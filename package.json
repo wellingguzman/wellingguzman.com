@@ -1,0 +1,21 @@
+{
+  "name": "wellingguzman.com",
+  "version": "0.0.1",
+  "description": "Welling Guzman - Blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Welling Guzman",
+  "license": "MIT",
+  "dependencies": {
+    "harp": "~0.14.0",
+    "moment": "~2.8.4",
+    "highlights": "~0.14.0",
+    "cheerio": "~0.18.0",
+    "string": "~2.2.0",
+    "router-stupid": "~0.7.0",
+    "glob": "~4.2.1",
+    "st": "~0.5.2"
+  }
+}
