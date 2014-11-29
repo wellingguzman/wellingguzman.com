@@ -1,6 +1,6 @@
 Howdy, Partner, My name is Welling Guzman as you have probably know, I am a Software & Web Engineer from the Dominican Republic, passionate about building software, make it better and reinventing the wheel.
 
-![](/images/me.jpg)
+![](/images/me.jpg?nocache)
 
 This is the place where I am going to publish anything I find interesting, problem I had and solved, experiments with technologies, programming languages, tools or anything else. Things I have learned and want to share.
 
