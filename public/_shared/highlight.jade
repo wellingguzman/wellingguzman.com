@@ -1,0 +1,39 @@
+//- function highlight(yield) {
+-   if (yield) {
+-     $ = cheerio.load(yield, {decodeEntities: false});
+-     $('pre code[class|="language"]').each(function(i, el) {
+-       var className, scopeName, codeHTML;
+-       className = $(this).attr('class');
+-       codeWrap    = '<pre>' + $(el).parents('pre').html() + '</pre>';
+-       codeHTMLRaw = $(el).text();
+-       codeHTML    = S($(el).html()).decodeHTMLEntities().s;
+-       if (className=='language-javascript') scopeName = 'source.js';
+-       if (className=='language-objective-c') scopeName = 'source.objc';
+-       if (className=='language-php') scopeName = 'text.html.php';
+-       if (className=='language-swift') scopeName = 'source.swift';
+-       if (scopeName) {
+-           code = highlighter.highlightSync({fileContents:codeHTML,scopeName: scopeName});
+-       //$code = cheerio.load(code);
+-       //console.log($code.attr('class'));
+-       //console.log($code('pre').attr('rel', 'javascript').html());
+-       //code = $(code).attr('class', 'javascript').html();//code = $code('pre.editor').attr('rel', className.replace('language-','')).html();
+-           if (scopeName=='text.html.php') console.log(code);
+-           if (scopeName=='text.html.php') console.log('=-----=========');
+-           if (scopeName!='text.html.php') code = S(code).decodeHTMLEntities().s;
+-           if (scopeName=='text.html.php') console.log(code);
+-           rel = className.replace('language-', '');
+-           yield = yield.replace(codeWrap, code.replace('<pre class', '<pre rel="'+rel+'" class'));}
+-       //console.log(i);
+-       //if (i==0) {yield = yield.replace(codeWrap, S(code).decodeHTMLEntities().s);
+-       //yield += codeWrap;
+-       //yield += codeHTMLRaw;
+-       //yield += code;
+-       //console.log(codeHTMLRaw);
+-       //console.log(S(codeHTMLRaw).decodeHTMLEntities().s);
+-       //console.log(code);
+-       //console.log(yield.indexOf(codeWrap));//yield = yield.replace(codeWrap, '');
+-       //}//console.log($(el).parents('pre').html());
+-     });
+-   }
+-   return yield;
+//- }
