@@ -1,5 +1,10 @@
 - var blog = public.writing || public.public.writing;
-- return Object.keys(blog._data).map(function (slug) {
+- // For some reason I need to take the index out of the list
+- // It return a all wrong sorted list.
+- var posts = Object.keys(blog._data);
+- var indexPageIndex = posts.indexOf('index');
+- if (indexPageIndex>-1) posts.splice(indexPageIndex,1);
+- return posts.map(function (slug) {
 -   var post = blog._data[slug];
 -   post.slug = slug;
 -   post.url = site_url + '/writing/' + post.slug;
