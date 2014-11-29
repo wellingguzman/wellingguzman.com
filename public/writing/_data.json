@@ -3,95 +3,95 @@
     "title": "Writings - Welling Guzman",
     "header_title": "Writings"
   },
-    "learn-proper-names": {
-        "title": "Learn the proper names",
-        "date": "2014-09-02 03:35:24",
-        "published": true,
-        "tags": [
-            "til"
-        ]
-    },
-    "type-s-eszett-mac-os": {
-        "title": "How to type \u00df (Eszett) on Mac OS",
-        "date": "2014-09-01 21:35:07",
-        "published": true,
-        "tags": [
-            "german",
-            "language",
-            "til"
-        ]
-    },
-    "custom-post-slug-collapse-page-slug-wordpress": {
-        "title": "Custom Post Slug collapse with Page Slug in WordPress",
-        "date": "2014-08-01 03:37:32",
-        "published": true,
-        "tags": [
-            "php",
-            "wordpress"
-        ]
-    },
-    "mamp-mysql-problem": {
-        "title": "MAMP MySQL Problem",
-        "date": "2014-07-19 15:47:19",
-        "published": true,
-        "tags": [
-            "javascript",
-            "mamp",
-            "mysql",
-            "node-js"
-        ]
-    },
-    "wordpress-functionality-another-php-project": {
-        "title": "WordPress functionality in another PHP Project",
-        "date": "2014-05-13 12:58:01",
-        "published": true,
-        "tags": []
-    },
-    "subdomain-different-server": {
-        "title": "Subdomain on a different server",
-        "date": "2014-05-12 22:31:30",
-        "published": true,
-        "tags": []
-    },
-    "control-wordpress-404-error": {
-        "title": "Control WordPress 404 Error",
-        "date": "2014-01-21 00:56:04",
-        "published": true,
-        "tags": [
-            "php",
-            "wordpress"
-        ]
-    },
-    "2014-goals": {
-        "title": "2014 Goals",
-        "date": "2014-01-08 17:58:30",
-        "published": true,
-        "tags": []
-    },
-    "all-i-use-as-web-developer": {
-        "title": "All I use as Web Developer",
-        "date": "2013-10-07 14:30:27",
-        "published": true,
-        "tags": []
-    },
-    "getting-hands-dirty-chrome-canary": {
-        "title": "Getting my hands dirty on Chrome Canary",
-        "date": "2013-09-18 17:13:30",
-        "published": true,
-        "tags": [
-            "canary"
-        ]
-    },
-    "php-apache-500-internal-server-error": {
-        "title": "PHP – Apache 500 Internal Server Error",
-        "date": "2013-01-25 18:15:47",
-        "published": true,
-        "tags": []
-    },
-    "sesiones-codeigniter-terminan-inmediatamente": {
-        "title": "Sesiones CodeIgniter terminan inmediatamente",
-        "date": "2013-01-19 16:25:13",
-        "published": true,
-        "tags": []
-    }
+  "learn-proper-names": {
+    "title": "Learn the proper names",
+    "date": "2014-09-02 03:35:24",
+    "published": true,
+    "tags": [
+      "til"
+    ]
+  },
+  "type-s-eszett-mac-os": {
+    "title": "How to type \u00df (Eszett) on Mac OS",
+    "date": "2014-09-01 21:35:07",
+    "published": true,
+    "tags": [
+      "german",
+      "language",
+      "til"
+    ]
+  },
+  "custom-post-slug-collapse-page-slug-wordpress": {
+    "title": "Custom Post Slug collapse with Page Slug in WordPress",
+    "date": "2014-08-01 03:37:32",
+    "published": true,
+    "tags": [
+      "php",
+      "wordpress"
+    ]
+  },
+  "mamp-mysql-problem": {
+    "title": "MAMP MySQL Problem",
+    "date": "2014-07-19 15:47:19",
+    "published": true,
+    "tags": [
+      "javascript",
+      "mamp",
+      "mysql",
+      "node-js"
+    ]
+  },
+  "wordpress-functionality-another-php-project": {
+    "title": "WordPress functionality in another PHP Project",
+    "date": "2014-05-13 12:58:01",
+    "published": true,
+    "tags": []
+  },
+  "subdomain-different-server": {
+    "title": "Subdomain on a different server",
+    "date": "2014-05-12 22:31:30",
+    "published": true,
+    "tags": []
+  },
+  "control-wordpress-404-error": {
+    "title": "Control WordPress 404 Error",
+    "date": "2014-01-21 00:56:04",
+    "published": true,
+    "tags": [
+      "php",
+      "wordpress"
+    ]
+  },
+  "2014-goals": {
+    "title": "2014 Goals",
+    "date": "2014-01-08 17:58:30",
+    "published": true,
+    "tags": []
+  },
+  "all-i-use-as-web-developer": {
+    "title": "All I use as Web Developer",
+    "date": "2013-10-07 14:30:27",
+    "published": true,
+    "tags": []
+  },
+  "getting-hands-dirty-chrome-canary": {
+    "title": "Getting my hands dirty on Chrome Canary",
+    "date": "2013-09-18 17:13:30",
+    "published": true,
+    "tags": [
+      "canary"
+    ]
+  },
+  "php-apache-500-internal-server-error": {
+    "title": "PHP – Apache 500 Internal Server Error",
+    "date": "2013-01-25 18:15:47",
+    "published": true,
+    "tags": []
+  },
+  "sesiones-codeigniter-terminan-inmediatamente": {
+    "title": "Sesiones CodeIgniter terminan inmediatamente",
+    "date": "2013-01-19 16:25:13",
+    "published": true,
+    "tags": []
+  }
 }
