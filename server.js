@@ -21,7 +21,7 @@ global.S = S;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
 
 route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
-  res.writeHead(302, { 'location': '/' + req.params.filename });
+  res.writeHead(302, { 'location': '/images/' + req.params.filename });
   res.end();
 });
 
