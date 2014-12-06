@@ -20,6 +20,11 @@ global.cheerio = cheerio;
 global.S = S;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
 
+route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
+  res.writeHead(302, { 'location': '/' + req.params.filename });
+  res.end();
+});
+
 var server = function (root) {
   // manually glob all the .html files so that we can navigate
   // without .html on the end of the urls
