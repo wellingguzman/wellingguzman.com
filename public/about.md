@@ -1,4 +1,4 @@
-Howdy, Partner, My name is Welling Guzman as you have probably know, I am a Software & Web Engineer from the Dominican Republic, passionate about building software, make it better and reinventing the wheel.
+Howdy, Partner, My name is Welling Guzman as you may probably know. I am a Software & Web Engineer from the Dominican Republic, passionate about building software, make it better and reinventing the wheel.
 
 ![](/images/me.jpg?nocache)
 
