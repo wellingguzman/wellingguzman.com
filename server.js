@@ -73,7 +73,7 @@ function run() {
       }
     });
 
-    console.log('Running harp-static on ' + port);
+    console.log('Running harp-static (production) on ' + port);
     http.createServer(route).listen(port);
 
     fourohfour = require('fs').readFileSync(outputPath + '/404.html');
@@ -93,7 +93,7 @@ function run() {
       harp.mount(__dirname)(req, res);
     });
 
-    console.log('Running harp-static on ' + port);
+    console.log('Running harp-static (development) on ' + port);
     http.createServer(route).listen(port);
     server(__dirname + '/public');
   }
