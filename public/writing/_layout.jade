@@ -1,8 +1,8 @@
 extends ../_shared/layout
 
 block content
-  article.Article
-    .Content-wrapper
+  .Content-wrapper
+    article.Article
       .Article-content
         content = partial('../_shared/highlight', {yield: yield})
         != content
