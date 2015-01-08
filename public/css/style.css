@@ -338,11 +338,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Lucario Theme - The best colorful flat theme ever \o/
- *
- * @project https://github.com/raphamorim/lucario
- * @author Raphael Amorim <rapha850@gmail.com>
- */
 .editor,
 .editor .gutter {
   background-color: #f7f8f7;
@@ -411,17 +406,16 @@ table {
 .storage {
   color: #A71D5D;
 }
-.storage.type {
-  font-style: italic;
-}
 .storage.type.objc {
   font-style: normal;
 }
 .entity.name.class {
   color: #795DA3;
 }
+.entity.name.namespace {
+  color: #795DA3;
+}
 .entity.other.inherited-class {
-  font-style: italic;
   color: #795DA3;
 }
 .entity.other.inherited-class.objc {
