@@ -629,7 +629,7 @@ p > code {
   border-left-color: rgba(251, 195, 29, 0.3);
 }
 [rel="javascript"]:before {
-  color: rgba(251, 195, 29, 0.01);
+  color: rgba(251, 195, 29, 0.8);
 }
 [rel="objective-c"] {
   border-left-color: rgba(0, 155, 51, 0.3);
