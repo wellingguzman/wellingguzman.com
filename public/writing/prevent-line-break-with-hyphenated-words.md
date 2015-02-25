@@ -12,6 +12,6 @@ This hotel is
 all-inclusive
 ```
 
-There is something you probably don't know is that there's a lot of differents hyphen- or dash-like characters in Unicode. The hyphen we need here it's the **non-breaking hyphen** (`U+2011` or `&#8209;`).
+There is something you probably don't know is that there's a lot of differents hyphen- or dash&#8209;like characters in Unicode. The hyphen we need here it's the **non&#8209;breaking hyphen** (`U+2011` or `&#8209;`).
 
-Instead of using the regular hyphen (or minus hyphen) use the non-breaking hyphen and you should be getting the correct result of treating the hyphenated word as a single word.
+Instead of using the regular hyphen (or minus hyphen) use the non&#8209;breaking hyphen and you should be getting the correct result of treating the hyphenated word as a single word.
