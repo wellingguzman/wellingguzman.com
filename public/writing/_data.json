@@ -28,6 +28,12 @@
     "published": false,
     "tags": []
   },
+  "prevent-line-break-with-hyphenated-words": {
+    "title": "Prevent line-break with hyphenated words",
+    "date": "2015-02-25 04:06:18",
+    "published": true,
+    "tags": []
+  },
   "github-long-diff-problem": {
    "title": "GitHub: long diff problem",
    "date": "2015-02-07 01:47:22",
