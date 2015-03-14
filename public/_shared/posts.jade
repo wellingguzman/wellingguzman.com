@@ -1,4 +1,4 @@
-- var blog = public.writing || public.public.writing;
+- var blog = public.notes || public.public.notes;
 - // For some reason I need to take the index out of the list
 - // It return a all wrong sorted list.
 - var posts = Object.keys(blog._data);
@@ -7,8 +7,8 @@
 - return posts.map(function (slug) {
 -   var post = blog._data[slug];
 -   post.slug = slug;
--   post.url = site_url + '/writing/' + post.slug;
--   post.url_relative = '/writing/' + post.slug;
+-   post.url = site_url + '/notes/' + post.slug;
+-   post.url_relative = '/notes/' + post.slug;
 -   return post;
 - }).filter(function (post) {
 -   if (post.published===false) {

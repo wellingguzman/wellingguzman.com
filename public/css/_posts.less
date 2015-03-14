@@ -1,4 +1,4 @@
-.Article {
+.Post {
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   background: #FFF;//#f8fcf9; //#FFF;
@@ -14,10 +14,36 @@
     border-bottom: 1px solid #EEE;
   }
 
-  .Article-content {
+  .Post-header,
+  .Post-footer {
+    position: relative;
+    margin: 10px 30px;
+    padding: 20px 0;
+  }
+
+  .Post-header {
+    margin-bottom: 0;
+    border-bottom: 1px solid #EEE;
+  }
+  .Post-footer {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .Post-title,
+  .Post-meta {
+    margin: 0;
+  }
+
+  .Post-title {
+    text-transform: none;
+    line-height: 1;
+  }
+
+  .Post-content {
     position: relative;
     margin: 10px;
-    padding: 20px;;
+    padding: 20px;
 
     @media (max-width: 720px) {
       margin-left: 0;
@@ -32,7 +58,28 @@
   }
 }
 
-.Article-signature
+.Tags
+{
+  margin: 0 10px;
+
+  .Tag {
+    display: inline-block;
+    color: #fff;
+    font-size: .95em;
+    line-height: 1;
+    text-transform: none;
+    margin: 0 5px 0 0;
+    padding: 2px 5px;
+    background-color: lighten(@navGreen, 10%);
+
+    &:hover {
+      background: darken(@navGreen, 5%);
+      padding: 2px 5px;
+    }
+  }
+}
+
+.Post-signature
 {
   text-align: right;
   margin: 0;
