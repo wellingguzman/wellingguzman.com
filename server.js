@@ -25,6 +25,15 @@ route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, n
   res.end();
 });
 
+route.all('/writing/{post_name}?', function (req, res, next) {
+  var redirect = '';
+  if(req.params.post_name) {
+    redirect = '/' + req.params.post_name;
+  }
+  res.writeHead(302, { 'location': '/notes' + redirect });
+  res.end();
+});
+
 var server = function (root) {
   // manually glob all the .html files so that we can navigate
   // without .html on the end of the urls
