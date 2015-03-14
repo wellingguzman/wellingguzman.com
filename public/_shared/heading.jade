@@ -1,8 +1,0 @@
-.Heading
-  .Content-wrapper
-    - pageTitle = header_title || title;
-    h1.Header-title #{pageTitle}
-    if header_caption
-      h4.Header-caption #{header_caption}
-    if current.path[0] == 'writing' && current.source != 'index'
-      h4.Header-caption: span.Timestamp #{moment(date).format('MMMM DD, YYYY')}

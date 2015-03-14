@@ -7,7 +7,7 @@ block content
         header.Post-header
           h1.Post-title #{title}
           h4.Post-meta
-            span.Timestamp #{moment(date).format('dddd, MMMM DD, YYYY')}
+            span.Timestamp #{moment(date).format('dddd, MMMM Do, YYYY')}
             if (tags && tags.length)
               span.Tags
                 each tag in tags
