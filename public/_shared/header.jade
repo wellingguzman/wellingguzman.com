@@ -1,11 +1,12 @@
-header(id="header")
-  .Content-wrapper
-    .sitebar
-      a.site-title(href="/")
-        span.first welling
-        span.last guzman
-      nav(id="site-nav")
-        ul.nav-links
-          li: a(href="/") home
-          li: a(href="/writing") writing
-          li: a(href="/about") about
+if (header_image)
+  - backgroundImage = header_image;
+  - style = "background-image: url(" + backgroundImage + ");"
+else
+  - className = "no-image";
+header.Main-header(class=className style=style)
+  .Header-content
+    unless current.path[0] == 'notes' && current.source != 'index'
+      - pageTitle = header_title || title;
+      h1.Header-title #{pageTitle}
+      if header_caption
+        h4.Header-caption #{header_caption}

@@ -2,10 +2,12 @@
   "index": {
     "title": "Welling Guzman - Blog",
     "header_title": "Howdy, Partner",
-    "header_caption": "Latest notes"
+    "header_caption": "Latest notes",
+    "header_image": "https://unsplash.imgix.net/22/brick-wall.JPG?q=75&fm=jpg&s=384c1f50be9eebb14ce9f91080556c66"
   },
   "about": {
     "title": "About - Welling Guzman",
-    "header_title": "About"
+    "header_title": "About",
+    "header_image": "https://unsplash.imgix.net/photo-1422513391413-ddd4f2ce3340?q=75&fm=jpg&s=282e5978de17d6cd2280888d16f06f04"
   }
 }

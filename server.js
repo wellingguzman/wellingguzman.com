@@ -81,8 +81,8 @@ function run() {
   } else {
     route.all('*', function (req, res, next){
       //@todo fix this
-      if (req.url == '/writing') {
-        req.url = '/writing/';
+      if (req.url == '/notes') {
+        req.url = '/notes/';
       }
       next();
     });

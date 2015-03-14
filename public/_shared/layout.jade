@@ -10,8 +10,8 @@ html
     link(rel="shortcut icon" href="/favicon.ico")
     link(rel="stylesheet" type="text/css" href="/css/style.css?v=#{version}")
   body(class="#{current.path[0]=='index'?'home':current.path[0]}")
+    include sitebar
     include header
-    include heading
     .Content
       block content
     include footer
