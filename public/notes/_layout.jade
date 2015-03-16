@@ -11,7 +11,7 @@ block content
             if (tags && tags.length)
               span.Tags
                 each tag in tags
-                  a.Tag(href="#") #{tag}
+                  .Tag(href="#") #{tag}
       .Post-content
         content = partial('../_shared/highlight', {yield: yield})
         != content
@@ -19,4 +19,4 @@ block content
       footer.Post-footer
         .Post-signature
           —
-          a(href="http://twitter.com/WellingGuzman") @WellingGuzman
+          a(href="http://twitter.com/WellingGuzman" target="_blank") @WellingGuzman
