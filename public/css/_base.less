@@ -164,8 +164,8 @@ pre {
   &:before {
     display: block;
     content: attr(rel);
-    letter-spacing: 2px;
-    font-size: 0.7em;
+    letter-spacing: 1px;
+    font-size: 0.95em;
     padding-bottom: 5px;
     text-transform: uppercase;
   }
@@ -183,22 +183,22 @@ p > code {
 }
 [rel="html"]
 {
-  border-left-color: fade(@htmlColor, 30%);
+  border-left-color: @htmlColor; //fade(@htmlColor, 30%);
   &:before {
-    color: fade(@htmlColor, 30%);
+    color: @htmlColor; //fade(@htmlColor, 30%);
   }
 }
 [rel="javascript"]
 {
-  border-left-color: fade(@jsColor, 30%);
+  border-left-color: @jsColor; //fade(@jsColor, 30%);
   &:before {
-    color: fade(@jsColor,80);
+    color: @jsColor; //fade(@jsColor,80);
   }
 }
 
 [rel="objective-c"]
 {
-  border-left-color: fade(@objcColor, 30%);
+  border-left-color: @objcColor; //fade(@objcColor, 30%);
   &:before {
     color: @objcColor;
   }
@@ -206,7 +206,7 @@ p > code {
 
 [rel="php"]
 {
-  border-left-color: fade(@phpColor, 30%);
+  border-left-color: @phpColor; //fade(@phpColor, 30%);
   &:before {
     color: @phpColor;
   }
@@ -214,7 +214,7 @@ p > code {
 
 [rel="swift"]
 {
-  border-left-color: fade(@swiftColor, 30%);
+  border-left-color: @swiftColor; //fade(@swiftColor, 30%);
   &:before {
     color: @swiftColor;
   }
