@@ -12,7 +12,7 @@ html
   body(class="#{current.path[0]=='index'?'home':current.path[0]}")
     include sitebar
     include header
-    .Content
+    .Content-wrapper
       block content
     include footer
     script.
