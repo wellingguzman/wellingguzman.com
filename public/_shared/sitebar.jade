@@ -5,6 +5,6 @@
       span.last guzman
     nav.site-nav
       ul.nav-links
-        li: a(href="/") home
-        li: a(href="/notes") notes
-        li: a(href="/about") about
+        if(main_nav)
+          each url, label in main_nav
+            li: a(href="#{url}") #{label}
