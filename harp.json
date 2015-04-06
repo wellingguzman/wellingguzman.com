@@ -3,6 +3,11 @@
     "site_title": "welling guzman's blog",
     "site_description": "Welling Guzman is a software engineer, and this is his writing in third person.",
     "site_url": "http://wellingguzman.com",
-    "analytics": "UA-37732822-1"
+    "analytics": "UA-37732822-1",
+    "nav": [
+      {
+        "Home": "/"
+      }
+    ]
   }
 }
