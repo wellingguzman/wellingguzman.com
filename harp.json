@@ -8,6 +8,11 @@
       "home": "/",
       "notes": "/notes",
       "about": "/about"
+    },
+    "footer_nav": {
+      "about": "/about",
+      "twitter": "https://twitter.com/WellingGuzman",
+      "github": "https://github.com/WellingGuzman"
     }
   }
 }
