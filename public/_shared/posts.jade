@@ -2,7 +2,7 @@
 - var postLimit = postLimit || 10;
 - // For some reason I need to take the index out of the list
 - // It return a all wrong sorted list.
-- var posts = Object.keys(blog._data);
+- var posts = blog._data ? Object.keys(blog._data) : [];
 - var indexPageIndex = posts.indexOf('index');
 - if (indexPageIndex>-1) {
 -   posts.splice(indexPageIndex,1);
