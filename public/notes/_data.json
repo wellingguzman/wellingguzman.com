@@ -34,6 +34,11 @@
     "published": false,
     "tags": []
   },
+  "teamwork": {
+    "title": "Teamwork",
+    "published": false,
+    "tags": []
+  },
   "how-open-source-has-helped-me": {
     "title": "How open-source has helped me",
     "published": false,
