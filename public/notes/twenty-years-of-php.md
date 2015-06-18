@@ -1,5 +1,4 @@
-# Twenty Years of PHP
-<delete>Yesterday</delete>9 days ago it was PHP 20th birthday. Twenty years ago **Rasmus Lerdorf** released PHP 1.0, but it wasn’t until 8 years later when I had my first encounter with this language.
+<del>Yesterday</del> 9 days ago it was PHP 20th birthday. Twenty years ago **Rasmus Lerdorf** released PHP 1.0, but it wasn’t until 8 years later when I had my first encounter with this language.
 
 In 2003, I found out that anyone were able to make websites, that it wasn’t something just for big company to show their product and information. So started digging and searching on Altavista and Yahoo (Remember those search engine?), “where” and “how” do I start making websites.
 
@@ -15,7 +14,7 @@ Until last year I thought PHP was death, but I realized that I was around differ
 
 I don’t mind the people who hate PHP and PHP Developers, the most common thing question I get after I say I’m a PHP developer is: “why?”.
 
-![PHP Comic](http://toomuchawful.com/wp-content/uploads/2015/01/breaking_the_ice_with_php_s.jpg)
+![PHP Comic](http://wellingguzman.com/images/breaking_the_ice_with_php_s.jpg)
 
 Thanks to PHP I got into Web Development, and I love it.
 
