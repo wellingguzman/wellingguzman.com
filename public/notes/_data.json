@@ -48,7 +48,7 @@
     "title": "Twenty years of PHP",
     "date": "2015-06-17 10:39:55",
     "published": true,
-    "tags": []
+    "tags": ["php", "personal"]
   },
   "prevent-line-break-with-hyphenated-words": {
     "title": "Prevent line-break with hyphenated words",
