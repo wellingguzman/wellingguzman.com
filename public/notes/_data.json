@@ -44,6 +44,11 @@
     "published": false,
     "tags": []
   },
+  "php-self-this-static": {
+    "title": "PHP: self, this and static",
+    "published": false,
+    "tags": []
+  },
   "how-open-source-has-helped-me": {
     "title": "How open-source has helped me",
     "published": false,
