@@ -14,7 +14,7 @@ Until last year I thought PHP was death, but I realized that I was around differ
 
 I don’t mind the people who hate PHP and PHP Developers, the most common thing question I get after I say I’m a PHP developer is: “why?”.
 
-![PHP Comic](http://wellingguzman.com/images/breaking_the_ice_with_php_s.jpg)
+![PHP Comic](/images/breaking_the_ice_with_php_s.jpg)
 
 Thanks to PHP I got into Web Development, and I love it.
 
