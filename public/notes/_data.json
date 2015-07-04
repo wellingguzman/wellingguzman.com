@@ -54,6 +54,11 @@
     "published": false,
     "tags": []
   },
+  "the-php-community": {
+    "title": "The PHP Community",
+    "published": false,
+    "tags": []
+  },
   "twenty-years-of-php": {
     "title": "Twenty years of PHP",
     "date": "2015-06-17 10:39:55",
