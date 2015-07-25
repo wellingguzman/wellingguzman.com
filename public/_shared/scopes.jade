@@ -6,5 +6,8 @@
 -   scopes['language-swift'] = 'source.swift';
 -   scopes['language-html'] = 'text.html.basic';
 -   scopes['language-css'] = 'source.css';
--   if (typeof className !== 'undefined') return scopes[className];
+-   if (typeof className !== 'undefined') {
+-     return scopes[className];
+-   }
+-   
 -   return;
