@@ -7,7 +7,7 @@
 -   scopes['language-html'] = 'text.html.basic';
 -   scopes['language-css'] = 'source.css';
 -   if (typeof className !== 'undefined') {
--     return scopes[className];
+-     return scopes[className] || false;
 -   }
 -   
--   return;
+-   return false;
