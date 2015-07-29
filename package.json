@@ -11,7 +11,7 @@
   "dependencies": {
     "harp": "~0.14.0",
     "moment": "~2.8.4",
-    "highlights": "~0.14.0",
+    "highlights": "~1.2.0",
     "cheerio": "~0.18.0",
     "string": "~2.2.0",
     "router-stupid": "~0.7.0",
