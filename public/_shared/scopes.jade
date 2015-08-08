@@ -1,10 +1,12 @@
--   var scopes = [];
--   scopes['language-javascript'] = 'source.js';
--   scopes['language-objective-c'] = 'source.objc';
--   scopes['language-php'] = 'text.html.php';
--   scopes['language-swift'] = 'source.swift';
--   scopes['language-html'] = 'text.html.basic';
--   scopes['language-css'] = 'source.css';
+-   var scopes = [
+-     'language-javascript'   => 'source.js',
+-     'language-objective-c'  => 'source.objc',
+-     'language-php']         => 'text.html.php',
+-     'language-swift']       => 'source.swift',
+-     'language-html']        => 'text.html.basic',
+-     'language-css']         => 'source.css'
+-   ];
+-   
 -   if (typeof className !== 'undefined') {
 -     return scopes[className] || false;
 -   }
