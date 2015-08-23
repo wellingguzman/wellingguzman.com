@@ -4,6 +4,11 @@
     "header_title": "Notes",
     "header_image": "images/header/just-me.jpeg"
   },
+  "getting-real": {
+    "title": "Getting Real in the real world",
+    "published": false,
+    "tags": []
+  },
   "backbonejs-upload-file": {
     "title": "Backbone.js – Upload file",
     "published": false,
