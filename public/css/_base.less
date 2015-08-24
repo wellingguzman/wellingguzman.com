@@ -165,6 +165,7 @@ pre {
   overflow-x: scroll;
   white-space: pre;
   border-left: 3px solid rgba(65, 65, 65, 0.2);
+  border-radius: 3px;
 
   &:before {
     display: block;
@@ -191,6 +192,13 @@ p > code {
   border-left-color: @htmlColor; //fade(@htmlColor, 30%);
   &:before {
     color: @htmlColor; //fade(@htmlColor, 30%);
+  }
+}
+[rel="css"]
+{
+  border-left-color: @cssColor;
+  &:before {
+    color: @cssColor;
   }
 }
 [rel="javascript"]
