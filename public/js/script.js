@@ -11,7 +11,7 @@
     }
 
     for (var i = 0; i < quantity; i++) {
-      var randomIndex = getRandomInt(0, words.length);
+      var randomIndex = getRandomInt(0, words.length, false);
       message.push(words[randomIndex]);
       words.splice(randomIndex, 1);
       if (words.length == 0) {
@@ -29,7 +29,20 @@
     return [
       'Desarrollador Web',
       'Web Developer',
-      'Web-Entwickler'
+      'Web-Entwickler',
+      'Does nothing',
+      'Taco',
+      'Pokemon',
+      'JavaScript',
+      'PHP',
+      'Objective-C',
+      'C/C++',
+      'Backbone.js',
+      'Pillow',
+      'Beer',
+      'Green Socks',
+      'CSS',
+      'Diaper'
     ];
   }
 
@@ -50,12 +63,16 @@
     head.removeChild(style);
   }
 
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  function getRandomInt(min, max, maxIncluded) {
+    var includeMax = 1;
+    if (maxIncluded === false) {
+      includeMax = 0;
+    }
+    return Math.floor(Math.random() * (max - min + includeMax)) + min;
   }
 
-  setDescription();
-  if (getRandomInt(0, 1) === 1) {
+  setDescription(4);
+  if (getRandomInt(0, 100) === 1) {
     addJay();
   }
 })();
