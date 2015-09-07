@@ -34,21 +34,28 @@
   }
 
   function addJay() {
+    var head = document.getElementsByTagName('head')[0];
+    var style = document.getElementById('style');
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = '/js/g.js?v=' + SITE_VERSION;
-    document.getElementsByTagName('head')[0].appendChild(script);
+    head.appendChild(script);
 
     var link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
     link.href = '/css/g.css?v=' + SITE_VERSION;
-    document.getElementsByTagName('head')[0].appendChild(link);
+    head.appendChild(link);
+
+    head.removeChild(style);
   }
 
   function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
   setDescription();
-  addJay();
+  if (getRandomInt(0, 1) === 1) {
+    addJay();
+  }
 })();
