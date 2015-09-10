@@ -1,0 +1,9 @@
+body {
+  background: url(../images/gbg01.jpg);
+}
+pre {
+  background: #FAFAFA;
+}
+p > code {
+  font-weight: bold;
+}
