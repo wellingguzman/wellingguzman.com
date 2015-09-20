@@ -1,10 +1,8 @@
-.sitebar
+#sitebar
   .Content-wrapper
-    a.site-title(href="/")
-      span.first welling
-      span.last guzman
-    nav.site-nav
-      ul.nav-links
-        if(main_nav)
-          each url, label in main_nav
-            li: a(href="#{url}") #{label}
+    .Content-box
+      nav.site-nav
+        ul.nav-links
+          if(main_nav)
+            each url, label in main_nav
+              li: a(href="#{url}") #{label}
