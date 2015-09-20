@@ -37,9 +37,9 @@ h6
   word-wrap: break-word;
 }
 
-.Button {
-  font-size: 1.2em;
-}
+// .Button {
+//   font-size: 1.2em;
+// }
 
 // List
 ul
@@ -55,31 +55,36 @@ li
 .List
 {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 10px;
+  padding: 0 10px;
 }
 .List-item
 {
-  font-size: 1.2em;
-  line-height: 1.2;
-  margin: 0 0 .75em;
-  padding: .75em 0 0;
-}
-@media all and (max-width: 480px) {
-  .List-item,
-  .Button
-  {
-    font-size: 1em;
+  // font-size: 1.2em;
+  // line-height: 1.2;
+  // margin: 0 0 .55em;
+  padding: 0 0 0.55em;
+  margin: 0 0 1.55em;
+
+  .List-text a {
+    border-bottom: 0;
   }
 }
+// @media all and (max-width: 480px) {
+//   .List-item,
+//   .Button
+//   {
+//     font-size: 1em;
+//   }
+// }
 .List-text
 {
   &:extend(.Text-truncate);
 }
 .List-meta
 {
-  float: right;
-  margin: 0 0 0 20px;
+  // float: right;
+  // margin: 0 0 0 20px;
 }
 
 a
@@ -98,10 +103,11 @@ a
 
 blockquote {
   position: relative;
-  margin: 1.5em 0 1.5em -2em;
-  padding: 0 0 0 1.6em;
+  margin: 1.5em 0 1.5em 0;
+  padding: 0.5em 1.6em;
   border-left: #4A4A4A 1em solid;
   color: lighten(@base-color, 7%);
+  background-color: #FAFAFA;
 
   &:before {
     position: absolute;
@@ -119,8 +125,9 @@ p {
 }
 
 hr {
-  border-top: 1px solid #D2D2D2;
-  border-bottom: none;
+  display: none;
+  // border-top: 1px solid #D2D2D2;
+  // border-bottom: none;
 }
 
 // Text
@@ -142,6 +149,10 @@ hr {
   text-transform: uppercase;
 }
 
+b, strong {
+  font-weight: @head-font-weight;
+}
+
 del {
   color: lighten(@base-color, 20%);
   font-style: italic;
@@ -159,13 +170,13 @@ pre {
   color: #414141;
   font-size: 0.77em;
   line-height: 1.45;
-  padding: 10px 15px;
+  padding: 10px 30px;
   margin: 1.5em 0;
   border-radius: 0px;
   overflow-x: scroll;
   white-space: pre;
   border-left: 3px solid rgba(65, 65, 65, 0.2);
-  border-radius: 3px;
+  // border-radius: 3px;
 
   &:before {
     display: block;

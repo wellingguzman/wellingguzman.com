@@ -1,8 +1,15 @@
-.sitebar
+#sitebar
 {
   background-color: @navDark;
   color: #FFF;
   letter-spacing: .05em;
+
+  .Content-box
+  {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
 
   .notes &
   {
@@ -16,56 +23,17 @@
 }
 // @todo create some mixin or something dude!
 @media (min-width: 570px) {
-  .sitebar
+  #sitebar
   {
     font-size: 1.063em;
   }
 }
 
 @media (min-width: 980px) {
-  .sitebar
+  #sitebar
   {
     font-size: 1.125em;
   }
-}
-
-.site-title
-{
-  display: block;
-  float: left;
-  color: #FFF;
-  padding: 0 0 2px;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-
-  &:hover
-  {
-    color: #000;
-    background: none;
-    padding: 0 0 2px;
-
-    .home &
-    {
-      color: @navYellow;
-    }
-  }
-
-  @media (max-width: 979px) {
-    padding: 2px 0 2px;
-    &:hover {
-      padding: 2px 0 2px;
-    }
-  }
-
-  .first
-  {
-    font-weight: 700;
-  }
-}
-
-.site-nav
-{
-  float: right;
 }
 
 .nav-links
@@ -75,8 +43,7 @@
 
   li
   {
-    display: block;
-    float: left;
+    display: inline-block;
     margin: 0;
     padding: 0;
     font-size: 0.9em;
@@ -122,41 +89,16 @@
   }
 }
 
-.Main-header
+#header
 {
-  display: table;
-  position: relative;
-  width: 100%;
-  height: 41%;
-  min-height: 200px;
-  background: transparent no-repeat center center;
-  background-size: cover;
-  z-index: 1;
-
-  .home &:after
+  .home & h1
   {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background: rgba(0,0,0,0.2);
-    z-index: -1;
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3f9c4f;
   }
-
-  &.no-image
-  {
-    min-height: 0;
-    height: 55px;
-  }
-
-  .Header-content
-  {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
   .Header-title
   {
     font-size: 3em;
@@ -191,16 +133,32 @@
 
   .home &
   {
-    background-color: #5EB06D;
+    // background-color: #5EB06D;
 
     .Header-title
     {
-      color: #F8FBF8;
+      // color: #F8FBF8;
     }
 
     .Header-caption
     {
-      color: #efefef;
+      // color: #efefef;
+    }
+
+    .avatar
+    {
+      display: block;
+      width: 120px;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+    .description
+    {
+      text-align: center;
+      display: block;
+      font-size: 0.875em;
+      font-weight: 500;
+      color: #5A6772;
     }
   }
 
