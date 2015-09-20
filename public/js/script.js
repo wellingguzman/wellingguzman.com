@@ -88,7 +88,6 @@
   var disguises = ['jay', 'one'];
 
   if (parseInt(disguiseExpiration, 10) < (new Date()).getTime() || disguises.indexOf(disguiseName) < 0) {
-    console.log('expired!!!');
     window.sessionStorage.removeItem('disguise_expiration');
     window.sessionStorage.removeItem('disguise_name');
     var randomNumber = getRandomInt(0, 100);
