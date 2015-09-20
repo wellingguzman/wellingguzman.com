@@ -1,0 +1,236 @@
+@white: #f9f7f9;
+@white2: #ffffff;
+@black: #181010;
+@black2: #000000;
+@gray1: #bbbbbb;
+@gray2: #6b6b6b;
+
+@green1: #a5d684;
+@green2: #4aa55a;
+
+@orange1: #ffa552; // - #e6a57b
+@orange2: #d65231; // - #ad734a
+
+@blue1: #adceef;
+@blue2: #739cce;
+
+@yellow1: #ffe673;
+@yellow2: #d6a500;
+
+body {
+  color: @black;
+  background-color: @green1;
+  -webkit-font-smoothing: auto;
+
+  &.notes {
+    background-color: @orange1;
+  }
+
+  &.about {
+    background-color: @blue1;
+  }
+}
+
+a:hover {
+  background: @green1;
+
+  .notes & {
+    background: @orange1;
+  }
+
+  .about & {
+    background: @blue1;
+  }
+}
+
+.Post .Post-header {
+  border-bottom: 2px solid @black;
+  margin-bottom: 10px;
+}
+
+.Tags .Tag {
+  background-color: @orange1;
+
+  &:hover {
+    background-color: @orange2;
+  }
+}
+
+#sitebar {
+  margin: 1em 0;
+  color: @black;
+
+  &,
+  .notes &,
+  .about & {
+    background-color: transparent;
+  }
+}
+
+.nav-links li{
+  a {
+    color: @black;
+  }
+
+  &:hover {
+    background: @black;
+    a {
+      color: @green2;
+    }
+
+    .notes & {
+      background: @black;
+      a {
+        color: @orange2;
+      }
+    }
+
+    .about & {
+      background: @black;
+      a {
+        color: @blue2;
+      }
+    }
+  }
+}
+
+.home #header .avatar,
+img {
+  border-radius: 0;
+  box-shadow: 0 3px 0 @green2,
+              3px 0 0 @green2,
+              0 -3px 0 @green2,
+              -3px 0 0 @green2,
+              0 3px 0 0 @green2;
+
+  .notes & {
+    box-shadow: 0 3px 0 @orange2,
+                3px 0 0 @orange2,
+                0 -3px 0 @orange2,
+                -3px 0 0 @orange2,
+                0 3px 0 0 @orange2;
+  }
+
+  .about & {
+    box-shadow: 0 3px 0 @blue2,
+                3px 0 0 @blue2,
+                0 -3px 0 @blue2,
+                -3px 0 0 @blue2,
+                0 3px 0 0 @blue2;
+  }
+}
+
+.Timestamp,
+.home #header .description {
+  color: inherit;
+}
+
+.home #header h1 {
+  color: @green2;
+
+  .notes & {
+    color: @orange2;
+  }
+
+  .about & {
+    color: @blue2;
+  }
+}
+
+.Post a {
+  color: @green2;
+  border-color: @green2;
+  &:hover {
+    background-color: #181010;
+    border-bottom: 0;
+    color: @green1;
+  }
+
+  .notes & {
+    color: @orange2;
+    border-color: @orange2;
+    &:hover {
+      color: @orange1;
+    }
+  }
+
+  .about & {
+    color: @blue2;
+    border-color: @blue2;
+    &:hover {
+      color: @blue1;
+    }
+  }
+}
+
+.Content-box.Content,
+.Content-box .site-nav,
+#footer .Content-box {
+  background-color: @white;
+  // border: 2px solid;
+  box-shadow: 0 5px 0  @black, 5px 0 0  @black, 0 -5px 0  @black, -5px 0 0  @black, 0 5px 0 0 @black;
+  border-radius: 0;
+  // box-shadow: 8px 8px rgba(46, 50, 57, 0.8);
+  transition: all 0.3s ease;
+}
+
+.Content-box .site-nav {
+  background-color: @green2;
+
+  .notes & {
+    background-color: @orange2;
+  }
+
+  .about & {
+    background-color: @blue2;
+  }
+}
+
+.Content-bottom:before {
+  background: #181010;
+  height: 4px;
+}
+
+#footer {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1em;
+
+  a {
+    color: @green1;
+    &:focus, &:active, &:hover {
+      text-decoration: none;
+      background-color: @green1;
+      color: @black;
+    }
+
+    .notes & {
+      color: @orange1;
+      &:focus, &:active, &:hover {
+        background-color: @orange1;
+        color: @black;
+      }
+    }
+
+    .about & {
+      color: @blue1;
+      &:focus, &:active, &:hover {
+        background-color: @blue1;
+        color: @black;
+      }
+    }
+  }
+
+  .Content-box {
+    background-color: @gray2;
+    color: @green1;
+
+    .notes & {
+      color: @orange1;
+    }
+
+    .about & {
+      color: @blue1;
+    }
+  }
+}
