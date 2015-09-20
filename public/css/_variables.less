@@ -1,11 +1,12 @@
 // Layout
 @container-width: 100%;
-@container-max-width: 800px;
+@container-max-width: 640px;
 
 // Colors
 @green: #57AD68;
 
 @htmlColor: #e34f26;
+@cssColor: #0171ba;
 @jsColor: darken(#FCD04F, 10%);
 @objcColor: #009B33;
 @phpColor: darken(#C9C, 10%); //#6F41A7;
@@ -17,17 +18,23 @@
 @navYellow: #FCCD67;
 @navBlue: #2B9FDC;
 
-@base-background: #eee8d5;
+// new nav
+// @navYellow: #FCD68A; text: #4E4E4E
+
+// #FAFAFA
+// #EEE8D5
+// A mixed between the two
+@base-background: darken(#F8F7F4, 3.4%);
 
 // Font
-@base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @base-font-size: 18px;
-@base-line-height: 1.7;
-@base-color: #2E2E2E;//#222;
+@base-line-height: 1.6;
+@base-color: #2E3239; //#4E4E4E;//#222;
 @base-font-weight: 400;
 
 @head-font-family: @base-font-family;
-@head-font-weight: 700;
+@head-font-weight: 600;
 
 @monospace-font-family: Menlo, monospace;
 

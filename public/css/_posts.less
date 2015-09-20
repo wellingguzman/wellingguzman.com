@@ -19,7 +19,7 @@
   .Post-header,
   .Post-footer {
     position: relative;
-    margin: 10px 30px;
+    margin: 0 30px;
     padding: 20px 0;
   }
 
@@ -44,8 +44,6 @@
 
   .Post-content {
     position: relative;
-    margin: 10px;
-    padding: 20px;
 
     @media (max-width: 720px) {
       margin-left: 0;
@@ -53,9 +51,23 @@
       padding: 0 10px;
     }
 
+    & > p {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    & p:first-of-type {
+      margin-top: 0;
+    }
+
+    blockquote p:last-of-type {
+      margin-bottom: 0;
+    }
+
     & > p:first-of-type
     {
-      margin-top: 0;
+      font-size: 1.15em;
+      font-weight: 500;
     }
   }
 }

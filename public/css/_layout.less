@@ -30,31 +30,31 @@
   &:extend(.clearfix all);
 }
 
-.Content
+.Content-box.Content
 {
   position: relative;
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 15px;
   background: #FFF;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 4px;
+}
+.Content-bottom
+{
+  text-align: center;
+  padding: 1.5em 0 0.5em;
 
-  .Content-bottom
+  &:before
   {
-    text-align: center;
-    padding: 1.5em 0 0.5em;
-
-    &:before
-    {
-      display: block;
-      height: 1px;
-      background: #DDD;
-      background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(#CCC), to(rgba(255, 255, 255, 0)));
-      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #CCC, rgba(255, 255, 255, 0));
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), #CCC, rgba(255, 255, 255, 0));
-      max-width: 87%;
-      margin: 1em auto;
-      content: "";
-    }
+    display: block;
+    height: 1px;
+    background: #DDD;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(#CCC), to(rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #CCC, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #CCC, rgba(255, 255, 255, 0));
+    max-width: 87%;
+    margin: 1em auto;
+    content: "";
   }
 }
