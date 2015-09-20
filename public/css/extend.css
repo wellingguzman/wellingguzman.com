@@ -37,6 +37,9 @@ a:hover {
 .about #sitebar {
   background-color: transparent;
 }
+.experiments #footer {
+  background-color: transparent;
+}
 .nav-links li a {
   color: #181010;
 }
