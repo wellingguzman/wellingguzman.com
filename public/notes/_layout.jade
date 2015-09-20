@@ -5,9 +5,11 @@ block content
     article.Post
       if current.path[0] == 'notes' && current.source != 'index'
         header.Post-header
-          h1.Post-title #{title}
+          h1.Post-title
+            | // #{title}
           h4.Post-meta
             span.Timestamp #{moment(date).format('dddd, MMMM Do, YYYY')}
+            //- span.Timestamp #{moment(date).format('DD.MM.YYYY')}
             if (tags && tags.length)
               span.Tags
                 each tag in tags
@@ -15,8 +17,8 @@ block content
       .Post-content
         content = partial('../_shared/highlight', {yield: yield})
         != content
-        if (current.source != 'index')
-      footer.Post-footer
-        .Post-signature
-          —
-          a(href="http://twitter.com/WellingGuzman" target="_blank") @WellingGuzman
+      //-   if (current.source != 'index')
+      //- footer.Post-footer
+      //-   .Post-signature
+      //-     —
+      //-     a(href="http://twitter.com/WellingGuzman" target="_blank") @WellingGuzman
