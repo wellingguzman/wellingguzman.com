@@ -1,69 +1,74 @@
-.editor, .editor .gutter {
-  background-color: #2D2D2D;
-  color: #CCCCCC;
+atom-text-editor, .editor, .editor .gutter {
+  background-color: #F0F0F0;
+  color: #545454;
+  border-radius: 3px;
 }
 
-.editor.is-focused .cursor {
-  border-color: #CCCCCC;
+atom-text-editor::shadow .cursor {
+  border-color: #AEAFAD;
 }
 
-.editor.is-focused .selection .region {
-  background-color: #515151;
+atom-text-editor::shadow .highlights .highlight.selection .region {
+  background-color: #DDD;
 }
 
-.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
-  background-color: #393939;
+atom-text-editor::shadow .line-number.cursor-line-no-selection, atom-text-editor :host.is-focused .line.cursor-line {
+  background-color: #EEE;
 }
 
 .comment {
-  color: #999999;
+  color: #969696;
 }
 
 .keyword.operator.class, .constant.other, .source.php.embedded.line {
-  color: #CCCCCC;
+  color: #666969;
 }
 
-.variable, .support.other.variable, .string.other.link, .entity.name.tag, .entity.other.attribute-name, .meta.tag, .declaration.tag, .markup.deleted.git_gutter {
-  color: #F2777A;
+.variable, .support.other.variable, .string.other.link, .string.regexp, .entity.name.tag, .entity.other.attribute-name, .meta.tag, .declaration.tag, .markup.deleted.git_gutter {
+  color: #DE2316;
 }
 
 .constant.numeric, .constant.language, .support.constant, .constant.character, .variable.parameter, .punctuation.section.embedded, .keyword.other.unit {
-  color: #F99157;
+  color: #FA9725;
+}
+
+.variable.language {
+  color: #FA9725;
 }
 
 .entity.name.class, .entity.name.type.class, .support.type, .support.class {
-  color: #FFCC66;
+  color: #E3B829;
 }
 
 .string, .constant.other.symbol, .entity.other.inherited-class, .entity.name.filename, .markup.heading, .markup.inserted.git_gutter {
-  color: #99CC99;
+  color: #729443;
 }
 
 .keyword.operator, .constant.other.color {
-  color: #66CCCC;
+  color: #545454;
 }
 
 .entity.name.function, .meta.function-call, .support.function, .keyword.other.special-method, .meta.block-level, .markup.changed.git_gutter {
-  color: #6699CC;
+  color: #0877BD;
 }
 
-.keyword, .storage, .storage.type, .entity.name.tag.css {
-  color: #CC99CC;
+.keyword, .storage, .storage.type {
+  color: #9878CC;
 }
 
 .invalid {
-  color: #CDCDCD;
-  background-color: #F2777A;
+  color: #FFFFFF;
+  background-color: #e33517;
 }
 
 .meta.separator {
-  color: #CDCDCD;
-  background-color: #99CCCC;
+  color: #FFFFFF;
+  background-color: #0777B8;
 }
 
 .invalid.deprecated {
-  color: #CDCDCD;
-  background-color: #CC99CC;
+  color: #FFFFFF;
+  background-color: #9879BA;
 }
 
 .markup.inserted.diff, .markup.deleted.diff, .meta.diff.header.to-file, .meta.diff.header.from-file {
@@ -71,19 +76,23 @@
 }
 
 .markup.inserted.diff, .meta.diff.header.to-file {
-  color: #718c00;
+  background-color: #729443;
 }
 
 .markup.deleted.diff, .meta.diff.header.from-file {
-  color: #c82829;
+  background-color: #DE2316;
 }
 
 .meta.diff.header.from-file, .meta.diff.header.to-file {
   color: #FFFFFF;
-  background-color: #4271ae;
+  background-color: #0676CC;
 }
 
 .meta.diff.range {
   font-style: italic;
-  color: #3e999f;
+  color: #3e999F;
+}
+
+.invisible-character, .indent-guide {
+  color: #CCC;
 }

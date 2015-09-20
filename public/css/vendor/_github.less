@@ -1,0 +1,201 @@
+atom-text-editor, .editor, :host, atom-text-editor::shadow {
+  background-color: rgba(147, 128, 108, 0.05); //rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+
+  .invisible-character,
+  .indent-guide,
+  .invisible,
+  .wrap-guide {
+    color: rgb(232, 233, 232);
+  }
+
+  .gutter {
+    background: rgb(249, 249, 249);
+    border-right: 1px solid rgb(237, 237, 237);
+    color: rgb(179, 155, 168);
+    margin-right: 6px;
+  }
+
+  .gutter.git-diff-icon .line-number {
+    &.git-line-added:before    {
+      color: rgb(99, 163, 92);
+    }
+
+    &.git-line-modified:before {
+      color: rgb(223, 80, 0);
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: rgba(226, 67, 0, 0.4);
+  }
+
+  .line-number.cursor-line-no-selection,
+  .selection .region {
+    background-color: rgb(251, 247, 205);
+  }
+
+  .cursor {
+    border-color: rgb(51, 51, 51);
+  }
+
+  .find-result .region, .highlights .ruby-block-highlight .region {
+    background-color: rgb(251, 247, 205);
+    border: 1px solid darken(rgb(255, 243, 172), 24);
+    border-radius: 2px;
+  }
+
+  // --------------------------------------------------------------------------
+  // Because of some funky shit with Atom and this it *needs* to be
+  // transparent so that the bracket matcher and find results actually show
+  // up, if this isn't then this for some reason sits above that.
+  // --------------------------------------------------------------------------
+
+  .line.cursor-line {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .bracket-matcher {
+    .region {
+      background-color: rgb(251, 247, 205);
+      border: 1px solid darken(rgb(255, 243, 172), 24);
+      border-radius: 2px;
+    }
+  }
+}
+
+.comment {
+  color: rgb(179, 155, 168);
+  .xxx, .yard, .todo, .fixme, .changed, .idea, .hack, .note {
+    color: darken(rgb(179, 155, 168), 9);
+  }
+}
+
+.string {
+  .punctuation.section.embedded,
+  .punctuation.section.embedded .source, & {
+    color: rgb(24, 54, 145);
+  }
+
+  .meta.embedded.line,
+  .source {
+    color: rgb(51, 51, 51);
+  }
+}
+
+.constant {
+  &.numeric,
+  &.other.symbol,
+  &.language {
+    color: rgb(0, 134, 179);
+  }
+
+  &.character {
+    color: rgb(99, 163, 92);
+  }
+
+  &.other {
+    color: rgb(51, 51, 51);
+  }
+}
+
+.variable.parameter,
+.variable.punctuation.separator,
+.variable.other.object > .punctuation,
+.variable.other.block,
+.variable {
+  color: rgb(51, 51, 51);
+}
+
+.keyword {
+  &.other,
+  &.control,
+  &, &.special-method,
+  &.operator,
+  &.unit {
+    color: rgb(167, 29, 93);
+    font-weight: bold;
+  }
+}
+
+.entity {
+  &.name.function,
+  &.other.attribute-name,
+  &.other.inherited-class.punctuation,
+  &.other.inherited-class,
+  &.name.class {
+    color: rgb(148, 82, 119);
+  }
+}
+
+.support {
+  &.class,
+  &.constant,
+  &.function,
+  &.type {
+    color: rgb(0, 134, 179);
+  }
+}
+
+.markup {
+  &.deleted {
+    background-color: rgb(255, 221, 221);
+    color: rgb(255, 170, 170);
+  }
+
+  &.inserted {
+    color: rgb(128, 200, 117);
+    background-color: rgb(221, 255, 224);
+  }
+}
+
+.invalid {
+  background-color: rgb(255, 221, 221);
+  color: rgb(224, 115, 115);
+
+  &.deprecated {
+    color: rgb(205, 185, 68);
+    background-color: rgb(251, 247, 205);
+  }
+}
+
+.meta {
+  &.structure.dictionary.json > .string.quoted.double.json,
+  &.structure.dictionary.json > .string.quoted.double.json
+      .punctuation.string {
+    color: rgb(99, 163, 92);
+  }
+
+  &.structure.dictionary.value.json > .string.quoted.double.json,
+  &.structure.dictionary.value.json > .string.quoted.double.json
+      > .punctuation {
+    color: rgb(24, 54, 145);
+  }
+
+  &.diff,
+  &.diff.header {
+    color: rgb(150, 152, 150);
+  }
+}
+
+.css, .less, .scss {
+  &.meta.selector,
+  &.support.function {
+    size: 100px;
+    color: rgb(148, 82, 119);
+  }
+}
+
+.coffee.assignment.variable, .yaml.entity.name, .html.entity.tag,
+    .slim.entity.name.tag, .haml.entity.name.tag {
+  color: rgb(99, 163, 92);
+}
+
+.js {
+  &.type.class { color: rgb(148, 82, 119); }
+  &.varabile.language {
+    color: rgb(0, 134, 179);
+  }
+}
