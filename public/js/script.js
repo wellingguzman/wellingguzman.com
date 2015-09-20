@@ -31,18 +31,18 @@
       'Web Developer',
       'Web-Entwickler',
       'Does nothing',
-      'Taco',
-      'Pokemon',
-      'JavaScript',
-      'PHP',
-      'Objective-C',
-      'C/C++',
-      'Backbone.js',
-      'Pillow',
-      'Beer',
+      'Taco Eater',
+      'Pokemon Trainer',
+      'JavaScript Developer',
+      'PHP Developer',
+      'Has Objective-C skills',
+      'C/C++ iskill',
+      'Backbone.js Developer',
+      'Pillow Tester',
+      'Beer Drinker',
       'Green Socks',
-      'CSS',
-      'Diaper'
+      'CSS Styler',
+      'Diaper Changer'
     ];
   }
 
