@@ -40,22 +40,28 @@ a:hover {
 .nav-links li a {
   color: #181010;
 }
-.nav-links li:hover {
+.nav-links li:hover,
+.nav-links li.selected {
   background: #181010;
 }
-.nav-links li:hover a {
+.nav-links li:hover a,
+.nav-links li.selected a {
   color: #4aa55a;
 }
-.notes .nav-links li:hover {
+.notes .nav-links li:hover,
+.notes .nav-links li.selected {
   background: #181010;
 }
-.notes .nav-links li:hover a {
+.notes .nav-links li:hover a,
+.notes .nav-links li.selected a {
   color: #d65231;
 }
-.about .nav-links li:hover {
+.about .nav-links li:hover,
+.about .nav-links li.selected {
   background: #181010;
 }
-.about .nav-links li:hover a {
+.about .nav-links li:hover a,
+.about .nav-links li.selected a {
   color: #739cce;
 }
 .home #header .avatar,
