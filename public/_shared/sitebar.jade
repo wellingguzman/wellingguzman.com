@@ -5,4 +5,8 @@
         ul.nav-links
           if(main_nav)
             each url, label in main_nav
-              li: a(href="#{url}") #{label}
+              - selected = '';
+              - if (current.path[0] == label || (current.path[0] == 'index' && label == 'home')) {
+              -   selected = 'selected';
+              - }
+              li(class="#{selected}"): a(href="#{url}") #{label}
