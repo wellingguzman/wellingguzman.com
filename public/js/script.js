@@ -48,7 +48,8 @@
 
   function addJay() {
     var head = document.getElementsByTagName('head')[0];
-    var style = document.getElementById('style');
+    var baseStyle = document.getElementById('baseStyle');
+    var extendStyle = document.getElementById('extendStyle');
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = '/js/g.js?v=' + SITE_VERSION;
@@ -60,6 +61,16 @@
     link.href = '/css/g.css?v=' + SITE_VERSION;
     head.appendChild(link);
 
+    head.removeChild(extendStyle);
+    head.removeChild(baseStyle);
+
+    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + 3600));
+    window.sessionStorage.setItem('disguise_name', 'jay');
+  }
+
+  function addOne() {
+    var head = document.getElementsByTagName('head')[0];
+    var style = document.getElementById('extendStyle');
     head.removeChild(style);
   }
 
@@ -72,7 +83,30 @@
   }
 
   setDescription(4);
-  if (getRandomInt(0, 100) === 1) {
-    addJay();
+  var disguiseExpiration = window.sessionStorage.getItem('disguise_expiration');
+  var disguiseName = window.sessionStorage.getItem('disguise_name');
+  var disguises = ['jay', 'one'];
+
+  if (parseInt(disguiseExpiration, 10) < (new Date()).getTime() || disguises.indexOf(disguiseName) < 0) {
+    console.log('expired!!!');
+    window.sessionStorage.removeItem('disguise_expiration');
+    window.sessionStorage.removeItem('disguise_name');
+    var randomNumber = getRandomInt(0, 100);
+    var disguiseName = '';
+    if (randomNumber === 34) {
+      disguiseName = 'jay';
+    } else if (randomNumber === 1) {
+      disguiseName = 'one';
+    }
+    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + 3600000));
+    window.sessionStorage.setItem('disguise_name', disguiseName);
+  }
+  switch(disguiseName) {
+    case 'jay':
+      addJay();
+      break;
+    case 'one':
+      addOne();
+      break;
   }
 })();
