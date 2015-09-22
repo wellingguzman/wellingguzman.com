@@ -35,6 +35,10 @@ body {
   &.about {
     background-color: @blue1;
   }
+
+  &.experiments {
+    background-color: @yellow1;
+  }
 }
 
 a:hover {
@@ -46,6 +50,10 @@ a:hover {
 
   .about & {
     background: @blue1;
+  }
+
+  .experiments & {
+    background: @yellow1;
   }
 }
 
@@ -68,7 +76,8 @@ a:hover {
 
   &,
   .notes &,
-  .about & {
+  .about &,
+  .experiments & {
     background-color: transparent;
   }
 }
@@ -103,6 +112,13 @@ a:hover {
         color: @blue2;
       }
     }
+
+    .experiments & {
+      background: @black;
+      a {
+        color: @yellow2;
+      }
+    }
   }
 }
 
@@ -130,6 +146,14 @@ img {
                 -3px 0 0 @blue2,
                 0 3px 0 0 @blue2;
   }
+
+  .experiments & {
+    box-shadow: 0 3px 0 @yellow2,
+                3px 0 0 @yellow2,
+                0 -3px 0 @yellow2,
+                -3px 0 0 @yellow2,
+                0 3px 0 0 @yellow2;
+  }
 }
 
 .Timestamp,
@@ -146,6 +170,10 @@ img {
 
   .about & {
     color: @blue2;
+  }
+
+  .experiments & {
+    color: @yellow2;
   }
 }
 
@@ -173,6 +201,14 @@ img {
       color: @blue1;
     }
   }
+
+  .experiments & {
+    color: @yellow2;
+    border-color: @yellow2;
+    &:hover {
+      color: @yellow1;
+    }
+  }
 }
 
 .Content-box.Content,
@@ -195,6 +231,10 @@ img {
 
   .about & {
     background-color: @blue2;
+  }
+
+  .experiments & {
+    background-color: @yellow2;
   }
 }
 
@@ -219,6 +259,7 @@ img {
     .notes & {
       color: @orange1;
       &:focus, &:active, &:hover {
+        text-decoration: none;
         background-color: @orange1;
         color: @black;
       }
@@ -227,7 +268,17 @@ img {
     .about & {
       color: @blue1;
       &:focus, &:active, &:hover {
+        text-decoration: none;
         background-color: @blue1;
+        color: @black;
+      }
+    }
+
+    .experiments & {
+      color: @yellow1;
+      &:focus, &:active, &:hover {
+        text-decoration: none;
+        background-color: @yellow1;
         color: @black;
       }
     }
@@ -243,6 +294,10 @@ img {
 
     .about & {
       color: @blue1;
+    }
+
+    .experiments & {
+      color: @yellow1;
     }
   }
 }
