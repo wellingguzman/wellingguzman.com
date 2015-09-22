@@ -5,5 +5,8 @@
   "about": {
     "title": "About - Welling Guzman",
     "header_title": "About"
+  },
+  "feed": {
+    "layout": false
   }
 }
