@@ -93,6 +93,9 @@ function run() {
       if (req.url == '/notes') {
         req.url = '/notes/';
       }
+      if (req.url == '/experiments') {
+        req.url = '/experiments/';
+      }
       next();
     });
 
