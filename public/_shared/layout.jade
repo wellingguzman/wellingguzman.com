@@ -14,7 +14,15 @@ html
     link#extendStyle(rel="stylesheet" type="text/css" href="/css/extend.css?v=#{version}")
     script.
       var SITE_VERSION = '#{version}';
-  body(class="#{current.path[0]=='index'?'home':current.path[0]}")
+  - var bodyClassName = '';
+  - if (current.path[0]=='index') {
+  -   bodyClassName = 'home';
+  - } else if (current.path[0] == '404') {
+  -   bodyClassName = 'missingPage';
+  - } else {
+  -   bodyClassName = current.path[0];
+  - }
+  body(class="#{bodyClassName}")
     include sitebar
     include header
     hr
