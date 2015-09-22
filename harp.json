@@ -13,7 +13,8 @@
     "footer_nav": {
       "about": "/about",
       "twitter": "https://twitter.com/WellingGuzman",
-      "github": "https://github.com/WellingGuzman"
+      "github": "https://github.com/WellingGuzman",
+      "RSS": "/feed.xml"
     },
     "language_scopes" : {
       "language-javascript":    "source.js",
