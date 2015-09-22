@@ -9,6 +9,9 @@ body.notes {
 body.about {
   background-color: #adceef;
 }
+body.experiments {
+  background-color: #ffe673;
+}
 a:hover {
   background: #a5d684;
 }
@@ -17,6 +20,9 @@ a:hover {
 }
 .about a:hover {
   background: #adceef;
+}
+.experiments a:hover {
+  background: #ffe673;
 }
 .Post .Post-header {
   border-bottom: 2px solid #181010;
@@ -34,7 +40,8 @@ a:hover {
 }
 #sitebar,
 .notes #sitebar,
-.about #sitebar {
+.about #sitebar,
+.experiments #sitebar {
   background-color: transparent;
 }
 .experiments #footer {
@@ -67,6 +74,14 @@ a:hover {
 .about .nav-links li.selected a {
   color: #739cce;
 }
+.experiments .nav-links li:hover,
+.experiments .nav-links li.selected {
+  background: #181010;
+}
+.experiments .nav-links li:hover a,
+.experiments .nav-links li.selected a {
+  color: #d6a500;
+}
 .home #header .avatar,
 img {
   border-radius: 0;
@@ -80,6 +95,10 @@ img {
 .about img {
   box-shadow: 0 3px 0 #739cce, 3px 0 0 #739cce, 0 -3px 0 #739cce, -3px 0 0 #739cce, 0 3px 0 0 #739cce;
 }
+.experiments .home #header .avatar,
+.experiments img {
+  box-shadow: 0 3px 0 #d6a500, 3px 0 0 #d6a500, 0 -3px 0 #d6a500, -3px 0 0 #d6a500, 0 3px 0 0 #d6a500;
+}
 .Timestamp,
 .home #header .description {
   color: inherit;
@@ -92,6 +111,9 @@ img {
 }
 .about .home #header h1 {
   color: #739cce;
+}
+.experiments .home #header h1 {
+  color: #d6a500;
 }
 .Post a {
   color: #4aa55a;
@@ -116,6 +138,13 @@ img {
 .about .Post a:hover {
   color: #adceef;
 }
+.experiments .Post a {
+  color: #d6a500;
+  border-color: #d6a500;
+}
+.experiments .Post a:hover {
+  color: #ffe673;
+}
 .Content-box.Content,
 .Content-box .site-nav,
 #footer .Content-box {
@@ -132,6 +161,9 @@ img {
 }
 .about .Content-box .site-nav {
   background-color: #739cce;
+}
+.experiments .Content-box .site-nav {
+  background-color: #d6a500;
 }
 .Content-bottom:before {
   background: #181010;
@@ -158,6 +190,7 @@ img {
 .notes #footer a:focus,
 .notes #footer a:active,
 .notes #footer a:hover {
+  text-decoration: none;
   background-color: #ffa552;
   color: #181010;
 }
@@ -167,7 +200,18 @@ img {
 .about #footer a:focus,
 .about #footer a:active,
 .about #footer a:hover {
+  text-decoration: none;
   background-color: #adceef;
+  color: #181010;
+}
+.experiments #footer a {
+  color: #ffe673;
+}
+.experiments #footer a:focus,
+.experiments #footer a:active,
+.experiments #footer a:hover {
+  text-decoration: none;
+  background-color: #ffe673;
   color: #181010;
 }
 #footer .Content-box {
@@ -179,4 +223,7 @@ img {
 }
 .about #footer .Content-box {
   color: #adceef;
+}
+.experiments #footer .Content-box {
+  color: #ffe673;
 }
