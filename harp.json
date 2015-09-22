@@ -11,9 +11,9 @@
       "about": "/about"
     },
     "footer_nav": {
-      "about": "/about",
-      "twitter": "https://twitter.com/WellingGuzman",
-      "github": "https://github.com/WellingGuzman",
+      "About": "/about",
+      "Twitter": "https://twitter.com/WellingGuzman",
+      "GitHub": "https://github.com/WellingGuzman",
       "RSS": "/feed.xml"
     },
     "language_scopes" : {
