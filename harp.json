@@ -8,7 +8,8 @@
     "main_nav": {
       "home": "/",
       "notes": "/notes",
-      "about": "/about"
+      "about": "/about",
+      "experiments": "/experiments"
     },
     "footer_nav": {
       "About": "/about",
