@@ -12,6 +12,10 @@ body.about {
 body.experiments {
   background-color: #ffe673;
 }
+body.missingPage {
+  background-color: #ecdcf3;
+  background-image: url(../images/missingPageBg.jpg);
+}
 a:hover {
   background: #a5d684;
 }
@@ -23,6 +27,9 @@ a:hover {
 }
 .experiments a:hover {
   background: #ffe673;
+}
+.missingPageBg a:hover {
+  background: #ecdcf3;
 }
 .Post .Post-header {
   border-bottom: 2px solid #181010;
@@ -41,7 +48,8 @@ a:hover {
 #sitebar,
 .notes #sitebar,
 .about #sitebar,
-.experiments #sitebar {
+.experiments #sitebar,
+.missingPage #sitebar {
   background-color: transparent;
 }
 .experiments #footer {
@@ -82,6 +90,14 @@ a:hover {
 .experiments .nav-links li.selected a {
   color: #d6a500;
 }
+.missingPage .nav-links li:hover,
+.missingPage .nav-links li.selected {
+  background: #181010;
+}
+.missingPage .nav-links li:hover a,
+.missingPage .nav-links li.selected a {
+  color: #bcabbc;
+}
 .home #header .avatar,
 img {
   border-radius: 0;
@@ -99,6 +115,10 @@ img {
 .experiments img {
   box-shadow: 0 3px 0 #d6a500, 3px 0 0 #d6a500, 0 -3px 0 #d6a500, -3px 0 0 #d6a500, 0 3px 0 0 #d6a500;
 }
+.missingPage .home #header .avatar,
+.missingPage img {
+  box-shadow: 0 3px 0 #bcabbc, 3px 0 0 #bcabbc, 0 -3px 0 #bcabbc, -3px 0 0 #bcabbc, 0 3px 0 0 #bcabbc;
+}
 .Timestamp,
 .home #header .description {
   color: inherit;
@@ -114,6 +134,9 @@ img {
 }
 .experiments .home #header h1 {
   color: #d6a500;
+}
+.missingPage .home #header h1 {
+  color: #bcabbc;
 }
 .Post a {
   color: #4aa55a;
@@ -145,6 +168,13 @@ img {
 .experiments .Post a:hover {
   color: #ffe673;
 }
+.missingPage .Post a {
+  color: #bcabbc;
+  border-color: #bcabbc;
+}
+.missingPage .Post a:hover {
+  color: #ecdcf3;
+}
 .Content-box.Content,
 .Content-box .site-nav,
 #footer .Content-box {
@@ -164,6 +194,9 @@ img {
 }
 .experiments .Content-box .site-nav {
   background-color: #d6a500;
+}
+.missingPage .Content-box .site-nav {
+  background-color: #bcabbc;
 }
 .Content-bottom:before {
   background: #181010;
@@ -214,6 +247,16 @@ img {
   background-color: #ffe673;
   color: #181010;
 }
+.missingPage #footer a {
+  color: #ecdcf3;
+}
+.missingPage #footer a:focus,
+.missingPage #footer a:active,
+.missingPage #footer a:hover {
+  text-decoration: none;
+  background-color: #ecdcf3;
+  color: #181010;
+}
 #footer .Content-box {
   background-color: #6b6b6b;
   color: #a5d684;
@@ -226,4 +269,7 @@ img {
 }
 .experiments #footer .Content-box {
   color: #ffe673;
+}
+.missingPage #footer .Content-box {
+  color: #ecdcf3;
 }
