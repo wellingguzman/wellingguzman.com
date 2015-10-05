@@ -9,7 +9,7 @@
   "author": "Welling Guzman",
   "license": "MIT",
   "dependencies": {
-    "harp": "~0.14.0",
+    "harp": "~0.19.0",
     "moment": "~2.8.4",
     "highlights": "~1.2.0",
     "cheerio": "~0.18.0",
