@@ -26,10 +26,40 @@
 @yellow1: #ffe673;
 @yellow2: #d6a500;
 
+@-webkit-keyframes blur {
+  0%   { -webkit-filter: blur(0.7px); opacity:0.98;}
+  25%  { -webkit-filter: blur(0px); opacity:1;}
+  50%  { -webkit-filter: blur(0.7px); opacity:0.98; }
+  75%  { -webkit-filter: blur(0px); opacity:1; }
+  100% { -webkit-filter: blur(0.7px); opacity:0.98; }
+}
+
+@-webkit-keyframes fontStyle {
+  0%   { font-style: italic; }
+  50%  { font-style: normal; }
+  100% { text-transform: underscore; }
+}
+@-webkit-keyframes fontFamily {
+  0%   { font-family: monospace;}
+  50%  { font-family: sans-serif; }
+  100% { font-family: Helvetica; }
+}
+
+@-webkit-keyframes jerk {
+  50% { left:5px; }
+  51% { left:-5px; }
+  52% { left: 0; }
+}
+
 body {
   color: @black;
   background-color: @green1;
   -webkit-font-smoothing: auto;
+
+  &.missingPage, &.missingPage h1 {
+    position: relative;
+    -webkit-animation: blur 500ms 5, jerk 1000ms 5, fontFamily 1510ms 5;
+  }
 
   &.notes {
     background-color: @orange1;
