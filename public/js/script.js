@@ -1,6 +1,7 @@
-'use strict';
-
 (function() {
+  
+  'use strict';
+  
   function setDescription(quantity) {
     quantity = quantity || 3;
     var words = getWords();
