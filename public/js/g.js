@@ -1,4 +1,6 @@
 (function(){
+  
+  'use strict';
 
   function wrapElement(whichElement, withElement) {
     whichElement.parentNode.insertBefore(withElement, whichElement);
