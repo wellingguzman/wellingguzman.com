@@ -1,11 +1,11 @@
-posts = partial('_shared/posts', { postlimit: 18 })
+- posts = partial('_shared/posts', { postlimit: 18 })
 ul.List
-  post = posts.shift();
+  - post = posts.shift();
   while post
     li.List-item
       .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
       .List-text: a(href="#{post.url_relative}") #{post.title}
-    post = posts.shift();
+    - post = posts.shift();
 
 .Content-bottom
   a.Button(href="/notes") Older notes
