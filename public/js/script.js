@@ -1,7 +1,28 @@
 (function() {
-  
+
   'use strict';
-  
+
+  function getWords() {
+    return [
+      'Desarrollador Web',
+      'Web Developer',
+      'Web-Entwickler',
+      'Does nothing',
+      'Taco Eater',
+      'Pokemon Trainer',
+      'JavaScript Developer',
+      'PHP Developer',
+      'Has Objective-C skills',
+      'C/C++ iskill',
+      'Backbone.js Developer',
+      'Pillow Tester',
+      'Beer Drinker',
+      'Green Socks',
+      'CSS Styler',
+      'Diaper Changer'
+    ];
+  }
+
   function setDescription(quantity) {
     quantity = quantity || 3;
     var words = getWords();
@@ -24,27 +45,6 @@
     if (description) {
       description.innerHTML = message.join(' | ');
     }
-  }
-
-  function getWords() {
-    return [
-      'Desarrollador Web',
-      'Web Developer',
-      'Web-Entwickler',
-      'Does nothing',
-      'Taco Eater',
-      'Pokemon Trainer',
-      'JavaScript Developer',
-      'PHP Developer',
-      'Has Objective-C skills',
-      'C/C++ iskill',
-      'Backbone.js Developer',
-      'Pillow Tester',
-      'Beer Drinker',
-      'Green Socks',
-      'CSS Styler',
-      'Diaper Changer'
-    ];
   }
 
   function addJay() {
