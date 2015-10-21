@@ -15,7 +15,7 @@ block content
                 each tag in tags
                   .Tag(href="#") #{tag}
       .Post-content
-        content = partial('../_shared/highlight', {yield: yield})
+        - content = partial('../_shared/highlight', {yield: yield})
         != content
       //-   if (current.source != 'index')
       //- footer.Post-footer
