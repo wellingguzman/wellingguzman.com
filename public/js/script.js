@@ -8,7 +8,7 @@
       'Web Developer',
       'Web-Entwickler',
       'Does nothing',
-      'Taco Eater',
+      'Eats Taco',
       'Pokemon Trainer',
       'JavaScript Developer',
       'PHP Developer',
