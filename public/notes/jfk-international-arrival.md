@@ -1,2 +1,0 @@
-- long lines
-- not rely on anything appointment near time of arrival 
