@@ -4,8 +4,8 @@
 
 <p>By seeing this behavior it has to be the custom post and his rewrite fault, this is part of the custom post:</p>
 
-<pre class="php">
-<code>
+```php
+<?php
 'public' => true,
 'show_ui' => true,
 'has_archive' => true,
@@ -17,8 +17,7 @@
 'rewrite' => array('slug'=>'films'),
 'supports' => array('title', 'thumbnail'),
 'show_in_nav_menus' => true
-</code>
-</pre>
+```
 
 <p>There is three solution to this:</p>
 
