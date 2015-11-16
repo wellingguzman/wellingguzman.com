@@ -90,11 +90,9 @@ function run() {
   } else {
     route.all('*', function (req, res, next){
       //@todo fix this
-      if (req.url == '/notes') {
-        req.url = '/notes/';
-      }
-      if (req.url == '/experiments') {
-        req.url = '/experiments/';
+      var directories = ['/notes', '/experiments'];
+      if (directories.indexOf(req.url) >= 0) {
+        req.url = req.url + '/';
       }
       next();
     });
