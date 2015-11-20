@@ -19,13 +19,11 @@
 
 <h2 id="metodo2">Metodo 2</h2>
 
-<p>El metodo 2 lo utilizas si no tienes acceso al php.ini o no quieres modificarlos de todo caso este metodo para hacer que reaparezcan esos errores al inicio del archivo php deberás agregar estas linea, que vendría siendo lo mismo que modificaríamos en php.ini.
-<pre>
-<code class="php">
+<p>El metodo 2 lo utilizas si no tienes acceso al php.ini o no quieres modificarlos de todo caso este metodo para hacer que reaparezcan esos errores al inicio del archivo php deberás agregar estas linea, que vendría siendo lo mismo que modificaríamos en php.ini.</p>
+
+```php
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-</code>
-</pre>
-</p>
+```
 
 <p>Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.</p>
