@@ -1,4 +1,5 @@
 var http = require('http');
+var fs = require('fs');
 var router = require('router-stupid');
 var harp = require ('harp');
 var moment = require('moment');
@@ -85,7 +86,7 @@ function run() {
     console.log('Running harp-static (production) on ' + port);
     http.createServer(route).listen(port);
 
-    fourohfour = require('fs').readFileSync(outputPath + '/404.html');
+    fourohfour = fs.readFileSync(outputPath + '/404.html');
     server(outputPath, port);
   } else {
     route.all('*', function (req, res, next){
