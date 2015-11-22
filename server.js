@@ -90,7 +90,7 @@ function run() {
     server(outputPath, port);
   } else {
     route.all('*', function (req, res, next){
-      //@todo fix this
+      // list of directories that represents a post "category"
       var directories = ['/notes', '/experiments'];
       if (directories.indexOf(req.url) >= 0) {
         req.url = req.url + '/';
