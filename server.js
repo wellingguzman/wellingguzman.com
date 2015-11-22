@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var router = require('router-stupid');
-var harp = require ('harp');
+var harp = require('harp');
 var moment = require('moment');
 var Highlights = require('highlights');
 var cheerio = require('cheerio');
