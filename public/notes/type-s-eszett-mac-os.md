@@ -3,7 +3,7 @@
 <span id="more-428"></span>
 
 <h2>Mac OS</h2>
-<p>the "s" needs to be lowercase</p>
+<p>The "s" needs to be lowercase</p>
 <pre class="text"><code>alt/option/⌥ + s</code></pre>
 
 <h2>iOS</h2>
