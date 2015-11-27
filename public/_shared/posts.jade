@@ -12,7 +12,7 @@
 -   post.slug = slug;
 -   post.url_relative = '/notes/' + post.slug;
 -   post.url = site_url + post.url_relative;
--   post.date = post.date || new Date();
+-   post.date = post.date || new Date(0);
 -   return post;
 - }).filter(function (post) {
 -   if (post.published===false) {
