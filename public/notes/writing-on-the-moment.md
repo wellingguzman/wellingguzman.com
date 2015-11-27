@@ -1,6 +1,6 @@
-This is probably has been said a lot out there, but I want to tell you again, if you like to express an idea, a experience or simply want to share some thoughts, write it down while you got the momentum going.
+This is probably has been said a lot out there, but I wanted to tell you this again, if you like to express an idea, a experience or simply want to share your thoughts, write it down while you got the momentum going.
 
-If you love something and want to say how much you love it, say it while you love it, and when you stop loving it, you can share it again and compare.
+If you love something and want to say how much you love it, say it while you love it, and when you stop loving it, you can share it again and compare saying why you stop loving it.
 
 If you want to share something today, and you are like me, there's a high chance that tomorrow you won't feel that spark that make you feel that you need it to share something.
 
