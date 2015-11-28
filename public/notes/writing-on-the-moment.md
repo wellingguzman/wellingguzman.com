@@ -8,6 +8,8 @@ I want to share so much, but then I end up thinking, who wants to read this anyw
 
 Don't be me and share your thoughts, it doesn't matter that you think it's worthless, someone will find it worth it.
 
-I'm saying this not because I do it, because I don't, but because I've been on the other side as a reader, reading comments about how they hate the post AND the author, while I'm sitting here thinking why do they hate them, they are awesome and this content is great.
+I'm saying this not because I do it, because I don't, but because I've been on the other side as a reader, reading comments about how they hate the post AND the author, while I'm sitting here thinking why do they hate them, they are awesome and this content is great. The author probably is thinking is all true, because people who liked the content are not expressing their love to them and their content, but rather they just stare at how other people hate (or _don't like_) them.
 
-Please, share your thoughts, I'll take my own advice and do the same.
+Please, share your thoughts and let people know if you liked their content or not, but do not offend them, they can talk, if not, move along.
+
+I'll take my own advice and do the same. Let's

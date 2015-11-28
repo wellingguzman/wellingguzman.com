@@ -116,8 +116,9 @@
   },
   "writing-on-the-moment": {
     "title": "Writing on the moment",
-    "published": false,
-    "tags": []  
+    "date": "2015-11-28 07:34:55",
+    "published": true,
+    "tags": []
   },
   "twenty-years-of-php": {
     "title": "Twenty years of PHP",
