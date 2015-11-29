@@ -9,13 +9,13 @@
   "author": "Welling Guzman",
   "license": "MIT",
   "dependencies": {
-    "harp": "~0.20.0",
-    "moment": "~2.8.4",
-    "highlights": "~1.3.0",
     "cheerio": "~0.18.0",
-    "string": "~2.2.0",
-    "router-stupid": "~0.7.0",
     "glob": "~4.2.1",
-    "st": "~0.5.2"
+    "harp": "~0.20.0",
+    "highlights": "~1.3.0",
+    "moment": "~2.8.4",
+    "router-stupid": "~0.7.0",
+    "st": "~0.5.2",
+    "string": "~2.2.0"
   }
 }
