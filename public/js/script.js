@@ -98,7 +98,8 @@
     } else if (randomNumber === 1) {
       disguiseName = 'one';
     }
-    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + 3600000));
+    var THIRTY_DAYS = 2592000;
+    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + THIRTY_DAYS));
     window.sessionStorage.setItem('disguise_name', disguiseName);
   }
   switch(disguiseName) {
