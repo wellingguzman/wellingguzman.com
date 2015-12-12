@@ -1,9 +1,8 @@
 - var blog = public.notes || public.public.notes;
 - var postLimit = postLimit || 10;
-- // For some reason I need to take the index out of the list
-- // It return a all wrong sorted list.
 - var posts = blog._data ? Object.keys(blog._data) : [];
 - var indexPageIndex = posts.indexOf('index');
+- // I do not need  the index to be part of the post lists
 - if (indexPageIndex>-1) {
 -   posts.splice(indexPageIndex,1);
 - }
