@@ -1,0 +1,13 @@
+- tag = filter === undefined ? current.path.slice(-2, -1)[0] : filter;
+- posts = partial('posts', { filter: function (post) {
+-   if (post.tags && post.tags.indexOf(tag) !== -1) return true;
+-   return false;
+- }});
+
+ul.List
+  - post = posts.shift();
+  while post
+    li.List-item
+      .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
+      .List-text: a(href="#{post.url_relative}") #{post.title}
+    - post = posts.shift();
