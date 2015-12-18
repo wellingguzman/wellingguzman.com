@@ -73,6 +73,10 @@ body {
     background-color: @yellow1;
   }
 
+  &.tags {
+    background-color: @brown1;
+  }
+
   &.missingPage {
     background-color: @purple1;
     background-image: url(../images/missingPageBg.jpg);
@@ -92,6 +96,10 @@ a:hover {
 
   .experiments & {
     background: @yellow1;
+  }
+
+  .tags & {
+    background: @brown1;
   }
 
   .missingPageBg & {
@@ -163,6 +171,13 @@ a:hover {
       }
     }
 
+    .tags & {
+      background: @black;
+      a {
+        color: @brown2;
+      }
+    }
+
     .missingPage & {
       background: @black;
       a {
@@ -205,6 +220,14 @@ img {
                 0 3px 0 0 @yellow2;
   }
 
+  .experiments & {
+    box-shadow: 0 3px 0 @brown2,
+                3px 0 0 @brown2,
+                0 -3px 0 @brown2,
+                -3px 0 0 @brown2,
+                0 3px 0 0 @brown2;
+  }
+
   .missingPage & {
     box-shadow: 0 3px 0 @purple2,
                 3px 0 0 @purple2,
@@ -232,6 +255,10 @@ img {
 
   .experiments & {
     color: @yellow2;
+  }
+
+  .tags & {
+    color: @brown2;
   }
 
   .missingPage & {
@@ -272,6 +299,14 @@ img {
     }
   }
 
+  .tags & {
+    color: @brown2;
+    border-color: @brown2;
+    &:hover {
+      color: @brown1;
+    }
+  }
+
   .missingPage & {
     color: @purple2;
     border-color: @purple2;
@@ -305,6 +340,10 @@ img {
 
   .experiments & {
     background-color: @yellow2;
+  }
+
+  .tags & {
+    background-color: @brown2;
   }
 
   .missingPage & {
@@ -357,6 +396,15 @@ img {
       }
     }
 
+    .tags & {
+      color: @brown1;
+      &:focus, &:active, &:hover {
+        text-decoration: none;
+        background-color: @brown1;
+        color: @black;
+      }
+    }
+
     .missingPage & {
       color: @purple1;
       &:focus, &:active, &:hover {
@@ -381,6 +429,10 @@ img {
 
     .experiments & {
       color: @yellow1;
+    }
+
+    .tags & {
+      color: @brown1;
     }
 
     .missingPage & {
