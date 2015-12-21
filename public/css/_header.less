@@ -20,6 +20,16 @@
   {
     background: @navBlue;
   }
+
+  .tags &
+  {
+    background: @navBrown;
+  }
+
+  .experiments &
+  {
+    background: @navYellow;
+  }
 }
 // @todo create some mixin or something dude!
 @media (min-width: 570px) {
@@ -59,6 +69,16 @@
       .about &
       {
         background: lighten(@navBlue, 10%);
+      }
+
+      .tags &
+      {
+        background: lighten(@navBrown, 10%);
+      }
+
+      .experiments &
+      {
+        background: lighten(@navYellow, 10%);
       }
     }
 
