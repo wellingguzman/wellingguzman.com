@@ -72,6 +72,9 @@ body.about {
 body.experiments {
   background-color: #ffe673;
 }
+body.tags {
+  background-color: #e6a57b;
+}
 body.missingPage {
   background-color: #ecdcf3;
   background-image: url(../images/missingPageBg.jpg);
@@ -87,6 +90,9 @@ a:hover {
 }
 .experiments a:hover {
   background: #ffe673;
+}
+.tags a:hover {
+  background: #e6a57b;
 }
 .missingPageBg a:hover {
   background: #ecdcf3;
@@ -150,6 +156,14 @@ a:hover {
 .experiments .nav-links li.selected a {
   color: #d6a500;
 }
+.tags .nav-links li:hover,
+.tags .nav-links li.selected {
+  background: #181010;
+}
+.tags .nav-links li:hover a,
+.tags .nav-links li.selected a {
+  color: #ad734a;
+}
 .missingPage .nav-links li:hover,
 .missingPage .nav-links li.selected {
   background: #181010;
@@ -175,6 +189,10 @@ img {
 .experiments img {
   box-shadow: 0 3px 0 #d6a500, 3px 0 0 #d6a500, 0 -3px 0 #d6a500, -3px 0 0 #d6a500, 0 3px 0 0 #d6a500;
 }
+.experiments .home #header .avatar,
+.experiments img {
+  box-shadow: 0 3px 0 #ad734a, 3px 0 0 #ad734a, 0 -3px 0 #ad734a, -3px 0 0 #ad734a, 0 3px 0 0 #ad734a;
+}
 .missingPage .home #header .avatar,
 .missingPage img {
   box-shadow: 0 3px 0 #bcabbc, 3px 0 0 #bcabbc, 0 -3px 0 #bcabbc, -3px 0 0 #bcabbc, 0 3px 0 0 #bcabbc;
@@ -194,6 +212,9 @@ img {
 }
 .experiments .home #header h1 {
   color: #d6a500;
+}
+.tags .home #header h1 {
+  color: #ad734a;
 }
 .missingPage .home #header h1 {
   color: #bcabbc;
@@ -228,6 +249,13 @@ img {
 .experiments .Post a:hover {
   color: #ffe673;
 }
+.tags .Post a {
+  color: #ad734a;
+  border-color: #ad734a;
+}
+.tags .Post a:hover {
+  color: #e6a57b;
+}
 .missingPage .Post a {
   color: #bcabbc;
   border-color: #bcabbc;
@@ -254,6 +282,9 @@ img {
 }
 .experiments .Content-box .site-nav {
   background-color: #d6a500;
+}
+.tags .Content-box .site-nav {
+  background-color: #ad734a;
 }
 .missingPage .Content-box .site-nav {
   background-color: #bcabbc;
@@ -307,6 +338,16 @@ img {
   background-color: #ffe673;
   color: #181010;
 }
+.tags #footer a {
+  color: #e6a57b;
+}
+.tags #footer a:focus,
+.tags #footer a:active,
+.tags #footer a:hover {
+  text-decoration: none;
+  background-color: #e6a57b;
+  color: #181010;
+}
 .missingPage #footer a {
   color: #ecdcf3;
 }
@@ -329,6 +370,9 @@ img {
 }
 .experiments #footer .Content-box {
   color: #ffe673;
+}
+.tags #footer .Content-box {
+  color: #e6a57b;
 }
 .missingPage #footer .Content-box {
   color: #ecdcf3;
