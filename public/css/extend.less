@@ -26,6 +26,9 @@
 @yellow1: #ffe673;
 @yellow2: #d6a500;
 
+@yuk1: #d6adb5;
+@yuk2: #7b7b94;
+
 @-webkit-keyframes blur {
   0%   { -webkit-filter: blur(0.7px); opacity:0.98;}
   25%  { -webkit-filter: blur(0px); opacity:1;}
@@ -77,6 +80,10 @@ body {
     background-color: @brown1;
   }
 
+  &.projects {
+    background-color: @yuk1;
+  }
+
   &.missingPage {
     background-color: @purple1;
     background-image: url(../images/missingPageBg.jpg);
@@ -100,6 +107,10 @@ a:hover {
 
   .tags & {
     background: @brown1;
+  }
+
+  .projects & {
+    background: @yuk1;
   }
 
   .missingPageBg & {
@@ -128,6 +139,7 @@ a:hover {
   .notes &,
   .about &,
   .experiments &,
+  .projects &,
   .missingPage & {
     background-color: transparent;
   }
@@ -175,6 +187,13 @@ a:hover {
       background: @black;
       a {
         color: @brown2;
+      }
+    }
+
+    .projects & {
+      background: @black;
+      a {
+        color: @yuk2;
       }
     }
 
@@ -228,6 +247,14 @@ img {
                 0 3px 0 0 @brown2;
   }
 
+  .projects & {
+    box-shadow: 0 3px 0 @yuk2,
+                3px 0 0 @yuk2,
+                0 -3px 0 @yuk2,
+                -3px 0 0 @yuk2,
+                0 3px 0 0 @yuk2;
+  }
+
   .missingPage & {
     box-shadow: 0 3px 0 @purple2,
                 3px 0 0 @purple2,
@@ -259,6 +286,10 @@ img {
 
   .tags & {
     color: @brown2;
+  }
+
+  .projects & {
+    color: @yuk2;
   }
 
   .missingPage & {
@@ -307,6 +338,14 @@ img {
     }
   }
 
+  .projects & {
+    color: @yuk2;
+    border-color: @yuk2;
+    &:hover {
+      color: @yuk1;
+    }
+  }
+
   .missingPage & {
     color: @purple2;
     border-color: @purple2;
@@ -344,6 +383,10 @@ img {
 
   .tags & {
     background-color: @brown2;
+  }
+
+  .projects & {
+    background-color: @yuk2;
   }
 
   .missingPage & {
@@ -405,6 +448,15 @@ img {
       }
     }
 
+    .projects & {
+      color: @yuk1;
+      &:focus, &:active, &:hover {
+        text-decoration: none;
+        background-color: @yuk1;
+        color: @black;
+      }
+    }
+
     .missingPage & {
       color: @purple1;
       &:focus, &:active, &:hover {
@@ -433,6 +485,10 @@ img {
 
     .tags & {
       color: @brown1;
+    }
+
+    .projects & {
+      color: @yuk1;
     }
 
     .missingPage & {
