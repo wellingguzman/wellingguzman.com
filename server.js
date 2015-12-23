@@ -21,6 +21,11 @@ global.cheerio = cheerio;
 global.S = S;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
 
+function redirect(res, url) {
+  res.writeHead(302, { location: url });
+  res.end();
+}
+
 route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
   res.writeHead(302, { 'location': '/images/' + req.params.filename });
   res.end();
@@ -89,16 +94,13 @@ function run() {
     fourohfour = fs.readFileSync(outputPath + '/404.html');
     server(outputPath, port);
   } else {
-    route.all('*', function (req, res, next){
-      if ('/public'.indexOf(req.url) > -1) {
-        next();
-      }
+    route.get(/^\/tags(\/(.*))?$/, function (req, res, next) {
+      req.url+='/';
+      next();
+    });
 
-      // list of directories that represents a post "category"
-      if (req.url.split().pop() !== '/') {
-        req.url = req.url + '/';
-      }
-
+    route.get(/^\/notes$/, function (req, res, next) {
+      req.url+='/';
       next();
     });
 
