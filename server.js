@@ -90,11 +90,15 @@ function run() {
     server(outputPath, port);
   } else {
     route.all('*', function (req, res, next){
+      if ('/public'.indexOf(req.url) > -1) {
+        next();
+      }
+
       // list of directories that represents a post "category"
-      var directories = ['/notes', '/experiments', '/tags'];
-      if (directories.indexOf(req.url) >= 0) {
+      if (req.url.split().pop() !== '/') {
         req.url = req.url + '/';
       }
+
       next();
     });
 
