@@ -1,5 +1,6 @@
 var http = require('http');
 var fs = require('fs');
+var path = require('path');
 var router = require('router-stupid');
 var harp = require('harp');
 var moment = require('moment');
@@ -20,12 +21,25 @@ global.highlighter = new Highlights();
 global.cheerio = cheerio;
 global.S = S;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
+global.tags = [];
 
 function redirect(res, url) {
   res.writeHead(302, { location: url });
   res.end();
 }
 
+function getDirectories(srcpath) {
+  return fs.readdirSync(srcpath).filter(function(file) {
+    return fs.statSync(path.join(srcpath, file)).isDirectory();
+  });
+}
+
+try {
+  global.tags = getDirectories(__dirname+'/public/tags');
+} catch (ex) {
+  global.tags = [];
+}
+console.log(global.tags);
 route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
   res.writeHead(302, { 'location': '/images/' + req.params.filename });
   res.end();
