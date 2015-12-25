@@ -1,4 +1,5 @@
 {
-  "personal": true,
-  "web": true
+  "personal": {
+    "hidden": false
+  }
 }
