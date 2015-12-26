@@ -114,6 +114,10 @@
     "published": false,
     "tags": []
   },
+  "my-running-goal-game": {
+    "title": "My running goal game",
+    "published": false
+  },
   "writing-on-the-moment": {
     "title": "Writing on the moment",
     "date": "2015-11-29 00:51:55",
