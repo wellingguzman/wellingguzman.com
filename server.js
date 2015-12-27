@@ -39,7 +39,7 @@ try {
 } catch (ex) {
   global.tags = [];
 }
-console.log(global.tags);
+
 route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
   res.writeHead(302, { 'location': '/images/' + req.params.filename });
   res.end();
