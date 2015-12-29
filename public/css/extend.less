@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
 @white: #f9f7f9;
 @white2: #ffffff;
 @black: #181010;
@@ -57,7 +59,7 @@
 body {
   color: @black;
   background-color: @green1;
-  -webkit-font-smoothing: auto;
+	font-family: 'Source Sans Pro', sans-serif;
 
   &.missingPage, &.missingPage h1 {
     position: relative;
@@ -118,9 +120,17 @@ a:hover {
   }
 }
 
+h1, h2, h3, h4, h5, h6, .List-text {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 .Post .Post-header {
   border-bottom: 2px solid @black;
   margin-bottom: 10px;
+}
+
+.Post .Post-content {
+	font-family: Georgia, serif;
 }
 
 .Post .Tags a.Tag {
@@ -148,12 +158,15 @@ a:hover {
 }
 
 #footer {
+	font-size: 1.13em;
   .experiments & {
     background-color: transparent;
   }
 }
 
-.nav-links li{
+.nav-links li {
+	font-size: 1.1em;
+
   a {
     color: @black;
   }
