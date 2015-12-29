@@ -75,6 +75,9 @@ body.experiments {
 body.tags {
   background-color: #e6a57b;
 }
+body.projects {
+  background-color: #d6adb5;
+}
 body.missingPage {
   background-color: #ecdcf3;
   background-image: url(../images/missingPageBg.jpg);
@@ -94,6 +97,9 @@ a:hover {
 .tags a:hover {
   background: #e6a57b;
 }
+.projects a:hover {
+  background: #d6adb5;
+}
 .missingPageBg a:hover {
   background: #ecdcf3;
 }
@@ -101,10 +107,12 @@ a:hover {
   border-bottom: 2px solid #181010;
   margin-bottom: 10px;
 }
-.Tags .Tag {
+.Post .Tags a.Tag {
+  color: #fff;
   background-color: #ffa552;
 }
-.Tags .Tag:hover {
+.Post .Tags a.Tag:hover {
+  color: #fff;
   background-color: #d65231;
 }
 #sitebar {
@@ -115,6 +123,7 @@ a:hover {
 .notes #sitebar,
 .about #sitebar,
 .experiments #sitebar,
+.projects #sitebar,
 .missingPage #sitebar {
   background-color: transparent;
 }
@@ -164,6 +173,14 @@ a:hover {
 .tags .nav-links li.selected a {
   color: #ad734a;
 }
+.projects .nav-links li:hover,
+.projects .nav-links li.selected {
+  background: #181010;
+}
+.projects .nav-links li:hover a,
+.projects .nav-links li.selected a {
+  color: #7b7b94;
+}
 .missingPage .nav-links li:hover,
 .missingPage .nav-links li.selected {
   background: #181010;
@@ -193,6 +210,10 @@ img {
 .experiments img {
   box-shadow: 0 3px 0 #ad734a, 3px 0 0 #ad734a, 0 -3px 0 #ad734a, -3px 0 0 #ad734a, 0 3px 0 0 #ad734a;
 }
+.projects .home #header .avatar,
+.projects img {
+  box-shadow: 0 3px 0 #7b7b94, 3px 0 0 #7b7b94, 0 -3px 0 #7b7b94, -3px 0 0 #7b7b94, 0 3px 0 0 #7b7b94;
+}
 .missingPage .home #header .avatar,
 .missingPage img {
   box-shadow: 0 3px 0 #bcabbc, 3px 0 0 #bcabbc, 0 -3px 0 #bcabbc, -3px 0 0 #bcabbc, 0 3px 0 0 #bcabbc;
@@ -215,6 +236,9 @@ img {
 }
 .tags .home #header h1 {
   color: #ad734a;
+}
+.projects .home #header h1 {
+  color: #7b7b94;
 }
 .missingPage .home #header h1 {
   color: #bcabbc;
@@ -256,6 +280,13 @@ img {
 .tags .Post a:hover {
   color: #e6a57b;
 }
+.projects .Post a {
+  color: #7b7b94;
+  border-color: #7b7b94;
+}
+.projects .Post a:hover {
+  color: #d6adb5;
+}
 .missingPage .Post a {
   color: #bcabbc;
   border-color: #bcabbc;
@@ -285,6 +316,9 @@ img {
 }
 .tags .Content-box .site-nav {
   background-color: #ad734a;
+}
+.projects .Content-box .site-nav {
+  background-color: #7b7b94;
 }
 .missingPage .Content-box .site-nav {
   background-color: #bcabbc;
@@ -348,6 +382,16 @@ img {
   background-color: #e6a57b;
   color: #181010;
 }
+.projects #footer a {
+  color: #d6adb5;
+}
+.projects #footer a:focus,
+.projects #footer a:active,
+.projects #footer a:hover {
+  text-decoration: none;
+  background-color: #d6adb5;
+  color: #181010;
+}
 .missingPage #footer a {
   color: #ecdcf3;
 }
@@ -373,6 +417,9 @@ img {
 }
 .tags #footer .Content-box {
   color: #e6a57b;
+}
+.projects #footer .Content-box {
+  color: #d6adb5;
 }
 .missingPage #footer .Content-box {
   color: #ecdcf3;
