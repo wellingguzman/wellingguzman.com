@@ -110,7 +110,8 @@ h3,
 h4,
 h5,
 h6,
-.List-text {
+.List-text,
+.List-meta {
   font-family: 'Source Sans Pro', sans-serif;
 }
 .Post .Post-header {
@@ -145,6 +146,9 @@ h6,
 }
 .experiments #footer {
   background-color: transparent;
+}
+.Site-footer-links {
+  padding-bottom: 0;
 }
 .nav-links li {
   font-size: 1.1em;
