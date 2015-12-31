@@ -114,6 +114,9 @@ h6,
 .List-meta {
   font-family: 'Source Sans Pro', sans-serif;
 }
+.List-meta .Timestamp {
+  font-size: 0.85em;
+}
 .Post .Post-header {
   border-bottom: 2px solid #181010;
   margin-bottom: 10px;
