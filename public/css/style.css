@@ -296,8 +296,7 @@ p {
 hr {
   display: none;
 }
-.Text-truncate,
-.List-text {
+.Text-truncate {
   max-width: 100%;
   overflow: hidden!important;
   text-overflow: ellipsis!important;
@@ -595,6 +594,10 @@ figure figcaption {
   background-position: bottom center;
   color: #fff;
 }
+.Post-List .Post-title {
+  font-size: 1.3em;
+  line-height: 1.6;
+}
 .Post {
   margin-bottom: 50px;
 }
@@ -628,10 +631,14 @@ figure figcaption {
 }
 .Post .Post-title {
   text-transform: none;
-  line-height: 1;
+}
+.Post .Post-header .Post-title {
+  font-size: 2em;
+  font-weight: 700;
 }
 .Post .Post-content {
   position: relative;
+  font-size: 1.1em;
 }
 @media (max-width: 720px) {
   .Post .Post-content {
