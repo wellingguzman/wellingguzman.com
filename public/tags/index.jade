@@ -9,10 +9,10 @@ each tag in tags
 
   if tagPosts.length > 0
     h2.Tag-title= tag
-    ul.List
+    ul.List.Post-List
       - post = tagPosts.shift();
       while post
         li.List-item
-          .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
-          .List-text: a(href="#{post.url_relative}") #{post.title}
+          .List-meta.Post-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
+          .List-text.Post-title: a(href="#{post.url_relative}") #{post.title}
         - post = tagPosts.shift();
