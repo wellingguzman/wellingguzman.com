@@ -703,6 +703,10 @@ figure figcaption {
 .Tag-title a {
   border: 0;
   font-weight: 700;
+  color: #444;
+}
+.Tag-title a:hover {
+  color: #fff;
 }
 .Post-signature {
   text-align: right;
