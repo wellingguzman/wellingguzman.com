@@ -8,7 +8,8 @@ each tag in tags
   -   }});
 
   if tagPosts.length > 0
-    h2.Tag-title= tag
+    h2.Tag-title
+        a(href="/tags/#{tag}") #{tag}
     ul.List.Post-List
       - post = tagPosts.shift();
       while post
