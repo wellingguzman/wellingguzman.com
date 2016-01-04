@@ -700,6 +700,10 @@ figure figcaption {
   background: #6bb76b;
   padding: 2px 5px;
 }
+.Tag-title a {
+  border: 0;
+  font-weight: 700;
+}
 .Post-signature {
   text-align: right;
   margin: 0;
