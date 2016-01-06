@@ -440,12 +440,16 @@ p > code {
   margin: 1em auto;
   content: "";
 }
+.noHomepage #header {
+  display: none;
+}
 @media (min-width: 1200px) {
   .noHomepage #header {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 280px;
     padding-top: 1em;
     padding-bottom: 1em;
   }
