@@ -245,10 +245,6 @@ img {
 .missingPage img {
   box-shadow: 0 3px 0 #bcabbc, 3px 0 0 #bcabbc, 0 -3px 0 #bcabbc, -3px 0 0 #bcabbc, 0 3px 0 0 #bcabbc;
 }
-.Timestamp,
-.home #header .description {
-  color: inherit;
-}
 .home #header h1 {
   color: #4aa55a;
 }
