@@ -20,9 +20,9 @@ html
   - if (current.path[0]=='index') {
   -   bodyClassName = 'home';
   - } else if (current.path[0] == '404') {
-  -   bodyClassName = 'missingPage';
+  -   bodyClassName = 'missingPage noHomepage';
   - } else {
-  -   bodyClassName = current.path[0];
+  -   bodyClassName = current.path[0] + ' noHomepage';
   - }
   body(class="#{bodyClassName}")
     include sitebar

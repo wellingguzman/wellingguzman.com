@@ -58,3 +58,22 @@
     content: "";
   }
 }
+
+@media (min-width: 1200px) {
+    .noHomepage #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        &, .Content-wrapper, .Content-box {
+            height: 100%;
+        }
+
+        .Content-box {
+            margin: 0;
+        }
+    }
+}

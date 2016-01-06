@@ -220,54 +220,54 @@ h6,
 .missingPage .nav-links li.selected a {
   color: #bcabbc;
 }
-.home #header .avatar,
+#header .avatar,
 img {
   border-radius: 0;
   box-shadow: 0 3px 0 #4aa55a, 3px 0 0 #4aa55a, 0 -3px 0 #4aa55a, -3px 0 0 #4aa55a, 0 3px 0 0 #4aa55a;
 }
-.notes .home #header .avatar,
+.notes #header .avatar,
 .notes img {
   box-shadow: 0 3px 0 #d65231, 3px 0 0 #d65231, 0 -3px 0 #d65231, -3px 0 0 #d65231, 0 3px 0 0 #d65231;
 }
-.about .home #header .avatar,
+.about #header .avatar,
 .about img {
   box-shadow: 0 3px 0 #739cce, 3px 0 0 #739cce, 0 -3px 0 #739cce, -3px 0 0 #739cce, 0 3px 0 0 #739cce;
 }
-.experiments .home #header .avatar,
+.experiments #header .avatar,
 .experiments img {
   box-shadow: 0 3px 0 #d6a500, 3px 0 0 #d6a500, 0 -3px 0 #d6a500, -3px 0 0 #d6a500, 0 3px 0 0 #d6a500;
 }
-.experiments .home #header .avatar,
+.experiments #header .avatar,
 .experiments img {
   box-shadow: 0 3px 0 #ad734a, 3px 0 0 #ad734a, 0 -3px 0 #ad734a, -3px 0 0 #ad734a, 0 3px 0 0 #ad734a;
 }
-.projects .home #header .avatar,
+.projects #header .avatar,
 .projects img {
   box-shadow: 0 3px 0 #7b7b94, 3px 0 0 #7b7b94, 0 -3px 0 #7b7b94, -3px 0 0 #7b7b94, 0 3px 0 0 #7b7b94;
 }
-.missingPage .home #header .avatar,
+.missingPage #header .avatar,
 .missingPage img {
   box-shadow: 0 3px 0 #bcabbc, 3px 0 0 #bcabbc, 0 -3px 0 #bcabbc, -3px 0 0 #bcabbc, 0 3px 0 0 #bcabbc;
 }
-.home #header h1 {
+#header h1 {
   color: #4aa55a;
 }
-.notes .home #header h1 {
+.notes #header h1 {
   color: #d65231;
 }
-.about .home #header h1 {
+.about #header h1 {
   color: #739cce;
 }
-.experiments .home #header h1 {
+.experiments #header h1 {
   color: #d6a500;
 }
-.tags .home #header h1 {
+.tags #header h1 {
   color: #ad734a;
 }
-.projects .home #header h1 {
+.projects #header h1 {
   color: #7b7b94;
 }
-.missingPage .home #header h1 {
+.missingPage #header h1 {
   color: #bcabbc;
 }
 .Post a {

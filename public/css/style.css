@@ -440,6 +440,24 @@ p > code {
   margin: 1em auto;
   content: "";
 }
+@media (min-width: 1200px) {
+  .noHomepage #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .noHomepage #header,
+  .noHomepage #header .Content-wrapper,
+  .noHomepage #header .Content-box {
+    height: 100%;
+  }
+  .noHomepage #header .Content-box {
+    margin: 0;
+  }
+}
 img {
   max-width: 100%;
 }
@@ -543,7 +561,7 @@ figure figcaption {
   padding-bottom: 1px;
   border-bottom: 2px solid #5c6476;
 }
-.home #header h1 {
+#header h1 {
   font-size: 3em;
   line-height: 1;
   margin: .3em 0;
@@ -577,13 +595,13 @@ figure figcaption {
   top: -15px;
   content: "";
 }
-.home #header .avatar {
+#header .avatar {
   display: block;
   width: 120px;
   margin: 0 auto;
   border-radius: 50%;
 }
-.home #header .description {
+#header .description {
   text-align: center;
   display: block;
   font-weight: 500;
