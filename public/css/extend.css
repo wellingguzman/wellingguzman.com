@@ -122,6 +122,10 @@ h6,
   border-bottom: 2px solid #181010;
   margin-bottom: 10px;
 }
+.Post .Post-header .Timestamp {
+  color: #777;
+  font-size: 0.85em;
+}
 .Post .Post-content {
   font-family: 'Noto Serif', Georgia, serif;
 }
