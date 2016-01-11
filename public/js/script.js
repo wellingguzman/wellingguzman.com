@@ -47,6 +47,12 @@
     }
   }
 
+  function setDisguise(name) {
+    var THIRTY_DAYS = 2592000;
+    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + THIRTY_DAYS));
+    window.sessionStorage.setItem('disguise_name', name);
+  }
+
   function addJay() {
     var head = document.getElementsByTagName('head')[0];
     var baseStyle = document.getElementById('baseStyle');
@@ -65,8 +71,7 @@
     head.removeChild(extendStyle);
     head.removeChild(baseStyle);
 
-    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + 3600));
-    window.sessionStorage.setItem('disguise_name', 'jay');
+    setDisguise('jay');
   }
 
   function addOne() {
@@ -98,10 +103,10 @@
     } else if (randomNumber === 1) {
       disguiseName = 'one';
     }
-    var THIRTY_DAYS = 2592000;
-    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + THIRTY_DAYS));
-    window.sessionStorage.setItem('disguise_name', disguiseName);
+
+    setDisguise(disguiseName);
   }
+
   switch(disguiseName) {
     case 'jay':
       addJay();
