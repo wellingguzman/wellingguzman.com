@@ -74,6 +74,12 @@
     setDisguise('jay');
   }
 
+  function addBef() {
+    var style = document.getElementById('extendStyle');
+    style.href = '/css/clean.css?v=' + SITE_VERSION;
+    console.log(style.href);
+  }
+
   function addOne() {
     var head = document.getElementsByTagName('head')[0];
     var style = document.getElementById('extendStyle');
@@ -91,7 +97,7 @@
   setDescription(4);
   var disguiseExpiration = window.sessionStorage.getItem('disguise_expiration');
   var disguiseName = window.sessionStorage.getItem('disguise_name');
-  var disguises = ['jay', 'one'];
+  var disguises = ['jay', 'one', 'bef'];
 
   if (parseInt(disguiseExpiration, 10) < (new Date()).getTime() || disguises.indexOf(disguiseName) < 0) {
     window.sessionStorage.removeItem('disguise_expiration');
@@ -110,6 +116,9 @@
   switch(disguiseName) {
     case 'jay':
       addJay();
+      break;
+    case 'bef':
+      addBef();
       break;
     case 'one':
       addOne();
