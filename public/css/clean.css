@@ -1,0 +1,37 @@
+body {
+  background: #fefefe;
+  font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+}
+#sitebar {
+  background: transparent !important;
+}
+.sitenav {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.nav-links li a {
+  color: #222;
+}
+#header h1 {
+  color: #000;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+#header .description {
+  color: #6f6f6f;
+}
+.Content-box.Content {
+  border: 0;
+}
+#footer {
+  background: transparent;
+  border: 0;
+}
