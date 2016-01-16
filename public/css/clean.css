@@ -1,6 +1,7 @@
 body {
   background: #fefefe;
   font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+  line-height: 1.7;
 }
 h1,
 h2,
@@ -10,15 +11,35 @@ h5,
 h6 {
   font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
 }
+a {
+  color: #000 !important;
+  border-bottom: 1px solid !important;
+  background: transparent !important;
+  padding: 0 0 2px !important;
+}
+a:hover {
+  border-bottom: 0 !important;
+}
 #sitebar {
   background: transparent !important;
 }
-.sitenav {
+.site-nav {
   padding-left: 40px;
   padding-right: 40px;
 }
 .nav-links li a {
   color: #222;
+  line-height: 1;
+  padding: 0 0 2px;
+}
+.nav-links li a:hover {
+  border-bottom: 1px solid #222;
+}
+.nav-links li {
+  padding: 0 10px 0 0;
+}
+.nav-links li:hover {
+  background: transparent !important;
 }
 #header h1 {
   color: #000;
