@@ -19,6 +19,7 @@ a {
 }
 a:hover {
   border-bottom: 0 !important;
+  text-decoration: none !important;
 }
 #sitebar {
   background: transparent !important;
@@ -55,4 +56,7 @@ a:hover {
 #footer {
   background: transparent;
   border: 0;
+}
+.Site-footer-links a {
+  margin: 0 10px;
 }
