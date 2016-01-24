@@ -25,14 +25,17 @@ html
   -   bodyClassName = current.path[0];
   - }
   body(class="#{bodyClassName}")
-    include sitebar
-    include header
-    hr
-    .Content-wrapper
-      .Content-box.Content
-        block content
-    hr
-    include footer
+    #sidebar
+      include sidebar
+    #main
+      include sitebar
+      include header
+      hr
+      .Content-wrapper
+        .Content-box.Content
+          block content
+      hr
+      include footer
     script(src="/js/script.js?v=#{version}")
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
