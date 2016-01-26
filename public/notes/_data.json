@@ -39,11 +39,6 @@
     "published": false,
     "tags": []
   },
-  "javascript-is-as-related-to-java-as": {
-    "title": "\"JavaScript\" is as related to \"Java\" as ...",
-    "published": false,
-    "tags": []
-  },
   "teamwork": {
     "title": "Teamwork",
     "published": false,
@@ -117,6 +112,12 @@
   "my-running-goal-game": {
     "title": "My running goal game",
     "published": false
+  },
+  "javascript-is-as-related-to-java-as": {
+    "title": "\"JavaScript\" is as related to \"Java\" as ...",
+    "date": "2015-01-25 23:58:02",
+    "published": true,
+    "tags": []
   },
   "writing-on-the-moment": {
     "title": "Writing on the moment",
