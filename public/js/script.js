@@ -19,7 +19,6 @@
       'Beer Drinker',
       'Green Socks',
       'CSS Styler',
-      'Diaper Changer'
     ];
   }
 
