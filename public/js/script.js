@@ -96,7 +96,7 @@
   setDescription(4);
   var disguiseExpiration = window.sessionStorage.getItem('disguise_expiration');
   var disguiseName = window.sessionStorage.getItem('disguise_name');
-  var disguises = ['jay', 'one', 'bef'];
+  var disguises = ['jay', 'one', 'bef', 'queen'];
 
   if (parseInt(disguiseExpiration, 10) < (new Date()).getTime() || disguises.indexOf(disguiseName) < 0) {
     window.sessionStorage.removeItem('disguise_expiration');
@@ -107,6 +107,8 @@
       disguiseName = 'jay';
     } else if (randomNumber === 1) {
       disguiseName = 'one';
+    } else if (randomNumber === 29) {
+      disguiseName = 'bef';
     }
 
     setDisguise(disguiseName);
