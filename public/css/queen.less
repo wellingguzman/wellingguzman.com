@@ -1,0 +1,78 @@
+@import 'vendor/_one_dark';
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700italic,700,400italic);
+@dark : #2e3239;
+@light: #f1efe9;
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: @dark;
+}
+
+pre, code {
+  -webkit-font-smoothing: antialiased;
+}
+
+pre:before {
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: -10px -10px 10px;
+  padding: 5px 10px 5px;
+  background: lighten(@dark, 5%);
+}
+
+.Content-wrapper {
+  max-width: 780px;
+}
+
+#sitebar {
+  background: transparent !important;
+  margin: 2em 0 0;
+}
+
+.nav-links a,
+#header .description {
+  color: @light;
+}
+
+.nav-links a {
+  text-transform: uppercase;
+  &:hover {
+    background: lighten(@dark, 10%) !important;
+  }
+}
+
+.nav-links li.selected {
+  background: lighten(@dark, 10%) !important;
+}
+
+#header .Content-box.Content {
+  border:0;
+  background: transparent;
+}
+
+.Post .Post-meta {
+  margin-top: 0.5em;
+}
+
+.Tags a.Tag {
+  background: lighten(@dark, 15%);
+  &:hover {
+    background: lighten(@dark, 5%);
+  }
+}
+
+.Post-List .Post-title {
+  font-size: 1.1em;
+}
+
+#footer {
+  border: 0;
+  background: darken(#2e3239, 5%);//#1e1219;
+  font-size: 1em;
+
+  .Content-box {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}

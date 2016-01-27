@@ -79,6 +79,11 @@
     style.href = '/css/clean.css?v=' + SITE_VERSION;
   }
 
+  function addQueen() {
+    var style = document.getElementById('extendStyle');
+    style.href = '/css/queen.css?v=' + SITE_VERSION;
+  }
+
   function addOne() {
     var head = document.getElementsByTagName('head')[0];
     var style = document.getElementById('extendStyle');
@@ -109,6 +114,8 @@
       disguiseName = 'one';
     } else if (randomNumber === 29) {
       disguiseName = 'bef';
+    } else if (randomNumber === 44) {
+      disguiseName = 'queen';
     }
 
     setDisguise(disguiseName);
@@ -123,6 +130,9 @@
       break;
     case 'one':
       addOne();
+      break;
+    case 'queen':
+      addQueen();
       break;
   }
 })();
