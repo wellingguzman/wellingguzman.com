@@ -77,7 +77,6 @@
   function addBef() {
     var style = document.getElementById('extendStyle');
     style.href = '/css/clean.css?v=' + SITE_VERSION;
-    console.log(style.href);
   }
 
   function addOne() {
