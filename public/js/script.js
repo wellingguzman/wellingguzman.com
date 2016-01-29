@@ -58,7 +58,7 @@
     var extendStyle = document.getElementById('extendStyle');
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = '/js/g.js?v=' + SITE_VERSION;
+    script.src = '/js/g.min.js?v=' + SITE_VERSION;
     head.appendChild(script);
 
     var link = document.createElement('link');
