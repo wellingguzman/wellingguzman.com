@@ -134,4 +134,17 @@
       addQueen();
       break;
   }
+
+function anchorClickHandler(event) {
+  event = event || window.event;
+  var  target = event.target || event.srcElement;
+
+  if (target.tagName == 'A') {
+    if (target.hostname != 'wellingguzman.com' || target.hostname != 'welli.ng') {
+      target.setAttribute('target', '_blank');
+    }
+  }
+
+}
+document.documentElement.addEventListener('click', anchorClickHandler, false);
 })();
