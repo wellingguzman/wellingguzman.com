@@ -21,6 +21,18 @@ a:hover {
   border-bottom: 0 !important;
   text-decoration: none !important;
 }
+pre {
+  border-left-width: 2px;
+}
+pre.editor {
+  background: #fff;
+}
+pre:before {
+  background: transparent;
+}
+.Post .Post-content > pre {
+  padding-top: 0;
+}
 #sitebar {
   background: transparent !important;
 }

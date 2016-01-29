@@ -115,6 +115,11 @@ h6,
 .List-meta {
   font-family: 'Source Sans Pro', sans-serif;
 }
+pre:before {
+  box-shadow: 0px 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 .List-meta .Timestamp {
   font-size: 0.85em;
 }
