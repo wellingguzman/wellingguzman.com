@@ -140,7 +140,8 @@ function anchorClickHandler(event) {
   var  target = event.target || event.srcElement;
 
   if (target.tagName == 'A') {
-    if (target.hostname != 'localhost' && target.hostname != 'wellingguzman.com' && target.hostname != 'welli.ng') {
+    var hosts = ['localhost', 'wellingguzman.com', 'welli.ng'];
+    if (hosts.indexOf(target.hostname) == -1) {
       target.setAttribute('target', '_blank');
     }
   }
