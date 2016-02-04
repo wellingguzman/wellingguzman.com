@@ -113,17 +113,7 @@ function run() {
       next();
     });
 
-    route.get(/^\/notes$/, function (req, res, next) {
-      req.url+='/';
-      next();
-    });
-
-    route.get(/^\/experiments$/, function (req, res, next) {
-      req.url+='/';
-      next();
-    });
-
-    route.get(/^\/projects$/, function (req, res, next) {
+    route.get(/^\/(notes|experiments|projects)$/, function (req, res, next) {
       req.url+='/';
       next();
     });
