@@ -118,6 +118,11 @@ function run() {
       next();
     });
 
+    route.get(/^\/projects$/, function (req, res, next) {
+      req.url+='/';
+      next();
+    });
+
     route.all('*', harp.mount(__dirname));
     route.all('*', function (req, res, next) {
       req.url = '/404';
