@@ -66,13 +66,13 @@ body.missingPage h1 {
   -webkit-animation: blur 500ms 5, jerk 1000ms 5, fontFamily 1510ms 5;
 }
 body.notes {
-  background-color: #ffa552;
+  background-color: #ffc085;
 }
 body.about {
   background-color: #adceef;
 }
 body.experiments {
-  background-color: #ffe673;
+  background-color: #fff4c0;
 }
 body.tags {
   background-color: #e6a57b;
