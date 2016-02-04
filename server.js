@@ -118,6 +118,11 @@ function run() {
       next();
     });
 
+    route.get(/^\/experiments$/, function (req, res, next) {
+      req.url+='/';
+      next();
+    });
+
     route.get(/^\/projects$/, function (req, res, next) {
       req.url+='/';
       next();
