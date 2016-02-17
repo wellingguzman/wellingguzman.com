@@ -21,7 +21,7 @@ global.highlighter = new Highlights();
 global.cheerio = cheerio;
 global.S = S;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
-global.tags = [];
+// global.allTags = [];
 
 function redirect(res, url) {
   res.writeHead(302, { location: url });
@@ -34,11 +34,11 @@ function getDirectories(srcpath) {
   });
 }
 
-try {
-  global.tags = getDirectories(__dirname+'/public/tags');
-} catch (ex) {
-  global.tags = [];
-}
+// try {
+//   global.allTags = getDirectories(__dirname+'/public/tags');
+// } catch (ex) {
+//   global.allTags = [];
+// }
 
 route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
   res.writeHead(302, { 'location': '/images/' + req.params.filename });
