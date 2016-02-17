@@ -113,6 +113,10 @@
     "title": "My running goal game",
     "published": false
   },
+  "sudo-and-redirect-output": {
+    "title": "sudo and redirect output",
+    "published": false
+  },
   "javascript-is-as-related-to-java-as": {
     "title": "\"JavaScript\" is as related to \"Java\" as ...",
     "date": "2016-01-25 23:58:02",
