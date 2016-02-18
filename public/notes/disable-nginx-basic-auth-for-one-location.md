@@ -1,4 +1,4 @@
-If you protected your website with nginx basic_auth, and one to disable for just one (_or maybe some specific locations_), you can use `basic_auth off` for that location and the authorization won't be required.
+If you protected your website with nginx basic_auth, and want to disable it for just one (_or maybe some specific locations_), you can use `basic_auth off` for that location and the authorization won't be required.
 
 Example:
 
