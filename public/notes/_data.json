@@ -113,6 +113,10 @@
     "title": "My running goal game",
     "published": false
   },
+  "disable-nginx-basic-auth-for-one-location": {
+    "title": "Disable nginx basic_auth for one location",
+    "published": false,
+  },
   "sudo-and-redirect-output": {
     "title": "sudo and redirect output",
     "date": "2016-02-16 21:20:21",
