@@ -115,7 +115,8 @@
   },
   "disable-nginx-basic-auth-for-one-location": {
     "title": "Disable nginx basic_auth for one location",
-    "published": false,
+    "date": "2016-02-18 02:19:21",
+    "published": true
   },
   "sudo-and-redirect-output": {
     "title": "sudo and redirect output",
