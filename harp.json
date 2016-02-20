@@ -27,7 +27,8 @@
       "language-php":           "text.html.php",
       "language-swift":         "source.swift",
       "language-html":          "text.html.basic",
-      "language-css":           "source.css"
+      "language-css":           "source.css",
+      "language-bash":          "source.shell"
     }
   }
 }
