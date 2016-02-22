@@ -19,7 +19,6 @@
       'Beer Drinker',
       'Green Socks',
       'CSS Styler',
-      'Diaper Changer'
     ];
   }
 
@@ -47,13 +46,19 @@
     }
   }
 
+  function setDisguise(name) {
+    var THIRTY_DAYS = 2592000;
+    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + THIRTY_DAYS));
+    window.sessionStorage.setItem('disguise_name', name);
+  }
+
   function addJay() {
     var head = document.getElementsByTagName('head')[0];
     var baseStyle = document.getElementById('baseStyle');
     var extendStyle = document.getElementById('extendStyle');
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = '/js/g.js?v=' + SITE_VERSION;
+    script.src = '/js/g.min.js?v=' + SITE_VERSION;
     head.appendChild(script);
 
     var link = document.createElement('link');
@@ -65,8 +70,17 @@
     head.removeChild(extendStyle);
     head.removeChild(baseStyle);
 
-    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + 3600));
-    window.sessionStorage.setItem('disguise_name', 'jay');
+    setDisguise('jay');
+  }
+
+  function addBef() {
+    var style = document.getElementById('extendStyle');
+    style.href = '/css/clean.css?v=' + SITE_VERSION;
+  }
+
+  function addQueen() {
+    var style = document.getElementById('extendStyle');
+    style.href = '/css/queen.css?v=' + SITE_VERSION;
   }
 
   function addOne() {
@@ -86,7 +100,7 @@
   setDescription(4);
   var disguiseExpiration = window.sessionStorage.getItem('disguise_expiration');
   var disguiseName = window.sessionStorage.getItem('disguise_name');
-  var disguises = ['jay', 'one'];
+  var disguises = ['jay', 'one', 'bef', 'queen'];
 
   if (parseInt(disguiseExpiration, 10) < (new Date()).getTime() || disguises.indexOf(disguiseName) < 0) {
     window.sessionStorage.removeItem('disguise_expiration');
@@ -97,16 +111,41 @@
       disguiseName = 'jay';
     } else if (randomNumber === 1) {
       disguiseName = 'one';
+    } else if (randomNumber === 29) {
+      disguiseName = 'bef';
+    } else if (randomNumber === 44) {
+      disguiseName = 'queen';
     }
-    window.sessionStorage.setItem('disguise_expiration', (new Date().getTime() + 3600000));
-    window.sessionStorage.setItem('disguise_name', disguiseName);
+
+    setDisguise(disguiseName);
   }
+
   switch(disguiseName) {
     case 'jay':
       addJay();
       break;
+    case 'bef':
+      addBef();
+      break;
     case 'one':
       addOne();
       break;
+    case 'queen':
+      addQueen();
+      break;
   }
+
+function anchorClickHandler(event) {
+  event = event || window.event;
+  var  target = event.target || event.srcElement;
+
+  if (target.tagName == 'A') {
+    var hosts = ['localhost', 'wellingguzman.com', 'welli.ng'];
+    if (hosts.indexOf(target.hostname) == -1) {
+      target.setAttribute('target', '_blank');
+    }
+  }
+
+}
+document.documentElement.addEventListener('click', anchorClickHandler, false);
 })();

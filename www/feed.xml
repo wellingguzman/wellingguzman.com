@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzman</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Sun, 29 Nov 2015 0:51:55 +0000</lastBuildDate><language>en-US</language><item><title>Writing on the moment</title><description><![CDATA[This is probably has been said a lot out there, but I wanted to tell you this again, if you like to express an idea, a experience or simply want to share your thoughts, write it down while you got the momentum going.
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzman</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Thu, 18 Feb 2016 2:19:21 +0000</lastBuildDate><language>en-US</language><item><title>Disable nginx basic_auth for one location</title><description><![CDATA[If you protected your website with nginx basic_auth, and want to disable it for just one (or maybe some specific locations), you can use basic_auth off for that location and the authorization won&#39;t be required.
+Example:
+server {
+  auth_basic &quot;Restricted content&quot;;
+  auth_basic_user_file /etc/nginx/.htpasswd;
+
+  location /public/ {
+    auth_basic off;
+  }
+}]]></description><content:encoded><![CDATA[<p>If you protected your website with nginx basic_auth, and want to disable it for just one (<em>or maybe some specific locations</em>), you can use <code>basic_auth off</code> for that location and the authorization won&#39;t be required.</p>
+<p>Example:</p>
+<pre><code class="language-bash">server {
+  auth_basic &quot;Restricted content&quot;;
+  auth_basic_user_file /etc/nginx/.htpasswd;
+
+  location /public/ {
+    auth_basic off;
+  }
+}
+</code></pre>
+]]></content:encoded><pubDate>Thu, 18 Feb 2016 2:19:21 +0000</pubDate><link>http://wellingguzman.com/notes/disable-nginx-basic-auth-for-one-location</link></item><item><title>sudo and redirect output</title><description><![CDATA[Concatenating two files in unix-like operative system can be done with a single line like these:
+$ cat file1.txt file2.txt &gt; newfile.txt
+
+If permission is needed to create and write into new files in the specified path you must use sudo, so you do this:
+$ sudo cat file1.txt file2.txt &gt; newfile.txt
+
+But that doesn&#39;t work because the output is handle by the shell and not sudo, and by that it means it won&#39;t let you create the new file returning something like this: -bash: newfile.txt: Permission denied. Note: This only happen when the current user doesn&#39;t have permission to create/write on the new file.
+There&#39;s several solutions to this but a one-liner solution is to run a shell command inline:
+sudo sh -c &#39;sudo cat file1.txt file2.txt &gt; newfile.txt&#39;]]></description><content:encoded><![CDATA[<p>Concatenating two files in unix-like operative system can be done with a single line like these:</p>
+<pre><code class="language-bash">$ cat file1.txt file2.txt &gt; newfile.txt
+</code></pre>
+<p>If permission is needed to create and write into new files in the specified path you must use <code>sudo</code>, so you do this:</p>
+<pre><code class="language-bash">$ sudo cat file1.txt file2.txt &gt; newfile.txt
+</code></pre>
+<p>But that doesn&#39;t work because the output is handle by the shell and not sudo, and by that it means it won&#39;t let you create the new file returning something like this: <code>-bash: newfile.txt: Permission denied</code>. <strong>Note:</strong> This only happen when the current user doesn&#39;t have permission to create/write on the new file.</p>
+<p>There&#39;s several solutions to this but a one-liner solution is to run a shell command inline:</p>
+<pre><code class="language-bash">sudo sh -c &#39;sudo cat file1.txt file2.txt &gt; newfile.txt&#39;
+</code></pre>
+]]></content:encoded><pubDate>Tue, 16 Feb 2016 21:20:21 +0000</pubDate><link>http://wellingguzman.com/notes/sudo-and-redirect-output</link></item><item><title>&quot;JavaScript&quot; is as related to &quot;Java&quot; as ...</title><description><![CDATA[Some people mix JavaScript with Java, thinking they are the same thing or one are based on the other.
+There is a comparison that start with &quot;Javascript is related to java as something is to some&quot; is a clever and funny comparison to me.
+So this would be a list of this comparison phrases:
+
+Java is related to JavaScript as Ham is to Hamburger.
+Java is related to JavaScript as Ham is to Hamster.
+Java is related to JavaScript as Rock is to Rocket.
+JavaScript is related to Java as Carnival is to Car. From YDKJS Books
+More to come...]]></description><content:encoded><![CDATA[<p>Some people mix <em>JavaScript</em> with <em>Java</em>, thinking they are the same thing or one are based on the other.</p>
+<p>There is a comparison that start with &quot;Javascript is related to java as <em>something</em> is to <em>some</em>&quot; is a clever and funny comparison to me.</p>
+<p>So this would be a list of this comparison phrases:</p>
+<ul>
+<li>Java is related to JavaScript as Ham is to Hamburger.</li>
+<li>Java is related to JavaScript as Ham is to Hamster.</li>
+<li>Java is related to JavaScript as Rock is to Rocket.</li>
+<li>JavaScript is related to Java as Carnival is to Car. <em>From YDKJS Books</em></li>
+<li>More to come...</li>
+</ul>
+]]></content:encoded><pubDate>Mon, 25 Jan 2016 23:58:02 +0000</pubDate><link>http://wellingguzman.com/notes/javascript-is-as-related-to-java-as</link></item><item><title>Writing on the moment</title><description><![CDATA[This is probably has been said a lot out there, but I wanted to tell you this again, if you like to express an idea, a experience or simply want to share your thoughts, write it down while you got the momentum going.
 If you love something and want to say how much you love it, say it while you love it, and when you stop loving it, you can share it again and compare saying why you stop loving it.
 If you want to share something today, and if you are like me, there&#39;s a high chance that tomorrow you won&#39;t feel that spark that make you feel you need it to share something.
 I want to share so much, but then I end up thinking, who wants to read this anyway, who will find this anyway. Don&#39;t be that person.
