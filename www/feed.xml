@@ -7,7 +7,7 @@ server {
   location /public/ {
     auth_basic off;
   }
-}]]></description><content:encoded><![CDATA[<p>If you protected your website with nginx basic_auth, and want to disable it for just one (<em>or maybe some specific locations</em>), you can use <code>basic_auth off</code> for that location and the authorization won&#39;t be required.</p>
+}]]></description><content:encoded><![CDATA[<p>If you protected your website with nginx <code>basic_auth</code>, and want to disable it for just one (<em>or maybe some specific locations</em>), you can use <code>basic_auth off</code> for that location and the authorization won&#39;t be required.</p>
 <p>Example:</p>
 <pre><code class="language-bash">server {
   auth_basic &quot;Restricted content&quot;;
