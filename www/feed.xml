@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzman</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Thu, 18 Feb 2016 2:19:21 +0000</lastBuildDate><language>en-US</language><item><title>Disable nginx basic_auth for one location</title><description><![CDATA[If you protected your website with nginx basic_auth, and want to disable it for just one (or maybe some specific locations), you can use basic_auth off for that location and the authorization won&#39;t be required.
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzman</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Fri, 01 Apr 2016 10:49:12 +0000</lastBuildDate><language>en-US</language><item><title>PHP - call_user_func reference</title><description><![CDATA[PHP function call_user_func() does not pass parameter variable as reference. the code below won&#39;t work as expected.
+From PHP documentation:
+
+Note that the parameters for call_user_func() are not passed by reference.
+
+&lt;?php
+
+function increment(&amp;$var)
+{
+    $var++;
+}
+
+$a = 0;
+call_user_func(&#39;increment&#39;, $a);
+echo $a.&quot;\n&quot;; // $a is equals to 0
+
+In order to solve this problem call_user_func_array() must be used instead.
+&lt;?php
+function increment(&amp;$var)
+{
+    $var++;
+}
+
+$a = 0;
+
+call_user_func_array(&#39;increment&#39;, array(&amp;$a));
+echo $a.&quot;\n&quot;; // $a is equals to 1]]></description><content:encoded><![CDATA[<p>PHP function <code>call_user_func()</code> does not pass parameter variable as reference. the code below won&#39;t work as expected.</p>
+<p>From PHP documentation:</p>
+<blockquote>
+<p>Note that the parameters for call_user_func() are not passed by reference.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+function increment(&amp;$var)
+{
+    $var++;
+}
+
+$a = 0;
+call_user_func(&#39;increment&#39;, $a);
+echo $a.&quot;\n&quot;; // $a is equals to 0
+</code></pre>
+<p>In order to solve this problem <code>call_user_func_array()</code> must be used instead.</p>
+<pre><code class="language-php">&lt;?php
+function increment(&amp;$var)
+{
+    $var++;
+}
+
+$a = 0;
+
+call_user_func_array(&#39;increment&#39;, array(&amp;$a));
+echo $a.&quot;\n&quot;; // $a is equals to 1
+</code></pre>
+]]></content:encoded><pubDate>Fri, 01 Apr 2016 10:49:12 +0000</pubDate><link>http://wellingguzman.com/notes/php-call-user-func-reference</link></item><item><title>Disable nginx basic_auth for one location</title><description><![CDATA[If you protected your website with nginx basic_auth, and want to disable it for just one (or maybe some specific locations), you can use basic_auth off for that location and the authorization won&#39;t be required.
 Example:
 server {
   auth_basic &quot;Restricted content&quot;;
