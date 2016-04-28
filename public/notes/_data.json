@@ -117,6 +117,12 @@
     "title": "Reinventing the wheel",
     "published": false
   },
+  "run-node-app-in-background-linux": {
+      "title": "Run node app in background (Linux)",
+      "date": "2016-04-28 07:01:59",
+      "published": true,
+      "tags": ["node", "os", "linux"]
+  },
   "php-call-user-func-reference": {
       "title": "PHP - call_user_func reference",
       "date": "2016-04-01 10:49:12",
