@@ -28,7 +28,7 @@
       "language-swift":         "source.swift",
       "language-html":          "text.html.basic",
       "language-css":           "source.css",
-      "language-bash":          "source.shell"
+      "language-shell":          "text.shell-session"
     }
   }
 }
