@@ -6,7 +6,8 @@
 
 <p>So, this is what I did, I added a action to <code>template_redirect</code> hook, that is executed before WordPress determine which page is going to be loaded.</p>
 
-<pre class="php"><code>
+```php
+<?php
 add_action('template_redirect', '_custom_redirect');
 function _custom_redirect()
 {
@@ -17,13 +18,14 @@ function _custom_redirect()
     // Here I take over 404 page
   }
 }
-</code></pre>
+```
 
 <p>So now, I know when it's a 404 page, I need to get the string it was passed on the url, in this case <code>someword</code>, so I can check if the string match a category or a tag name with that name.</p>
 
 <p>This string is stored in a array named <code>query_vars</code> with the key <code>name</code>. <code>query_vars</code> is a variable member of <code>WP_Query</code> which WordPress uses to execute the main query.</p>
 
-<p><pre class="php"><code>
+```php
+<?php
 add_action('template_redirect', '_custom_redirect');
 function _custom_redirect()
 {
@@ -51,11 +53,12 @@ function _custom_redirect()
     }
   }
 }
-</code></pre></p>
+```
 
 <p>After this code WordPress would still "believe" it's a 404 page, I needed to add some more lines to changed this.</p>
 
-<p><pre class="php"><code>
+```php
+<?php
 add_action('template_redirect', '_custom_redirect');
 function _custom_redirect()
 {
@@ -88,13 +91,14 @@ function _custom_redirect()
     status_header( 200 );
   }
 }
-</code></pre></p>
+```
 
 <p>This is pretty much what I wanted to do, now I can get a <em>tag</em> or a <em>category</em> object if one exists, otherwise WordPress will keep its own process and will display its normal 404 page.</p>
 
 <p>If I actually got a tag or category object, I need to query all posts under it.</p>
 
-<p><pre class="php"><code>
+```php
+<?php
 add_action('template_redirect', '_custom_redirect');
 function _custom_redirect()
 {
@@ -133,25 +137,27 @@ function _custom_redirect()
     query_posts( $query_args );
   }
 }
-</code></pre></p>
+```
 
 <p>If <code>status_header( 200 );</code> isn't added the HTTP status will always be a 404, so this line change the status code from 404 to 200.</p>
 
 <p>This is about it, but I want a little bit more, I want if <code>is_category();</code> or <code>is_tag();</code> functions are used, it has to return true. In order to make this to happen I needed to set a couple of variables more.</p>
 
-<p><pre class="php"><code>
+```php
+<?php
 $wp_query->set('category_name', $category->slug);
 $wp_query->set('cat', $category->term_id);
 
 $wp_query->set('tag', $tag->slug);
 $wp_query->set('tag_id', $tag->term_id);
-</code></pre></p>
+```
 
 <p><code>$wp_query->set()</code> will set a variable to <code>query_vars</code> array, which as I mentioned before is used by WordPress main query. With this variables set, when WordPress executes <code>is_category();</code> or <code>is_tag();</code> would have category or tag specific variable values to check if is a category/tag or not. </p>
 
 <h3>Final code</h3>
 
-<p><pre class="php"><code>
+```php
+<?php
 add_action('template_redirect', '_custom_redirect');
 function _custom_redirect()
 {
@@ -196,7 +202,7 @@ function _custom_redirect()
     query_posts( $query_args );
   }
 }
-</code></pre></p>
+```
 
 <p>This would be helpful too if you want to log/register/email requested pages that ends up being a 404 page.</p>
 

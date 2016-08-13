@@ -22,6 +22,7 @@
 <p>El metodo 2 lo utilizas si no tienes acceso al php.ini o no quieres modificarlos de todo caso este metodo para hacer que reaparezcan esos errores al inicio del archivo php deberás agregar estas linea, que vendría siendo lo mismo que modificaríamos en php.ini.</p>
 
 ```php
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 ```
