@@ -1,18 +1,1 @@
-body {
-  background: url(../images/gbg01.jpg);
-  font-family: monospace;
-  font-size: 120%;
-}
-pre {
-  background: #FAFAFA;
-}
-p > code {
-  font-weight: bold;
-}
-.Post {
-  background-color: #fdf6e3;
-  padding: 10px;
-}
-.Tags a {
-  margin: 0 5px;
-}
+body{background:url(../images/gbg01.jpg);font-family:monospace;font-size:120%}pre{background:#FAFAFA}p>code{font-weight:700}.Post{background-color:#fdf6e3;padding:10px}.Tags a{margin:0 5px}

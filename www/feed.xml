@@ -26,30 +26,39 @@ $results = $statement-&gt;execute();
 </code></pre>
 ]]></content:encoded><pubDate>Mon, 09 May 2016 0:56:13 +0000</pubDate><link>http://wellingguzman.com/notes/zend-db-select-from-different-database</link></item><item><title>Run node app in background (Linux)</title><description><![CDATA[Running a script in the background in linux can be done using nohup, using nohup we can run node application in the background.
 $ nohup node /nodeapp/index.js &amp;
+
 Forever is another solution for Node scripts.
 Installation$ npm install forever -g
+
 Usage$ forever start /nodeapp/index.js
 $ forever restart /nodeapp/index.js
 $ forever stop /nodeapp/index.js
 $ forever list
+
 Kill ProcessYou can stop the process using the kill command as well:
 First you need to know which process ID to kill, list all the process running node by running:
 ps axl | grep node
+
 The second column of your result is probably the PID, take that number and run the command below:
 kill -9 [PID]]]></description><content:encoded><![CDATA[<p>Running a script in the background in linux can be done using <code>nohup</code>, using nohup we can run node application in the background.</p>
-<pre><code>$ nohup node /nodeapp/index.js &amp;
-</code></pre><p><a href="https://github.com/foreverjs/forever">Forever</a> is another solution for Node scripts.</p>
-<h3>Installation</h3><pre><code>$ npm install forever -g
-</code></pre><h3>Usage</h3><pre><code>$ forever start /nodeapp/index.js
+<pre><code class="language-shell">$ nohup node /nodeapp/index.js &amp;
+</code></pre>
+<p><a href="https://github.com/foreverjs/forever">Forever</a> is another solution for Node scripts.</p>
+<h3>Installation</h3><pre><code class="language-shell">$ npm install forever -g
+</code></pre>
+<h3>Usage</h3><pre><code class="language-shell">$ forever start /nodeapp/index.js
 $ forever restart /nodeapp/index.js
 $ forever stop /nodeapp/index.js
 $ forever list
-</code></pre><h3>Kill Process</h3><p>You can stop the process using the <code>kill</code> command as well:</p>
+</code></pre>
+<h3>Kill Process</h3><p>You can stop the process using the <code>kill</code> command as well:</p>
 <p>First you need to know which process ID to kill, list all the process running node by running:</p>
-<pre><code>ps axl | grep node
-</code></pre><p>The second column of your result is probably the PID, take that number and run the command below:</p>
-<pre><code>kill -9 [PID]
-</code></pre>]]></content:encoded><pubDate>Thu, 28 Apr 2016 7:01:59 +0000</pubDate><link>http://wellingguzman.com/notes/run-node-app-in-background-linux</link></item><item><title>PHP - call_user_func reference</title><description><![CDATA[PHP function call_user_func() does not pass parameter variable as reference. the code below won&#39;t work as expected.
+<pre><code class="language-shell">ps axl | grep node
+</code></pre>
+<p>The second column of your result is probably the PID, take that number and run the command below:</p>
+<pre><code class="language-shell">kill -9 [PID]
+</code></pre>
+]]></content:encoded><pubDate>Thu, 28 Apr 2016 7:01:59 +0000</pubDate><link>http://wellingguzman.com/notes/run-node-app-in-background-linux</link></item><item><title>PHP - call_user_func reference</title><description><![CDATA[PHP function call_user_func() does not pass parameter variable as reference. the code below won&#39;t work as expected.
 From PHP documentation:
 
 Note that the parameters for call_user_func() are not passed by reference.
@@ -463,7 +472,7 @@ var connection = mysql.createConnection({
 To do this and have the power of  WordPress into another project, add the WordPress wp-load.php file.
 
 
-
+&lt;?php
 $wordPressPath = &#39;/wordpress/path/wp-load.php&#39;;
 require $wordPressPath;
 
@@ -476,18 +485,16 @@ $args = array(
       );
 
 $posts = get_posts( $args );
-
-
 
 Something that could happen is that you have a function/class with the same name as WordPress has and this would thrown a function/class redeclaration error.
 
 But aside from this, works perfect.]]></description><content:encoded><![CDATA[<p>I&#39;m working on a Project using Laravel and I need to pull all the blog post from a WordPress site that is already on the same server.</p>
 <span id="more-343"></span>
 
-<p>To do this and have the power of  WordPress into another project, add the WordPress <code>wp-load.php</code> file.
+<p>To do this and have the power of  WordPress into another project, add the WordPress <code>wp-load.php</code> file.</p>
 
-<pre class="php">
-<code>
+
+<pre><code class="language-php">&lt;?php
 $wordPressPath = &#39;/wordpress/path/wp-load.php&#39;;
 require $wordPressPath;
 
@@ -500,9 +507,7 @@ $args = array(
       );
 
 $posts = get_posts( $args );
-</code>
-</pre>
-
+</code></pre>
 <p>Something that could happen is that you have a function/class with the same name as WordPress has and this would thrown a function/class redeclaration error.
 
 <p>But aside from this, works perfect.</p>]]></content:encoded><pubDate>Tue, 13 May 2014 12:58:01 +0000</pubDate><link>http://wellingguzman.com/notes/wordpress-functionality-another-php-project</link></item><item><title>Subdomain on a different server</title><description><![CDATA[I want to develop my first Node.js applications and host it as subdomain, but this server (shared on hostgator) does not support Node.js applications, and for a second I thought if I need to change server only for this?. But nope, there is a solution for this.
@@ -568,24 +573,23 @@ If the user, let&#39;s say, go to http://mysite.com/someword on mysite, and if t
 
 So, this is what I did, I added a action to template_redirect hook, that is executed before WordPress determine which page is going to be loaded.
 
-
-add_action('template_redirect', '_custom_redirect');
+&lt;?php
+add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
   global $wp_query;
 
-  if ( $wp_query->is_404() )
+  if ( $wp_query-&gt;is_404() )
   {
     // Here I take over 404 page
   }
 }
 
-
 So now, I know when it&#39;s a 404 page, I need to get the string it was passed on the url, in this case someword, so I can check if the string match a category or a tag name with that name.
 
 This string is stored in a array named query_vars with the key name. query_vars is a variable member of WP_Query which WordPress uses to execute the main query.
 
-
+&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -614,10 +618,9 @@ function _custom_redirect()
   }
 }
 
-
 After this code WordPress would still &quot;believe&quot; it&#39;s a 404 page, I needed to add some more lines to changed this.
 
-
+&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -651,12 +654,11 @@ function _custom_redirect()
   }
 }
 
-
 This is pretty much what I wanted to do, now I can get a tag or a category object if one exists, otherwise WordPress will keep its own process and will display its normal 404 page.
 
 If I actually got a tag or category object, I need to query all posts under it.
 
-
+&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -696,24 +698,22 @@ function _custom_redirect()
   }
 }
 
-
 If status_header( 200 ); isn&#39;t added the HTTP status will always be a 404, so this line change the status code from 404 to 200.
 
 This is about it, but I want a little bit more, I want if is_category(); or is_tag(); functions are used, it has to return true. In order to make this to happen I needed to set a couple of variables more.
 
-
+&lt;?php
 $wp_query-&gt;set(&#39;category_name&#39;, $category-&gt;slug);
 $wp_query-&gt;set(&#39;cat&#39;, $category-&gt;term_id);
 
 $wp_query-&gt;set(&#39;tag&#39;, $tag-&gt;slug);
 $wp_query-&gt;set(&#39;tag_id&#39;, $tag-&gt;term_id);
 
-
 $wp_query-&gt;set() will set a variable to query_vars array, which as I mentioned before is used by WordPress main query. With this variables set, when WordPress executes is_category(); or is_tag(); would have category or tag specific variable values to check if is a category/tag or not. 
 
 Final code
 
-
+&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -758,7 +758,6 @@ function _custom_redirect()
     query_posts( $query_args );
   }
 }
-
 
 This would be helpful too if you want to log/register/email requested pages that ends up being a 404 page.
 
@@ -769,24 +768,23 @@ NOTE: if you don&#39;t have any category or tag template page will returns a 404
 
 <p>So, this is what I did, I added a action to <code>template_redirect</code> hook, that is executed before WordPress determine which page is going to be loaded.</p>
 
-<pre class="php"><code>
-add_action('template_redirect', '_custom_redirect');
+<pre><code class="language-php">&lt;?php
+add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
   global $wp_query;
 
-  if ( $wp_query->is_404() )
+  if ( $wp_query-&gt;is_404() )
   {
     // Here I take over 404 page
   }
 }
 </code></pre>
-
 <p>So now, I know when it&#39;s a 404 page, I need to get the string it was passed on the url, in this case <code>someword</code>, so I can check if the string match a category or a tag name with that name.</p>
 
 <p>This string is stored in a array named <code>query_vars</code> with the key <code>name</code>. <code>query_vars</code> is a variable member of <code>WP_Query</code> which WordPress uses to execute the main query.</p>
 
-<p><pre class="php"><code>
+<pre><code class="language-php">&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -814,11 +812,10 @@ function _custom_redirect()
     }
   }
 }
-</code></pre></p>
-
+</code></pre>
 <p>After this code WordPress would still &quot;believe&quot; it&#39;s a 404 page, I needed to add some more lines to changed this.</p>
 
-<p><pre class="php"><code>
+<pre><code class="language-php">&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -851,13 +848,12 @@ function _custom_redirect()
     status_header( 200 );
   }
 }
-</code></pre></p>
-
+</code></pre>
 <p>This is pretty much what I wanted to do, now I can get a <em>tag</em> or a <em>category</em> object if one exists, otherwise WordPress will keep its own process and will display its normal 404 page.</p>
 
 <p>If I actually got a tag or category object, I need to query all posts under it.</p>
 
-<p><pre class="php"><code>
+<pre><code class="language-php">&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -896,25 +892,23 @@ function _custom_redirect()
     query_posts( $query_args );
   }
 }
-</code></pre></p>
-
+</code></pre>
 <p>If <code>status_header( 200 );</code> isn&#39;t added the HTTP status will always be a 404, so this line change the status code from 404 to 200.</p>
 
 <p>This is about it, but I want a little bit more, I want if <code>is_category();</code> or <code>is_tag();</code> functions are used, it has to return true. In order to make this to happen I needed to set a couple of variables more.</p>
 
-<p><pre class="php"><code>
+<pre><code class="language-php">&lt;?php
 $wp_query-&gt;set(&#39;category_name&#39;, $category-&gt;slug);
 $wp_query-&gt;set(&#39;cat&#39;, $category-&gt;term_id);
 
 $wp_query-&gt;set(&#39;tag&#39;, $tag-&gt;slug);
 $wp_query-&gt;set(&#39;tag_id&#39;, $tag-&gt;term_id);
-</code></pre></p>
-
+</code></pre>
 <p><code>$wp_query-&gt;set()</code> will set a variable to <code>query_vars</code> array, which as I mentioned before is used by WordPress main query. With this variables set, when WordPress executes <code>is_category();</code> or <code>is_tag();</code> would have category or tag specific variable values to check if is a category/tag or not. </p>
 
 <h3>Final code</h3>
 
-<p><pre class="php"><code>
+<pre><code class="language-php">&lt;?php
 add_action(&#39;template_redirect&#39;, &#39;_custom_redirect&#39;);
 function _custom_redirect()
 {
@@ -959,8 +953,7 @@ function _custom_redirect()
     query_posts( $query_args );
   }
 }
-</code></pre></p>
-
+</code></pre>
 <p>This would be helpful too if you want to log/register/email requested pages that ends up being a 404 page.</p>
 
 <p><strong>NOTE:</strong> if you don&#39;t have any category or tag template page will returns a 404 page template, just take that in mind.</p>]]></content:encoded><pubDate>Tue, 21 Jan 2014 0:56:04 +0000</pubDate><link>http://wellingguzman.com/notes/control-wordpress-404-error</link></item><item><title>2014 Goals</title><description><![CDATA[Late Happy New year to everybody who is not reading this and won&#39;t be reading this until whoever knows how they get in here.
@@ -1468,6 +1461,7 @@ Metodo 2
 
 El metodo 2 lo utilizas si no tienes acceso al php.ini o no quieres modificarlos de todo caso este metodo para hacer que reaparezcan esos errores al inicio del archivo php deberás agregar estas linea, que vendría siendo lo mismo que modificaríamos en php.ini.
 
+&lt;?php
 error_reporting(E_ALL);
 ini_set(&#39;display_errors&#39;, &#39;On&#39;);
 
@@ -1493,7 +1487,8 @@ Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.]]></descript
 
 <p>El metodo 2 lo utilizas si no tienes acceso al php.ini o no quieres modificarlos de todo caso este metodo para hacer que reaparezcan esos errores al inicio del archivo php deberás agregar estas linea, que vendría siendo lo mismo que modificaríamos en php.ini.</p>
 
-<pre><code class="language-php">error_reporting(E_ALL);
+<pre><code class="language-php">&lt;?php
+error_reporting(E_ALL);
 ini_set(&#39;display_errors&#39;, &#39;On&#39;);
 </code></pre>
 <p>Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.</p>]]></content:encoded><pubDate>Fri, 25 Jan 2013 18:15:47 +0000</pubDate><link>http://wellingguzman.com/notes/php-apache-500-internal-server-error</link></item><item><title>Sesiones CodeIgniter terminan inmediatamente</title><description><![CDATA[He estado utilizando Codeigniter por mucho tiempo localmente y remotamente pero nunca me habia pasado algo como esto, tratando de utilizar las sesiones localmente funcionaban sin ningún problema, pero al utilizarlo en un servidor, las sesiones no querían funcionar, no querían almacenarse ni mantenerse su tiempo indicado en la configuración de CodeIgniter.
@@ -1504,15 +1499,15 @@ En CodeIgniter 2.1.3 es la version que utilizo actualmente tiene por defecto est
 Sesiones CodeIgniter
 
 &lt;?php
-$config[&#39;sess_cookie_name&#39;]    = &#39;ci_session&#39;;
-$config[&#39;sess_expiration&#39;]    = 7200;
-$config[&#39;sess_expire_on_close&#39;]    = FALSE;
-$config[&#39;sess_encrypt_cookie&#39;]    = FALSE;
+$config[&#39;sess_cookie_name&#39;]     = &#39;ci_session&#39;;
+$config[&#39;sess_expiration&#39;]      = 7200;
+$config[&#39;sess_expire_on_close&#39;] = FALSE;
+$config[&#39;sess_encrypt_cookie&#39;]  = FALSE;
 $config[&#39;sess_use_database&#39;]    = FALSE;
-$config[&#39;sess_table_name&#39;]    = &#39;ci_sessions&#39;;
-$config[&#39;sess_match_ip&#39;]    = FALSE;
-$config[&#39;sess_match_useragent&#39;]    = TRUE;
-$config[&#39;sess_time_to_update&#39;]    = 300;
+$config[&#39;sess_table_name&#39;]      = &#39;ci_sessions&#39;;
+$config[&#39;sess_match_ip&#39;]        = FALSE;
+$config[&#39;sess_match_useragent&#39;] = TRUE;
+$config[&#39;sess_time_to_update&#39;]  = 300;
 
 Como podrán notar en $config[&#39;sess_expiration&#39;]    = 7200; nos indica que la session expirara después de 7200 segundos de ser creada, que resulta ser 2 horas, la cual se ira actualizando en cada ejecución y en fin el caso seria que si dura 2 horas (7200 segundos) inactiva expirara.
 
@@ -1537,15 +1532,15 @@ Pues la solución es bastante simple, Incrementar el tiempo de expiración de la
 <h2>Sesiones CodeIgniter</h2>
 
 <pre><code class="language-php">&lt;?php
-$config[&#39;sess_cookie_name&#39;]    = &#39;ci_session&#39;;
-$config[&#39;sess_expiration&#39;]    = 7200;
-$config[&#39;sess_expire_on_close&#39;]    = FALSE;
-$config[&#39;sess_encrypt_cookie&#39;]    = FALSE;
+$config[&#39;sess_cookie_name&#39;]     = &#39;ci_session&#39;;
+$config[&#39;sess_expiration&#39;]      = 7200;
+$config[&#39;sess_expire_on_close&#39;] = FALSE;
+$config[&#39;sess_encrypt_cookie&#39;]  = FALSE;
 $config[&#39;sess_use_database&#39;]    = FALSE;
-$config[&#39;sess_table_name&#39;]    = &#39;ci_sessions&#39;;
-$config[&#39;sess_match_ip&#39;]    = FALSE;
-$config[&#39;sess_match_useragent&#39;]    = TRUE;
-$config[&#39;sess_time_to_update&#39;]    = 300;
+$config[&#39;sess_table_name&#39;]      = &#39;ci_sessions&#39;;
+$config[&#39;sess_match_ip&#39;]        = FALSE;
+$config[&#39;sess_match_useragent&#39;] = TRUE;
+$config[&#39;sess_time_to_update&#39;]  = 300;
 </code></pre>
 <p>Como podrán notar en <code>$config[&#39;sess_expiration&#39;]    = 7200;</code> nos indica que la session expirara después de 7200 segundos de ser creada, que resulta ser 2 horas, la cual se ira actualizando en cada ejecución y en fin el caso seria que si dura 2 horas (7200 segundos) inactiva expirara.</p>
 
