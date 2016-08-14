@@ -132,7 +132,7 @@ function run() {
 
 if (process.argv[2] === 'compile') {
   harp.compile(__dirname, outputPath, function(errors){
-    if(errors) {
+    if (errors) {
       console.log(JSON.stringify(errors, null, 2));
       process.exit(1);
     }
