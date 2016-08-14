@@ -1,0 +1,11 @@
+unless posts.length
+    h3
+      | No entries found
+      
+ul.List.Post-List
+  - post = posts.shift();
+  while post
+    li.List-item
+      .List-meta.Post-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
+      .List-text.Post-title: a(href="#{post.url_relative}") #{post.title}
+    - post = posts.shift();
