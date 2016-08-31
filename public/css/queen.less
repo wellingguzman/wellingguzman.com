@@ -1,13 +1,23 @@
+@import 'style';
 @import 'vendor/_one_dark';
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700italic,700,400italic);
+
 @dark : #2e3239;
 @light: #f1efe9;
 
 body {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.5;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
   background: @dark;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.3;
+  letter-spacing: -1px;
 }
 
 pre, code {
@@ -15,7 +25,8 @@ pre, code {
 }
 
 pre {
-  font-size: 15px;
+  font-family: monospace;
+  font-size: 0.95em;//15px;
   line-height: 1.5;
   border-left: 0;
 }
