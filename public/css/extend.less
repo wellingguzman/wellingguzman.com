@@ -1,8 +1,42 @@
 @import 'style';
 
 .Content-box.Content {
+  border: 0;
   border-radius: 0;
   box-shadow: 10px 10px #999;
+}
+
+.Post-List {
+  margin: 0 -15px;
+  padding: 0;
+
+  .List-item {
+    margin: 0;
+    padding: 1.55em 0 0;
+    background: #fff;
+    &:first-child {
+      padding-top: 0;
+    }
+
+    .List-meta, .List-text a {
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+
+    .List-text:hover {
+      box-shadow: 10px 10px #555;
+    }
+
+    a {
+      display: block;
+      padding: 2px 0;
+    }
+  }
+}
+
+.Content-bottom {
+  background: #fff;
+  margin:0 -15px;
 }
 
 @media (min-width: 1024px) {
