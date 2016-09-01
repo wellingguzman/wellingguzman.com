@@ -9,10 +9,51 @@
   .site-nav {
     border-radius: 0;
     box-shadow: 10px 10px #999;
+
+    .notes &
+    {
+      background: @navGreen;
+    }
+
+    .about &
+    {
+      background: @navBlue;
+    }
+
+    .tags &
+    {
+      background: @navBrown;
+    }
+
+    .experiments &
+    {
+      background: @navYellow;
+    }
   }
 
   .nav-links li {
-    background-color: #464C59;
+    background: @navDark;
+
+    .notes &
+    {
+      background: @navGreen;
+    }
+
+    .about &
+    {
+      background: @navBlue;
+    }
+
+    .tags &
+    {
+      background: @navBrown;
+    }
+
+    .experiments &
+    {
+      background: @navYellow;
+    }
+
     &:hover {
       box-shadow: 10px 10px #555;
     }
