@@ -1,5 +1,14 @@
 @import 'style';
 
+.editor {
+  background-color: #FFF6E6;
+}
+
+#header .avatar {
+  border-radius: 0;
+  border: 5px solid;
+}
+
 .Content-box.Content {
   border: 0;
   border-radius: 0;
@@ -30,6 +39,21 @@
     a {
       display: block;
       padding: 2px 0;
+    }
+  }
+}
+
+.Tags {
+  a.Tag {
+    border: 2px solid @navGreen;
+    background-color: #fff;
+    color: #444;
+    box-shadow: 3px 3px fade(@base-color, 50);
+
+    &:hover {
+      color: #fff;
+      background-color: @navGreen;
+      box-shadow: 3px 3px fade(@base-color, 70);
     }
   }
 }
