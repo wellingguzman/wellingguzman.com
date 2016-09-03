@@ -2,7 +2,6 @@ Using Zend DB to select data from or use a table that doesn't belong to the adap
 
 ```php
 <?php
-
 use Zend\Db\Sql\Sql;
 use Zend\Db\Sql\TableIdentifier;
 

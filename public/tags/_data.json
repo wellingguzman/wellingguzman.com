@@ -1,5 +1,23 @@
 {
   "personal": {
     "hidden": false
+  },
+  "database": {
+    "hidden": false
+  },
+  "nginx": {
+    "hidden": false
+  },
+  "php": {
+    "hidden": false
+  },
+  "server": {
+    "hidden": false
+  },
+  "zend": {
+    "hidden": false
+  },
+  "zend-db": {
+    "hidden": false
   }
 }

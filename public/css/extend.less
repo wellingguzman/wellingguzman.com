@@ -1,18 +1,43 @@
 @import 'style';
 
+@editorBackground: #FFF6E6;
+
 .editor {
-  background-color: #FFF6E6;
+  background-color: @editorBackground;
 }
 
-#header .avatar {
-  border-radius: 0;
-  border: 5px solid;
+pre {
+  font-size: 0.80em;
+  line-height: 1.5;
+
+  &:before {
+    margin: -10px -20px 10px;
+    text-transform: uppercase;
+    background: darken(@editorBackground, 7%);
+  }
+}
+
+#header {
+  h1 {
+    font-weight: bold;
+  }
+
+  .avatar {
+    border-radius: 0;
+    border: 5px solid;
+  }
 }
 
 .Content-box.Content {
   border: 0;
   border-radius: 0;
   box-shadow: 10px 10px #999;
+}
+
+.Post .Post-content > pre {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 10px 20px;
 }
 
 .Post-List {
@@ -54,6 +79,18 @@
       color: #fff;
       background-color: @navGreen;
       box-shadow: 3px 3px fade(@base-color, 70);
+    }
+  }
+}
+
+.Post .Post-content {
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+    &.Tag-title {
+      margin-top: 0;
+      background: #fff;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding: 25px 35px 0;
     }
   }
 }

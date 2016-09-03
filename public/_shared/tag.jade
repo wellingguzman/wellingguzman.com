@@ -14,3 +14,6 @@ ul.List.Post-List
       .List-meta.Post-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
       .List-text.Post-title: a(href="#{post.url_relative}") #{post.title}
     - post = posts.shift();
+
+.Content-bottom
+  a.Button(href="/tags") All tags

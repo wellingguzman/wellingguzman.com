@@ -7,11 +7,11 @@ block content
         header.Post-header
           h1.Post-title
             | #{title}
-          h4.Post-meta
+          .Post-meta
             span.Timestamp #{moment(date).format('dddd, MMMM Do, YYYY')}
             //- span.Timestamp #{moment(date).format('DD.MM.YYYY')}
             if (tags && tags.length)
-              span.Tags
+              .Tags
                 each tag in tags
                   a.Tag(href="/tags/#{tag}") #{tag}
       .Post-content
