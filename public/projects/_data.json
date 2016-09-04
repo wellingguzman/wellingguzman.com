@@ -2,6 +2,7 @@
   "sample": {
     "title": "Sample.js - Welling Guzman",
     "header_title": "Sample.js",
+    "published": false,
     "authors": [{
         "name": "Welling Guzman",
         "url": "https://wellingguzman.com"
