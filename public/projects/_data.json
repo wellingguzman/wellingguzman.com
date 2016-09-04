@@ -5,9 +5,7 @@
     "authors": [{
         "name": "Welling Guzman",
         "url": "https://wellingguzman.com"
-    },{
-        "name": "John Doe",
-        "url": "https://john.do"
-    }]
+    }],
+    "tags": ["javascript"]
   }
 }
