@@ -12,8 +12,7 @@ html
     link(href="https://plus.google.com/109985810023249441310/posts" rel="publisher")
     link(rel="shortcut icon" href="/favicon.ico")
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet')
-    link#baseStyle(rel="stylesheet" type="text/css" href="/css/style.css?v=#{version}")
-    link#extendStyle(rel="stylesheet" type="text/css" href="/css/extend.css?v=#{version}")
+    link#baseStyle(rel="stylesheet" type="text/css" href="/css/extend.css?v=#{version}")
     script.
       var SITE_VERSION = '#{version}';
   - var bodyClassName = '';
@@ -36,7 +35,7 @@ html
           block content
       hr
       include footer
-    script(src="/js/script.min.js?v=#{version}")
+      script(src="/js/script-min.js?v=#{version}")
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
