@@ -494,7 +494,10 @@ figure figcaption {
   background: #e6a57b;
 }
 .experiments #sitebar {
-  background: #FCCD67;
+  background: #ffa552;
+}
+.projects #sitebar {
+  background: #D65231;
 }
 @media (min-width: 570px) {
   #sitebar {
@@ -530,7 +533,10 @@ figure figcaption {
   background: #eec2a6;
 }
 .experiments .nav-links li:hover {
-  background: #fddd99;
+  background: #ffc085;
+}
+.projects .nav-links li:hover {
+  background: #de765c;
 }
 .nav-links li a {
   display: block;
@@ -965,7 +971,10 @@ body.tags .Post .Post-content h2.Tag-title:first-of-type {
     background: #e6a57b;
   }
   .experiments .site-nav {
-    background: #FCCD67;
+    background: #ffa552;
+  }
+  .projects .site-nav {
+    background: #D65231;
   }
   .nav-links li {
     background: #464C59;
@@ -980,7 +989,10 @@ body.tags .Post .Post-content h2.Tag-title:first-of-type {
     background: #e6a57b;
   }
   .experiments .nav-links li {
-    background: #FCCD67;
+    background: #ffa552;
+  }
+  .projects .nav-links li {
+    background: #D65231;
   }
   .nav-links li:hover {
     box-shadow: 10px 10px #555;

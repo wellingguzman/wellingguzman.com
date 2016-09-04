@@ -495,7 +495,10 @@ figure figcaption {
   background: #e6a57b;
 }
 .experiments #sitebar {
-  background: #FCCD67;
+  background: #ffa552;
+}
+.projects #sitebar {
+  background: #D65231;
 }
 @media (min-width: 570px) {
   #sitebar {
@@ -531,7 +534,10 @@ figure figcaption {
   background: #eec2a6;
 }
 .experiments .nav-links li:hover {
-  background: #fddd99;
+  background: #ffc085;
+}
+.projects .nav-links li:hover {
+  background: #de765c;
 }
 .nav-links li a {
   display: block;
