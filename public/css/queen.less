@@ -33,7 +33,7 @@ pre {
 
 pre:before {
   -webkit-font-smoothing: subpixel-antialiased;
-  margin: -10px -10px 10px;
+  margin: -10px -46px 10px;
   padding: 5px 10px 5px;
   background: lighten(@dark, 5%);
 }
@@ -54,13 +54,13 @@ pre:before {
 
 .nav-links a {
   text-transform: uppercase;
-  &:hover {
-    background: lighten(@dark, 10%) !important;
-  }
 }
 
-.nav-links li.selected {
-  background: lighten(@dark, 10%) !important;
+.nav-links li {
+  background: lighten(@dark, 10%);
+  &:hover, &.selected {
+    background: lighten(@dark, 15%) !important;
+  }
 }
 
 #header .Content-box.Content {
@@ -70,6 +70,19 @@ pre:before {
 
 .Post .Post-meta {
   margin-top: 0.5em;
+}
+
+.Post .Post-content > h3 {
+  margin-left: -46px;
+  margin-right: -46px;
+  padding: 25px 46px 0 46px;
+  border-top: 30px solid @dark;
+}
+
+.Post .Post-content > pre {
+  padding: 10px 46px 25px;
+  margin-left: -16px;
+  margin-right: -16px;
 }
 
 .Tags a.Tag {
