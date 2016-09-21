@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Mon, 09 May 2016 0:56:13 +0000</lastBuildDate><language>en-US</language><item><title>Zend DB select from a different database</title><description><![CDATA[Using Zend DB to select data from or use a table that doesn&#39;t belong to the adapter selected database, can be done by using TableIdentifier instead of a string as it shows below:
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Tue, 20 Sep 2016 4:22:34 +0000</lastBuildDate><language>en-US</language><item><title>Ubuntu missing package sources</title><description><![CDATA[While trying to install Directus in an ubuntu server I got an error from a composer dependency that php5-mcrypt is not installed.
+php5-mcrypt : Depends: libmcrypt4 but it is not installable
+Running apt-get install php5-mcrypt didn&#39;t work.
+Running apt-get update first didn&#39;t work either.
+After some time figuring out what was the problem, I end up noticing that the source.list file was missing.
+The next question would be where do I find the official ubuntu repositories? Luckily I found this generator where you can select a ubuntu release and all the repositories you need and it generates you a source.list file.
+Coping and pasting the new generate content to source.list file and running apt-get update updates the ubuntu package repositories.
+Now apt-get install php5-mcrypt works.]]></description><content:encoded><![CDATA[<p>While trying to install <a href="http://getdirectus.com">Directus</a> in an ubuntu server I got an error from a composer dependency that <code>php5-mcrypt</code> is not installed.</p>
+<pre><code>php5-mcrypt : Depends: libmcrypt4 but it is not installable
+</code></pre><p>Running <code>apt-get install php5-mcrypt</code> didn&#39;t work.</p>
+<p>Running <code>apt-get update</code> first didn&#39;t work either.</p>
+<p>After some time figuring out what was the problem, I end up noticing that the <code>source.list</code> file was missing.</p>
+<p>The next question would be where do I find the official ubuntu repositories? Luckily I found <a href="https://repogen.simplylinux.ch/">this generator</a> where you can select a ubuntu release and all the repositories you need and it generates you a <code>source.list</code> file.</p>
+<p>Coping and pasting the new generate content to <code>source.list</code> file and running <code>apt-get update</code> updates the ubuntu package repositories.</p>
+<p>Now <code>apt-get install php5-mcrypt</code> works.</p>
+]]></content:encoded><pubDate>Tue, 20 Sep 2016 4:22:34 +0000</pubDate><link>http://wellingguzman.com/notes/ubuntu-missing-package-sources</link></item><item><title>Zend DB select from a different database</title><description><![CDATA[Using Zend DB to select data from or use a table that doesn&#39;t belong to the adapter selected database, can be done by using TableIdentifier instead of a string as it shows below:
 &lt;?php
 use Zend\Db\Sql\Sql;
 use Zend\Db\Sql\TableIdentifier;
