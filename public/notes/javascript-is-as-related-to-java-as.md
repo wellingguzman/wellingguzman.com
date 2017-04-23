@@ -4,8 +4,8 @@ There is a comparison that start with "Javascript is related to java as _somethi
 
 So this would be a list of this comparison phrases:
 
-- Java is related to JavaScript as Ham is to Hamburger.
-- Java is related to JavaScript as Ham is to Hamster.
-- Java is related to JavaScript as Rock is to Rocket.
+- JavaScript is related to Java as Hamburger is to Ham.
+- JavaScript is related to Java as Hamster is to Ham.
+- JavaScript is related to Java as Rocket is to Rock.
 - JavaScript is related to Java as Carnival is to Car. _From YDKJS Books_
 - More to come...
