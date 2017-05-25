@@ -1,0 +1,24 @@
+#footer {
+  font-size: 0.87rem;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 0.25rem;
+    padding: 1rem 0;
+
+    &:not(:last-of-type):after {
+      display: inline-block;
+      margin: 0 0 0 .5rem;
+      content: "•"
+    }
+  }
+
+  span.copyright a {
+    margin-left: 0.5rem
+  }
+
+  section {
+    padding: 0;
+  }
+}

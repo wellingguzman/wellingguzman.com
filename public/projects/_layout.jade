@@ -1,7 +1,7 @@
 extends ../_shared/layout
 
 block content
-  .Content
+  section
     article.Post
       if current.source != 'index'
         header.Post-header
@@ -11,5 +11,4 @@ block content
             - var authorList = authors.map(function(o){ return o.name; }).join(', ');
             span Made by 
               strong #{authorList}
-      .Post-content
-        != yield
+      != yield

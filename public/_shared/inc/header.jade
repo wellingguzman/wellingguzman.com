@@ -1,0 +1,12 @@
+if current.path[0] == 'index'
+  header#header
+    .container
+      section
+        h1#name Welling Guzmán
+        span#description I am a Computer Engineer building software.
+      unless current.path[0] == 'notes' && current.source != 'index'
+        - pageTitle = header_title || title;
+        if header_title
+          h1.Header-title #{pageTitle}
+        if header_caption
+          h4.Header-caption #{header_caption}

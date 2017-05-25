@@ -1,13 +1,2 @@
 {
-  "sample": {
-    "title": "Sample.js - Welling Guzmán",
-    "header_title": "Sample.js",
-    "authors": [{
-        "name": "Welling Guzmán",
-        "url": "https://wellingguzman.com"
-    },{
-        "name": "John Doe",
-        "url": "https://john.do"
-    }]
-  }
 }

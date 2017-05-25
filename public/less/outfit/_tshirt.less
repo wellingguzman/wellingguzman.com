@@ -1,0 +1,53 @@
+.tshirt-outfit {
+  body& {
+    font-family: monospace;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 1rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  #sitebar {
+    margin-bottom: 1rem;
+
+    .container {
+      &:after {
+        display: block;
+        content: "==========================================================="
+      }
+    }
+
+    nav.menu {
+      li {
+        display: inline-block;
+
+        &:not(:first-of-type) {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  #name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  #header {
+    margin-bottom: 1rem;
+  }
+}

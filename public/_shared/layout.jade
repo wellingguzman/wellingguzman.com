@@ -2,7 +2,6 @@ doctype
 html
   head
     meta(charset="utf8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
     title= title || site_title
     meta(name="description",content="#{site_description}")
     if(site_keywords)
@@ -11,8 +10,7 @@ html
     meta(name="author" content="#{site_author}")
     link(href="https://plus.google.com/109985810023249441310/posts" rel="publisher")
     link(rel="shortcut icon" href="/favicon.ico")
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet')
-    link#baseStyle(rel="stylesheet" type="text/css" href="/css/extend.css?v=#{version}")
+    link(rel="stylesheet" type="text/css" href="/css/main.css?v=#{version}")
     script.
       var SITE_VERSION = '#{version}';
   - var bodyClassName = '';
@@ -23,23 +21,8 @@ html
   - } else {
   -   bodyClassName = current.path[0];
   - }
-  body(class="#{bodyClassName}")
-    //- #sidebar
-    //-   include sidebar
-    #main
-      include sitebar
-      include header
-      hr
-      .Content-wrapper
-        .Content-box.Content
-          block content
-      hr
-      include footer
-      script(src="/js/script-min.js?v=#{version}")
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', '#{analytics}', 'auto');
-      ga('send', 'pageview');
+  body(class="fresh-outfit #{bodyClassName}")
+    include inc/sitebar
+    include inc/header
+    include inc/main
+    include inc/footer

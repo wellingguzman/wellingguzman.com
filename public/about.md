@@ -1,6 +1,6 @@
-![](//wellingguzman.com/images/me.jpg)
+My name is Welling Guzmán, I have a degree in Computer Engineer, passionate about the web, building software, performance, open software and _reinventing the wheel_. I help build [Directus](https://getdirectus.com).
 
-Howdy, my name is Welling Guzmán as you may probably know, and I am a Software Engineer, passionate about the web, building software, performance and _reinventing the wheel_.
+![](//wellingguzman.com/images/me.jpg)
 
 - You can reach me at hola AT this domain
 - You can read what I am up to in Twitter: [@WellingGuzman](https://twitter.com/WellingGuzman)

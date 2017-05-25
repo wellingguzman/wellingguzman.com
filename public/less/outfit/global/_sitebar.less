@@ -1,0 +1,27 @@
+#sitebar {
+  margin: 0;
+
+  a {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    color: @sitebar-menu-item-color;
+
+    &:hover {
+      background: @sitebar-menu-item-hover-background-color;
+      color: @sitebar-menu-item-hover-color;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    width: 122px;
+    margin-left: -178px;
+    background: @sitebar-menu-background;
+  }
+
+  .container {
+    border: 0;
+    border-radius: 0;
+  }
+}

@@ -11,15 +11,23 @@
 - }
 
 - return posts.map(function (slug) {
--   var post = items._data[slug];
+-     var post = items._data[slug];
 
--   post.slug = slug;
--   post.url_relative = itemPath + post.slug;
--   post.url = site_url + post.url_relative;
--   post.date = post.date || new Date(0);
+-     post.slug = slug;
+-     post.url_relative = itemPath + post.slug;
+-     post.url = site_url + post.url_relative;
+-     post.date = post.date || new Date(0);
 
--   return post;
-- }).filter(function (post) {
+-     if (itemType == 'logs') {
+-       var parts = slug.split('/');
+-       post.day_slug = parts.shift();
+-       // post.slug
+-       post.day_url_relative = itemPath + post.day_slug;
+-       post.time = parts.pop();
+-     }
+
+-     return post;
+-   }).filter(function (post) {
 -   if (post.published===false) {
 -     return false;
 -   }

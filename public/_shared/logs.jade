@@ -1,0 +1,12 @@
+- var days = [];
+- return partial('items', { type: 'logs', postlimit: postlimit, filter: function (post) {
+-   if (filter) {
+-     return filter(post);
+-   }
+-   var day = post.day_slug;
+-   if (days.indexOf(day) >= 0) {
+-     return false;
+-   }
+-   days.push(day);
+-   return true;
+- }});

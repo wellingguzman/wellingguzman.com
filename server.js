@@ -9,6 +9,7 @@ var cheerio = require('cheerio');
 var S = require('string');
 var glob = require('glob');
 var st = require('st');
+var marked = require('marked');
 
 var mount;
 var route = router();
@@ -20,7 +21,19 @@ global.moment = moment;
 global.highlighter = new Highlights();
 global.cheerio = cheerio;
 global.S = S;
+global.marked = marked;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
+global.logs = function (path) {
+  var content = '';
+
+  try {
+    content = fs.readFileSync(__dirname + '/public/logs/' + path + '.md', 'utf8');
+  } catch (err) {
+
+  }
+
+  return content;
+};
 // global.allTags = [];
 
 function redirect(res, url) {
@@ -113,7 +126,7 @@ function run() {
       next();
     });
 
-    route.get(/^\/(notes|experiments|projects)$/, function (req, res, next) {
+    route.get(/^\/(notes|logs|logs(\/(.*)+[^\/]$)|experiments|projects)$/, function (req, res, next) {
       req.url+='/';
       next();
     });

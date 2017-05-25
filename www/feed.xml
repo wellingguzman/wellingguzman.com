@@ -3,15 +3,15 @@ php5-mcrypt : Depends: libmcrypt4 but it is not installable
 Running apt-get install php5-mcrypt didn&#39;t work.
 Running apt-get update first didn&#39;t work either.
 After some time figuring out what was the problem, I end up noticing that the source.list file was missing.
-The next question would be where do I find the official ubuntu repositories? Luckily I found this generator where you can select a ubuntu release and all the repositories you need and it generates you a source.list file.
-Coping and pasting the new generate content to source.list file and running apt-get update updates the ubuntu package repositories.
+The next question would be where do I find the official ubuntu repositories? Luckily I found this generator where you can select a ubuntu release and all the repositories you need and it generates a source.list file.
+Copying and pasting the new generate content to source.list file, and then running apt-get update, will updates the ubuntu package repositories.
 Now apt-get install php5-mcrypt works.]]></description><content:encoded><![CDATA[<p>While trying to install <a href="http://getdirectus.com">Directus</a> in an ubuntu server I got an error from a composer dependency that <code>php5-mcrypt</code> is not installed.</p>
 <pre><code>php5-mcrypt : Depends: libmcrypt4 but it is not installable
 </code></pre><p>Running <code>apt-get install php5-mcrypt</code> didn&#39;t work.</p>
 <p>Running <code>apt-get update</code> first didn&#39;t work either.</p>
 <p>After some time figuring out what was the problem, I end up noticing that the <code>source.list</code> file was missing.</p>
-<p>The next question would be where do I find the official ubuntu repositories? Luckily I found <a href="https://repogen.simplylinux.ch/">this generator</a> where you can select a ubuntu release and all the repositories you need and it generates you a <code>source.list</code> file.</p>
-<p>Coping and pasting the new generate content to <code>source.list</code> file and running <code>apt-get update</code> updates the ubuntu package repositories.</p>
+<p>The next question would be where do I find the official ubuntu repositories? Luckily I found <a href="https://repogen.simplylinux.ch/">this generator</a> where you can select a ubuntu release and all the repositories you need and it generates a <code>source.list</code> file.</p>
+<p>Copying and pasting the new generate content to <code>source.list</code> file, and then running <code>apt-get update</code>, will updates the ubuntu package repositories.</p>
 <p>Now <code>apt-get install php5-mcrypt</code> works.</p>
 ]]></content:encoded><pubDate>Tue, 20 Sep 2016 4:22:34 +0000</pubDate><link>http://wellingguzman.com/notes/ubuntu-missing-package-sources</link></item><item><title>Zend DB select from a different database</title><description><![CDATA[Using Zend DB to select data from or use a table that doesn&#39;t belong to the adapter selected database, can be done by using TableIdentifier instead of a string as it shows below:
 &lt;?php
@@ -167,17 +167,17 @@ sudo sh -c &#39;sudo cat file1.txt file2.txt &gt; newfile.txt&#39;]]></descripti
 There is a comparison that start with &quot;Javascript is related to java as something is to some&quot; is a clever and funny comparison to me.
 So this would be a list of this comparison phrases:
 
-Java is related to JavaScript as Ham is to Hamburger.
-Java is related to JavaScript as Ham is to Hamster.
-Java is related to JavaScript as Rock is to Rocket.
+JavaScript is related to Java as Hamburger is to Ham.
+JavaScript is related to Java as Hamster is to Ham.
+JavaScript is related to Java as Rocket is to Rock.
 JavaScript is related to Java as Carnival is to Car. From YDKJS Books
 More to come...]]></description><content:encoded><![CDATA[<p>Some people mix <em>JavaScript</em> with <em>Java</em>, thinking they are the same thing or one are based on the other.</p>
 <p>There is a comparison that start with &quot;Javascript is related to java as <em>something</em> is to <em>some</em>&quot; is a clever and funny comparison to me.</p>
 <p>So this would be a list of this comparison phrases:</p>
 <ul>
-<li>Java is related to JavaScript as Ham is to Hamburger.</li>
-<li>Java is related to JavaScript as Ham is to Hamster.</li>
-<li>Java is related to JavaScript as Rock is to Rocket.</li>
+<li>JavaScript is related to Java as Hamburger is to Ham.</li>
+<li>JavaScript is related to Java as Hamster is to Ham.</li>
+<li>JavaScript is related to Java as Rocket is to Rock.</li>
 <li>JavaScript is related to Java as Carnival is to Car. <em>From YDKJS Books</em></li>
 <li>More to come...</li>
 </ul>

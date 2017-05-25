@@ -16,8 +16,8 @@ each tag in tags
       - post = tagPosts.shift();
       while post
         li.List-item
-          .List-meta.Post-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
-          .List-text.Post-title: a(href="#{post.url_relative}") #{post.title}
+          .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
+          .List-text: a(href="#{post.url_relative}") #{post.title}
         - post = tagPosts.shift();
 
 

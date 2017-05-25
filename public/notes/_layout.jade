@@ -1,24 +1,23 @@
 extends ../_shared/layout
 
 block content
-  .Content
+  section
     article.Post
       if current.path[0] == 'notes' && current.source != 'index'
-        header.Post-header
-          h1.Post-title
-            | #{title}
-          .Post-meta
-            span.Timestamp #{moment(date).format('dddd, MMMM Do, YYYY')}
-            //- span.Timestamp #{moment(date).format('DD.MM.YYYY')}
-            if (tags && tags.length)
-              .Tags
-                each tag in tags
-                  a.Tag(href="/tags/#{tag}") #{tag}
-      .Post-content
-        - content = partial('../_shared/highlight', {yield: yield})
-        != content
-      //-   if (current.source != 'index')
-      //- footer.Post-footer
-      //-   .Post-signature
-      //-     —
-      //-     a(href="http://twitter.com/WellingGuzman" target="_blank") @WellingGuzman
+        h1.Post-title
+          | #{title}
+        .Post-meta
+          span.Timestamp #{moment(date).format('dddd, MMMM Do, YYYY')}
+          //- span.Timestamp #{moment(date).format('DD.MM.YYYY')}
+          if (tags && tags.length)
+            .Tags
+              each tag in tags
+                a.Tag(href="/tags/#{tag}") #{tag}
+
+      - content = partial('../_shared/highlight', {yield: yield})
+      != content
+    //-   if (current.source != 'index')
+    //- footer.Post-footer
+    //-   .Post-signature
+    //-     —
+    //-     a(href="http://twitter.com/WellingGuzman" target="_blank") @WellingGuzman

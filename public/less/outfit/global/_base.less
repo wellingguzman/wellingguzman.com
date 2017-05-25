@@ -1,0 +1,83 @@
+html {
+  font-size: 110%;
+}
+
+hr {
+  display: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem;
+}
+
+p > code {
+  white-space: nowrap;
+
+  &::before,
+  &::after {
+    content: "\00a0";
+    letter-spacing: -0.25rem;
+  }
+}
+
+pre, p > code {
+  background: #ECEFF1;
+}
+
+pre {
+  padding: 1rem;
+}
+
+// section {
+//   margin: 2rem 0;
+// }
+
+main {
+  margin: 2rem 0;
+}
+
+main section:last-of-type {
+  margin-bottom: 0;
+}
+
+#header section,
+main section {
+  padding: 2rem;
+}
+
+.container {
+  border: 1px solid rgba(102, 89, 92,.06);
+  border-radius: 4px;
+}
+
+.List {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.Post-List,
+.Post {
+  .Post-meta {
+    text-transform: uppercase;
+    font-size: 0.87rem;
+  }
+}
+
+.Post-title {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.List-text {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,83 @@
+.suit-outfit {
+  @sitebar-menu-background: #464C59;
+  @sitebar-menu-item-color: #FFFFFF;
+  @sitebar-menu-item-hover-color: #464C59;
+  @sitebar-menu-item-hover-background-color: #5C6476;
+
+  body& {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2E3239;
+    background-color: #2E3239;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @import (multiple) 'global/_base';
+  @import (multiple) 'global/_sitebar';
+  @import (multiple) 'global/_header';
+  @import (multiple) 'global/_main';
+  @import (multiple) 'global/_footer';
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, serif;
+  }
+
+  // .container {
+  //   border: 0;
+  //   border-radius: 0;
+  // }
+
+  a {
+    color: #4D9E5D;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      background: #449955;
+    }
+  }
+
+  pre {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  nav.menu a {
+    text-transform: uppercase;
+  }
+
+  #name {
+    color: #3F9C4F;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  #description {
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  main .container {
+    background-color: #FFFFFF;
+  }
+
+  .Post-List,
+  .Post {
+    .Post-title {
+      font-size: 1.2rem;
+    }
+  }
+
+  #footer {
+    background: #23262B;
+    color: #999999;
+
+    a {
+      color: #E5E5E5;
+    }
+  }
+}

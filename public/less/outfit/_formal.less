@@ -1,0 +1,259 @@
+.formal-outfit {
+  @sitebar-menu-background: #464C59;
+  @sitebar-menu-item-color: #FFFFFF;
+  @sitebar-menu-item-hover-color: #FFFFFF;
+  @sitebar-menu-item-hover-background-color: #5C6476;
+
+  @import (multiple) 'global/_base';
+  @import (multiple) 'global/_sitebar';
+  @import (multiple) 'global/_header';
+  @import (multiple) 'global/_main';
+  @import (multiple) 'global/_footer';
+
+  .border() {
+    border-radius: 0;
+    box-shadow: 10px 10px #999;
+  }
+
+  .border-hover() {
+    &:hover {
+      box-shadow: 10px 10px #555;
+    }
+  }
+
+  .mp_base {
+    display: block;
+    background: #FFF;
+  }
+
+  .margin() {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .padding() {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  body& {
+    .default-font-family;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #66595c;
+    background-color: #FAF6EC; //#F1EFE9
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: #4D9E5D;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      background: #449955;
+    }
+  }
+
+  main {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dotted #2E3239;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .List,
+    .Content-bottom {
+      .margin;
+    }
+
+    .Tag-title {
+      .mp_base;
+      .margin;
+      .padding;
+      margin-top: -1rem;
+      padding-top: 1rem;
+    }
+  }
+
+  section article.Post  {
+    padding: 0 2rem;
+    margin: 0 -2rem;
+  }
+
+  .container {
+    border: 0;
+  }
+
+  .List-item {
+    margin-top: 0;
+    padding-top: 1rem;
+    background: #FFFFFF;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  .List-meta,
+  .List-text a {
+    display: block;
+    padding: 0 2rem;
+  }
+
+  .List-text a {
+    .border-hover;
+  }
+
+  #name {
+    text-transform: uppercase;
+    color: #3F9C4F;
+    font-weight: 500;
+  }
+
+  #description {
+    color: #5A6772;
+    text-transform: uppercase;
+  }
+
+  #header .container,
+  main .container {
+    background-color: #FFFFFF;
+    .border;
+  }
+
+  nav.menu {
+    .border;
+
+    li {
+      background: @sitebar-menu-background;
+      .border-hover
+    }
+  }
+
+  @import '../vendor/_earth';
+
+  .Tags {
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+
+    .Tag {
+      padding: 2px 5px;
+      border: 2px solid #7CBF7C;
+      background-color: #FFFFFF;
+      color: #444;
+      box-shadow: 3px 3px rgba(46, 50, 57, 0.5);
+
+      &:hover {
+        color: #fff;
+        background-color: #7CBF7C;
+        box-shadow: 3px 3px rgba(46, 50, 57, 0.7);
+      }
+    }
+  }
+
+  pre, code {
+    .default-mono-font-family;
+    font-size: 0.9rem;
+  }
+
+  p code {
+    background: #f8f6f2;
+    padding: 0.3em 0;
+    background-color: #f8f6f2;
+    border-radius: 3px;
+  }
+
+  article pre {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 1rem 2rem;
+    // background: #f8f6f2;
+    // background: #eae2c7
+    // #f8f5ec
+  }
+
+  .Content-bottom {
+    background: #FFFFFF;
+    margin-top: -1rem;
+  }
+
+  #footer {
+    background-color: #554A4C;
+    color: #E0DCDD;
+
+    a {
+      color: #B8ADB0;
+
+      &:hover {
+        color: lighten(#B8ADB0, 10%);
+        text-decoration: underline;
+        background: transparent;
+      }
+    }
+  }
+
+  &.logs {
+    main {
+      .container {
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .Log-meta {
+        font-weight: 700;
+      }
+
+      .Log-title {
+        border-bottom: 1px dotted #2E3239;
+        font-size: 1.3rem;
+      }
+
+      section {
+        background: #FFFFFF;
+        margin: 2rem 0 3rem;
+        overflow: hidden;
+        .border;
+
+        header {
+          padding: 1rem 2rem;
+        }
+
+        article {
+          padding: 0 2rem;
+          margin: 1rem 0 2rem;
+        }
+
+        section {
+          background: antiquewhite;
+
+          header {
+            padding: 0;
+          }
+
+          article {
+            padding: 0;
+          }
+
+          footer {
+            background: #d7d0cb;
+          }
+        }
+
+        footer {
+          padding: 0.5rem 1rem;
+          background: #CCCBD2;
+          font-size: 0.9rem;
+
+          p {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+}
