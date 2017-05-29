@@ -20,8 +20,8 @@ Emojis (Unicode characters)UTF8 can support emoji, but not all of them, all the 
 The sparkle emoji (✨ U+2728) is between U+0000 and U+FFFF then it can be used on utf8 but the Woman Health Worker (👩 U+1F469) which is not between U+0000 and U+FFFF, must use the utf8mb4 charset.
 Index lengthNow all the characters use 4 bytes instead of 3, so all columns that has more than 191 characters now uses more than 767 bytes, because 192 x 4 bytes is 768 bytes.
 The options were removing the index, keep using utf8 or reduce the length. Removing the index wasn&#39;t an option neither keep using the utf8, but reducing the length was possible was the columns will probably never met the actual length which is 255 characters, reducing it to 191 was optimal and in no way will harm the system.
-ConclusionChanging all columns length greater than 191 characters to 191.
-If changing this is not possible, change the column index to only a chunk of x characters.
+ConclusionChanging all string columns that length are greater than 191 characters to 191.
+If changing the length is not a possible or desired option, changing the column index to only a chunk of x characters.
 CREATE INDEX index_name ON posts (title(191));]]></description><content:encoded><![CDATA[<p>After changing the default charset from <code>utf8</code> to <code>utf8mb4</code> to support emojis on <a href="https://getdirectus.com">Directus</a>, we started to received errors that the key was too long.</p>
 <p>How can be too long if we only change the charset? one may ask.</p>
 <p>First these are the errors I&#39;m talking about:</p>
@@ -44,8 +44,8 @@ CREATE INDEX index_name ON posts (title(191));]]></description><content:encoded>
 <p>The sparkle emoji (✨ U+2728) is between U+0000 and U+FFFF then it can be used on <code>utf8</code> but the Woman Health Worker (👩 U+1F469) which is not between U+0000 and U+FFFF, must use the <code>utf8mb4</code> charset.</p>
 <h2>Index length</h2><p>Now all the characters use 4 bytes instead of 3, so all columns that has more than 191 characters now uses more than 767 bytes, because 192 x 4 bytes is 768 bytes.</p>
 <p>The options were removing the index, keep using <code>utf8</code> or reduce the length. Removing the index wasn&#39;t an option neither keep using the <code>utf8</code>, but reducing the length was possible was the columns will probably never met the actual length which is 255 characters, reducing it to 191 was optimal and in no way will harm the system.</p>
-<h2>Conclusion</h2><p>Changing all columns length greater than 191 characters to 191.</p>
-<p>If changing this is not possible, change the column index to only a chunk of x characters.</p>
+<h2>Conclusion</h2><p>Changing all string columns that length are greater than 191 characters to 191.</p>
+<p>If changing the length is not a possible or desired option, changing the column index to only a chunk of x characters.</p>
 <pre><code class="language-sql">CREATE INDEX index_name ON posts (title(191));
 </code></pre>
 ]]></content:encoded><pubDate>Sun, 28 May 2017 20:06:14 +0000</pubDate><link>http://wellingguzman.com/notes/mysql-key-limit</link></item><item><title>Ubuntu missing package sources</title><description><![CDATA[While trying to install Directus in an ubuntu server I got an error from a composer dependency that php5-mcrypt is not installed.

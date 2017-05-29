@@ -55,9 +55,9 @@ The options were removing the index, keep using `utf8` or reduce the length. Rem
 
 ## Conclusion
 
-Changing all columns length greater than 191 characters to 191.
+Changing all string columns that length are greater than 191 characters to 191.
 
-If changing this is not possible, change the column index to only a chunk of x characters.
+If changing the length is not a possible or desired option, changing the column index to only a chunk of x characters.
 
 ```sql
 CREATE INDEX index_name ON posts (title(191));
