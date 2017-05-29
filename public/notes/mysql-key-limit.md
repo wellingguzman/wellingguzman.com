@@ -17,7 +17,7 @@ It can be any of those errors depending on whether the table's storage engine is
 
 utf8 charset requires only 3 bytes per character, while utf8mb4 requires 4 bytes, which mean you have to use at most 191 characters in your string column
 
-191 characters x 4 bytes = 754 bytes which is less than the maximum length of 767 bytes;
+191 characters x 4 bytes = 764 bytes which is less than the maximum length of 767 bytes;
 
 ---
 

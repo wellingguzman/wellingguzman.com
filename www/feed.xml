@@ -6,7 +6,7 @@ First these are the errors I&#39;m talking about:
 #1071 - Specified key was too long; max key length is 3072 bytes
 It can be any of those errors depending on whether the table&#39;s storage engine is: MySIAM, InnoDb or InnoDb with innodb_large_prefix enabled.
 TL;DRutf8 charset requires only 3 bytes per character, while utf8mb4 requires 4 bytes, which mean you have to use at most 191 characters in your string column
-191 characters x 4 bytes = 754 bytes which is less than the maximum length of 767 bytes;
+191 characters x 4 bytes = 764 bytes which is less than the maximum length of 767 bytes;
 
 String storageString storage size vary depends on if the column is fixed-length or variable-length, it also depends on the charset it takes more bytes to storage a japanese character than an ASCII/Latin letter.
 As an example CHAR is a fixed-length while VARCHAR and TEXT are variable-length.
@@ -30,7 +30,7 @@ CREATE INDEX index_name ON posts (title(191));]]></description><content:encoded>
 #1071 - Specified key was too long; max key length is 3072 bytes
 </code></pre><p>It can be any of those errors depending on whether the table&#39;s storage engine is: MySIAM, InnoDb or InnoDb with <code>innodb_large_prefix</code> enabled.</p>
 <h2>TL;DR</h2><p>utf8 charset requires only 3 bytes per character, while utf8mb4 requires 4 bytes, which mean you have to use at most 191 characters in your string column</p>
-<p>191 characters x 4 bytes = 754 bytes which is less than the maximum length of 767 bytes;</p>
+<p>191 characters x 4 bytes = 764 bytes which is less than the maximum length of 767 bytes;</p>
 <hr>
 <h2>String storage</h2><p>String storage size vary depends on if the column is fixed-length or variable-length, it also depends on the charset it takes more bytes to storage a japanese character than an ASCII/Latin letter.</p>
 <p>As an example <code>CHAR</code> is a fixed-length while <code>VARCHAR</code> and <code>TEXT</code> are variable-length.</p>
