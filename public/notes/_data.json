@@ -117,6 +117,12 @@
     "title": "Reinventing the wheel",
     "published": false
   },
+  "mysql-key-limit": {
+    "title": "MySQL string columns key length",
+    "date": "2017-05-27 20:06:14",
+    "published": true,
+    "tags": ["mysql", "unicode"]
+  },
   "ubuntu-missing-package-sources": {
     "title": "Ubuntu missing package sources",
     "date": "2016-09-20 04:22:34",
