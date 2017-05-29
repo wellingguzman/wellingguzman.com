@@ -119,7 +119,7 @@
   },
   "mysql-key-limit": {
     "title": "MySQL string columns key length",
-    "date": "2017-05-27 20:06:14",
+    "date": "2017-05-28 20:06:14",
     "published": true,
     "tags": ["mysql", "unicode"]
   },
