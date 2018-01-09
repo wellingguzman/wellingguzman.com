@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com</link><description>Notes about code and among other things.</description><lastBuildDate>Sun, 28 May 2017 20:06:14 +0000</lastBuildDate><language>en-US</language><item><title>MySQL string columns key length</title><description><![CDATA[After changing the default charset from utf8 to utf8mb4 to support emojis on Directus, we started to received errors that the key was too long.
+<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="fresh-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li><li><a href="/experiments">lab</a></li><li><a href="/projects">projects</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sun, 28 May 2017 20:06:14 +0000</lastbuilddate><language>en-US</language><item><title>MySQL string columns key length</title><description><![CDATA[After changing the default charset from utf8 to utf8mb4 to support emojis on Directus, we started to received errors that the key was too long.
 How can be too long if we only change the charset? one may ask.
 First these are the errors I&#39;m talking about:
 #1071 - Specified key was too long; max key length is 767 bytes
@@ -48,7 +48,7 @@ CREATE INDEX index_name ON posts (title(191));]]></description><content:encoded>
 <p>If changing the length is not a possible or desired option, changing the column index to only a chunk of x characters.</p>
 <pre><code class="language-sql">CREATE INDEX index_name ON posts (title(191));
 </code></pre>
-]]></content:encoded><pubDate>Sun, 28 May 2017 20:06:14 +0000</pubDate><link>http://wellingguzman.com/notes/mysql-key-limit</link></item><item><title>Ubuntu missing package sources</title><description><![CDATA[While trying to install Directus in an ubuntu server I got an error from a composer dependency that php5-mcrypt is not installed.
+]]></content:encoded><pubdate>Sun, 28 May 2017 20:06:14 +0000</pubdate><link>http://wellingguzman.com/notes/mysql-key-limit</item><item><title>Ubuntu missing package sources</title><description><![CDATA[While trying to install Directus in an ubuntu server I got an error from a composer dependency that php5-mcrypt is not installed.
 php5-mcrypt : Depends: libmcrypt4 but it is not installable
 Running apt-get install php5-mcrypt didn&#39;t work.
 Running apt-get update first didn&#39;t work either.
@@ -63,7 +63,7 @@ Now apt-get install php5-mcrypt works.]]></description><content:encoded><![CDATA
 <p>The next question would be where do I find the official ubuntu repositories? Luckily I found <a href="https://repogen.simplylinux.ch/">this generator</a> where you can select a ubuntu release and all the repositories you need and it generates a <code>source.list</code> file.</p>
 <p>Copying and pasting the new generate content to <code>source.list</code> file, and then running <code>apt-get update</code>, will updates the ubuntu package repositories.</p>
 <p>Now <code>apt-get install php5-mcrypt</code> works.</p>
-]]></content:encoded><pubDate>Tue, 20 Sep 2016 4:22:34 +0000</pubDate><link>http://wellingguzman.com/notes/ubuntu-missing-package-sources</link></item><item><title>Zend DB select from a different database</title><description><![CDATA[Using Zend DB to select data from or use a table that doesn&#39;t belong to the adapter selected database, can be done by using TableIdentifier instead of a string as it shows below:
+]]></content:encoded><pubdate>Tue, 20 Sep 2016 4:22:34 +0000</pubdate><link>http://wellingguzman.com/notes/ubuntu-missing-package-sources</item><item><title>Zend DB select from a different database</title><description><![CDATA[Using Zend DB to select data from or use a table that doesn&#39;t belong to the adapter selected database, can be done by using TableIdentifier instead of a string as it shows below:
 &lt;?php
 use Zend\Db\Sql\Sql;
 use Zend\Db\Sql\TableIdentifier;
@@ -87,7 +87,7 @@ $select-&gt;where(array(&#39;id&#39; =&gt; 1));
 $statement = $sql-&gt;prepareStatementForSqlObject($select);
 $results = $statement-&gt;execute();
 </code></pre>
-]]></content:encoded><pubDate>Mon, 09 May 2016 0:56:13 +0000</pubDate><link>http://wellingguzman.com/notes/zend-db-select-from-different-database</link></item><item><title>Run node app in background (Linux)</title><description><![CDATA[Running a script in the background in linux can be done using nohup, using nohup we can run node application in the background.
+]]></content:encoded><pubdate>Mon, 09 May 2016 0:56:13 +0000</pubdate><link>http://wellingguzman.com/notes/zend-db-select-from-different-database</item><item><title>Run node app in background (Linux)</title><description><![CDATA[Running a script in the background in linux can be done using nohup, using nohup we can run node application in the background.
 $ nohup node /nodeapp/index.js &amp;
 
 Forever is another solution for Node scripts.
@@ -121,7 +121,7 @@ $ forever list
 <p>The second column of your result is probably the PID, take that number and run the command below:</p>
 <pre><code class="language-shell">kill -9 [PID]
 </code></pre>
-]]></content:encoded><pubDate>Thu, 28 Apr 2016 7:01:59 +0000</pubDate><link>http://wellingguzman.com/notes/run-node-app-in-background-linux</link></item><item><title>PHP - call_user_func reference</title><description><![CDATA[PHP function call_user_func() does not pass parameter variable as reference. the code below won&#39;t work as expected.
+]]></content:encoded><pubdate>Thu, 28 Apr 2016 7:01:59 +0000</pubdate><link>http://wellingguzman.com/notes/run-node-app-in-background-linux</item><item><title>PHP - call_user_func reference</title><description><![CDATA[PHP function call_user_func() does not pass parameter variable as reference. the code below won&#39;t work as expected.
 From PHP documentation:
 
 Note that the parameters for call_user_func() are not passed by reference.
@@ -175,7 +175,7 @@ $a = 0;
 call_user_func_array(&#39;increment&#39;, array(&amp;$a));
 echo $a.&quot;\n&quot;; // $a is equals to 1
 </code></pre>
-]]></content:encoded><pubDate>Fri, 01 Apr 2016 10:49:12 +0000</pubDate><link>http://wellingguzman.com/notes/php-call-user-func-reference</link></item><item><title>Disable nginx basic_auth for one location</title><description><![CDATA[If you protected your website with nginx basic_auth, and want to disable it for just one (or maybe some specific locations), you can use basic_auth off for that location and the authorization won&#39;t be required.
+]]></content:encoded><pubdate>Fri, 01 Apr 2016 10:49:12 +0000</pubdate><link>http://wellingguzman.com/notes/php-call-user-func-reference</item><item><title>Disable nginx basic_auth for one location</title><description><![CDATA[If you protected your website with nginx basic_auth, and want to disable it for just one (or maybe some specific locations), you can use basic_auth off for that location and the authorization won&#39;t be required.
 Example:
 server {
   auth_basic &quot;Restricted content&quot;;
@@ -195,7 +195,7 @@ server {
   }
 }
 </code></pre>
-]]></content:encoded><pubDate>Thu, 18 Feb 2016 2:19:21 +0000</pubDate><link>http://wellingguzman.com/notes/disable-nginx-basic-auth-for-one-location</link></item><item><title>sudo and redirect output</title><description><![CDATA[Concatenating two files in unix-like operative system can be done with a single line like these:
+]]></content:encoded><pubdate>Thu, 18 Feb 2016 2:19:21 +0000</pubdate><link>http://wellingguzman.com/notes/disable-nginx-basic-auth-for-one-location</item><item><title>sudo and redirect output</title><description><![CDATA[Concatenating two files in unix-like operative system can be done with a single line like these:
 $ cat file1.txt file2.txt &gt; newfile.txt
 
 If permission is needed to create and write into new files in the specified path you must use sudo, so you do this:
@@ -213,7 +213,7 @@ sudo sh -c &#39;sudo cat file1.txt file2.txt &gt; newfile.txt&#39;]]></descripti
 <p>There&#39;s several solutions to this but a one-liner solution is to run a shell command inline:</p>
 <pre><code class="language-bash">sudo sh -c &#39;sudo cat file1.txt file2.txt &gt; newfile.txt&#39;
 </code></pre>
-]]></content:encoded><pubDate>Tue, 16 Feb 2016 21:20:21 +0000</pubDate><link>http://wellingguzman.com/notes/sudo-and-redirect-output</link></item><item><title>&quot;JavaScript&quot; is as related to &quot;Java&quot; as ...</title><description><![CDATA[Some people mix JavaScript with Java, thinking they are the same thing or one are based on the other.
+]]></content:encoded><pubdate>Tue, 16 Feb 2016 21:20:21 +0000</pubdate><link>http://wellingguzman.com/notes/sudo-and-redirect-output</item><item><title>&quot;JavaScript&quot; is as related to &quot;Java&quot; as ...</title><description><![CDATA[Some people mix JavaScript with Java, thinking they are the same thing or one are based on the other.
 There is a comparison that start with &quot;Javascript is related to java as something is to some&quot; is a clever and funny comparison to me.
 So this would be a list of this comparison phrases:
 
@@ -231,7 +231,7 @@ More to come...]]></description><content:encoded><![CDATA[<p>Some people mix <em
 <li>JavaScript is related to Java as Carnival is to Car. <em>From YDKJS Books</em></li>
 <li>More to come...</li>
 </ul>
-]]></content:encoded><pubDate>Mon, 25 Jan 2016 23:58:02 +0000</pubDate><link>http://wellingguzman.com/notes/javascript-is-as-related-to-java-as</link></item><item><title>Writing on the moment</title><description><![CDATA[This is probably has been said a lot out there, but I wanted to tell you this again, if you like to express an idea, a experience or simply want to share your thoughts, write it down while you got the momentum going.
+]]></content:encoded><pubdate>Mon, 25 Jan 2016 23:58:02 +0000</pubdate><link>http://wellingguzman.com/notes/javascript-is-as-related-to-java-as</item><item><title>Writing on the moment</title><description><![CDATA[This is probably has been said a lot out there, but I wanted to tell you this again, if you like to express an idea, a experience or simply want to share your thoughts, write it down while you got the momentum going.
 If you love something and want to say how much you love it, say it while you love it, and when you stop loving it, you can share it again and compare saying why you stop loving it.
 If you want to share something today, and if you are like me, there&#39;s a high chance that tomorrow you won&#39;t feel that spark that make you feel you need it to share something.
 I want to share so much, but then I end up thinking, who wants to read this anyway, who will find this anyway. Don&#39;t be that person.
@@ -246,7 +246,7 @@ I&#39;ll take my own advice and do the same. Let&#39;s]]></description><content:
 <p>I&#39;m saying this not because I do it, because I don&#39;t, but because I&#39;ve been on the other side as a reader, reading comments about how they hate the post AND the author, while I&#39;m sitting here thinking why do they hate them, they are awesome and this content is great. The author probably is thinking is all true, because people who liked the content are not expressing their love to them and their content, but rather they just stare at how other people hate (or <em>don&#39;t like</em>) them.</p>
 <p>Please, share your thoughts and let people know if you liked their content or not, but do not offend them, they can talk, if not, move along.</p>
 <p>I&#39;ll take my own advice and do the same. Let&#39;s</p>
-]]></content:encoded><pubDate>Sun, 29 Nov 2015 0:51:55 +0000</pubDate><link>http://wellingguzman.com/notes/writing-on-the-moment</link></item><item><title>Twenty years of PHP</title><description><![CDATA[Yesterday 9 days ago it was PHP 20th birthday. Twenty years ago Rasmus Lerdorf released PHP 1.0, but it wasn’t until 8 years later when I had my first encounter with this language.
+]]></content:encoded><pubdate>Sun, 29 Nov 2015 0:51:55 +0000</pubdate><link>http://wellingguzman.com/notes/writing-on-the-moment</item><item><title>Twenty years of PHP</title><description><![CDATA[Yesterday 9 days ago it was PHP 20th birthday. Twenty years ago Rasmus Lerdorf released PHP 1.0, but it wasn’t until 8 years later when I had my first encounter with this language.
 In 2003, I found out that anyone were able to make websites, that it wasn’t something just for big company to show their product and information. So started digging and searching on Altavista and Yahoo (Remember those search engine?), “where” and “how” do I start making websites.
 I found Geocities, it was a great service from Yahoo. but as far as I remember it was only HTML, CSS, images and glitter, then I found Lycos, here I could upload PHP code and MySQL databases, it was all about CuteFTP and PHPMyAdmin. I uploaded CMS, forums, blogs (I think it were called news back then, don’t recall), and thousands of PHP scripts for any purpose, such as PHPNuke and PHPBB.
 I didn’t know programming at all, but I loved how easy it was, you didn’t need to know OOP, just open a text editor and write some basic c-style code instruction and you are all set, no framework, no nothing.
@@ -267,7 +267,7 @@ I would like to thanks: Rasmus Lerdorf, PHP core developers and the whole PHP co
 <p><img src="/images/breaking_the_ice_with_php_s.jpg" alt="PHP Comic"></p>
 <p>Thanks to PHP I got into Web Development, and I love it.</p>
 <p>I would like to thanks: Rasmus Lerdorf, PHP core developers and the whole PHP community and web folks.</p>
-]]></content:encoded><pubDate>Wed, 17 Jun 2015 10:39:55 +0000</pubDate><link>http://wellingguzman.com/notes/twenty-years-of-php</link></item><item><title>Prevent line-break with hyphenated words</title><description><![CDATA[When you got a paragraph in HTML and in there you have a word hyphenated and you want to treat it as a whole as one word, but then there&#39;s not much space and it gets broken in the middle.
+]]></content:encoded><pubdate>Wed, 17 Jun 2015 10:39:55 +0000</pubdate><link>http://wellingguzman.com/notes/twenty-years-of-php</item><item><title>Prevent line-break with hyphenated words</title><description><![CDATA[When you got a paragraph in HTML and in there you have a word hyphenated and you want to treat it as a whole as one word, but then there&#39;s not much space and it gets broken in the middle.
 This is what you should probably be getting:
 This hotel is all-
 inclusive
@@ -284,7 +284,7 @@ inclusive
 all-inclusive
 </code></pre><p>There is something you probably don&#39;t know is that there&#39;s a lot of differents hyphen- or dash&#8209;like characters in Unicode. The hyphen we need here it&#39;s the <strong>non&#8209;breaking hyphen</strong> (<code>U+2011</code> or <code>&amp;#8209;</code>).</p>
 <p>Instead of using the regular hyphen (or minus hyphen) use the non&#8209;breaking hyphen and you should be getting the correct result of treating the hyphenated word as a single word.</p>
-]]></content:encoded><pubDate>Wed, 25 Feb 2015 4:06:18 +0000</pubDate><link>http://wellingguzman.com/notes/prevent-line-break-with-hyphenated-words</link></item><item><title>GitHub: long diff problem</title><description><![CDATA[This is not something that would happen frequently, but when there a big change with lots of files and lines of code involved, GitHub will display a messages that says: &quot;Sorry, we could not display the entire diff because too many files changed.&quot; and it will be hard to check all the files that were affected by that commit.
+]]></content:encoded><pubdate>Wed, 25 Feb 2015 4:06:18 +0000</pubdate><link>http://wellingguzman.com/notes/prevent-line-break-with-hyphenated-words</item><item><title>GitHub: long diff problem</title><description><![CDATA[This is not something that would happen frequently, but when there a big change with lots of files and lines of code involved, GitHub will display a messages that says: &quot;Sorry, we could not display the entire diff because too many files changed.&quot; and it will be hard to check all the files that were affected by that commit.
 It would be nice if there was a option where you can hide the lines of code and only show the file names, so that way wouldn&#39;t slow down the browser performance, and we can see the files name quickly.
 Because this still not a option available, we have Dev Tools and DOM Selectors, and when this happen I open the console and run this line of code:
 // hides the content
@@ -298,11 +298,11 @@ $(&#39;.data.blob-wrapper&#39;).hide()
 </code></pre>
 <p>Here it&#39;s what it would ends up looking like this:</p>
 <p><img src="/images/github-diff.jpg" alt="GitHub Diff" title="GitHub Diff"></p>
-]]></content:encoded><pubDate>Sat, 07 Feb 2015 1:47:22 +0000</pubDate><link>http://wellingguzman.com/notes/github-long-diff-problem</link></item><item><title>Learn the proper names</title><description><![CDATA[Someone asked me if I knew what Lambdas was, and quickly I answered: “I’ve heard that word before, but really don’t know what it is”.
+]]></content:encoded><pubdate>Sat, 07 Feb 2015 1:47:22 +0000</pubdate><link>http://wellingguzman.com/notes/github-long-diff-problem</item><item><title>Learn the proper names</title><description><![CDATA[Someone asked me if I knew what Lambdas was, and quickly I answered: “I’ve heard that word before, but really don’t know what it is”.
 
 It turned out that I do knew what it was, just didn’t know it was called Lambdas, for me Lambdas was a shiny Ruby only feature or something. But Lambdas are Anonymous functions, I use it everyday without knowing it was also called Lambdas.]]></description><content:encoded><![CDATA[<p>Someone asked me if I knew what Lambdas was, and quickly I answered: “I’ve heard that word before, but really don’t know what it is”.</p>
 
-<p>It turned out that I do knew what it was, just didn’t know it was called Lambdas, for me Lambdas was a shiny Ruby only feature or something. But Lambdas are Anonymous functions, I use it everyday without knowing it was also called Lambdas.</p>]]></content:encoded><pubDate>Tue, 02 Sep 2014 3:35:24 +0000</pubDate><link>http://wellingguzman.com/notes/learn-proper-names</link></item><item><title>How to type ß (Eszett) on Mac OS</title><description><![CDATA[How to type this ß (Eszett) or weird-looking &quot;B&quot; as I knew it before in Mac and iPhone.
+<p>It turned out that I do knew what it was, just didn’t know it was called Lambdas, for me Lambdas was a shiny Ruby only feature or something. But Lambdas are Anonymous functions, I use it everyday without knowing it was also called Lambdas.</p>]]></content:encoded><pubdate>Tue, 02 Sep 2014 3:35:24 +0000</pubdate><link>http://wellingguzman.com/notes/learn-proper-names</item><item><title>How to type ß (Eszett) on Mac OS</title><description><![CDATA[How to type this ß (Eszett) or weird-looking &quot;B&quot; as I knew it before in Mac and iPhone.
 
 
 Mac OS
@@ -353,7 +353,7 @@ Notice the lowercase &quot;s&quot; in Schokolade.]]></description><content:encod
 <p><img src="http://wellingguzman.com/wp-content/uploads/2014/09/sub.jpg"><p>
 
 <p><em>Notice the lowercase &quot;s&quot; in Schokolade.</em></p>
-]]></content:encoded><pubDate>Mon, 01 Sep 2014 21:35:07 +0000</pubDate><link>http://wellingguzman.com/notes/type-s-eszett-mac-os</link></item><item><title>Custom Post Slug collapse with Page Slug in WordPress</title><description><![CDATA[Changing permalink on WordPress it&#39;s never, well at least it never gave me any headache, but when I change /blog/%postname%/ to just /%postname%/ some pages fell apart, and I was blaming the .htaccess, deleting it, recreating, let WordPress rebuild it, did a flush_rewrite_rules(); and nothing was fixed. Then I notice it was all the custom post slug that matches the page slug.
+]]></content:encoded><pubdate>Mon, 01 Sep 2014 21:35:07 +0000</pubdate><link>http://wellingguzman.com/notes/type-s-eszett-mac-os</item><item><title>Custom Post Slug collapse with Page Slug in WordPress</title><description><![CDATA[Changing permalink on WordPress it&#39;s never, well at least it never gave me any headache, but when I change /blog/%postname%/ to just /%postname%/ some pages fell apart, and I was blaming the .htaccess, deleting it, recreating, let WordPress rebuild it, did a flush_rewrite_rules(); and nothing was fixed. Then I notice it was all the custom post slug that matches the page slug.
 
 The site had three custom post, Films, Stories, Galleries, also for each custom post there is a page with the same name and slug which had a custom template, but I enter to thesite.com/films, thesite.com/stories or thesite.com/galleries it did not serve the right template, so I change thesite.com/films to thesite.com/filmz and it did work and serve the right template.
 
@@ -409,7 +409,7 @@ Do not use the custom page, and customize the archive-{$post_type}.php file and 
 <p>Change <code>&#39;has_archive&#39;=&gt; true</code> to <code>false</code> and the <code>/films</code> would be ignore by the custom post.</p>
 
 <p><h3>Solution #3</h3></p>
-<p>Do not use the custom page, and customize the <code>archive-{$post_type}.php</code> file and forget about the specific page for each one.</p>]]></content:encoded><pubDate>Fri, 01 Aug 2014 3:37:32 +0000</pubDate><link>http://wellingguzman.com/notes/custom-post-slug-collapse-page-slug-wordpress</link></item><item><title>MAMP MySQL Problem</title><description><![CDATA[Using the library node-mysql I found myself with an error that refused my node app to connect to an MySQL Database or in fact the server itself. At first I blame the library, searching and searching and I didn&#39;t find any solution that leads me to fix error. Every time I tried a connection I always get the error : Error: connect ECONNREFUSED.
+<p>Do not use the custom page, and customize the <code>archive-{$post_type}.php</code> file and forget about the specific page for each one.</p>]]></content:encoded><pubdate>Fri, 01 Aug 2014 3:37:32 +0000</pubdate><link>http://wellingguzman.com/notes/custom-post-slug-collapse-page-slug-wordpress</item><item><title>MAMP MySQL Problem</title><description><![CDATA[Using the library node-mysql I found myself with an error that refused my node app to connect to an MySQL Database or in fact the server itself. At first I blame the library, searching and searching and I didn&#39;t find any solution that leads me to fix error. Every time I tried a connection I always get the error : Error: connect ECONNREFUSED.
 
 
 
@@ -529,7 +529,7 @@ var connection = mysql.createConnection({
 </code>
 </pre>
 
-<p>Hope it solve you an issue or help you in anyway.</p>]]></content:encoded><pubDate>Sat, 19 Jul 2014 15:47:19 +0000</pubDate><link>http://wellingguzman.com/notes/mamp-mysql-problem</link></item><item><title>WordPress functionality in another PHP Project</title><description><![CDATA[I&#39;m working on a Project using Laravel and I need to pull all the blog post from a WordPress site that is already on the same server.
+<p>Hope it solve you an issue or help you in anyway.</p>]]></content:encoded><pubdate>Sat, 19 Jul 2014 15:47:19 +0000</pubdate><link>http://wellingguzman.com/notes/mamp-mysql-problem</item><item><title>WordPress functionality in another PHP Project</title><description><![CDATA[I&#39;m working on a Project using Laravel and I need to pull all the blog post from a WordPress site that is already on the same server.
 
 
 To do this and have the power of  WordPress into another project, add the WordPress wp-load.php file.
@@ -573,7 +573,7 @@ $posts = get_posts( $args );
 </code></pre>
 <p>Something that could happen is that you have a function/class with the same name as WordPress has and this would thrown a function/class redeclaration error.
 
-<p>But aside from this, works perfect.</p>]]></content:encoded><pubDate>Tue, 13 May 2014 12:58:01 +0000</pubDate><link>http://wellingguzman.com/notes/wordpress-functionality-another-php-project</link></item><item><title>Subdomain on a different server</title><description><![CDATA[I want to develop my first Node.js applications and host it as subdomain, but this server (shared on hostgator) does not support Node.js applications, and for a second I thought if I need to change server only for this?. But nope, there is a solution for this.
+<p>But aside from this, works perfect.</p>]]></content:encoded><pubdate>Tue, 13 May 2014 12:58:01 +0000</pubdate><link>http://wellingguzman.com/notes/wordpress-functionality-another-php-project</item><item><title>Subdomain on a different server</title><description><![CDATA[I want to develop my first Node.js applications and host it as subdomain, but this server (shared on hostgator) does not support Node.js applications, and for a second I thought if I need to change server only for this?. But nope, there is a solution for this.
 
 
 What I want
@@ -629,7 +629,7 @@ This would do the trick, and every time subdomain.wellingguzman.com is typed it 
 </li>
 </ol>
 
-<p>This would do the trick, and every time <em>subdomain.wellingguzman.com</em> is typed it would request <em>nodejs-welling.rhcloud.com</em>.</p>]]></content:encoded><pubDate>Mon, 12 May 2014 22:31:30 +0000</pubDate><link>http://wellingguzman.com/notes/subdomain-different-server</link></item><item><title>Control WordPress 404 Error</title><description><![CDATA[I have site built with Wordpress and I wanted to catch all 404 page that Wordpress try to display and make my own custom 404 page depending on the requested page, or in fact I just wanted to whether or not show a 404 page.
+<p>This would do the trick, and every time <em>subdomain.wellingguzman.com</em> is typed it would request <em>nodejs-welling.rhcloud.com</em>.</p>]]></content:encoded><pubdate>Mon, 12 May 2014 22:31:30 +0000</pubdate><link>http://wellingguzman.com/notes/subdomain-different-server</item><item><title>Control WordPress 404 Error</title><description><![CDATA[I have site built with Wordpress and I wanted to catch all 404 page that Wordpress try to display and make my own custom 404 page depending on the requested page, or in fact I just wanted to whether or not show a 404 page.
 
 
 If the user, let&#39;s say, go to http://mysite.com/someword on mysite, and if that is not a post/page it would probably display a 404 page, but I didn&#39;t want that behavior I wanted to search if someword is a category slug or a tag and display posts in that category or tag, otherwise would show the normal 404 page.
@@ -1019,7 +1019,7 @@ function _custom_redirect()
 </code></pre>
 <p>This would be helpful too if you want to log/register/email requested pages that ends up being a 404 page.</p>
 
-<p><strong>NOTE:</strong> if you don&#39;t have any category or tag template page will returns a 404 page template, just take that in mind.</p>]]></content:encoded><pubDate>Tue, 21 Jan 2014 0:56:04 +0000</pubDate><link>http://wellingguzman.com/notes/control-wordpress-404-error</link></item><item><title>2014 Goals</title><description><![CDATA[Late Happy New year to everybody who is not reading this and won&#39;t be reading this until whoever knows how they get in here.
+<p><strong>NOTE:</strong> if you don&#39;t have any category or tag template page will returns a 404 page template, just take that in mind.</p>]]></content:encoded><pubdate>Tue, 21 Jan 2014 0:56:04 +0000</pubdate><link>http://wellingguzman.com/notes/control-wordpress-404-error</item><item><title>2014 Goals</title><description><![CDATA[Late Happy New year to everybody who is not reading this and won&#39;t be reading this until whoever knows how they get in here.
 
 This year I am going to propose myself a list of goals that I want to or would like to have done by the end of year 2014 at lease.
 
@@ -1151,7 +1151,7 @@ I would like to create some library or some code that would be useful for develo
 <h2>Publish on GitHub</h2>
 
 <p>When is something that is too big for CodePen or whatever, I will post it here, in GitHub</p>
-<p>I would like to create some library or some code that would be useful for developer, so I hope I could write at least 2 cool new Repositories that would be helpful for many people.</p>]]></content:encoded><pubDate>Wed, 08 Jan 2014 17:58:30 +0000</pubDate><link>http://wellingguzman.com/notes/2014-goals</link></item><item><title>All I use as Web Developer</title><description><![CDATA[I recently did a Mac OS X clean install, now I&#39;m just going to install only application I need and commonly use, I always say that and end up doing it again installing and downloading bunch of things I don&#39;t need or even use, and full my computer of useless files that slow my machine down.
+<p>I would like to create some library or some code that would be useful for developer, so I hope I could write at least 2 cool new Repositories that would be helpful for many people.</p>]]></content:encoded><pubdate>Wed, 08 Jan 2014 17:58:30 +0000</pubdate><link>http://wellingguzman.com/notes/2014-goals</item><item><title>All I use as Web Developer</title><description><![CDATA[I recently did a Mac OS X clean install, now I&#39;m just going to install only application I need and commonly use, I always say that and end up doing it again installing and downloading bunch of things I don&#39;t need or even use, and full my computer of useless files that slow my machine down.
 
 This post will also make me keep track of all I need/use.
 
@@ -1349,7 +1349,7 @@ Oh have you not heard? It was my understanding that everyone had heard.]]></desc
 <p><a href="https://www.wunderlist.com/" target="new">Wunderlist</a>, here is where I keep all my todo task, even outside Developing, like run out of Dr. Pepper. It also syncs in all my devices.</p>
 
 
-<p><em>Oh have you not heard? It was my understanding that everyone had heard.</em></p>]]></content:encoded><pubDate>Mon, 07 Oct 2013 14:30:27 +0000</pubDate><link>http://wellingguzman.com/notes/all-i-use-as-web-developer</link></item><item><title>Getting my hands dirty on Chrome Canary</title><description><![CDATA[If you want to have the newest features from Google Chrome, you must need to use Chrome Canary. Chrome Canary is updated almost everyday, it&#39;s mean would be fresh builds. It can run side by side with Google Chrome stable version, so you don&#39;t have to choose one of the two, one thing to know is that you can&#39;t use Canary as your default browser.
+<p><em>Oh have you not heard? It was my understanding that everyone had heard.</em></p>]]></content:encoded><pubdate>Mon, 07 Oct 2013 14:30:27 +0000</pubdate><link>http://wellingguzman.com/notes/all-i-use-as-web-developer</item><item><title>Getting my hands dirty on Chrome Canary</title><description><![CDATA[If you want to have the newest features from Google Chrome, you must need to use Chrome Canary. Chrome Canary is updated almost everyday, it&#39;s mean would be fresh builds. It can run side by side with Google Chrome stable version, so you don&#39;t have to choose one of the two, one thing to know is that you can&#39;t use Canary as your default browser.
 
 Although this is designed for Developers and early adopters, you should be aware this could crash sometimes even has more chances to if you are using experimental features.
 
@@ -1502,7 +1502,7 @@ Follow me on Google+]]></description><content:encoded><![CDATA[<p><img src="http
 <li><a href="http://www.youtube.com/playlist?list=PLM7CMPN8kQrKQdYtnG8qhubQHQmb6CHTw" target="new">The Breakpoint Episodes</a></li>
 <li><a href="http://twitter.com/WellingGuzman" target="new">Follow me on Twitter</a></li>
 <li><a href="https://plus.google.com/u/0/109985810023249441310/posts" target="new">Follow me on Google+</a></li>
-</ul>]]></content:encoded><pubDate>Wed, 18 Sep 2013 17:13:30 +0000</pubDate><link>http://wellingguzman.com/notes/getting-hands-dirty-chrome-canary</link></item><item><title>PHP – Apache 500 Internal Server Error</title><description><![CDATA[Este error lo puede causar diferentes acciones, pero en este caso me refiero que apache en vez de presentar un error de php, como la variable no existe, el archivo no existe o cualquier otro tipo de error, muestra Apache 500 Internal Server Error.
+</ul>]]></content:encoded><pubdate>Wed, 18 Sep 2013 17:13:30 +0000</pubdate><link>http://wellingguzman.com/notes/getting-hands-dirty-chrome-canary</item><item><title>PHP – Apache 500 Internal Server Error</title><description><![CDATA[Este error lo puede causar diferentes acciones, pero en este caso me refiero que apache en vez de presentar un error de php, como la variable no existe, el archivo no existe o cualquier otro tipo de error, muestra Apache 500 Internal Server Error.
 
 
 Si este es el caso este problema puede ser un dolor de cabeza, por lo cual para esto tenemos dos forma como resolver.
@@ -1554,7 +1554,7 @@ Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.]]></descript
 error_reporting(E_ALL);
 ini_set(&#39;display_errors&#39;, &#39;On&#39;);
 </code></pre>
-<p>Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.</p>]]></content:encoded><pubDate>Fri, 25 Jan 2013 18:15:47 +0000</pubDate><link>http://wellingguzman.com/notes/php-apache-500-internal-server-error</link></item><item><title>Sesiones CodeIgniter terminan inmediatamente</title><description><![CDATA[He estado utilizando Codeigniter por mucho tiempo localmente y remotamente pero nunca me habia pasado algo como esto, tratando de utilizar las sesiones localmente funcionaban sin ningún problema, pero al utilizarlo en un servidor, las sesiones no querían funcionar, no querían almacenarse ni mantenerse su tiempo indicado en la configuración de CodeIgniter.
+<p>Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.</p>]]></content:encoded><pubdate>Fri, 25 Jan 2013 18:15:47 +0000</pubdate><link>http://wellingguzman.com/notes/php-apache-500-internal-server-error</item><item><title>Sesiones CodeIgniter terminan inmediatamente</title><description><![CDATA[He estado utilizando Codeigniter por mucho tiempo localmente y remotamente pero nunca me habia pasado algo como esto, tratando de utilizar las sesiones localmente funcionaban sin ningún problema, pero al utilizarlo en un servidor, las sesiones no querían funcionar, no querían almacenarse ni mantenerse su tiempo indicado en la configuración de CodeIgniter.
 
 
 En CodeIgniter 2.1.3 es la version que utilizo actualmente tiene por defecto estas configuraciones de sesión.
@@ -1621,4 +1621,9 @@ $config[&#39;sess_time_to_update&#39;]  = 300;
 <h2>Solución</h2>
 <p>
 Pues la solución es bastante simple, Incrementar el tiempo de expiración de la sesión, la cual seria 1 dia, así no encontraríamos ningún problema con el servidor y el cliente. Hay ciertos países que tienen casi 1 dia de diferencia así que pueden variar o elegir el valor que prefieran.
-</p>]]></content:encoded><pubDate>Sat, 19 Jan 2013 16:25:13 +0000</pubDate><link>http://wellingguzman.com/notes/sesiones-codeigniter-terminan-inmediatamente</link></item></channel></rss>
+</p>]]></content:encoded><pubdate>Sat, 19 Jan 2013 16:25:13 +0000</pubdate><link>http://wellingguzman.com/notes/sesiones-codeigniter-terminan-inmediatamente</item></channel></rss></section></div></main><hr><footer id="footer"><div class="container"><section><ul><li><span class="copyright">Copyright &copy; 2018<a href="https://plus.google.com/109985810023249441310/posts" rel="publisher">Welling Guzmán</a></span></li><li><a href="/about">About</a></li><li><a href="https://twitter.com/WellingGuzman">Twitter</a></li><li><a href="https://github.com/WellingGuzman">GitHub</a></li><li><a href="https://www.flickr.com/people/wellingguzman">Photos</a></li><li><a href="/feed.xml">Subscribe (RSS)</a></li></ul></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37732822-1', 'auto');
+ga('send', 'pageview');</script></body></html>
