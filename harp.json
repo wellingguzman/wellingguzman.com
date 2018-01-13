@@ -8,9 +8,7 @@
     "main_nav": {
       "home": "/",
       "notes": "/notes",
-      "about": "/about",
-      "lab": "/experiments",
-      "projects": "/projects"
+      "about": "/about"
     },
     "footer_nav": {
       "About": "/about",
