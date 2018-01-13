@@ -1,4 +1,6 @@
-My name is Welling Guzmán, I have a degree in Computer Engineer, passionate about the web, building software, performance, open source software and _reinventing the wheel_. I help build [Directus](https://getdirectus.com).
+My name is Welling Guzmán, I have a degree in Computer Engineer, passionate about the web, building software, performance, open source software and _reinventing the wheel_.
+
+Currently I'm helping build [Directus](https://getdirectus.com), a open-source headless CMS & API for managing databases content.
 
 ![](//wellingguzman.com/images/me.jpg)
 
