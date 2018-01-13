@@ -15,9 +15,7 @@
     "footer_nav": {
       "About": "/about",
       "Twitter": "https://twitter.com/WellingGuzman",
-      "GitHub": "https://github.com/WellingGuzman",
-      "Photos": "https://www.flickr.com/people/wellingguzman",
-      "Subscribe (RSS)": "/feed.xml"
+      "GitHub": "https://github.com/WellingGuzman"
     },
     "language_scopes" : {
       "language-javascript":    "source.js",
