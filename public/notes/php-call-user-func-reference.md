@@ -2,7 +2,7 @@ PHP function `call_user_func()` does not pass parameter variable as reference. t
 
 From PHP documentation:
 
-> Note that the parameters for call_user_func() are not passed by reference.
+> Note that the parameters for `call_user_func()` are not passed by reference.
 
 ```php
 <?php
