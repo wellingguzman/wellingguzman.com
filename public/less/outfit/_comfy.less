@@ -1,0 +1,165 @@
+.comfy-outfit {
+  @mainColor: #1AAF5C;
+  body& {
+    font-family: "SFMono-Regular", "Liberation Mono", Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace, serif;
+    font-size: 13px;
+    /*line-height: 1.6;*/
+  }
+
+  &.tags {
+    h1, h2 {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .Tag-title {
+      margin: 2rem 0 1rem;
+    }
+
+    .List {
+      margin: 0 0 1rem;
+    }
+  }
+
+  a {
+    color: @mainColor;
+    text-decoration: none;
+
+    &:hover {
+      background: @mainColor;
+      color: #FFFFFF;
+    }
+  }
+
+  hr {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  pre, code {
+    background: #dedede;
+  }
+
+  pre {
+    padding: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  code {
+    display: inline-block;
+    padding: 0 0.25rem;
+  }
+
+  .container {
+    max-width: 680px;
+  }
+
+  #sitebar, #header {
+    margin: 1rem 0 3rem;
+  }
+
+  .menu {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 0.75rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .List {
+    .List-item {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .List-meta {
+      display: inline-block;
+      margin: 0 1.5rem 0 0;
+      color: #999999;
+      min-width: 150px;
+      text-align: right;
+    }
+
+    .responsive(500px, {
+      .List-item {
+        display: block;
+      }
+
+      .List-meta,
+      .List-text {
+        width: 100%;
+        text-align: left;
+      }
+    });
+  }
+
+  #name {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 1rem 0 0.5rem;
+  }
+
+  #description {
+    display: block;
+    text-align: center;
+    margin: 0 0 2rem;
+    color: #777777;
+  }
+
+  main {
+    margin: 0 0 3rem;
+  }
+
+  .Post {
+    h2 {
+      font-size: 1rem;
+      border-bottom: 1px solid #999999;
+      margin: 2rem 0 1rem;
+    }
+
+    .Post-meta {
+      color: #999999;
+      margin: 0 0 2rem;
+    }
+  }
+
+  .Content-bottom {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  #footer {
+    text-align: center;
+    margin: 0 0 3rem;
+
+    li {
+      display: inline-block;
+      padding: 0 0.45rem;
+    }
+
+    .responsive(500px, {
+      li {
+        display: block;
+        padding: 0.45rem 0;
+      }
+    });
+  }
+}
