@@ -150,7 +150,7 @@ call_user_func_array(&#39;increment&#39;, array(&amp;$a));
 echo $a.&quot;\n&quot;; // $a is equals to 1]]></description><content:encoded><![CDATA[<p>PHP function <code>call_user_func()</code> does not pass parameter variable as reference. the code below won&#39;t work as expected.</p>
 <p>From PHP documentation:</p>
 <blockquote>
-<p>Note that the parameters for call_user_func() are not passed by reference.</p>
+<p>Note that the parameters for <code>call_user_func()</code> are not passed by reference.</p>
 </blockquote>
 <pre><code class="language-php">&lt;?php
 
