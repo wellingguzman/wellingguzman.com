@@ -469,7 +469,7 @@ var connection = mysql.createConnection({
 
 
 
-Hope it solve you an issue or help you in anyway.]]></description><content:encoded><![CDATA[<p>Using the library <a href="https://github.com/felixge/node-mysql" target="_blank">node-mysql</a> I found myself with an error that refused my node app to connect to an MySQL Database or in fact the server itself. At first I blame the library, searching and searching and I didn&#39;t find any solution that leads me to fix error. Every time I tried a connection I always get the error : <code>Error: connect ECONNREFUSED</code>.</p>
+Hope it helps in any way.]]></description><content:encoded><![CDATA[<p>Using the library <a href="https://github.com/felixge/node-mysql" target="_blank">node-mysql</a> I found myself with an error that refused my node app to connect to an MySQL Database or in fact the server itself. At first I blame the library, searching and searching and I didn&#39;t find any solution that leads me to fix error. Every time I tried a connection I always get the error : <code>Error: connect ECONNREFUSED</code>.</p>
 
 <pre class="javascript">
 <code>
@@ -529,7 +529,8 @@ var connection = mysql.createConnection({
 </code>
 </pre>
 
-<p>Hope it solve you an issue or help you in anyway.</p>]]></content:encoded><pubdate>Sat, 19 Jul 2014 15:47:19 +0000</pubdate><link>http://wellingguzman.com/notes/mamp-mysql-problem</item><item><title>WordPress functionality in another PHP Project</title><description><![CDATA[I&#39;m working on a Project using Laravel and I need to pull all the blog post from a WordPress site that is already on the same server.
+<p>Hope it helps in any way.</p>
+]]></content:encoded><pubdate>Sat, 19 Jul 2014 15:47:19 +0000</pubdate><link>http://wellingguzman.com/notes/mamp-mysql-problem</item><item><title>WordPress functionality in another PHP Project</title><description><![CDATA[I&#39;m working on a Project using Laravel and I need to pull all the blog post from a WordPress site that is already on the same server.
 
 
 To do this and have the power of  WordPress into another project, add the WordPress wp-load.php file.
