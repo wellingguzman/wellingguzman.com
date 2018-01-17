@@ -58,4 +58,4 @@ var connection = mysql.createConnection({
 </code>
 </pre>
 
-<p>Hope it solve you an issue or help you in anyway.</p>
+<p>Hope it helps in any way.</p>
