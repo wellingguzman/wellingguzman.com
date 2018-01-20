@@ -4,8 +4,7 @@ Currently I have been helping build [Directus](https://getdirectus.com), a open-
 
 ![](//wellingguzman.com/images/me.jpg)
 
-- Reach me at hola AT this domain
-- Read even shorter notes in Twitter: [@WellingGuzman](https://twitter.com/WellingGuzman)
+- Reach me or Read even shorter notes via Twitter: [@WellingGuzman](https://twitter.com/WellingGuzman)
 - Check some of my codes in Github: [WellingGuzman](https://github.com/WellingGuzman)
 
 Please feel free to contact me.
