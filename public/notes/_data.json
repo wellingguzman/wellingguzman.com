@@ -120,6 +120,9 @@
   "loading-relational-data": {
     "published": false
   },
+  "ubuntu-upgrading-to-php-7": {
+    "published": false
+  },
   "mysql-query-table-case-sensitive": {
     "published": false
   },
