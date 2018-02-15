@@ -1,4 +1,6 @@
-- posts = partial('_shared/posts', { postlimit: 18 })
+- posts = partial('_shared/posts', { postlimit: 8 })
+
+p.title Latest notes
 ul.List.Post-List
   - post = posts.shift();
   while post
