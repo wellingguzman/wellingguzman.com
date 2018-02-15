@@ -1,4 +1,69 @@
-<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sun, 28 May 2017 20:06:14 +0000</lastbuilddate><language>en-US</language><item><title>MySQL string columns key length</title><description><![CDATA[After changing the default charset from utf8 to utf8mb4 to support emojis on Directus, we started to received errors that the key was too long.
+<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Wed, 14 Feb 2018 20:22:34 +0000</lastbuilddate><language>en-US</language><item><title>MySQL fetch table name with original case</title><description><![CDATA[MySQL provides a database with metadata and information about the server, such as list of all the tables in a database and columns data type.
+Fetching a table information can be done with the following query:
+SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
+FROM INFORMATION_SCHEMA.TABLES
+WHERE
+  TABLE_SCHEMA = &quot;mydatabase&quot;
+  AND TABLE_NAME = &quot;Products&quot;
+
+Result:
++------------+--------+-----------------+
+| TABLE_NAME | ENGINE | TABLE_COLLATION |
++------------+--------+-----------------+
+| products   | InnoDB | utf8_general_ci |
++------------+--------+-----------------+
+This result is what we expected, the name, the engine and the collation.
+The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.
+I can&#39;t tell if this is a configuration issue or a bug.
+Making a the condition for table name twice solves the issue.
+SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
+FROM INFORMATION_SCHEMA.TABLES
+WHERE
+  TABLE_SCHEMA = &quot;mydatabase&quot;
+  AND (
+    TABLE_NAME = &quot;Products&quot;
+    OR TABLE_NAME = &quot;Products&quot;
+  )
+
+The query above will result with the table name in the original case it was created.
++------------+--------+-----------------+
+| TABLE_NAME | ENGINE | TABLE_COLLATION |
++------------+--------+-----------------+
+| Products   | InnoDB | utf8_general_ci |
++------------+--------+-----------------+]]></description><content:encoded><![CDATA[<p>MySQL provides a database with metadata and information about the server, such as list of all the tables in a database and columns data type.</p>
+<p>Fetching a table information can be done with the following query:</p>
+<pre><code class="language-sql">SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
+FROM INFORMATION_SCHEMA.TABLES
+WHERE
+  TABLE_SCHEMA = &quot;mydatabase&quot;
+  AND TABLE_NAME = &quot;Products&quot;
+</code></pre>
+<p>Result:</p>
+<pre><code>+------------+--------+-----------------+
+| TABLE_NAME | ENGINE | TABLE_COLLATION |
++------------+--------+-----------------+
+| products   | InnoDB | utf8_general_ci |
++------------+--------+-----------------+
+</code></pre><p>This result is what we expected, the name, the engine and the collation.</p>
+<p>The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.</p>
+<p>I can&#39;t tell if this is a configuration issue or a bug.</p>
+<p>Making a the condition for table name twice solves the issue.</p>
+<pre><code class="language-sql">SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
+FROM INFORMATION_SCHEMA.TABLES
+WHERE
+  TABLE_SCHEMA = &quot;mydatabase&quot;
+  AND (
+    TABLE_NAME = &quot;Products&quot;
+    OR TABLE_NAME = &quot;Products&quot;
+  )
+</code></pre>
+<p>The query above will result with the table name in the original case it was created.</p>
+<pre><code>+------------+--------+-----------------+
+| TABLE_NAME | ENGINE | TABLE_COLLATION |
++------------+--------+-----------------+
+| Products   | InnoDB | utf8_general_ci |
++------------+--------+-----------------+
+</code></pre>]]></content:encoded><pubdate>Wed, 14 Feb 2018 20:22:34 +0000</pubdate><link>http://wellingguzman.com/notes/mysql-fetch-table-name-with-original-case</item><item><title>MySQL string columns key length</title><description><![CDATA[After changing the default charset from utf8 to utf8mb4 to support emojis on Directus, we started to received errors that the key was too long.
 How can be too long if we only change the charset? one may ask.
 First these are the errors I&#39;m talking about:
 #1071 - Specified key was too long; max key length is 767 bytes
