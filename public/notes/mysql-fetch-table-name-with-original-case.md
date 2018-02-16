@@ -20,11 +20,9 @@ Result:
 +------------+--------+-----------------+
 ```
 
-This result is what we expected, the name, the engine and the collation.
+This result is what we expected, the name, the engine and the collation. The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.
 
-The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.
-
-I can't tell if this is a configuration issue or a bug.
+I can't tell if this is a configuration issue or a mysql bug.
 
 Making a the condition for table name twice solves the issue.
 
