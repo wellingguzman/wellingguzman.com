@@ -12,7 +12,7 @@ WHERE
 
 Result:
 
-```
+```text
 +------------+--------+-----------------+
 | TABLE_NAME | ENGINE | TABLE_COLLATION |
 +------------+--------+-----------------+
@@ -41,7 +41,7 @@ WHERE
 
 The query above will result with the table name in the original case it was created.
 
-```
+```text
 +------------+--------+-----------------+
 | TABLE_NAME | ENGINE | TABLE_COLLATION |
 +------------+--------+-----------------+
