@@ -8,6 +8,7 @@
 -     codeHTML    = S($(el).html()).decodeHTMLEntities().s;
 -     scopeName = partial('scopes', {className: className});
 -     if (scopeName) {
+-       yield = S(yield).decodeHTMLEntities().s;
 -       code = highlighter.highlightSync({fileContents:codeHTML,scopeName: scopeName});
 -       rel = className.replace('language-', '');
 -       yield = yield.replace(codeWrap, code.replace('<pre class', '<pre rel="'+rel+'" class'));
