@@ -12,9 +12,9 @@ Result:
 +------------+--------+-----------------+
 | products   | InnoDB | utf8_general_ci |
 +------------+--------+-----------------+
-This result is what we expected, the name, the engine and the collation.
-The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.
-I can&#39;t tell if this is a configuration issue or a bug.
+
+This result is what we expected, the name, the engine and the collation. The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.
+I can&#39;t tell if this is a configuration issue or a mysql bug.
 Making a the condition for table name twice solves the issue.
 SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
 FROM INFORMATION_SCHEMA.TABLES
@@ -39,14 +39,14 @@ WHERE
   AND TABLE_NAME = &quot;Products&quot;
 </code></pre>
 <p>Result:</p>
-<pre><code>+------------+--------+-----------------+
+<pre><code class="language-text">+------------+--------+-----------------+
 | TABLE_NAME | ENGINE | TABLE_COLLATION |
 +------------+--------+-----------------+
 | products   | InnoDB | utf8_general_ci |
 +------------+--------+-----------------+
-</code></pre><p>This result is what we expected, the name, the engine and the collation.</p>
-<p>The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.</p>
-<p>I can&#39;t tell if this is a configuration issue or a bug.</p>
+</code></pre>
+<p>This result is what we expected, the name, the engine and the collation. The problem comes when the table have uppercase letter, as the result always seems to be in lowercase.</p>
+<p>I can&#39;t tell if this is a configuration issue or a mysql bug.</p>
 <p>Making a the condition for table name twice solves the issue.</p>
 <pre><code class="language-sql">SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
 FROM INFORMATION_SCHEMA.TABLES
@@ -58,12 +58,13 @@ WHERE
   )
 </code></pre>
 <p>The query above will result with the table name in the original case it was created.</p>
-<pre><code>+------------+--------+-----------------+
+<pre><code class="language-text">+------------+--------+-----------------+
 | TABLE_NAME | ENGINE | TABLE_COLLATION |
 +------------+--------+-----------------+
 | Products   | InnoDB | utf8_general_ci |
 +------------+--------+-----------------+
-</code></pre>]]></content:encoded><pubdate>Wed, 14 Feb 2018 20:22:34 +0000</pubdate><link>http://wellingguzman.com/notes/mysql-fetch-table-name-with-original-case</item><item><title>MySQL string columns key length</title><description><![CDATA[After changing the default charset from utf8 to utf8mb4 to support emojis on Directus, we started to received errors that the key was too long.
+</code></pre>
+]]></content:encoded><pubdate>Wed, 14 Feb 2018 20:22:34 +0000</pubdate><link>http://wellingguzman.com/notes/mysql-fetch-table-name-with-original-case</item><item><title>MySQL string columns key length</title><description><![CDATA[After changing the default charset from utf8 to utf8mb4 to support emojis on Directus, we started to received errors that the key was too long.
 How can be too long if we only change the charset? one may ask.
 First these are the errors I&#39;m talking about:
 #1071 - Specified key was too long; max key length is 767 bytes
