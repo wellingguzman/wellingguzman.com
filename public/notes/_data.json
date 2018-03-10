@@ -123,6 +123,9 @@
   "ubuntu-upgrading-to-php-7": {
     "published": false
   },
+  "updating-curl-on-ubuntu-12.04": {
+    "published": false
+  }
   "github-reauthentication-on-mac-osx": {
     "title": "Github: Re-authentication on Mac OSX",
     "date": "2018-03-10 16:25:06",
