@@ -1,4 +1,47 @@
-<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Wed, 14 Feb 2018 20:22:34 +0000</lastbuilddate><language>en-US</language><item><title>MySQL fetch table name with original case</title><description><![CDATA[MySQL provides a database with metadata and information about the server, such as list of all the tables in a database and columns data type.
+<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sat, 10 Mar 2018 16:25:06 +0000</lastbuilddate><language>en-US</language><item><title>Github: Re-authentication on Mac OSX</title><description><![CDATA[Trying to interact with github, pushing mainly as it requires write permission from the user to perform such task, I was getting a 403 error, which means I am not authorized to push to that repository.
+remote: Permission to directus/directus.git denied to WellingGuzman.
+fatal: unable to access &#39;https://github.com/directus/directus.git/&#39;: The requested URL returned error: 403
+
+For some reason this started to happen after I installed Github Desktop Application.
+I don&#39;t know the reason why it got invalid or corrupted, but I did find a way to re-authenticate myself.
+On Mac OSX Git uses the Keychain Access to store credentials information, you can either update or remove the credentials from the keychain.
+Removing this information the next time you try to push it will ask you to enter your username and password
+$ git push origin master
+Username for &#39;https://github.com&#39;: wellingguzman
+Password for &#39;https://wellingguzman@github.com&#39;:
+remote: Invalid username or password.
+
+Terminalgit credential-osxkeychain erase
+
+Application
+Using the method of your preferences, Finder search, manually search the application directory or CMD (⌘) + Spacebar look for &quot;Keychain Access&quot;.
+Search for &quot;Github.com&quot;
+Find and edit/remove the one that says to be &quot;Internet password&quot; kind, to make sure this is the one, open this entry and on the access control tab should says credentials-osxkeychain.
+After you are sure about this, edit or delete to get back your git access control.
+
+Hope it helps, hope I can remember this next time.]]></description><content:encoded><![CDATA[<p>Trying to interact with github, pushing mainly as it requires write permission from the user to perform such task, I was getting a 403 error, which means I am not authorized to push to that repository.</p>
+<pre><code class="language-shell">remote: Permission to directus/directus.git denied to WellingGuzman.
+fatal: unable to access &#39;https://github.com/directus/directus.git/&#39;: The requested URL returned error: 403
+</code></pre>
+<p>For some reason this started to happen after I installed Github Desktop Application.</p>
+<p>I don&#39;t know the reason why it got invalid or corrupted, but I did find a way to re-authenticate myself.</p>
+<p>On Mac OSX Git uses the Keychain Access to store credentials information, you can either update or remove the credentials from the keychain.</p>
+<p>Removing this information the next time you try to push it will ask you to enter your username and password</p>
+<pre><code class="language-shell">$ git push origin master
+Username for &#39;https://github.com&#39;: wellingguzman
+Password for &#39;https://wellingguzman@github.com&#39;:
+remote: Invalid username or password.
+</code></pre>
+<h2>Terminal</h2><pre><code class="language-shell">git credential-osxkeychain erase
+</code></pre>
+<h2>Application</h2><ol>
+<li>Using the method of your preferences, Finder search, manually search the application directory or <code>CMD (⌘) + Spacebar</code> look for &quot;Keychain Access&quot;.</li>
+<li>Search for &quot;Github.com&quot;</li>
+<li>Find and edit/remove the one that says to be &quot;Internet password&quot; kind, to make sure this is the one, open this entry and on the access control tab should says credentials-osxkeychain.</li>
+<li>After you are sure about this, edit or delete to get back your git access control.</li>
+</ol>
+<p>Hope it helps, hope I can remember this next time.</p>
+]]></content:encoded><pubdate>Sat, 10 Mar 2018 16:25:06 +0000</pubdate><link>http://wellingguzman.com/notes/github-reauthentication-on-mac-osx</item><item><title>MySQL fetch table name with original case</title><description><![CDATA[MySQL provides a database with metadata and information about the server, such as list of all the tables in a database and columns data type.
 Fetching a table information can be done with the following query:
 SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
 FROM INFORMATION_SCHEMA.TABLES
