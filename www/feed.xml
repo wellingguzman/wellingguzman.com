@@ -1,4 +1,47 @@
-<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sat, 10 Mar 2018 16:25:06 +0000</lastbuilddate><language>en-US</language><item><title>Github: Re-authentication on Mac OSX</title><description><![CDATA[Trying to interact with github, pushing mainly as it requires write permission from the user to perform such task, I was getting a 403 error, which means I am not authorized to push to that repository.
+<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sat, 31 Mar 2018 1:06:32 +0000</lastbuilddate><language>en-US</language><item><title>Cocoa: Set the nib name on a view controller</title><description><![CDATA[When you create NSViewController and makes it the owner of a view nib, the controller and the nib has to have the same name otherwise the controller will fails loading the nib.
+From NSViewController source file:
+
+On 10.10 and higher, a nil nibName can be used, and NSViewController will automatically attempt to load a view with the same class name.
+
+It is important to notice that even this comment states that will attempt to load a view with the same class name, it seems to be attempting the file name instead.
+NSViewController -loadView comment:
+
+Prior to 10.10, -loadView would not have well defined behavior if [self nibName] returned nil. On 10.10 and later, if nibName is nil, NSViewController will automatically try to load a nib with the same name as the classname. This allows a convenience of doing [[MyViewController alloc] init] (which has a nil nibName) and having it automatically load a nib with the name &quot;MyViewController&quot;.
+
+Having a controller with the name MyViewController and a view with the name MyView wouldn&#39;t work because the controller will attempt to load a nib with the name MyViewController. Naming a view MyViewController doesn&#39;t make sense because it is not a controller.
+What should we do here? use the method -nibName to set the default nib name.
+In your controller implementation file add the following method:
+- (NSNibName)nibName
+{
+    return @&quot;MyView&quot;;
+}
+
+
+NSNibName is an alias for NSString.
+
+Now the controller will attempt to load MyView nib instead of a MyViewController.]]></description><content:encoded><![CDATA[<p>When you create <code>NSViewController</code> and makes it the owner of a view nib, the controller and the nib has to have the same name otherwise the controller will fails loading the nib.</p>
+<p>From <code>NSViewController</code> source file:</p>
+<blockquote>
+<p>On 10.10 and higher, a nil nibName can be used, and NSViewController will automatically attempt to load a view with the same class name.</p>
+</blockquote>
+<p>It is important to notice that even this comment states that will attempt to load a view with the same class name, it seems to be attempting the file name instead.</p>
+<p><code>NSViewController</code> <code>-loadView</code> comment:</p>
+<blockquote>
+<p>Prior to 10.10, -loadView would not have well defined behavior if [self nibName] returned nil. On 10.10 and later, if nibName is nil, NSViewController will automatically try to load a nib with the same name as the classname. This allows a convenience of doing [[MyViewController alloc] init] (which has a nil nibName) and having it automatically load a nib with the name &quot;MyViewController&quot;.</p>
+</blockquote>
+<p>Having a controller with the name <code>MyViewController</code> and a view with the name <code>MyView</code> wouldn&#39;t work because the controller will attempt to load a nib with the name <code>MyViewController</code>. Naming a view <code>MyViewController</code> doesn&#39;t make sense because it is not a controller.</p>
+<p>What should we do here? use the method <code>-nibName</code> to set the default nib name.</p>
+<p>In your controller implementation file add the following method:</p>
+<pre><code class="language-objective-c">- (NSNibName)nibName
+{
+    return @&quot;MyView&quot;;
+}
+</code></pre>
+<blockquote>
+<p><code>NSNibName</code> is an alias for <code>NSString</code>.</p>
+</blockquote>
+<p>Now the controller will attempt to load <code>MyView</code> nib instead of a <code>MyViewController</code>.</p>
+]]></content:encoded><pubdate>Sat, 31 Mar 2018 1:06:32 +0000</pubdate><link>http://wellingguzman.com/notes/cocoa-set-the-nib-name-on-a-view-controller</item><item><title>Github: Re-authentication on Mac OSX</title><description><![CDATA[Trying to interact with github, pushing mainly as it requires write permission from the user to perform such task, I was getting a 403 error, which means I am not authorized to push to that repository.
 remote: Permission to directus/directus.git denied to WellingGuzman.
 fatal: unable to access &#39;https://github.com/directus/directus.git/&#39;: The requested URL returned error: 403
 

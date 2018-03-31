@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="utf8"><title>Cocoa: Set the nib name on a view controller</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit notes"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li class="selected"><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><article class="Post"><h1 class="Post-title">Cocoa: Set the nib name on a view controller</h1><div class="Post-meta"><span class="Timestamp">Saturday, March 31st, 2018</span><div class="Tags"><a href="/tags/cocoa" class="Tag">cocoa</a><a href="/tags/objective-c" class="Tag">objective-c</a></div></div><p>When you create <code>NSViewController</code> and makes it the owner of a view nib, the controller and the nib has to have the same name otherwise the controller will fails loading the nib.</p>
+<p>From <code>NSViewController</code> source file:</p>
+<blockquote>
+<p>On 10.10 and higher, a nil nibName can be used, and NSViewController will automatically attempt to load a view with the same class name.</p>
+</blockquote>
+<p>It is important to notice that even this comment states that will attempt to load a view with the same class name, it seems to be attempting the file name instead.</p>
+<p><code>NSViewController</code> <code>-loadView</code> comment:</p>
+<blockquote>
+<p>Prior to 10.10, -loadView would not have well defined behavior if [self nibName] returned nil. On 10.10 and later, if nibName is nil, NSViewController will automatically try to load a nib with the same name as the classname. This allows a convenience of doing [[MyViewController alloc] init] (which has a nil nibName) and having it automatically load a nib with the name "MyViewController".</p>
+</blockquote>
+<p>Having a controller with the name <code>MyViewController</code> and a view with the name <code>MyView</code> wouldn't work because the controller will attempt to load a nib with the name <code>MyViewController</code>. Naming a view <code>MyViewController</code> doesn't make sense because it is not a controller.</p>
+<p>What should we do here? use the method <code>-nibName</code> to set the default nib name.</p>
+<p>In your controller implementation file add the following method:</p>
+<pre rel="objective-c" class="editor editor-colors"><div class="line"><span class="source objc"><span>-&nbsp;(NSNibName)nibName</span></span></div><div class="line"><span class="source objc"><span class="meta block c"><span class="punctuation section block begin c"><span>{</span></span></span></span></div><div class="line"><span class="source objc"><span class="meta block c"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword control c"><span>return</span></span><span>&nbsp;</span><span class="string quoted double objc"><span class="punctuation definition string begin objc"><span>@&quot;</span></span><span>MyView</span><span class="punctuation definition string end objc"><span>&quot;</span></span></span><span>;</span></span></span></div><div class="line"><span class="source objc"><span class="meta block c"><span class="punctuation section block end c"><span>}</span></span></span></span></div></pre>
+<blockquote>
+<p><code>NSNibName</code> is an alias for <code>NSString</code>.</p>
+</blockquote>
+<p>Now the controller will attempt to load <code>MyView</code> nib instead of a <code>MyViewController</code>.</p></article></section></div></main><hr><footer id="footer"><div class="container"><section><ul><li><span class="copyright">Copyright &copy; 2018</span></li><li><a href="/about" class="link-about">About</a></li><li><a href="https://twitter.com/WellingGuzman" class="link-twitter">Twitter</a></li><li><a href="https://github.com/WellingGuzman" class="link-github">GitHub</a></li></ul></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37732822-1', 'auto');
+ga('send', 'pageview');</script></body></html>
