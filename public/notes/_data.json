@@ -126,6 +126,12 @@
   "updating-curl-on-ubuntu-12.04": {
     "published": false
   },
+  "guzzle-http-upgrade-mocking-from-version-5-to-6": {
+    "title": "Guzzle HTTP: Upgrade mocking from version 5 to 6",
+    "date": "2018-03-31 19:08:19",
+    "published": true,
+    "tags": ["php"]
+  },
   "cocoa-set-the-nib-name-on-a-view-controller": {
     "title": "Cocoa: Set the nib name on a view controller",
     "date": "2018-03-31 01:06:32",
