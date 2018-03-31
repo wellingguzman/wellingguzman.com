@@ -126,9 +126,11 @@
   "updating-curl-on-ubuntu-12.04": {
     "published": false
   },
-  "set-the-nib-name-on-the-view-controller": {
-    "title": "Set the nib name on the view controller",
-    "published": false
+  "cocoa-set-the-nib-name-on-a-view-controller": {
+    "title": "Cocoa: Set the nib name on a view controller",
+    "date": "2018-03-31 01:06:32",
+    "published": true,
+    "tags": ["cocoa", "objective-c"]
   },
   "github-reauthentication-on-mac-osx": {
     "title": "Github: Re-authentication on Mac OSX",
