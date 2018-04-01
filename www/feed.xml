@@ -1,4 +1,97 @@
-<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sat, 31 Mar 2018 1:06:32 +0000</lastbuilddate><language>en-US</language><item><title>Cocoa: Set the nib name on a view controller</title><description><![CDATA[When you create NSViewController and makes it the owner of a view nib, the controller and the nib has to have the same name otherwise the controller will fails loading the nib.
+<!DOCTYPE html><html><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.3"><script>var SITE_VERSION = '1.3';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sat, 31 Mar 2018 19:08:19 +0000</lastbuilddate><language>en-US</language><item><title>Guzzle HTTP: Upgrade mocking from version 5 to 6</title><description><![CDATA[Testing a http response with guzzle 5 was done using the Subscriber/Mock class, but on version 6, this class doesn&#39;t exists.
+The way this mock response works is by attaching fake response objects to the http client, and on every request it will pick the result from the queue instead of making a real request to the server.
+Guzzle HTTP 5Let&#39;s take a look how mocking was done on version 5 in the example below:
+// Guzzle http client
+$client = new \GuzzleHttp\Client([&#39;base_url&#39; =&gt; &#39;http://localhost&#39;]);
+
+// Create Mock
+$mock = new \GuzzleHttp\Subscriber\Mock();
+
+// Attach mocking subscriber to the client
+$client-&gt;getEmitter()-&gt;attach($mock);
+
+// Add response to a queue
+$mockPath = &#39;/path/to/raw/response.txt&#39;;
+$mockContent = file_get_contents($mockPath);
+$mock-&gt;addResponse($mockContent);
+
+The content of /path/to/raw/response.txt is a raw http response.
+HTTP/1.1 200 OK
+Date: Wed, 15 Jun 2016 17:02:51 GMT
+Server: nginx
+Content-Length: 86
+Content-Type: application/json; charset=utf-8
+
+{&quot;id&quot;:1,&quot;active&quot;:1,&quot;title&quot;:&quot;Article 1&quot;,&quot;body&quot;:&quot;Content&quot;,&quot;tags&quot;:&quot;tags,tugs&quot;,&quot;author&quot;:1}
+The next request the client makes it will pick the first response on the queue as the result.
+You can add more responses to the queue, and make sure you the queue is not empty before you send a new request.
+$mockPath = &#39;/path/to/raw/http/response/file.txt&#39;;
+$mockContent = file_get_contents($mockPath);
+$mock-&gt;addResponse($mockContent);
+
+Guzzle HTTP 6On version 6 they removed the Mock class and introduce a new MockHandler class. docs.
+We now need to create a http client and attach the MockHandler object as the client handler
+// Guzzle http client
+$handler = new \GuzzleHttp\Handler\MockHandler();
+$client = new \GuzzleHttp\Client([&#39;handler&#39; =&gt; $handler]);
+
+There is not way to access the handler, so you have to keep a reference somewhere.
+Now all the response needs to be added to the mock handler using the append method.
+// Add response to a queue
+$mockPath = &#39;/path/to/raw/http/response/file.txt&#39;;
+$mockContent = file_get_contents($mockPath);
+// Convert the raw http response into a Response Object
+$response = \GuzzleHttp\Psr7\parse_response($mockContent);
+$handler-&gt;append($response);
+
+Same as previous version each request pull the first response from the queue on each request.]]></description><content:encoded><![CDATA[<p>Testing a http response with guzzle 5 was done using the <code>Subscriber/Mock</code> class, but on version 6, this class doesn&#39;t exists.</p>
+<p>The way this mock response works is by attaching fake response objects to the http client, and on every request it will pick the result from the queue instead of making a real request to the server.</p>
+<h2>Guzzle HTTP 5</h2><p>Let&#39;s take a look how mocking was done on version 5 in the example below:</p>
+<pre><code class="language-php">// Guzzle http client
+$client = new \GuzzleHttp\Client([&#39;base_url&#39; =&gt; &#39;http://localhost&#39;]);
+
+// Create Mock
+$mock = new \GuzzleHttp\Subscriber\Mock();
+
+// Attach mocking subscriber to the client
+$client-&gt;getEmitter()-&gt;attach($mock);
+
+// Add response to a queue
+$mockPath = &#39;/path/to/raw/response.txt&#39;;
+$mockContent = file_get_contents($mockPath);
+$mock-&gt;addResponse($mockContent);
+</code></pre>
+<p>The content of <code>/path/to/raw/response.txt</code> is a raw http response.</p>
+<pre><code>HTTP/1.1 200 OK
+Date: Wed, 15 Jun 2016 17:02:51 GMT
+Server: nginx
+Content-Length: 86
+Content-Type: application/json; charset=utf-8
+
+{&quot;id&quot;:1,&quot;active&quot;:1,&quot;title&quot;:&quot;Article 1&quot;,&quot;body&quot;:&quot;Content&quot;,&quot;tags&quot;:&quot;tags,tugs&quot;,&quot;author&quot;:1}
+</code></pre><p>The next request the client makes it will pick the first response on the queue as the result.</p>
+<p>You can add more responses to the queue, and make sure you the queue is not empty before you send a new request.</p>
+<pre><code class="language-php">$mockPath = &#39;/path/to/raw/http/response/file.txt&#39;;
+$mockContent = file_get_contents($mockPath);
+$mock-&gt;addResponse($mockContent);
+</code></pre>
+<h2>Guzzle HTTP 6</h2><p>On version 6 they removed the <code>Mock</code> class and introduce a new <code>MockHandler</code> class. <a href="http://docs.guzzlephp.org/en/stable/testing.html#mock-handler">docs</a>.</p>
+<p>We now need to create a http client and attach the <code>MockHandler</code> object as the client handler</p>
+<pre><code class="language-php">// Guzzle http client
+$handler = new \GuzzleHttp\Handler\MockHandler();
+$client = new \GuzzleHttp\Client([&#39;handler&#39; =&gt; $handler]);
+</code></pre>
+<p>There is not way to access the handler, so you have to keep a reference somewhere.</p>
+<p>Now all the response needs to be added to the mock handler using the <code>append</code> method.</p>
+<pre><code class="language-php">// Add response to a queue
+$mockPath = &#39;/path/to/raw/http/response/file.txt&#39;;
+$mockContent = file_get_contents($mockPath);
+// Convert the raw http response into a Response Object
+$response = \GuzzleHttp\Psr7\parse_response($mockContent);
+$handler-&gt;append($response);
+</code></pre>
+<p>Same as previous version each request pull the first response from the queue on each request.</p>
+]]></content:encoded><pubdate>Sat, 31 Mar 2018 19:08:19 +0000</pubdate><link>http://wellingguzman.com/notes/guzzle-http-upgrade-mocking-from-version-5-to-6</item><item><title>Cocoa: Set the nib name on a view controller</title><description><![CDATA[When you create NSViewController and makes it the owner of a view nib, the controller and the nib has to have the same name otherwise the controller will fails loading the nib.
 From NSViewController source file:
 
 On 10.10 and higher, a nil nibName can be used, and NSViewController will automatically attempt to load a view with the same class name.
