@@ -4,9 +4,13 @@
 -     var className, scopeName, codeHTML;
 -     className = $(this).attr('class');
 -     codeWrap    = '<pre>' + $(el).parents('pre').html() + '</pre>';
--     codeHTMLRaw = $(el).text();
 -     codeHTML    = S($(el).html()).decodeHTMLEntities().s;
+-
 -     scopeName = partial('scopes', {className: className});
+-     if (scopeName == 'text.html.php' && codeHTML.indexOf('<?php') !== 0) {
+-       codeHTML = '<?php\n' + codeHTML;
+-     }
+-
 -     if (scopeName) {
 -       yield = S(yield).decodeHTMLEntities().s;
 -       code = highlighter.highlightSync({fileContents:codeHTML,scopeName: scopeName});

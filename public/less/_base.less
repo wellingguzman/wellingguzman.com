@@ -13,6 +13,13 @@ img {
   text-shadow: none;
 }
 
+.editor {
+  // Hide the php open tag
+  .line:first-child .php.embedded.begin {
+    display: none;
+  }
+}
+
 .Tags .Tag:not(:first-of-type) {
   margin-left: 0.5rem;
 }
