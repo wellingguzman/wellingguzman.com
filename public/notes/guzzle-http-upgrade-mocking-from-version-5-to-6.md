@@ -39,7 +39,7 @@ The next request the client makes it will pick the first response on the queue a
 You can add more responses to the queue, and make sure you the queue is not empty before you send a new request.
 
 ```php
-$mockPath = '/path/to/raw/response.txt';
+$mockPath = '/path/to/raw/http/response/file.txt';
 $mockContent = file_get_contents($mockPath);
 $mock->addResponse($mockContent);
 ```
@@ -60,7 +60,7 @@ Now all the response needs to be added to the mock handler using the `append` me
 
 ```php
 // Add response to a queue
-$mockPath = '/path/to/raw/response.txt';
+$mockPath = '/path/to/raw/http/response/file.txt';
 $mockContent = file_get_contents($mockPath);
 // Convert the raw http response into a Response Object
 $response = \GuzzleHttp\Psr7\parse_response($mockContent);
