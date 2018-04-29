@@ -1,9 +1,13 @@
 .comfy-outfit {
   @mainColor: #1AAF5C;
+  @pinkColor: #ef89b8;
+
   body& {
-    font-family: "SFMono-Regular", "Liberation Mono", Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace, serif;
-    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, "Helvetica Neue", sans-serif;
+    // font-size: 14px;
     /*line-height: 1.6;*/
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   @import '../vendor/_minimal-white-syntax';
@@ -64,23 +68,21 @@
 
   pre, code {
     background: #EFEFEF; // ECEFF1
+    font-family: "SFMono-Regular", "Liberation Mono", Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace, serif;
+    font-size: 0.87rem;
+    line-height: 1.6;
   }
 
   code {
-    font-weight: 700;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #333333;
   }
 
   pre {
     padding: 0.5rem;
     margin: 1.5rem 0;
     overflow: auto;
-
-    font-family: SFMono-Regular,"Liberation Mono",Menlo,Monaco,"Lucida Console","Courier New",Courier,monospace,serif;
-    font-size: 90%;
-
-    code {
-      font-weight: 400;
-    }
   }
 
   blockquote {
@@ -131,7 +133,7 @@
     .List-meta {
       display: inline-block;
       margin: 0 1.5rem 0 0;
-      color: #999999;
+      color: #777777;
       text-align: right;
       flex: 0 0 170px;
     }
@@ -171,18 +173,22 @@
 
   .Post {
     h1 {
-      text-transform: uppercase;
+      margin: 0 0 0.25em;
+      font-size: 1.5rem;
+      font-weight: 500;
     }
 
     h2 {
-      font-size: 1em;
+      font-size: 1.3rem;
       border-bottom: 1px solid #CCCCCC;
-      margin: 2rem 0 1rem;
-      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 1.1rem;
     }
 
     .Post-meta {
-      color: #999999;
+      color: #777777;
       margin: 0 0 2rem;
     }
   }
