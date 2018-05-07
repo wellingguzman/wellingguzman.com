@@ -6,7 +6,7 @@ block content
       if current.source != 'index'
         header.Post-header
           h1.Post-title
-            | #{header_title}
+            | #{title}
           .Post-meta
             - var authorList = authors.map(function(o){ return o.name; }).join(', ');
             span Made by
