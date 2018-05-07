@@ -126,7 +126,7 @@ function run() {
       next();
     });
 
-    route.get(/^\/(notes|logs|logs(\/(.*)+[^\/]$)|experiments|projects)$/, function (req, res, next) {
+    route.get(/^\/(notes|logs|logs(\/(.*)+[^\/]$)|lab|projects)$/, function (req, res, next) {
       req.url+='/';
       next();
     });

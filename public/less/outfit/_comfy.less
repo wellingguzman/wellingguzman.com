@@ -1,6 +1,12 @@
 .comfy-outfit {
   @mainColor: #1AAF5C;
-  @pinkColor: #ef89b8;
+  @pinkColor: #EF89B8;
+  @pinkStrongColor: #FF5E99;
+  @yellowColor: #FCE496;
+
+  ::selection {
+    background: @pinkColor;
+  }
 
   body& {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, "Helvetica Neue", sans-serif;
@@ -8,6 +14,10 @@
     /*line-height: 1.6;*/
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+
+    &.lab {
+      background-color: lighten(@pinkColor, 25%);
+    }
   }
 
   @import '../vendor/_minimal-white-syntax';
@@ -49,6 +59,17 @@
     &:hover {
       background: @mainColor;
       color: #FFFFFF;
+    }
+  }
+
+  &.lab {
+    a {
+      color: @pinkStrongColor;
+
+      &:hover {
+        background: @pinkStrongColor;
+        color: #FFFFFF;
+      }
     }
   }
 
@@ -196,6 +217,10 @@
     }
   }
 
+  &.lab .Post h1 {
+    border-bottom-color: @pinkColor;
+  }
+
   .Post-meta {
     .Tags {
       display: inline;
@@ -237,6 +262,10 @@
         padding: 0.45rem 0;
       }
     });
+  }
+
+  &.lab #footer ul {
+    border-top-color: @pinkColor;
   }
 }
 

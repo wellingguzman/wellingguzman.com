@@ -1,0 +1,17 @@
+{
+  "index": {
+    "title": "Experiments - Welling Guzmán",
+    "header_title": "Experiments",
+    "authors": [
+      {"name": "welling guzman"}
+    ]
+  },
+  "example": {
+    "title": "Example project",
+    "date": "2018-04-04 20:20:20",
+    "published": true,
+    "authors": [
+      {"name": "welling guzman"}
+    ]
+  }
+}
