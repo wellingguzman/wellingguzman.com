@@ -16,4 +16,4 @@ The rules are basically:
 
 The goals will be create around 20 mini projects in the next 100 days.
 
-Check my progress on [Twitter](https://twitter.com/WellingGuzman) and [GitHub](https://github.com/WellingGuzman/100DaysOfCoding).
+Follow my progress on [Twitter](https://twitter.com/WellingGuzman) and [GitHub](https://github.com/WellingGuzman/100DaysOfCoding).
