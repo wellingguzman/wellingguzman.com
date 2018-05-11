@@ -1,4 +1,4 @@
-Along side with (/notes/hashtag-100-days-of-code) I have decided I should practice my English for the next 100 days.
+Along side with [#100DaysOfCode](/notes/hashtag-100-days-of-code) I have decided I should practice my English for the next 100 days.
 
 I learned english almost by myself. I was taught english at school, but the same thing for a decade, nothing useful at the long run. about 5 years ago I put myself into a intensive english course for grammar and allow myself to speak with people in english, since then I have not talk much.
 
