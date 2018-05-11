@@ -2,13 +2,14 @@ extends ../_shared/layout
 
 block content
   section
-    article.Post
+    article.Post.Experiment
       if current.source != 'index'
         header.Post-header
           h1.Post-title
             | #{title}
           .Post-meta
             - var authorList = authors.map(function(o){ return o.name; }).join(', ');
-            span Made by
+            span.madeBy Made by
+            span.madeByName
               strong #{authorList}
       != yield
