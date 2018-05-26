@@ -8,6 +8,7 @@
     "main_nav": {
       "home": "/",
       "notes": "/notes",
+      "hire me": "/hire-me",
       "about": "/about"
     },
     "footer_nav": {
