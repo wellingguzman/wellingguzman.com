@@ -4,7 +4,7 @@ I have a degree in Computer Engineering. Passionate about the web, building soft
 
 ![](//wellingguzman.com/images/me.jpg)
 
-My area of expertise and interest are desktop, mobile and web applications, API design (Restful), software and database architecture, administering \*nix systems and scripting.
+My area of expertise and interest are desktop, mobile and web applications, APIs, software and database architecture, administering \*nix systems and scripting.
 
 Currently working on [Directus](https://getdirectus.com). A open-source headless CMS & API for managing databases content.
 
