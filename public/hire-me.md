@@ -6,7 +6,7 @@ I am a Software Engineer and I am looking for a new opportunity as a Senior or L
 
 I am interested in working on APIs, web applications, SaaS, micro-services, communication between systems and open source projects.
 
-I have a degree in Computer Engineering. I have worked with Development Agencies and startups to materialize their ideas into projects.
+I have a degree in Computer Engineering. I have worked with Development Agencies and startups to materialize their ideas into projects. I have experience creating a products from scratch, rewriting projects, improvement or adaptation of legacy code, working with different development stack and working in-house and with a remote team.
 
 ## Area of expertise & skills:
 
