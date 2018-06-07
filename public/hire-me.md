@@ -18,8 +18,8 @@ I have a degree in Computer Engineering. I have worked with Development Agencies
 - Comfortable working with Linux/Unix servers
 - Communication between systems
 - AWS
-- Third-parties authentication (OAuth)
-- Third-parties APIs
+- Third-party authentication (OAuth)
+- Third-party APIs
 - Apache, NGINX.
 - PHP, JavaScript, HTML5/XHTML, CSS3/Sass/Less
 - jQuery, Backbone.js
