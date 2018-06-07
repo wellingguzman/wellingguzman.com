@@ -2,27 +2,36 @@
 
 # Hi, I am Welling Guzman.
 
-I am a Software Engineer and I am looking for a new opportunity to help you with your projects. Remote opportunities preferably.
+I am a Software Engineer and I am looking for a new opportunity as a Senior or Lead Engineer. Remote opportunities preferably.
 
-I have a degree in Computer Engineering. I have worked with Development Agencies and  startups to materialize their ideas into projects, reviewed their codebase and provided professional advise based on their goals, built minimum viable product (MVP), helped their team to solve or advised them about possible solutions to technical problems and be available for any questions they may have.
+I am interested in working on APIs, web applications, SaaS, micro-services, communication between systems and open source projects.
+
+I have a degree in Computer Engineering. I have worked with Development Agencies and startups to materialize their ideas into projects.
 
 ## Area of expertise & skills:
 
-- API Design, Integration and Development
+- Design, Integration and Development of APIs
 - Web Applications
 - Desktop Applications
 - Software and Database architecture
 - Responsive Web Design
 - Comfortable working with Linux/Unix servers
-- Apache and NGINX.
+- Communication between systems
+- AWS
+- Third-parties authentication (OAuth)
+- Third-parties APIs
+- Apache, NGINX.
 - PHP, JavaScript, HTML5/XHTML, CSS3/Sass/Less
 - jQuery, Backbone.js
 - Zend DB, Slim Framework
 - SQL, MySQL, Microsoft SQL Server
+- Queries optimization
+- Docker
 - WordPress
 - Gulp/Grunt
 - Photoshop
 - Mentoring
+- Spanish
 
 While these have been the languages, tools and area of my expertise I am consider myself a quick-learner which had led me into working with new projects with new tools and languages that I haven't used before.
 
