@@ -26,7 +26,6 @@ I have a degree in Computer Engineering. I have worked with Development Agencies
 - Zend DB, Slim Framework
 - SQL, MySQL, Microsoft SQL Server
 - Queries optimization
-- Docker
 - WordPress
 - Gulp/Grunt
 - Photoshop
