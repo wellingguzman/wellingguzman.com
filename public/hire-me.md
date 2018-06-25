@@ -41,3 +41,5 @@ I may be helpful in some area that I have worked on the past. I have had the opp
 Feel free to get in touch via [email](&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#105;&#114;&#101;&#064;&#119;&#101;&#108;&#108;&#105;&#110;&#103;&#103;&#117;&#122;&#109;&#097;&#110;&#046;&#099;&#111;&#109;) or [Twitter](https://twitter.com/WellingGuzman)
 
 Check my open-source contributions on [Github](https://github.com/WellingGuzman)
+
+You can find my resume as pdf [here](/resume.pdf)
