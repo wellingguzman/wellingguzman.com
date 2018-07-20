@@ -3,6 +3,10 @@
   @pinkColor: #EF89B8;
   @pinkStrongColor: #FF5E99;
   @yellowColor: #FCE496;
+  @gray: #757575;
+  @lightGray: #E0E0E0;
+  @lighterGray: #EEEEEE;
+  @opaqueGreen: #49796B;
 
   ::selection {
     background: @pinkColor;
@@ -10,8 +14,6 @@
 
   body& {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, "Helvetica Neue", sans-serif;
-    // font-size: 14px;
-    /*line-height: 1.6;*/
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 
@@ -22,7 +24,20 @@
 
   @import '../vendor/_minimal-white-syntax';
 
+  ul {
+    padding: 0 0 0 1.5rem;
+    margin: 0 0 1.5rem;
+  }
+
+  figcaption {
+    text-align: center;
+    color: @gray;
+    font-size: 0.87rem;
+  }
+
   section {
+    padding: 0 1rem;
+
     .title {
       text-align: center;
     }
@@ -74,7 +89,7 @@
   }
 
   @media (min-width: 576px) {
-    &.hire-me img#MyFace {
+    &.hire-me #MyFace {
       float: left;
       width: 200px;
       margin: 0 10px 0 0;
@@ -90,7 +105,7 @@
   }
 
   pre, code {
-    background: #EFEFEF; // ECEFF1
+    background: @lighterGray;
     font-family: "SFMono-Regular", "Liberation Mono", Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace, serif;
     font-size: 0.87rem;
     line-height: 1.6;
@@ -109,10 +124,10 @@
   }
 
   blockquote {
-    border-left: 4px solid #ddd;
-    padding-left: 1rem;
+    border-left: 4px solid @lightGray;
     padding: 0.5rem 0 0.5rem 1rem;
-    color: #777;
+    color: @gray;
+    margin-left: 1.5rem;
 
     p:first-of-type {
       margin-top: 0;
@@ -128,7 +143,7 @@
   }
 
   #sitebar, #header {
-    margin: 1rem 0 3rem;
+    margin: 1rem 0;
   }
 
   .menu {
@@ -142,12 +157,22 @@
 
     li {
       display: inline-block;
-      padding: 0 0.75rem;
+      padding: 0 0.75rem 1rem;
+      margin: 0;
       text-transform: capitalize;
+      width: 25%;
+      box-sizing: border-box;
+      border-bottom: 2px solid @lightGray;
+
+      &.selected {
+        border-bottom-color: #000000;
+      }
     }
   }
 
   .List {
+    padding: 0;
+
     .List-item {
       display: flex;
       flex-wrap: nowrap;
@@ -156,7 +181,7 @@
     .List-meta {
       display: inline-block;
       margin: 0 1.5rem 0 0;
-      color: #777777;
+      color: @gray;
       text-align: right;
       flex: 0 0 170px;
     }
@@ -186,7 +211,7 @@
   #description {
     display: block;
     margin: 0 0 2rem;
-    color: #777777;
+    color: @gray;
   }
 
   main {
@@ -196,10 +221,8 @@
   .Post {
     h1 {
       margin: 0 0 0.25em;
-      padding-bottom: 0.25em;
       font-size: 2rem;
-      font-weight: 500;
-      border-bottom: 2px solid #CCCCCC;
+      font-weight: 600;
 
       &.List-Title {
         margin-bottom: 1em;
@@ -208,8 +231,9 @@
 
     h2 {
       font-size: 1.3rem;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.6;
+      border-bottom: 1px solid @lightGray;
     }
 
     h3 {
@@ -217,7 +241,7 @@
     }
 
     .Post-meta {
-      color: #777777;
+      color: @gray;
       margin: 0 0 2rem;
     }
   }
@@ -229,14 +253,19 @@
   .Post-meta {
     .Tags {
       display: inline;
-      margin-left: 0.5em;
+      margin-left: 0.25em;
 
-      &:before {
-        content: "| Tagged: "
-      }
+      .Tag {
+        margin-left: 0.5rem;
+        color: @opaqueGreen;
 
-      .Tag:not(:last-of-type) {
-        margin: 0 0.5em 0 0;
+        &:before {
+          content: "#";
+        }
+
+        &:hover {
+          color: #FFFFFF;
+        }
       }
     }
   }
@@ -249,10 +278,10 @@
     text-align: center;
     margin: 0 0 3rem;
     font-size: 0.87rem;
-    color: #777777;
+    color: @gray;
 
     ul {
-      border-top: 2px solid #CCCCCC;
+      border-top: 2px solid @lightGray;
       padding-top: 2rem;
     }
 
@@ -271,6 +300,27 @@
 
   &.lab #footer ul {
     border-top-color: @pinkColor;
+  }
+
+  &.hire-me {
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    main {
+      ul {
+        li {
+          border-bottom: 1px solid @lightGray;
+          padding: 0 0 0.5rem;
+          margin: 0 0 0.5rem;
+          list-style-type: square;
+        }
+      }
+    }
   }
 }
 
