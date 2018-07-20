@@ -6,7 +6,8 @@
           if(main_nav)
             each url, label in main_nav
               - selected = '';
-              - if (current.path[0] == label || (current.path[0] == 'experiments' && label == 'lab') || (current.path[0] == 'index' && label == 'home')) {
+              - path = current.path[0].replace(/\-/g, ' ');
+              - if (path == label || (path == 'experiments' && label == 'lab') || (path == 'index' && label == 'home')) {
               -   selected = 'selected';
               - }
               li(class="#{selected}"): a(href="#{url}") #{label}
