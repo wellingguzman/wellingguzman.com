@@ -1,5 +1,13 @@
+- var documentId = '';
+- if (current.path[0]=='index') {
+-   documentId = 'home';
+- } else if (current.path[0] == '404') {
+-   documentId = 'missingPage';
+- } else {
+-   documentId = current.path[0];
+- }
 doctype
-html
+html(id="#{documentId}")
   head
     meta(charset="utf8")
     title= title || site_title
@@ -13,15 +21,7 @@ html
     link(rel="stylesheet" type="text/css" href="/css/main.css?v=#{version}")
     script.
       var SITE_VERSION = '#{version}';
-  - var bodyClassName = '';
-  - if (current.path[0]=='index') {
-  -   bodyClassName = 'home';
-  - } else if (current.path[0] == '404') {
-  -   bodyClassName = 'missingPage';
-  - } else {
-  -   bodyClassName = current.path[0];
-  - }
-  body(class="comfy-outfit #{bodyClassName}")
+  body(class="comfy-outfit #{documentId}")
     include inc/sitebar
     include inc/header
     include inc/main
