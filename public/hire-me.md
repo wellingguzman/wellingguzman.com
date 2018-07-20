@@ -1,6 +1,6 @@
-<img id="MyFace" src="/images/my-face.jpg">
-
 # Hi, I am Welling Guzman.
+
+<figure id="MyFace"><img src="/images/my-face.jpg"></figure>
 
 I am a Software Engineer and I am looking for a new opportunity as a Senior or Lead Engineer. Remote opportunities preferably.
 
