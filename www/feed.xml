@@ -1,4 +1,11 @@
-<!DOCTYPE html><html id="feed.xml"><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.4"><script>var SITE_VERSION = '1.4';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/hire-me">hire me</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Thu, 10 May 2018 10:55:03 +0000</lastbuilddate><language>en-US</language><item><title>#100DaysOfEnglish</title><description><![CDATA[Along side with #100DaysOfCode I have decided I should practice my English for the next 100 days.
+<!DOCTYPE html><html id="feed.xml"><head><meta charset="utf8"><title>Welling Guzmán</title><meta name="description" content="Notes about code and among other things."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="undefined"><link href="https://plus.google.com/109985810023249441310/posts" rel="publisher"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/main.css?v=1.5"><script>var SITE_VERSION = '1.5';</script></head><body class="comfy-outfit feed.xml"><div id="sitebar"><div class="container"><section><nav class="menu"><ul class="nav-links"><li><a href="/">home</a></li><li><a href="/notes">notes</a></li><li><a href="/hire-me">hire me</a></li><li><a href="/about">about</a></li></ul></nav></section></div></div><hr><main><div class="container"><section><?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes by Welling Guzmán</title><atom:link href="http://wellingguzman.com/notes.xml" rel="self" type="application/rss+xml"></atom:link><link>http://wellingguzman.com<description>Notes about code and among other things.</description><lastbuilddate>Sat, 21 Jul 2018 13:55:13 +0000</lastbuilddate><language>en-US</language><item><title>Manipulating Pixels Using Canvas</title><description><![CDATA[Modern browsers support playing video via the &lt;video&gt; element. Most browsers also have access to webcams via the MediaDevices.getUserMedia() API. But even with those two things combined, we can’t really access and manipulate those pixels directly.
+Fortunately, browsers have a Canvas API that allows us to draw graphics using JavaScript. We can actually draw images to the &lt;canvas&gt; from the video itself, which gives us the ability to manipulate and play with those pixels.
+Everything you learn here about how to manipulate pixels will give you a foundation to work with images and videos of any kind or any source, not just canvas.
+Read full article.]]></description><content:encoded><![CDATA[<p>Modern browsers support playing video via the <code>&lt;video&gt;</code> element. Most browsers also have access to webcams via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">MediaDevices.getUserMedia()</a> API. But even with those two things combined, we can’t really access and manipulate those pixels directly.</p>
+<p>Fortunately, browsers have a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a> that allows us to draw graphics using JavaScript. We can actually draw images to the <code>&lt;canvas&gt;</code> from the video itself, which gives us the ability to manipulate and play with those pixels.</p>
+<p>Everything you learn here about how to manipulate pixels will give you a foundation to work with images and videos of any kind or any source, not just canvas.</p>
+<p><a href="https://css-tricks.com/manipulating-pixels-using-canvas">Read full article</a>.</p>
+]]></content:encoded><pubdate>Sat, 21 Jul 2018 13:55:13 +0000</pubdate><link>https://css-tricks.com/manipulating-pixels-using-canvas</item><item><title>#100DaysOfEnglish</title><description><![CDATA[Along side with #100DaysOfCode I have decided I should practice my English for the next 100 days.
 I learned english almost by myself. I was taught english at school, but the same thing for a decade, nothing useful at the long run. about 5 years ago I put myself into a intensive english course for grammar and allow myself to speak with people in english, since then I have not talk much.
 I would say I am good at listening and reading, I read and listen english every day, but I write from time to time, and speak not very often (almost zero time).
 My goals is to get used to speak and write english more often. The way I want to accomplish this is by writing every day or record myself talking or both.
@@ -1838,74 +1845,7 @@ Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.]]></descript
 error_reporting(E_ALL);
 ini_set(&#39;display_errors&#39;, &#39;On&#39;);
 </code></pre>
-<p>Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.</p>]]></content:encoded><pubdate>Fri, 25 Jan 2013 18:15:47 +0000</pubdate><link>http://wellingguzman.com/notes/php-apache-500-internal-server-error</item><item><title>Sesiones CodeIgniter terminan inmediatamente</title><description><![CDATA[He estado utilizando Codeigniter por mucho tiempo localmente y remotamente pero nunca me habia pasado algo como esto, tratando de utilizar las sesiones localmente funcionaban sin ningún problema, pero al utilizarlo en un servidor, las sesiones no querían funcionar, no querían almacenarse ni mantenerse su tiempo indicado en la configuración de CodeIgniter.
-
-
-En CodeIgniter 2.1.3 es la version que utilizo actualmente tiene por defecto estas configuraciones de sesión.
-
-Sesiones CodeIgniter
-
-&lt;?php
-$config[&#39;sess_cookie_name&#39;]     = &#39;ci_session&#39;;
-$config[&#39;sess_expiration&#39;]      = 7200;
-$config[&#39;sess_expire_on_close&#39;] = FALSE;
-$config[&#39;sess_encrypt_cookie&#39;]  = FALSE;
-$config[&#39;sess_use_database&#39;]    = FALSE;
-$config[&#39;sess_table_name&#39;]      = &#39;ci_sessions&#39;;
-$config[&#39;sess_match_ip&#39;]        = FALSE;
-$config[&#39;sess_match_useragent&#39;] = TRUE;
-$config[&#39;sess_time_to_update&#39;]  = 300;
-
-Como podrán notar en $config[&#39;sess_expiration&#39;]    = 7200; nos indica que la session expirara después de 7200 segundos de ser creada, que resulta ser 2 horas, la cual se ira actualizando en cada ejecución y en fin el caso seria que si dura 2 horas (7200 segundos) inactiva expirara.
-
-Esto me estaba funcionando perfectamente en mi servidor local hasta que trate de subirlo a un servidor remoto en la cual no encontraba cual seria el problema que no podia iniciar sesión, pense que el servidor no me estaba guardando o trabajando las sesiones pero si las almacenabas.
-
-Investigando encontre el problema y la solución.
-
-Problema
-El problema estaba en que el servidor remoto estaba en un pais con diferencia de horario mayor a 2 horas a mi pais de residencia, la cual el problema funcionaba de esta manera:
-
-Iniciaba Sesión en la web a las 08:00am.
-El servidor creaba las sesiones y le indicaba al navegador local que esta sesión expiran en 2 horas de su hora local que es 01:00am, la cual nos indica que la sesión habra terminado a las 03:00am si no la consultan antes de esta hora.
-Cuando inmediatamente volvia a preguntar por la sesión que acaba de crear... ¡BANG! no funciona porque ya expiro a las 03:00am hace 5 horas según el servidor, según mi navegador (cliente local) no es nada cierto.
-
-Solución
-
-Pues la solución es bastante simple, Incrementar el tiempo de expiración de la sesión, la cual seria 1 dia, así no encontraríamos ningún problema con el servidor y el cliente. Hay ciertos países que tienen casi 1 dia de diferencia así que pueden variar o elegir el valor que prefieran.]]></description><content:encoded><![CDATA[<p>He estado utilizando <strong>Codeigniter</strong> por mucho tiempo localmente y remotamente pero nunca me habia pasado algo como esto, tratando de utilizar las sesiones localmente funcionaban sin ningún problema, pero al utilizarlo en un servidor, las sesiones no querían funcionar, no querían almacenarse ni mantenerse su tiempo indicado en la configuración de CodeIgniter.</p>
-
-<p><span id="more-36"></span></p>
-<p>En <strong>CodeIgniter 2.1.3</strong> es la version que utilizo actualmente tiene por defecto estas configuraciones de sesión.</p>
-
-<h2>Sesiones CodeIgniter</h2>
-
-<pre><code class="language-php">&lt;?php
-$config[&#39;sess_cookie_name&#39;]     = &#39;ci_session&#39;;
-$config[&#39;sess_expiration&#39;]      = 7200;
-$config[&#39;sess_expire_on_close&#39;] = FALSE;
-$config[&#39;sess_encrypt_cookie&#39;]  = FALSE;
-$config[&#39;sess_use_database&#39;]    = FALSE;
-$config[&#39;sess_table_name&#39;]      = &#39;ci_sessions&#39;;
-$config[&#39;sess_match_ip&#39;]        = FALSE;
-$config[&#39;sess_match_useragent&#39;] = TRUE;
-$config[&#39;sess_time_to_update&#39;]  = 300;
-</code></pre>
-<p>Como podrán notar en <code>$config[&#39;sess_expiration&#39;]    = 7200;</code> nos indica que la session expirara después de 7200 segundos de ser creada, que resulta ser 2 horas, la cual se ira actualizando en cada ejecución y en fin el caso seria que si dura 2 horas (7200 segundos) inactiva expirara.</p>
-
-<p>Esto me estaba funcionando perfectamente en mi servidor local hasta que trate de subirlo a un servidor remoto en la cual no encontraba cual seria el problema que no podia iniciar sesión, pense que el servidor no me estaba guardando o trabajando las sesiones pero si las almacenabas.</p>
-
-<p>Investigando encontre el <em>problema</em> y la <em>solución</em>.</p>
-
-<p><h2>Problema</h2></p>
-<p>El problema estaba en que el servidor remoto estaba en un pais con diferencia de horario mayor a 2 horas a mi pais de residencia, la cual el problema funcionaba de esta manera:</p>
-<ol>
-<li>Iniciaba Sesión en la web a las 08:00am.</li>
-<li>El servidor creaba las sesiones y le indicaba al navegador local que esta sesión expiran en 2 horas de su hora local que es 01:00am, la cual nos indica que la sesión habra terminado a las 03:00am si no la consultan antes de esta hora.</li>
-<li>Cuando inmediatamente volvia a preguntar por la sesión que acaba de crear... ¡BANG! no funciona porque ya expiro a las 03:00am hace 5 horas según el servidor, según mi navegador (cliente local) no es nada cierto.</li>
-</ol>
-<h2>Solución</h2>
-<p>
-Pues la solución es bastante simple, Incrementar el tiempo de expiración de la sesión, la cual seria 1 dia, así no encontraríamos ningún problema con el servidor y el cliente. Hay ciertos países que tienen casi 1 dia de diferencia así que pueden variar o elegir el valor que prefieran.
-</p>]]></content:encoded><pubdate>Sat, 19 Jan 2013 16:25:13 +0000</pubdate><link>http://wellingguzman.com/notes/sesiones-codeigniter-terminan-inmediatamente</item></channel></rss></section></div></main><hr><footer id="footer"><div class="container"><section><ul><li><span class="copyright">Copyright &copy; 2018</span></li><li><a href="/about" class="link-about">About</a></li><li><a href="https://twitter.com/WellingGuzman" class="link-twitter">Twitter</a></li><li><a href="https://github.com/WellingGuzman" class="link-github">GitHub</a></li></ul></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<p>Y Con esto tenemos los errores de PHP devuelta en nuestro servidor.</p>]]></content:encoded><pubdate>Fri, 25 Jan 2013 18:15:47 +0000</pubdate><link>http://wellingguzman.com/notes/php-apache-500-internal-server-error</item></channel></rss></section></div></main><hr><footer id="footer"><div class="container"><section><ul><li><span class="copyright">Copyright &copy; 2018</span></li><li><a href="/about" class="link-about">About</a></li><li><a href="https://twitter.com/WellingGuzman" class="link-twitter">Twitter</a></li><li><a href="https://github.com/WellingGuzman" class="link-github">GitHub</a></li></ul></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
