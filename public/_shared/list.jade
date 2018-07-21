@@ -5,8 +5,8 @@ unless posts.length
 ul.List.Post-List
   - post = posts.shift();
   while post
-    li.List-item
-      .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
+    li.List-item(class=post.original_date ? "external" : "")
+      .List-meta: time.Timestamp #{moment(post.original_date || post.date).format('MMMM DD, YYYY')}
       .List-text: a(href="#{post.url_relative}") #{post.title}
     - post = posts.shift();
 
