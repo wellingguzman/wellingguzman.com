@@ -126,6 +126,14 @@
   "updating-curl-on-ubuntu-12.04": {
     "published": false
   },
+  "manipulating-pixels-using-canvas": {
+    "title": "Manipulating Pixels Using Canvas",
+    "date": "2018-07-21 13:55:13",
+    "original_date": "2018-06-07 00:00:00",
+    "url": "https://css-tricks.com/manipulating-pixels-using-canvas",
+    "published": true,
+    "tags": ["canvas"]
+  },
   "hashtag-100-days-of-english": {
     "title": "#100DaysOfEnglish",
     "date": "2018-05-10 10:55:03",
