@@ -71,6 +71,10 @@
   p {
     margin: 1rem 0;
     line-height: 1.5rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 
   a {
@@ -148,7 +152,7 @@
     max-width: 580px;
   }
 
-  #sitebar, #header {
+  #sitebar, #header, #main, #footer {
     margin: 1rem 0;
   }
 
@@ -227,13 +231,11 @@
 
   #description {
     display: block;
-    margin: 0 0 2rem;
+    margin: 0;
     color: @gray;
   }
 
-  main {
-    margin: 0 0 2rem;
-
+  #main {
     section {
       padding: 1rem;
     }
@@ -292,23 +294,24 @@
   }
   .Content-bottom {
     text-align: center;
-    margin: 2rem 0;
+    margin: 0;
   }
 
   #footer {
     text-align: center;
-    margin: 0 0 3rem;
     font-size: 0.87rem;
     color: @gray;
 
     ul {
       border-top: 2px solid @lightGray;
-      padding-top: 2rem;
+      padding: 1rem 0;
+      margin: 0;
     }
 
     li {
       display: inline-block;
       padding: 0 0.45rem;
+      margin: 0;
     }
 
     .responsive(500px, {
@@ -332,7 +335,7 @@
       margin: 0 0 1rem;
     }
 
-    main {
+    #main {
       ul {
         li {
           border-bottom: 1px solid @lightGray;
