@@ -121,15 +121,12 @@ function run() {
     fourohfour = fs.readFileSync(outputPath + '/404.html');
     server(outputPath, port);
   } else {
-    route.get(/^\/tags(\/(.*))?$/, function (req, res, next) {
-      req.url+='/';
+    var normalizeDirectories = function (req, res, next) {
+      req.url += '/';
       next();
-    });
+    };
 
-    route.get(/^\/(notes|logs|logs(\/(.*)+[^\/]$)|lab|projects)$/, function (req, res, next) {
-      req.url+='/';
-      next();
-    });
+    route.get(/^\/(notes|logs|logs(\/(.*)+[^\/]$)|lab|projects|tags(\/(.*))?)$/, normalizeDirectories);
 
     route.all('*', harp.mount(__dirname));
     route.all('*', function (req, res, next) {
@@ -139,7 +136,6 @@ function run() {
 
     console.log('Running harp-static (development) on ' + port);
     http.createServer(route).listen(port);
-    server(__dirname + '/public');
   }
 }
 
