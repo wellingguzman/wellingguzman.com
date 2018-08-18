@@ -64,9 +64,6 @@ function run() {
             "headers" : [{
               "key" : "Cache-Control",
               "value" : "public, max-age=7200"
-            }, {
-              "key": "Content-Disposition",
-              "value": null
             }]
           }
         ],
