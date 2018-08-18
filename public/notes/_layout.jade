@@ -7,8 +7,7 @@ block content
         h1.Post-title
           | #{title}
         .Post-meta
-          span.Timestamp #{moment(date).format('dddd, MMMM Do, YYYY')}
-          //- span.Timestamp #{moment(date).format('DD.MM.YYYY')}
+          span.Timestamp #{moment(date).format('dddd, MMMM D, YYYY')}
           if (tags && tags.length)
             .Tags
               each tag in tags
@@ -16,8 +15,3 @@ block content
 
       - content = partial('../_shared/highlight', {yield: yield})
       != content
-    //-   if (current.source != 'index')
-    //- footer.Post-footer
-    //-   .Post-signature
-    //-     —
-    //-     a(href="http://twitter.com/WellingGuzman" target="_blank") @WellingGuzman
