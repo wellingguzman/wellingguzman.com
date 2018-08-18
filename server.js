@@ -1,17 +1,13 @@
 var http = require('http');
 var fs = require('fs');
-var path = require('path');
 var router = require('router-stupid');
 var harp = require('harp');
 var moment = require('moment');
 var Highlights = require('highlights');
 var cheerio = require('cheerio');
 var S = require('string');
-var glob = require('glob');
-var st = require('st');
+var serveHandler = require('serve-handler');
 var marked = require('marked');
-
-var mount;
 var route = router();
 var outputPath = __dirname + '/www';
 var port = process.env.PORT || 9000;
@@ -23,62 +19,27 @@ global.cheerio = cheerio;
 global.S = S;
 global.marked = marked;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
-global.logs = function (path) {
-  var content = '';
-
-  try {
-    content = fs.readFileSync(__dirname + '/public/logs/' + path + '.md', 'utf8');
-  } catch (err) {
-
-  }
-
-  return content;
-};
-// global.allTags = [];
 
 function redirect(res, url) {
   res.writeHead(302, { location: url });
   res.end();
 }
 
-function getDirectories(srcpath) {
-  return fs.readdirSync(srcpath).filter(function(file) {
-    return fs.statSync(path.join(srcpath, file)).isDirectory();
-  });
-}
-
-// try {
-//   global.allTags = getDirectories(__dirname+'/public/tags');
-// } catch (ex) {
-//   global.allTags = [];
-// }
-
 route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
-  res.writeHead(302, { 'location': '/images/' + req.params.filename });
-  res.end();
+  redirect(res, '/images/' + req.params.filename);
 });
 
 route.all('/writing/{post_name}?', function (req, res, next) {
-  var redirect = '';
-  if(req.params.post_name) {
-    redirect = '/' + req.params.post_name;
+  var url = '';
+
+  if (req.params.post_name) {
+    url = '/notes/' + req.params.post_name;
   }
-  res.writeHead(302, { 'location': '/notes' + redirect });
-  res.end();
+
+  redirect(res, url);
 });
 
 var server = function (root) {
-  // manually glob all the .html files so that we can navigate
-  // without .html on the end of the urls
-  glob('**/*.html', {
-    cwd: root,
-    dot: false
-  }, function (er, files) {
-    htmlFiles = files.map(function (file) {
-      return '/' + file;
-    });
-  });
-
   // use st module for static cached routing
   mount = st({
     path: root,
@@ -91,35 +52,34 @@ var server = function (root) {
 
 function run() {
   if (process.env.NODE_ENV === 'production') {
+    var fourohfour = fs.readFileSync(outputPath + '/404.html');
+
     route.get('*', function (req, res, next) {
-
-      // simplify the url (remove the ?search) and test if
-      // we have a file that exists (in `htmlFiles`)
-      req.url = req.url.replace(/\?.*$/, '').replace(/(.)\/$/, '$1');
-      if (htmlFiles.indexOf(req.url + '.html') !== -1) {
-        // then we requested /foo/bar and we know there's a
-        // generated file that matches
-        req.url += '.html';
-      }
-
-      // if our server is ready, respond using the st module
-      // and if it's a 404, respond with `serve404`.
-      if (mount) {
-        mount(req, res, function serve404() {
+      serveHandler(req, res, {
+        cleanUrls: true,
+        public: 'www',
+        headers: [
+          {
+            "source" : "**/*.*",
+            "headers" : [{
+              "key" : "Cache-Control",
+              "value" : "public, max-age=7200"
+            }, {
+              "key": "Content-Disposition",
+              "value": null
+            }]
+          }
+        ],
+      }, function sendError(absolutePath, response, acceptsJSON, current, handlers, config, error) {
+        if (error.statusCode === 404) {
           res.writeHead(404);
           res.end(fourohfour);
-        });
-      } else {
-        res.writeHead(404);
-        res.end();
-      }
+        }
+      });
     });
 
-    console.log('Running harp-static (production) on ' + port);
     http.createServer(route).listen(port);
-
-    fourohfour = fs.readFileSync(outputPath + '/404.html');
-    server(outputPath, port);
+    console.log('Running harp-static (production) on ' + port);
   } else {
     var normalizeDirectories = function (req, res, next) {
       req.url += '/';
