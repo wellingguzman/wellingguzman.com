@@ -39,17 +39,6 @@ route.all('/writing/{post_name}?', function (req, res, next) {
   redirect(res, url);
 });
 
-var server = function (root) {
-  // use st module for static cached routing
-  mount = st({
-    path: root,
-    url: '/',
-    index: 'index.html', // server index.html for directories
-    passthrough: true // pass through if not found, so we can send 404
-  });
-  console.log('compilation complete');
-};
-
 function run() {
   if (process.env.NODE_ENV === 'production') {
     var fourohfour = fs.readFileSync(outputPath + '/404.html');
