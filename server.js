@@ -57,7 +57,7 @@ function run() {
     route.get('*', function (req, res, next) {
       serveHandler(req, res, {
         cleanUrls: true,
-        public: 'www',
+        public: outputPath,
         headers: [
           {
             "source" : "**/*.*",
