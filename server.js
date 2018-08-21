@@ -41,8 +41,6 @@ route.all('/writing/{post_name}?', function (req, res, next) {
 
 function run() {
   if (process.env.NODE_ENV === 'production') {
-    var fourohfour = fs.readFileSync(outputPath + '/404.html');
-
     route.get('*', function (req, res, next) {
       serveHandler(req, res, {
         cleanUrls: true,
@@ -56,11 +54,6 @@ function run() {
             }]
           }
         ],
-      }, function sendError(absolutePath, response, acceptsJSON, current, handlers, config, error) {
-        if (error.statusCode === 404) {
-          res.writeHead(404);
-          res.end(fourohfour);
-        }
       });
     });
 
