@@ -9,8 +9,7 @@ var S = require('string');
 var serveHandler = require('serve-handler');
 var marked = require('marked');
 var route = router();
-var publicDir = 'www';
-var outputPath = __dirname + '/' + publicDir;
+var outputPath = __dirname + '/www';
 var port = process.env.PORT || 9000;
 var pkg = require('./package');
 
@@ -47,7 +46,7 @@ function run() {
     route.get('*', function (req, res, next) {
       serveHandler(req, res, {
         cleanUrls: true,
-        public: publicDir,
+        public: outputPath,
         headers: [
           {
             "source" : "**/*.*",
