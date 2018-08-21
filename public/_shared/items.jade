@@ -12,14 +12,11 @@
 
 - return posts.map(function (slug) {
 -     var post = items._data[slug];
-
+-
 -     post.slug = slug;
 -     post.date = post.date || new Date(0);
 -     if (!post.url) {
--       post.url_relative = itemPath + post.slug;
--       post.url = site_url + post.url_relative;
--     } else {
--       post.url_relative = post.url;
+-       post.url = itemPath + post.slug;
 -     }
 -
 -     return post;
