@@ -126,6 +126,12 @@
   "updating-curl-on-ubuntu-12.04": {
     "published": false
   },
+  "upgrading-nodejs-npm-on-ubuntu-14-04": {
+    "title": "Upgrading nodejs/npm on Ubuntu 14.04",
+    "date": "2018-08-23 10:53:13",
+    "published": true,
+    "tags": ["server"]
+  },
   "manipulating-pixels-using-canvas": {
     "title": "Manipulating Pixels Using Canvas",
     "date": "2018-07-21 13:55:13",
