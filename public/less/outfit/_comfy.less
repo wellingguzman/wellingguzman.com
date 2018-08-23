@@ -85,7 +85,7 @@
   }
 
   p {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 
     &:first-of-type {
       margin-top: 0;
@@ -95,10 +95,12 @@
   a {
     color: @mainColor;
     text-decoration: none;
+    border-bottom: 1px dotted;
 
     &:hover {
       background: @mainColor;
       color: #FFFFFF;
+      border-bottom: none;
 
       code {
         background: @mainColor;
@@ -114,6 +116,12 @@
         background: @pinkStrongColor;
         color: #FFFFFF;
       }
+    }
+  }
+
+  #sitebar, #header, #footer, .List {
+    a {
+      border-bottom: 0;
     }
   }
 
@@ -134,9 +142,9 @@
   }
 
   pre, code, .editor {
-    background: #F4F4F6;
+    background: #F6F6F8;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace, serif;
-    font-size: 0.84rem;
+    font-size: 0.813rem;
   }
 
   p code {
@@ -166,7 +174,7 @@
   }
 
   .container {
-    max-width: 580px;
+    max-width: 620px;
   }
 
   #sitebar, #header, #main, #footer {
@@ -176,6 +184,7 @@
   .menu {
     padding: 0;
     text-align: center;
+    font-size: 0.938rem;
   }
 
   .nav-links {
@@ -286,6 +295,7 @@
     .Post-meta {
       color: @gray;
       margin: 0 0 2rem;
+      font-size: 0.938em;
     }
   }
 
@@ -319,7 +329,7 @@
 
   #footer {
     text-align: center;
-    font-size: 0.87rem;
+    font-size: 0.875rem;
     color: @gray;
 
     ul {
