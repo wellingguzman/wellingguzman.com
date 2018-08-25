@@ -22,16 +22,16 @@ global.Prism = Prism;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
 
 loadLanguages([
-  "javascript",
-  "objectivec",
-  "c",
-  "cpp",
-  "php",
-  "swift",
-  "http",
-  "sql",
-  "bash",
-  "textfile"
+  'javascript',
+  'objectivec',
+  'c',
+  'cpp',
+  'php',
+  'swift',
+  'http',
+  'sql',
+  'bash',
+  'textfile'
 ]);
 
 function redirect(res, url) {
@@ -61,10 +61,10 @@ function run() {
         public: outputPath,
         headers: [
           {
-            "source" : "**/*.*",
-            "headers" : [{
-              "key" : "Cache-Control",
-              "value" : "public, max-age=7200"
+            'source' : '**/*.*',
+            'headers' : [{
+              'key' : 'Cache-Control',
+              'value' : 'public, max-age=7200'
             }]
           }
         ],
