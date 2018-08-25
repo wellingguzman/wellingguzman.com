@@ -3,13 +3,12 @@
 -   $('pre code[class|="language"]').each(function(i, el) {
 -     var className, code, codeWrap, language, languageId;
 -     className = $(this).attr('class');
--     code = $(el).text();
--     codeWrap    = '<pre>' + $(el).parents('pre').html() + '</pre>';
+-     code = $(this).html();
+-     codeWrap    = '<pre>' + $(this).closest('pre').html() + '</pre>';
 -     languageId = partial('language', {languageId: className.replace('language-', '')});
 -     language = Prism.languages[languageId];
 -
 -     if (language) {
--       yield = S(yield).decodeHTMLEntities().s;
 -       code = Prism.highlight(code, language, className);
 -       yield = yield.replace(codeWrap, '<pre><code class="' + className + '">' + code + '</code></pre>');
 -     }
