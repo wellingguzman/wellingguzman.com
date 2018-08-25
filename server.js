@@ -3,22 +3,36 @@ var fs = require('fs');
 var router = require('router-stupid');
 var harp = require('harp');
 var moment = require('moment');
-var Highlights = require('highlights');
 var cheerio = require('cheerio');
 var S = require('string');
 var serveHandler = require('serve-handler');
 var marked = require('marked');
+var Prism = require('prismjs');
+var loadLanguages = require('prismjs/components/');
 var route = router();
 var outputPath = __dirname + '/www';
 var port = process.env.PORT || 9000;
 var pkg = require('./package');
 
 global.moment = moment;
-global.highlighter = new Highlights();
 global.cheerio = cheerio;
 global.S = S;
 global.marked = marked;
+global.Prism = Prism;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
+
+loadLanguages([
+  "javascript",
+  "objectivec",
+  "c",
+  "cpp",
+  "php",
+  "swift",
+  "http",
+  "sql",
+  "bash",
+  "textfile"
+]);
 
 function redirect(res, url) {
   res.writeHead(302, { location: url });

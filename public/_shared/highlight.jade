@@ -1,21 +1,17 @@
 - if (yield) {
 -   $ = cheerio.load(yield, {decodeEntities: false});
 -   $('pre code[class|="language"]').each(function(i, el) {
--     var className, scopeName, codeHTML;
+-     var className, code, codeWrap, language, languageId;
 -     className = $(this).attr('class');
+-     code = $(el).text();
 -     codeWrap    = '<pre>' + $(el).parents('pre').html() + '</pre>';
--     codeHTML    = S($(el).html()).decodeHTMLEntities().s;
+-     languageId = partial('language', {languageId: className.replace('language-', '')});
+-     language = Prism.languages[languageId];
 -
--     scopeName = partial('scopes', {className: className});
--     if (scopeName == 'text.html.php' && codeHTML.indexOf('<?php') !== 0) {
--       codeHTML = '<?php\n' + codeHTML;
--     }
--
--     if (scopeName) {
+-     if (language) {
 -       yield = S(yield).decodeHTMLEntities().s;
--       code = highlighter.highlightSync({fileContents:codeHTML,scopeName: scopeName});
--       rel = className.replace('language-', '');
--       yield = yield.replace(codeWrap, code.replace('<pre class', '<pre rel="'+rel+'" class'));
+-       code = Prism.highlight(code, language, className);
+-       yield = yield.replace(codeWrap, '<pre><code class="' + className + '">' + code + '</code></pre>');
 -     }
 -   });
 - }
