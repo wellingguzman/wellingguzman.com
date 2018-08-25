@@ -1,16 +1,16 @@
 - if (yield) {
 -   $ = cheerio.load(yield, {decodeEntities: false});
+-   yield = S(yield).decodeHTMLEntities().s;
 -   $('pre code[class|="language"]').each(function(i, el) {
 -     var className, code, codeWrap, language, languageId;
 -     className = $(this).attr('class');
 -     code = $(this).html();
--     codeWrap    = '<pre>' + $(this).closest('pre').html() + '</pre>';
+-     codeWrap    = S(code).wrapHTML('code', {class: className}).s;
 -     languageId = partial('language', {languageId: className.replace('language-', '')});
 -     language = Prism.languages[languageId];
--
 -     if (language) {
 -       code = Prism.highlight(code, language, className);
--       yield = yield.replace(codeWrap, '<pre><code class="' + className + '">' + code + '</code></pre>');
+-       yield = yield.replace(codeWrap, S(code).wrapHTML('code', {class: className}).s);
 -     }
 -   });
 - }
