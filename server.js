@@ -5,7 +5,6 @@ var moment = require('moment');
 var cheerio = require('cheerio');
 var S = require('string');
 var serveHandler = require('serve-handler');
-var marked = require('marked');
 var Prism = require('prismjs');
 var loadLanguages = require('prismjs/components/');
 var route = router();
@@ -16,7 +15,6 @@ var pkg = require('./package');
 global.moment = moment;
 global.cheerio = cheerio;
 global.S = S;
-global.marked = marked;
 global.Prism = Prism;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
 
