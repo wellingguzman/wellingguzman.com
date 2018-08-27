@@ -8,7 +8,9 @@ Let's take a look how mocking was done on version 5 in the example below:
 
 ```php
 // Guzzle http client
-$client = new \GuzzleHttp\Client(['base_url' => 'http://localhost']);
+$client = new \GuzzleHttp\Client([
+    'base_url' => 'http://localhost'
+]);
 
 // Create Mock
 $mock = new \GuzzleHttp\Subscriber\Mock();
@@ -24,7 +26,7 @@ $mock->addResponse($mockContent);
 
 The content of `/path/to/raw/response.txt` is a raw http response.
 
-```
+```http
 HTTP/1.1 200 OK
 Date: Wed, 15 Jun 2016 17:02:51 GMT
 Server: nginx
