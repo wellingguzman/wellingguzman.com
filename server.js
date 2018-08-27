@@ -28,7 +28,6 @@ loadLanguages([
   'http',
   'sql',
   'bash',
-  'textfile'
 ]);
 
 function redirect(res, url) {
