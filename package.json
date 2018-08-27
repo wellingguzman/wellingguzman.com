@@ -11,9 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "~1.0.0-rc.2",
-    "glob": "~7.1.2",
     "harp": "0.25.0",
-    "marked": "0.3.12",
     "moment": "~2.20.1",
     "prismjs": "^1.15.0",
     "router-stupid": "~0.7.0",
