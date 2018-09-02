@@ -84,8 +84,8 @@ function run() {
       harp.mount(__dirname)(req, res);
     });
 
-    console.log('Running harp-static (development) on ' + port);
     http.createServer(route).listen(port);
+    console.log('Running harp-static (development) on ' + port);
   }
 }
 
