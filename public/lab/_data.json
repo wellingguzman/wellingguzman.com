@@ -1,5 +1,8 @@
 {
   "index": {
     "title": "Experiments - Welling Guzmán"
+  },
+  "audio-streaming-node-socket-io": {
+    "title": "Audio Streaming using Node and Socket.io"
   }
 }
