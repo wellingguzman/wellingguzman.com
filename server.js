@@ -84,7 +84,19 @@ function run(port) {
       next();
     };
 
-    route.get(/^\/(notes|logs|logs(\/(.*)+[^\/]$)|lab|projects|tags(\/(.*))?)$/, normalizeDirectories);
+    var directoriesPattern = [
+      'notes',
+      'logs',
+      'logs(\/(.*)+[^\/]$)',
+      'lab',
+      'projects',
+      'tags(\/(.*))'
+    ].join('|');
+
+    route.get(
+      new RegExp('^\/(' + directoriesPattern + '?)$'),
+      normalizeDirectories
+    );
 
     route.all('*', harp.mount(__dirname));
     route.all('*', function (req, res, next) {
