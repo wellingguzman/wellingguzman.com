@@ -103,8 +103,6 @@ if (process.argv[2] === 'compile') {
   if (requestPort) {
     run(requestPort);
   } else {
-    getPort({port: defaultPort}).then(function (newPort) {
-      run(newPort);
-    });
+    getPort({port: defaultPort}).then(run);
   }
 }
