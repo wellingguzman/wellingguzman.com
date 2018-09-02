@@ -15,19 +15,19 @@ It can be any of those errors depending on whether the table's storage engine is
 
 ## TL;DR
 
-utf8 charset requires only 3 bytes per character, while utf8mb4 requires 4 bytes, which mean you have to use at most 191 characters in your string column.
+`utf8` charset requires only 3 bytes per character, while `utf8mb4` requires 4 bytes, which means you have to use at most 191 characters in your string column.
 
 191 characters x 4 bytes = 764 bytes which is less than the maximum length of 767 bytes.
 
 ---
 
-## String storage
+## String Storage
 
-String storage size vary depends on if the column is fixed-length or variable-length, it also depends on the charset it takes more bytes to storage a japanese character than an ASCII/Latin letter.
+String storage size vary depends on if the column is fixed-length or variable-length. It also depends on the charset, it takes more bytes to storage a japanese character than an ASCII/Latin letter.
 
-As an example `CHAR` is a fixed-length while `VARCHAR` and `TEXT` are variable-length.
+As an example, `CHAR` is a fixed-length while `VARCHAR` and `TEXT` are variable-length.
 
-All fixed-length data types uses all the bytes declared it with, for example `CHAR(16)`, no matter what's inside, there are not truncated as `VARCHAR` will be, but right padded with spaces to the specific length.
+All fixed-length data types uses all the bytes they were declared. For example `CHAR(16)`, no matter what's inside, they are not truncated as `VARCHAR` will be, but right padded with spaces to the specific length.
 
 In the other hand using `VARCHAR(16)` MySQL internally will remove all trailing spaces from any variable-length column data type.
 
