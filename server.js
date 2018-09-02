@@ -10,7 +10,8 @@ var loadLanguages = require('prismjs/components/');
 var getPort = require('get-port');
 var route = router();
 var outputPath = __dirname + '/www';
-var port = process.env.PORT || 9000;
+var defaultPort = 9000;
+var requestPort = process.env.PORT;
 var pkg = require('./package');
 
 global.moment = moment;
@@ -50,7 +51,7 @@ route.all('/writing/{post_name}?', function (req, res, next) {
   redirect(res, url);
 });
 
-function run() {
+function run(port) {
   if (process.env.NODE_ENV === 'production') {
     route.get('*', function (req, res, next) {
       serveHandler(req, res, {
@@ -99,8 +100,11 @@ if (process.argv[2] === 'compile') {
     process.exit(0);
   });
 } else {
-  getPort({port: port}).then(function (newPort) {
-    port = newPort;
-    run();
-  });
+  if (requestPort) {
+    run(requestPort);
+  } else {
+    getPort({port: defaultPort}).then(function (newPort) {
+      run(newPort);
+    });
+  }
 }
