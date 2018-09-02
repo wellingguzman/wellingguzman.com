@@ -51,6 +51,13 @@ route.all('/writing/{post_name}?', function (req, res, next) {
   redirect(res, url);
 });
 
+function printSuccess(port) {
+  var mode = 'development';
+  var url = 'http://localhost:' + port;
+
+  console.log('Running harp-static (' + mode + ') on ' + url);
+}
+
 function run(port) {
   if (process.env.NODE_ENV === 'production') {
     route.get('*', function (req, res, next) {
@@ -70,7 +77,7 @@ function run(port) {
     });
 
     http.createServer(route).listen(port);
-    console.log('Running harp-static (production) on ' + port);
+    printSuccess(port);
   } else {
     var normalizeDirectories = function (req, res, next) {
       req.url += '/';
@@ -86,7 +93,7 @@ function run(port) {
     });
 
     http.createServer(route).listen(port);
-    console.log('Running harp-static (development) on ' + port);
+    printSuccess(port);
   }
 }
 
