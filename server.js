@@ -7,6 +7,7 @@ var S = require('string');
 var serveHandler = require('serve-handler');
 var Prism = require('prismjs');
 var loadLanguages = require('prismjs/components/');
+var getPort = require('get-port');
 var route = router();
 var outputPath = __dirname + '/www';
 var port = process.env.PORT || 9000;
@@ -98,5 +99,8 @@ if (process.argv[2] === 'compile') {
     process.exit(0);
   });
 } else {
-  run();
+  getPort({port: port}).then(function (newPort) {
+    port = newPort;
+    run();
+  });
 }
