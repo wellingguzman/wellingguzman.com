@@ -60,5 +60,5 @@ Changing all string columns with length greater than 191 characters to 191.
 If changing the length was not possible or desired option, changing the column index to only a chunk of x characters.
 
 ```sql
-CREATE INDEX `index_name` ON posts (title(191));
+CREATE INDEX `index_name` ON `posts` (title(191));
 ```
