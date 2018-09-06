@@ -130,9 +130,8 @@
     "title": "MySQL NULL values",
     "published": false
   },
-  "pagination-in-mysql": {
-    "title": "Pagination in MySQL",
-    "published": false
+  "pagination-with-mysql": {
+    "title": "Pagination with MySQL"
   },
   "upgrading-nodejs-npm-on-ubuntu-14-04": {
     "title": "Upgrading nodejs/npm on Ubuntu 14.04",
