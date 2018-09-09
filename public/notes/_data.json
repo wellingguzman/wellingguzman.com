@@ -130,6 +130,9 @@
     "title": "MySQL NULL values",
     "published": false
   },
+  "bootstrap-grid-system": {
+    "title": "Bootstrap Grid System"
+  },
   "pagination-with-mysql": {
     "title": "Pagination with MySQL",
     "date": "2018-09-07 08:20:01",
