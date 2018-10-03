@@ -1,7 +1,6 @@
-<p>Using the library <a href="https://github.com/felixge/node-mysql" target="_blank">node-mysql</a> I found myself with an error that refused my node app to connect to an MySQL Database or in fact the server itself. At first I blame the library, searching and searching and I didn't find any solution that leads me to fix error. Every time I tried a connection I always get the error : <code>Error: connect ECONNREFUSED</code>.</p>
+Using the library [node-mysql](https://github.com/felixge/node-mysql) I found myself with an error that refused my node app to connect to an MySQL Database or in fact the server itself. At first I blame the library, searching and searching and I didn't find any solution that leads me to fix error. Every time I tried a connection I always get the error : `Error: connect ECONNREFUSED`.
 
-<pre class="javascript">
-<code>
+```javascript
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -17,45 +16,45 @@ connection.connect(function(err) {
 
   console.log('connected as id ' + connection.threadId);
 });
-</code>
-</pre>
+```
 
-<p>So I wrote and <a href="https://github.com/felixge/node-mysql/issues/874" target="_blank">issue</a> and it was not a library issue, it was MAMP's MySQL bad configuration. There is two thing that can resolve this problem:</p>
+So I wrote an [issue](https://github.com/felixge/node-mysql/issues/874) and it was not a library issue, it was MAMP's MySQL bad configuration. There is two thing that can resolve this problem:
 
-<h2>Solution #1</h2>
-<p>On MAMP disable <code>Allow local access only</code>.</p>
+## Solution #1
 
-<h2>Solution #2</h2>
-<p>run <code>mysql_config --socket</code> in the terminal and use the output as <code>socketPath</code> value
-<pre class="sh">
-<code>
+On MAMP disable `Allow local access only`.
+
+## Solution #2
+
+run `mysql_config --socket` in the terminal and use the output as `socketPath` value.
+
+```shell
 $ mysql_config --socket
 /tmp/mysql.sock
-</code>
-</pre>
+```
 
-<p>Probably when you run <code>mysql_config</code> it would says:
-<pre><code>-bash: mysql_config: command not found</code></pre>
+Probably when you run `mysql_config` it would says:
 
-<p>In MAMP is located in: <code>/Applications/MAMP/Library/bin/mysql_config</code> so it would be: </p>
-<pre class="sh">
-<code>
+```shell
+-bash: mysql_config: command not found
+```
+
+In MAMP is located in: `/Applications/MAMP/Library/bin/mysql_config` so it would be:
+
+```shell
 $ /Applications/MAMP/Library/bin/mysql_config --socket
 /tmp/mysql.sock
-</code>
-</pre>
+```
 
-<p>You can use alias or export to make this long path short.</p>
+You can use alias or export to make this long path short.
 
-<pre class="javascript">
-<code>
+```javascript
 var connection = mysql.createConnection({
   socketPath : '/tmp/mysql.sock',
   host     : 'localhost',
   user       : 'root',
   password   : '123'
 });
-</code>
-</pre>
+```
 
-<p>Hope it helps in any way.</p>
+Hope it helped you in any way.

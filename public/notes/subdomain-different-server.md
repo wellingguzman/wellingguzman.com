@@ -1,30 +1,24 @@
-<p>I want to develop my first Node.js applications and host it as subdomain, but this server (shared on hostgator) does not support Node.js applications, and for a second I thought if I need to change server only for this?. But nope, there is a solution for this.</p>
+I want to develop my first Node.js applications and host it as subdomain, but this server (shared on hostgator) does not support Node.js applications, and for a second I thought if I need to change server only for this?. But nope, there is a solution for this.
 
 <span id="more-332"></span>
 
-<h2>What I want</h2>
-<ul>
-<li><p>Host a Nodejs application in subdomain (<em>subdomain.wellingguzman.com</em>) on a server that does not support nodejs.</p></li>
-<li><p>Keep it like if it was hosted on the same server.</p></li>
-</ul>
+## What I want
 
+- Host a Nodejs application in subdomain (__subdomain.wellingguzman.com_) on a server that does not support nodejs.
+- Keep it like if it was hosted on the same server.
 
-<h2>Solution</h2>
+## Solution
 
-<ol>
-<li><p>Go to your hosting provider, and look for <strong>DNS Zone</strong>, on <strong>hostgator</strong> is under domains tab.</p>
-<p><img src="http://wellingguzman.com/wp-content/uploads/2014/05/zonadns.jpg" alt="zonadns" class="alignnone size-full wp-image-335" /></p>
-</li>
+1. Go to your hosting provider, and look for **DNS Zone**, on **hostgator** is under domains tab.
 
-<li><p><strong>Add a Record</strong>, put the <strong>Name</strong> of the host, or subdomain (<em>subdomain.wellingguzman.com</em>), there is possible two types you would need, type <strong>A</strong> or <strong>CNAME</strong>. If you want to point to an IP you need a type <strong>A</strong>, but if you want to point to a domain/subdomain you need <strong>CNAME</strong>.</p>
+![zonadns](http://wellingguzman.com/wp-content/uploads/2014/05/zonadns.jpg)
 
-<p>On <em>Address</em>/<em>CNAME</em> put the server's IP or subdomain, in my case the app is hosted on <strong>OpenShift</strong> and the CNAME would be something like <em>nodejs-welling.rhcloud.com</em>. </p>
+2. **Add a Record**, put the **Name** of the host, or subdomain (_subdomain.wellingguzman.com_), there is possible two types you would need, type **A** or **CNAME**. If you want to point to an IP you need a type **A**, but if you want to point to a domain/subdomain you need **CNAME**.
 
-<p><strong>TTL</strong> is <em>Time to Live</em>, amount of seconds the record cache would last.</p>
+On _Address_/_CNAME_ put the server's IP or subdomain, in my case the app is hosted on **OpenShift** and the CNAME would be something like _nodejs-welling.rhcloud.com_.
 
-<p><img src="http://wellingguzman.com/wp-content/uploads/2014/05/dnszone-filled.jpg" alt="dnszone-filled" class="alignnone size-full wp-image-339" /></p>
+**TTL** is _Time to Live_, amount of seconds the record cache would last.
 
-</li>
-</ol>
+![dnszone filled](http://wellingguzman.com/wp-content/uploads/2014/05/dnszone-filled.jpg)
 
-<p>This would do the trick, and every time <em>subdomain.wellingguzman.com</em> is typed it would request <em>nodejs-welling.rhcloud.com</em>.</p>
+This would do the trick, and every time _subdomain.wellingguzman.com_ is typed it would request _nodejs-welling.rhcloud.com_.

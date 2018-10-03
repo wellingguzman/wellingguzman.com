@@ -1,10 +1,10 @@
-<p>I have site built with Wordpress and I wanted to catch all 404 page that Wordpress try to display and make my own custom 404 page depending on the requested page, or in fact I just wanted to whether or not show a 404 page.</p>
+I have site built with Wordpress and I wanted to catch all 404 page that Wordpress try to display and make my own custom 404 page depending on the requested page, or in fact I just wanted to whether or not show a 404 page.
 
 <!-- more -->
 
-<p>If the user, let's say, go to <code>http://mysite.com/someword</code> on mysite, and if that is not a post/page it would probably display a 404 page, but I didn't want that behavior I wanted to search if <code>someword</code> is a category slug or a tag and display posts in that category or tag, otherwise would show the normal 404 page.</p>
+If the user, let's say, go to `http://mysite.com/someword` on mysite, and if that is not a post/page it would probably display a 404 page, but I didn't want that behavior I wanted to search if `someword` is a category slug or a tag and display posts in that category or tag, otherwise would show the normal 404 page.
 
-<p>So, this is what I did, I added a action to <code>template_redirect</code> hook, that is executed before WordPress determine which page is going to be loaded.</p>
+So, this is what I did, I added a action to `template_redirect` hook, that is executed before WordPress determine which page is going to be loaded.
 
 ```php
 <?php
@@ -20,9 +20,9 @@ function _custom_redirect()
 }
 ```
 
-<p>So now, I know when it's a 404 page, I need to get the string it was passed on the url, in this case <code>someword</code>, so I can check if the string match a category or a tag name with that name.</p>
+So now, I know when it's a 404 page, I need to get the string it was passed on the url, in this case `someword`, so I can check if the string match a category or a tag name with that name.
 
-<p>This string is stored in a array named <code>query_vars</code> with the key <code>name</code>. <code>query_vars</code> is a variable member of <code>WP_Query</code> which WordPress uses to execute the main query.</p>
+This string is stored in a array named `query_vars` with the key `name`. `query_vars` is a variable member of `WP_Query` which WordPress uses to execute the main query.
 
 ```php
 <?php
@@ -55,7 +55,7 @@ function _custom_redirect()
 }
 ```
 
-<p>After this code WordPress would still "believe" it's a 404 page, I needed to add some more lines to changed this.</p>
+After this code WordPress would still "believe" it's a 404 page, I needed to add some more lines to changed this.
 
 ```php
 <?php
@@ -93,9 +93,9 @@ function _custom_redirect()
 }
 ```
 
-<p>This is pretty much what I wanted to do, now I can get a <em>tag</em> or a <em>category</em> object if one exists, otherwise WordPress will keep its own process and will display its normal 404 page.</p>
+This is pretty much what I wanted to do, now I can get a `tag` or a `category` object if one exists, otherwise WordPress will keep its own process and will display its normal 404 page.
 
-<p>If I actually got a tag or category object, I need to query all posts under it.</p>
+If I actually got a tag or category object, I need to query all posts under it.
 
 ```php
 <?php
@@ -139,9 +139,9 @@ function _custom_redirect()
 }
 ```
 
-<p>If <code>status_header( 200 );</code> isn't added the HTTP status will always be a 404, so this line change the status code from 404 to 200.</p>
+If `status_header( 200 );` isn't added the HTTP status will always be a 404, so this line change the status code from 404 to 200.
 
-<p>This is about it, but I want a little bit more, I want if <code>is_category();</code> or <code>is_tag();</code> functions are used, it has to return true. In order to make this to happen I needed to set a couple of variables more.</p>
+This is about it, but I want a little bit more, I want if `is_category();` or `is_tag();` functions are used, it has to return true. In order to make this to happen I needed to set a couple of variables more.
 
 ```php
 <?php
@@ -152,9 +152,9 @@ $wp_query->set('tag', $tag->slug);
 $wp_query->set('tag_id', $tag->term_id);
 ```
 
-<p><code>$wp_query->set()</code> will set a variable to <code>query_vars</code> array, which as I mentioned before is used by WordPress main query. With this variables set, when WordPress executes <code>is_category();</code> or <code>is_tag();</code> would have category or tag specific variable values to check if is a category/tag or not. </p>
+`$wp_query->set()` will set a variable to `query_vars` array, which as I mentioned before is used by WordPress main query. With this variables set, when WordPress executes `is_category();` or `is_tag();` would have category or tag specific variable values to check if is a category/tag or not.
 
-<h3>Final code</h3>
+## Final code
 
 ```php
 <?php
@@ -204,6 +204,6 @@ function _custom_redirect()
 }
 ```
 
-<p>This would be helpful too if you want to log/register/email requested pages that ends up being a 404 page.</p>
+This would be helpful too if you want to log/register/email requested pages that ends up being a 404 page.
 
-<p><strong>NOTE:</strong> if you don't have any category or tag template page will returns a 404 page template, just take that in mind.</p>
+**NOTE:** if you don't have any category or tag template page will returns a 404 page template, just take that in mind.
