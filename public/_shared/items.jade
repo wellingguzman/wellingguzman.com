@@ -15,8 +15,9 @@
 -
 -     post.slug = slug;
 -     post.date = post.date || new Date(0);
+-     post.url_relative = itemPath + post.slug;
 -     if (!post.url) {
--       post.url = itemPath + post.slug;
+-       post.url = site_url + itemPath + post.slug;
 -     }
 -
 -     return post;
