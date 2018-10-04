@@ -133,6 +133,9 @@
   "bootstrap-grid-system": {
     "title": "Bootstrap Grid System"
   },
+  "let-s-encrypt-ssl-certificate-on-mediatemple": {
+    "title": "Let's Encrypt SSL Certificate on MediaTemple"
+  },
   "pagination-with-mysql": {
     "title": "Pagination with MySQL",
     "date": "2018-09-07 08:20:01",
