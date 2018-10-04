@@ -131,10 +131,12 @@
     "published": false
   },
   "bootstrap-grid-system": {
-    "title": "Bootstrap Grid System"
+    "title": "Bootstrap Grid System",
+    "published": false
   },
   "let-s-encrypt-ssl-certificate-on-mediatemple": {
-    "title": "Let's Encrypt SSL Certificate on MediaTemple"
+    "title": "Let's Encrypt SSL Certificate on MediaTemple",
+    "published": false
   },
   "pagination-with-mysql": {
     "title": "Pagination with MySQL",
