@@ -6,7 +6,7 @@
     "title": "About - Welling Guzmán",
     "header_title": "About"
   },
-  "feed": {
+  "feed.xml": {
     "layout": false
   }
 }
