@@ -4,7 +4,7 @@
   @pinkStrongColor: #FF5E99;
   @yellowColor: #FCE496;
   @gray: #848484;
-  @lightGray: #D3D3D3;
+  @lightGray: #D1D2D3;
   @lighterGray: #E0E0E0;
   @blue: #51C0F1;
 
@@ -132,10 +132,6 @@
     }
   }
 
-  hr {
-    display: none;
-  }
-
   li {
     margin-bottom: 1rem;
   }
@@ -172,8 +168,13 @@
     }
   }
 
-  .container {
+  .container, hr {
     max-width: 610px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 2px solid @lightGray;
   }
 
   #sitebar, #header, #main, #footer {
@@ -330,7 +331,6 @@
     color: @gray;
 
     ul {
-      border-top: 2px solid @lightGray;
       padding: 1rem 0;
       margin: 0;
     }
