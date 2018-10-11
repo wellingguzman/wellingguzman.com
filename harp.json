@@ -4,6 +4,7 @@
     "site_description": "Notes about code and among other things.",
     "site_keywords": "",
     "site_url": "http://wellingguzman.com",
+    "site_lang": "en",
     "analytics": "UA-37732822-1",
     "main_nav": {
       "home": "/",
