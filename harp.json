@@ -7,10 +7,10 @@
     "site_lang": "en",
     "analytics": "UA-37732822-1",
     "main_nav": {
-      "home": "/",
-      "notes": "/notes",
-      "hire me": "/hire-me",
-      "about": "/about"
+      "Home": "/",
+      "Notes": "/notes",
+      "Hire Me": "/hire-me",
+      "About": "/about"
     },
     "footer_nav": {
       "About": "/about",
