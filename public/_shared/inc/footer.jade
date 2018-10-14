@@ -4,8 +4,6 @@ footer#footer
   .container
     section
       ul
-        li
-          span.copyright Copyright &copy; #{moment(date).format('YYYY')}
         each url, label in footer_nav
           li
             a(href="#{url}", class="link-#{label.toLowerCase()}") #{label}
