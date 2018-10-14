@@ -1,16 +1,16 @@
 #sitebar
   .container
     section
-      nav#main-nav(role="navigation",itemscope=true,itemtype="http://schema.org/SiteNavigationElement")
-        ul.nav-links
-          if (main_nav)
-            each url, label in main_nav
-              - selected = '';
-              - path = current.path[0].replace(/\-/g, ' ');
-              - if (path == label || (path == 'experiments' && label == 'lab') || (path == 'index' && label == 'home')) {
-              -   selected = 'selected';
-              - }
-              li(class="#{selected}")
-                a(href="#{url}",itemprop="url")
-                  span(itemprop="name") #{label}
+      nav#main-nav.items(role="navigation",itemscope=true,itemtype="http://schema.org/SiteNavigationElement")
+        if (main_nav)
+          each url, label in main_nav
+            - selected = '';
+            - path = current.path[0].replace(/\-/g, ' ');
+            - if (path == label || (path == 'experiments' && label == 'lab') || (path == 'index' && label == 'home')) {
+            -   selected = 'selected';
+            - }
+            span.item(class="#{selected}")
+              a(href="#{url}",itemprop="url")
+                span(itemprop="name") #{label}
+              span.sep &nbsp
 hr

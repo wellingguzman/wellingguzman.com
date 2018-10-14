@@ -3,11 +3,13 @@ hr
 footer#footer
   .container
     section
-      ul
+      #footer-nav.items(itemscope=true,itemtype="http://schema.org/SiteNavigationElement")
         if (footer_nav)
           each url, label in footer_nav
-            li
-              a(href="#{url}", class="link-#{label.toLowerCase()}") #{label}
+            span.item
+              a(href="#{url}", class="link-#{label.toLowerCase()}")
+                span #{label}
+              span.sep &nbsp
 
 script.
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
