@@ -6,7 +6,7 @@
     "site_url": "http://wellingguzman.com",
     "site_lang": "en",
     "analytics": "UA-37732822-1",
-    "main_nav": {
+    "main_menu": {
       "home": "/",
       "notes": "/notes",
       "hire me": "/hire-me",
