@@ -1,10 +1,10 @@
 #sitebar
   .container
     section
-      nav#main-menu(role="navigation",itemscope=true,itemtype="http://schema.org/SiteNavigationElement")
+      nav#main-nav(role="navigation",itemscope=true,itemtype="http://schema.org/SiteNavigationElement")
         ul.nav-links
-          if(main_menu)
-            each url, label in main_menu
+          if (main_nav)
+            each url, label in main_nav
               - selected = '';
               - path = current.path[0].replace(/\-/g, ' ');
               - if (path == label || (path == 'experiments' && label == 'lab') || (path == 'index' && label == 'home')) {
