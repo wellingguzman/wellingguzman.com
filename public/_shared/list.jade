@@ -9,5 +9,3 @@ ul.List.Post-List
       .List-meta: time.Timestamp #{moment(post.original_date || post.date).format('MMMM DD, YYYY')}
       .List-text: a(href="#{post.url_relative}") #{post.title}
     - post = posts.shift();
-
-.Content-bottom
