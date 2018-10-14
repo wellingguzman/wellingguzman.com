@@ -63,6 +63,7 @@ function run(port) {
     route.get('*', function (req, res, next) {
       serveHandler(req, res, {
         cleanUrls: true,
+        directoryListing: false,
         public: outputPath,
         headers: [
           {
