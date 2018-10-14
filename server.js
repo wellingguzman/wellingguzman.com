@@ -52,7 +52,7 @@ route.all('/writing/{post_name}?', function (req, res, next) {
 });
 
 function printSuccess(port) {
-  var mode = 'development';
+  var mode = process.env.NODE_ENV || 'development';
   var url = 'http://localhost:' + port;
 
   console.log('Running harp-static (' + mode + ') on ' + url);
