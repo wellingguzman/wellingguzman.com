@@ -4,6 +4,8 @@ footer#footer
   .container
     section
       #footer-nav.items(itemscope=true,itemtype="http://schema.org/SiteNavigationElement")
+        span.item
+          span.copyright &copy; #{moment().format('YYYY')} Welling Guzman
         if (footer_nav)
           each url, label in footer_nav
             span.item
