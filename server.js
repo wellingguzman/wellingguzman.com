@@ -1,12 +1,8 @@
 var http = require('http');
 var router = require('router-stupid');
-var harp = require('harp');
+var harp = require('./harp');
 var moment = require('moment');
-var cheerio = require('cheerio');
-var S = require('string');
 var serveHandler = require('serve-handler');
-var Prism = require('prismjs');
-var loadLanguages = require('prismjs/components/');
 var getPort = require('get-port');
 var route = router();
 var outputPath = __dirname + '/www';
@@ -15,22 +11,7 @@ var requestPort = process.env.PORT;
 var pkg = require('./package');
 
 global.moment = moment;
-global.cheerio = cheerio;
-global.S = S;
-global.Prism = Prism;
 global.version = pkg.version.split('.').slice(0, 2).join('.');
-
-loadLanguages([
-  'javascript',
-  'objectivec',
-  'c',
-  'cpp',
-  'php',
-  'swift',
-  'http',
-  'sql',
-  'bash',
-]);
 
 function redirect(res, url) {
   res.writeHead(302, { location: url });

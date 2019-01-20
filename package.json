@@ -10,13 +10,11 @@
   "author": "Welling Guzman",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "~1.0.0-rc.2",
     "get-port": "^4.0.0",
     "harp": "0.25.0",
     "moment": "~2.20.1",
     "prismjs": "^1.15.0",
     "router-stupid": "~0.7.0",
-    "serve-handler": "^5.0.0",
-    "string": "~3.3.3"
+    "serve-handler": "^5.0.0"
   }
 }
