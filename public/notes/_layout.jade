@@ -14,5 +14,4 @@ block content
                 each tag in tags
                   a.Tag(href="/tags/#{tag}") #{tag}
 
-      - content = partial('../_shared/highlight', {yield: yield})
-      != content
+      != yield
