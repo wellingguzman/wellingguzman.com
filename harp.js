@@ -23,6 +23,7 @@ function getLanguage(languageId) {
 
     return Prism.languages[languageId];
   }
+
   return null;
 }
 
@@ -36,8 +37,10 @@ function escape(html, encode) {
 }
 
 marked.Renderer.prototype.code = function (code, lang, escaped) {
-  if (lang) {
-    var out = Prism.highlight(code, getLanguage(lang));
+  var prismLanguage = lang ? getLanguage(lang) : null;
+
+  if (prismLanguage) {
+    var out = Prism.highlight(code, prismLanguage);
 
     if (out != null && out !== code) {
       escaped = true;
