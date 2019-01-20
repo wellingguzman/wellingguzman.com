@@ -4,14 +4,15 @@ block content
   section
     article.Post
       if current.path[0] == 'notes' && current.source != 'index'
-        h1.Post-title
-          | #{title}
-        .Post-meta
-          span.Timestamp #{moment(date).format('dddd, MMMM D, YYYY')}
-          if (tags && tags.length)
-            .Tags
-              each tag in tags
-                a.Tag(href="/tags/#{tag}") #{tag}
+        header
+          h1.Post-title
+            | #{title}
+          .Post-meta
+            span.Timestamp #{moment(date).format('MMMM D, YYYY')}
+            if (tags && tags.length)
+              .Tags
+                each tag in tags
+                  a.Tag(href="/tags/#{tag}") #{tag}
 
       - content = partial('../_shared/highlight', {yield: yield})
       != content

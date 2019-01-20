@@ -3,7 +3,8 @@
   @pinkColor: #EF89B8;
   @pinkStrongColor: #FF5E99;
   @yellowColor: #FCE496;
-  @gray: #848484;
+  @gray :#848484;
+  @darkGray: darken(@gray, 10%);
   @lightGray: #D1D2D3;
   @lighterGray: #E0E0E0;
   @blue: #51C0F1;
@@ -13,9 +14,9 @@
   }
 
   body& {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
     color: #000000;
-    line-height: 1.6;
+    line-height: 1.5;
 
     &.lab {
       background-color: lighten(@pinkColor, 25%);
@@ -35,6 +36,10 @@
   ul {
     padding: 0 0 0 1.5rem;
     margin: 0 0 1.5rem;
+
+    li {
+      list-style-type: square;
+    }
   }
 
   figure {
@@ -61,14 +66,6 @@
     }
   }
 
-  section {
-    padding: 0 1rem;
-
-    .title {
-      text-align: center;
-    }
-  }
-
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.10;
   }
@@ -89,6 +86,20 @@
 
     .List {
       margin: 0 0 1rem;
+    }
+  }
+
+  section {
+    padding: 1rem 1.75rem;
+
+    .title {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      margin: 0 0 0.25em;
     }
   }
 
@@ -119,6 +130,12 @@
     }
   }
 
+  .Button {
+    border: 1px solid;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.87rem;
+  }
+
   #sitebar, #header, #footer, .List, .Tags {
     a {
       border-bottom: 0;
@@ -136,14 +153,10 @@
     }
   }
 
-  li {
-    margin-bottom: 1rem;
-  }
-
   pre, code, .editor {
     background: #F6F6F8;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace, serif;
-    font-size: 0.875rem;
+    font-size: 0.87rem;
   }
 
   p code {
@@ -158,9 +171,9 @@
   }
 
   blockquote {
-    border-left: 4px solid @lightGray;
+    border-left: 2px solid @lightGray;
     padding: 0 1rem;
-    color: @gray;
+    color: @darkGray;
     margin: 0 0.5rem;
 
     p:first-of-type {
@@ -172,17 +185,23 @@
     }
   }
 
-  .container, hr {
-    max-width: 610px;
+  .container, hr#hr-footer {
+    max-width: 600px;
   }
 
   hr {
+    display: none;
     border: 0;
+    margin: 0 auto;
+  }
+
+  hr#hr-footer {
+    display: block;
     border-top: 2px solid @lightGray;
   }
 
-  #sitebar, #header, #main, #footer {
-    margin: 1rem 0;
+  #main {
+    padding: 0;
   }
 
   #main-nav {
@@ -243,7 +262,8 @@
 
     #name {
       text-transform: uppercase;
-      margin: 1rem 0 0.5rem;
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
     }
 
     #description {
@@ -262,23 +282,24 @@
   }
 
   .Post {
-    h1 {
-      font-size: 2.7rem;
-      margin: 0 0 0.25em;
+    header {
+      margin: 0 0 1rem;
+      padding: 0 0 1rem;
+      border-bottom: 1px solid @lightGray;
+    }
 
+    h1 {
       &.List-Title {
         margin-bottom: 1em;
       }
     }
 
     h2 {
-      border-bottom: 1px solid @lightGray;
       margin-top: 1.5em;
     }
 
     .Post-meta {
       color: @gray;
-      margin: 0 0 2rem;
       font-size: 0.938em;
     }
   }
@@ -339,17 +360,6 @@
 
     p {
       margin: 0 0 1rem;
-    }
-
-    #main {
-      ul {
-        li {
-          border-bottom: 1px solid @lightGray;
-          padding: 0 0 0.5rem;
-          margin: 0 0 0.5rem;
-          list-style-type: square;
-        }
-      }
     }
   }
 }
