@@ -200,6 +200,32 @@
     border-top: 2px solid @lightGray;
   }
 
+  .post-nav {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+
+    .post-nav-item {
+      width: 33.33%;
+
+      text-align: center;
+
+      &.post-nav-prev {
+        text-align: left;
+      }
+
+      &.post-nav-next {
+        text-align: right;
+      }
+    }
+
+    a {
+      display: inline-block;
+      border-bottom: none;
+      margin: 0.5rem 0.5rem 0;
+    }
+  }
+
   #main {
     padding: 0;
   }

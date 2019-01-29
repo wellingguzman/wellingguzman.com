@@ -1,0 +1,40 @@
+- var itemType = type || 'notes';
+- var items = public[itemType] || public.public[itemType];
+- var data = items._data ? Object.keys(items._data) : [];
+- var itemPath = '/' + itemType + '/';
+- var posts = data.map(function (slug) {
+-    var post = items._data[slug];
+-    post.slug = slug;
+-    post.url_relative = itemPath + post.slug;
+-    post.date = post.date || new Date(0);
+-    if (!post.url) {
+-       post.url = site_url + itemPath + post.slug;
+-    }
+-
+-    return post;
+- }).filter(function (post) {
+-   if (post.published == false) return false;
+-   if (post.slug == 'index') return false;
+-
+-   return true;
+- }).sort(function (a,b){
+-   if (!a.date) return 0;
+-   a = +new Date(a.date);
+-   b = +new Date(b.date);
+
+-   return a-b;
+- }).reverse()
+
+.post-nav
+  each post, i in posts
+    if post.slug == current.source
+      - var prev = posts[i-1];
+      - var next = posts[i+1];
+      .post-nav-item.post-nav-prev
+        if (prev)
+          a(rel="prev", href="#{prev.url_relative}", title="#{prev.title}") « Previous
+      .post-nav-item.post-nav-index
+        a(href="/#{itemType}") Index
+      .post-nav-item.post-nav-next
+        if (next)
+          a(rel="next", href="#{next.url_relative}", title="#{next.title}") Next »
