@@ -1,4 +1,4 @@
-# Hi, I am Welling Guzman.
+# Hello!
 
 <figure id="MyFace"><img src="/images/my-face.jpg"></figure>
 
