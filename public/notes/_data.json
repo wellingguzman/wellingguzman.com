@@ -138,6 +138,12 @@
     "title": "Let's Encrypt SSL Certificate on MediaTemple",
     "published": false
   },
+  "change-timezone-ubuntu": {
+    "title": "Change timezone in Ubuntu",
+    "date": "2019-02-02 21:40:19",
+    "published": true,
+    "tags": ["ubuntu", "linux"]
+  },
   "php-zero-equals-any-string": {
     "title": "PHP: Zero equals to any string",
     "date": "2019-02-01 21:22:23",
