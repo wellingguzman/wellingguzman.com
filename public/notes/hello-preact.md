@@ -133,6 +133,10 @@ To enable the preset and plugin we need to add it to `.babelrc` file.
 }
 ```
 
+By default `@babel/plugin-transform-react-jsx` because is a React specific plugin, it will translate `<></>` from JSX into `React.createElement`, instead of Preact `h` function, we must substitute this by changing the `pragma` option to `h`.
+
+[Pragma option reference](https://babeljs.io/docs/en/next/babel-plugin-transform-react-jsx.html#pragma)
+
 ## Transform JavaScript
 
 Add a new command to `package.json` inside the `scripts` property to execute the babel command.
