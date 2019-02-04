@@ -20,15 +20,23 @@ $ npm init -y
 
 After executing `npm init -y`, a file called `package.json` should have been created.
 
-## Install Preact
+## Add HTML Page
 
-Install and add `preact` to the project dependencies package.
-
-```shell
-$ npm install --save preact
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>Hello Preact</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/preact/dist/preact.min.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>
 ```
 
-Now `preact` is installed and added into the `package.json` as dependency.
+Babel is going to transpile our app file into a single `bundle.js` file.
 
 ## Add Preact Component
 
@@ -48,23 +56,7 @@ render(<HelloPreact />, document.getElementById('root'));
 
 And save it in a file named `app.js`, or any name you prefer.
 
-## Add HTML Page
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <title>Hello Preact</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/preact/dist/preact.min.js"></script>
-    <script src="bundle.js"></script>
-  </body>
-</html>
-```
-
-Babel is going to transpile `app.js` into `bundle.js`.
+The `window.preact` reference comes from the script tag inside the HTML file.
 
 ## What is Babel?
 
