@@ -147,3 +147,5 @@ $ npm run build
 ```
 
 See final code here: [WellingGuzman/hello-preact](https://github.com/WellingGuzman/hello-preact).
+
+Next: [Hello Preact Modules](/notes/hello-preact-modules)
