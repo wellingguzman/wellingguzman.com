@@ -138,6 +138,12 @@
     "title": "Let's Encrypt SSL Certificate on MediaTemple",
     "published": false
   },
+  "webpack-without-babelrc": {
+    "title": "Webpack without .babelrc",
+    "date": "2019-02-05 23:30:21",
+    "published": true,
+    "tags": "webpack"
+  },
   "hello-preact-modules": {
     "title": "Hello Preact Modules",
     "date": "2019-02-04 22:58:35",
