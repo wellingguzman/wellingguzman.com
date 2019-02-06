@@ -142,7 +142,7 @@
     "title": "Webpack without .babelrc",
     "date": "2019-02-05 23:30:21",
     "published": true,
-    "tags": "webpack"
+    "tags": ["webpack"]
   },
   "hello-preact-modules": {
     "title": "Hello Preact Modules",
