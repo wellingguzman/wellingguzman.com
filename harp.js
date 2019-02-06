@@ -13,6 +13,7 @@ loadLanguages([
   'http',
   'sql',
   'bash',
+  'diff',
 ]);
 
 function getLanguage(languageId) {
