@@ -14,6 +14,7 @@ loadLanguages([
   'sql',
   'bash',
   'diff',
+  'json',
 ]);
 
 function getLanguage(languageId) {
