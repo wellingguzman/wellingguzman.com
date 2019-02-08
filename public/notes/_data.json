@@ -138,6 +138,12 @@
     "title": "Let's Encrypt SSL Certificate on MediaTemple",
     "published": false
   },
+  "zend-db-nested-conditions": {
+    "title": "Zend DB Nested Conditions",
+    "date": "2019-02-07 21:09:25",
+    "published": true,
+    "tags": ["php", "zend", "zend-db", "database"]
+  },
   "php-datetime-createfromformat-c": {
     "title": "PHP DateTime createFromFormat c fails",
     "date": "2019-02-06 20:17:02",
