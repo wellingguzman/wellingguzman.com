@@ -8,7 +8,7 @@ From PHP Docs:
 
 It can be possible that PHP is not loading configuration from the configuration file (`php.ini`). Make sure to confirm the value `cfg_file_path` exists.
 
-```
+```php
 if (get_cfg_var('cfg_file_path')) {
     // Using configuration file
 }
