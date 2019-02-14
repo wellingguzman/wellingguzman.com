@@ -67,6 +67,7 @@ function run(port) {
     };
 
     var directoriesPattern = [
+      'images',
       'notes',
       'logs',
       'logs(\/(.*)+[^\/]$)',
