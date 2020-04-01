@@ -1,1 +1,157 @@
-.container{margin:0 auto;max-width:640px}section{padding:0 2rem}.List-item:not(:first-of-type){margin-top:.5rem}body,html{margin:0;padding:0}img{max-width:100%}::selection{background:#FF5E99;color:#FFF;text-shadow:none}.editor .line:first-child .php.embedded.begin{display:none}.sep{display:none}.Tags .Tag:not(:first-of-type){margin-left:.5rem}#footer .copyright a{margin-left:5px}.comfy-outfit ::selection{background:#EF89B8}body.comfy-outfit{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;color:#000;line-height:1.5}body.comfy-outfit.lab{background-color:#fef9fc}.comfy-outfit pre code .comment{color:#998;font-style:italic}.comfy-outfit pre code .keyword{font-weight:700}.comfy-outfit pre code .string{color:#B84}.comfy-outfit pre code .number{color:#099}.comfy-outfit pre code.language-sql .operator{font-weight:700}.comfy-outfit pre code.language-diff .deleted{color:#d21b1b}.comfy-outfit pre code.language-diff .inserted{color:#1ba03b}.comfy-outfit .highlight{background:#FEA}.comfy-outfit .text-center{text-align:center}.comfy-outfit ul{padding:0 0 0 1.5rem;margin:0 0 1.5rem}.comfy-outfit ul li{list-style-type:square}.comfy-outfit figure{text-align:center}.comfy-outfit figcaption{text-align:center;color:#848484;font-size:.87rem}.comfy-outfit table{border-spacing:0;border-collapse:collapse}.comfy-outfit table tr{border-top:1px solid #D1D2D3}.comfy-outfit table td,.comfy-outfit table th{border:1px solid #D1D2D3;padding:.33rem .66rem}.comfy-outfit h1,.comfy-outfit h2,.comfy-outfit h3,.comfy-outfit h4,.comfy-outfit h5,.comfy-outfit h6{line-height:1.1}.comfy-outfit.tags h1,.comfy-outfit.tags h2{text-align:center;font-size:1rem}.comfy-outfit.tags h2{font-weight:400}.comfy-outfit.tags .Tag-title{margin:2rem 0 1rem}.comfy-outfit.tags .List{margin:0 0 1rem}.comfy-outfit section{padding:1rem 1.75rem}.comfy-outfit section .title{text-align:center;margin-top:0}.comfy-outfit section h1{font-size:2.7rem;margin:0 0 .25em}.comfy-outfit a{color:#1AAF5C;text-decoration:none;border-bottom:1px dotted}.comfy-outfit a:hover{background:#1AAF5C;color:#FFF;border-bottom:none}.comfy-outfit a:hover code{background:#1AAF5C}.comfy-outfit.lab a{color:#FF5E99}.comfy-outfit.lab a:hover{background:#FF5E99;color:#FFF}.comfy-outfit .Button{border:1px solid;padding:.25rem .7rem;font-size:.87rem}.comfy-outfit #footer a,.comfy-outfit #header a,.comfy-outfit #sitebar a,.comfy-outfit .List a,.comfy-outfit .Tags a{border-bottom:0}.comfy-outfit.hire-me #MyFace{width:200px;margin:1.5rem auto}.comfy-outfit .editor,.comfy-outfit code,.comfy-outfit pre{background:#F6F6F8;font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,Monaco,"Lucida Console","Courier New",Courier,monospace,serif;font-size:.87rem}.comfy-outfit p code{padding:2px 4px;border-radius:3px}.comfy-outfit pre{padding:1rem;margin:1.5rem 0;overflow:auto}.comfy-outfit blockquote{border-left:2px solid #D1D2D3;padding:0 1rem;color:#6b6b6b;margin:0 .5rem}.comfy-outfit blockquote p:first-of-type{margin-top:0}.comfy-outfit blockquote p:last-of-type{margin-bottom:0}.comfy-outfit .container,.comfy-outfit hr#hr-footer{max-width:600px}.comfy-outfit hr{display:none;border:0;margin:0 auto}.comfy-outfit hr#hr-footer{display:block;border-top:2px solid #D1D2D3}.comfy-outfit .post-nav{font-size:.9rem;display:flex;justify-content:space-between}.comfy-outfit .post-nav .post-nav-item{width:33.33%;text-align:center}.comfy-outfit .post-nav .post-nav-item.post-nav-prev{text-align:left}.comfy-outfit .post-nav .post-nav-item.post-nav-next{text-align:right}.comfy-outfit .post-nav a{display:inline-block;border-bottom:none;margin:.5rem .5rem 0}.comfy-outfit #main{padding:0}.comfy-outfit #main-nav{padding:0;text-align:center;font-size:.938rem}.comfy-outfit #main-nav a{margin:0 .75rem}.comfy-outfit .List{padding:0}.comfy-outfit .List .List-item{display:flex;flex-wrap:nowrap}.comfy-outfit .List .List-item.external time{color:#51C0F1}.comfy-outfit .List .List-item.external a{color:#EF89B8}.comfy-outfit .List .List-item.external a:hover{background:#EF89B8;color:#FFF}.comfy-outfit .List .List-meta{display:inline-block;margin:0 1.5rem 0 0;color:#848484;text-align:right;flex:0 0 170px}@media only screen and (max-width:500px){.comfy-outfit .List .List-item{display:block}.comfy-outfit .List .List-meta,.comfy-outfit .List .List-text{width:100%;text-align:left}}.comfy-outfit header#header{text-align:center}.comfy-outfit header#header #name{text-transform:uppercase;margin:0 0 .5rem;font-size:1.4rem}.comfy-outfit header#header #description{display:block;margin:0;color:#848484}.comfy-outfit header#header section{padding:1rem}.comfy-outfit h1,.comfy-outfit h2,.comfy-outfit h3{font-weight:600}.comfy-outfit .Post header{margin:0 0 1rem;padding:0 0 1rem;border-bottom:1px solid #D1D2D3}.comfy-outfit .Post h1.List-Title{margin-bottom:1em}.comfy-outfit .Post h2{margin-top:1.5em}.comfy-outfit .Post .Post-meta{color:#848484;font-size:.938em}.comfy-outfit.lab .Post h1{border-bottom-color:#EF89B8}.comfy-outfit .Post-meta .Tags{display:inline;margin-left:.25em}.comfy-outfit .Post-meta .Tags .Tag{margin-left:.5rem;color:#848484}.comfy-outfit .Post-meta .Tags .Tag:before{content:"#"}.comfy-outfit .Post-meta .Tags .Tag:hover{color:#FFF}.comfy-outfit .Content-bottom{text-align:center;margin:0}.comfy-outfit #footer{text-align:center;font-size:.875rem;color:#848484}.comfy-outfit #footer a{margin:0 .45rem}@media only screen and (max-width:500px){.comfy-outfit #footer li{display:block;padding:.45rem 0}}.comfy-outfit.lab #footer ul{border-top-color:#EF89B8}.comfy-outfit.hire-me h1{margin:0 0 .5rem;font-weight:700;text-align:center}.comfy-outfit.hire-me p{margin:0 0 1rem}a.link-twitter:hover{background:#1da1f2}a.link-github:hover{background:#24292e}
+.style-plain body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.style-plain a {
+  color: #005eee;
+}
+.style-plain a:visited {
+  color: #751a8b;
+}
+.style-plain a:hover {
+  background: #005eee;
+  color: white;
+  text-decoration: none;
+}
+.style-plain ul,
+.style-plain ol {
+  padding: 0 0 0 2rem;
+}
+.style-plain ul li,
+.style-plain ol li {
+  margin-bottom: 0.5rem;
+}
+.style-plain h1,
+.style-plain h2,
+.style-plain h3,
+.style-plain h4,
+.style-plain h5,
+.style-plain h6 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+.style-plain img {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+.style-plain figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+.style-plain figure img {
+  margin: 1rem 0 0;
+}
+.style-plain figure figcaption {
+  font-size: 0.9rem;
+}
+.style-plain blockquote {
+  margin: 0 1rem 0 0.25rem;
+  padding: 0 1rem 0 0.7rem;
+  border-left: 1px solid;
+  color: #333333;
+}
+.style-plain p + h2,
+.style-plain p + h3 {
+  margin: 3.5rem 0 1rem;
+}
+.style-plain #wrap {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.style-plain #main .content {
+  padding: 1rem 0;
+}
+.style-plain #main-nav .item,
+.style-plain #footer-nav .item {
+  margin-right: 0.5rem;
+}
+.style-plain .note-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.style-plain .note-nav .note-nav-item {
+  width: 33.33%;
+}
+.style-plain .note-nav .note-nav-prev {
+  text-align: left;
+}
+.style-plain .note-nav .note-nav-index {
+  text-align: center;
+}
+.style-plain .note-nav .note-nav-next {
+  text-align: right;
+}
+.style-plain pre {
+  line-height: 1.1;
+  background: #eeeeee;
+  padding: 0.5rem 1rem;
+  overflow: auto;
+}
+.style-plain code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+}
+.style-plain p code {
+  background: #eeeeee;
+  padding: 0.1rem 0.2rem;
+}
+.style-plain p a:hover code {
+  background: #005eee;
+}
+.style-plain pre code .comment {
+  color: #505047;
+  font-style: italic;
+}
+.style-plain pre code .keyword {
+  font-weight: bold;
+}
+.style-plain pre code .string {
+  color: #905200;
+}
+.style-plain pre code .number {
+  color: #009999;
+}
+.style-plain pre code.language-sql .operator {
+  font-weight: 700;
+}
+.style-plain pre code.language-diff .deleted {
+  color: #d21b1b;
+}
+.style-plain pre code.language-diff .inserted {
+  color: #1ba03b;
+}
+.style-plain .timestamp {
+  color: #696969;
+}
+.style-plain .page-meta > :not(.sep):not(:first-child):before {
+  color: rgba(69, 69, 69, 0.5);
+  content: " / ";
+  margin: 0 0.25rem;
+}
+.style-plain .page-meta .sep {
+  display: none;
+}
+.style-plain article h1 {
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+.style-plain article h2 {
+  font-size: 2rem;
+}
+.style-plain a.tag {
+  text-decoration: none;
+  margin-right: 0.25rem;
+}
+.style-plain .copyright {
+  color: #454545;
+}
+.style-plain .hero h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 0;
+}
+.style-plain .hero p {
+  font-size: 1.3rem;
+  color: #454545;
+}

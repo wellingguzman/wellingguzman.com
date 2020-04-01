@@ -1,8 +1,17 @@
-- posts = partial('_shared/posts', { postlimit: 8 })
+- notes = partial('_shared/notes', { limit: 8 })
 
-h3.title Latest notes
+block header
+  header
+    .container
+      .content
+        .hero
+          h1 Welling Guzman
+          p Welcome! I'm a software engineer in Berlin, and this is my personal website.
 
-include ./_shared/list
+  hr#hr-header
 
-.Content-bottom
-  a.Button(href="/notes") All notes
+.box
+  h3 Latest notes
+  include ./_shared/list
+  p
+    a(href="/notes") All notes

@@ -1,17 +1,38 @@
 extends ../_shared/layout
 
 block content
-  section
-    article.Post
+  .content
+    article.page(lang=typeof lang === 'undefined' ? undefined : lang)
       if current.path[0] == 'notes' && current.source != 'index'
         header
-          h1.Post-title
-            | #{title}
-          .Post-meta
-            span.Timestamp #{moment(date).format('MMMM D, YYYY')}
+          h1 #{title}
+          .page-meta
+            time.timestamp(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
+            span.sep &nbsp;
+            if (updated_at)
+              time.timestamp(datetime="#{moment(updated_at).format(formats.tagDateTime)}") Updated on #{moment(updated_at).format(formats.displayDate)}
+              span.sep &nbsp;
             if (tags && tags.length)
-              .Tags
+              span.tags
                 each tag in tags
-                  a.Tag(href="/tags/#{tag}") #{tag}
-
+                  a.tag(href="/tags/#{tag}") #{tag}
+                  span.sep &nbsp;
       != yield
+
+block footer_top
+  - notes = partial('../_shared/notes')
+  if (current.source !== 'index')
+    .container
+      .note-nav
+        each note, i in notes
+          if note.slug == current.source
+            - var prev = notes[i-1];
+            - var next = notes[i+1];
+            .note-nav-item.note-nav-prev
+              if (prev)
+                a(rel="prev", href="#{prev.path}", title="#{prev.title}") « Previous
+            .note-nav-item.note-nav-index
+              a(href="/notes") Index
+            .note-nav-item.note-nav-next
+              if (next)
+                a(rel="next", href="#{next.path}", title="#{next.title}") Next »

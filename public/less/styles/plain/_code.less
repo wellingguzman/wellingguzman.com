@@ -1,0 +1,55 @@
+pre {
+  line-height: 1.1;
+  background : #eeeeee;
+  padding    : 0.5rem 1rem;
+  overflow   : auto;
+}
+
+code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size  : 0.9rem;
+}
+
+p code {
+  background: #eeeeee;
+  padding   : 0.1rem 0.2rem;
+}
+
+p a:hover code {
+  background: @linkColor;
+}
+
+pre code {
+  .comment {
+    color     : #505047;
+    font-style: italic;
+  }
+
+  .keyword {
+    font-weight: bold;
+  }
+
+  .string {
+    color: #905200;
+  }
+
+  .number {
+    color: #009999;
+  }
+
+  &.language-sql {
+    .operator {
+      font-weight: 700;
+    }
+  }
+
+  &.language-diff {
+    .deleted {
+      color: #d21b1b;
+    }
+
+    .inserted {
+      color: #1ba03b;
+    }
+  }
+}

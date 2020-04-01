@@ -1,0 +1,44 @@
+- var type = 'notes';
+- var items = public[type] || {};
+- var itemPath = '/' + type + '/';
+- var userFilter = filter || undefined;
+- var posts = items._data ? Object.keys(items._data) : [];
+- var indexPageIndex = posts.indexOf('index');
+
+- // Avoid the index to be part of the post lists
+- if (indexPageIndex > -1) {
+-   posts.splice(indexPageIndex, 1);
+- }
+
+- return posts.map(function (slug) {
+-     var post = items._data[slug];
+-
+-     post.slug = slug;
+-     post.date = post.date || new Date(0);
+-     post.path = itemPath + post.slug; 
+-     if (!post.url) {
+-       post.url = site_url + itemPath + post.slug;
+-     }
+-
+-     return post;
+-   }).filter(function (post) {
+-   if (post.published === false) {
+-     return false;
+-   }
+
+-   if (new Date(post.date) > new Date()) {
+-     return false;
+-   }
+
+-   if (userFilter) {
+-      return userFilter(post);
+-   }
+
+-   return post;
+- }).sort(function (a, b) {
+-   if (!a.date) return 0;
+-   a = +new Date(a.date);
+-   b = +new Date(b.date);
+
+-   return a-b;
+- }).reverse().slice(0, limit || undefined)

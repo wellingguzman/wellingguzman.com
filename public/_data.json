@@ -1,10 +1,8 @@
 {
   "index": {
-    "title": "Welling Guzmán"
   },
   "about": {
-    "title": "About - Welling Guzmán",
-    "header_title": "About"
+    "title": "About"
   },
   "feed.xml": {
     "layout": false

@@ -1,5 +1,8 @@
 extends _shared/layout
 
 block content
-  section
-    != yield
+  .content
+    article
+      if (title)
+        h1 #{title}
+      != yield

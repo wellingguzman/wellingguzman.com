@@ -1,4 +1,4 @@
-- posts = partial('_shared/posts', { postlimit: 30 })
+- notes = partial('_shared/notes', { limit: 30 })
 
 doctype xml
 rss(version='2.0'
@@ -6,16 +6,16 @@ rss(version='2.0'
   xmlns:atom='http://www.w3.org/2005/Atom')
   channel
     title Notes by Welling Guzmán
-    atom:link(href="#{ site_url }/notes.xml" rel="self" type="application/rss+xml")
+    atom:link(href="#{ site_url }/feed.xml" rel="self" type="application/rss+xml")
     link #{ site_url }
     description #{ site_description }
-    lastBuildDate #{ moment(posts[0].date).format('ddd, DD MMM YYYY H:mm:ss +0000') }
+    lastBuildDate #{ moment(notes[0].date).format('ddd, DD MMM YYYY H:mm:ss +0000') }
     language en-US
 
-    each post in posts
+    each note in notes
       item
-        title #{ post.title }
-        description <![CDATA[!{ partial('notes/' + post.slug).replace(/<h1>.*?<\/h1>/, '').split('<!--more-->')[0].replace(/(<([^>]+)>)/ig, '').trim() }]]>
-        content:encoded <![CDATA[!{ partial('notes/' + post.slug).replace(/<h1>.*?<\/h1>/, '').replace(/<!--more-->\s\n+/m, '') }]]>
-        pubDate #{ moment(post.date).format('ddd, DD MMM YYYY H:mm:ss +0000') }
-        link #{ post.url }
+        title #{ note.title }
+        description <![CDATA[!{ partial('notes/' + note.slug).replace(/<h1>.*?<\/h1>/, '').split('<!--more-->')[0].replace(/(<([^>]+)>)/ig, '').trim() }]]>
+        content:encoded <![CDATA[!{ partial('notes/' + note.slug).replace(/<h1>.*?<\/h1>/, '').replace(/<!--more-->\s\n+/m, '') }]]>
+        pubDate #{ moment(note.date).format('ddd, DD MMM YYYY HH:mm:ss ZZ') }
+        link #{ note.url }

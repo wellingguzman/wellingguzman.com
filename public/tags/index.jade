@@ -1,21 +1,20 @@
 - tags = partial('../_shared/tags');
 if tags.length === 0
-  h2 Notes not found
+  p Not found
 
-h1 All notes tags
 each tag in tags
-  -   tagPosts = partial('../_shared/posts', { filter: function (post) {
-  -     if (post.tags && post.tags.indexOf(tag) !== -1) return true;
-  -     return false;
-  -   }});
+  - tagNotes = partial('../_shared/notes', { filter: function (note) {
+  -   return note.tags && note.tags.indexOf(tag) >= 0;
+  - }});
 
-  if tagPosts.length > 0
-    h2.Tag-title
-        a(href="/tags/#{tag}") #{tag}
-    ul.List.Post-List
-      - post = tagPosts.shift();
-      while post
-        li.List-item
-          .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
-          .List-text: a(href="#{post.url}") #{post.title}
-        - post = tagPosts.shift();
+  if tagNotes.length > 0
+    h2
+      a(href="/tags/#{tag}") #{tag}
+    ul
+      - note = tagNotes.shift();
+      while note
+        li
+          span: time.Timestamp #{moment(note.date).format(formats.date)}
+          span.sep &nbsp;
+          span: a(href="#{note.path}") #{note.title}
+        - note = tagNotes.shift();

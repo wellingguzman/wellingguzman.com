@@ -1,0 +1,35 @@
+.timestamp {
+  color: @lightGray;
+}
+
+.page-meta {
+  &> :not(.sep):not(:first-child):before {
+    color  : fade(@gray, 50%);
+    content: " / ";
+    margin : 0 0.25rem;
+  }
+
+  .sep {
+    display: none;
+  }
+}
+
+article {
+  h1 {
+    font-size: 2.4rem;
+    margin: 1rem 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+a.tag {
+  text-decoration: none;
+  margin-right   : 0.25rem;
+}
+
+.copyright {
+  color: @gray;
+}

@@ -1,8 +1,6 @@
 {
   "index": {
-    "title": "Notes - Welling Guzmán",
-    "header_title": "Notes",
-    "header_image": "images/header/just-me.jpeg"
+    "title": "Notes"
   },
   "getting-real": {
     "title": "Getting Real in the real world",
@@ -406,12 +404,14 @@
   },
   "php-apache-500-internal-server-error": {
     "title": "PHP – Apache 500 Internal Server Error",
+    "lang": "es",
     "date": "2013-01-25 18:15:47",
     "published": true,
     "tags": []
   },
   "sesiones-codeigniter-terminan-inmediatamente": {
     "title": "Sesiones CodeIgniter terminan inmediatamente",
+    "lang": "es",
     "date": "2013-01-19 16:25:13",
     "published": true,
     "tags": []

@@ -1,6 +1,7 @@
-@import '_layout';
-@import '_base';
-@import '_mixins_relaxins';
+.responsive(@maxWidth; @content) {
+  @media only screen and (max-width: @maxWidth) {
+    @content();
+  }
+}
 
-// Outfits
-@import 'outfit/_all';
+@import 'styles/_plain';

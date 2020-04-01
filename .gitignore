@@ -1,13 +1,3 @@
-node_modules
 .DS_Store
-.idea
-
-# Compiled
-www
-
-# Logs
-logs
-*.log
-npm-debug.log*
-
-config.codekit
+node_modules
+dist
