@@ -2,7 +2,10 @@ extends ../_shared/layout
 
 block content
   .content
-    article.page(lang=typeof lang === 'undefined' ? undefined : lang)
+    article.page(
+        class=summary === true ? 'has-summary' : undefined,
+        lang=typeof lang === 'undefined' ? undefined : lang
+      )
       if current.path[0] == 'notes' && current.source != 'index'
         header
           h1 #{title}
@@ -17,6 +20,7 @@ block content
                 each tag in tags
                   a.tag(href="/tags/#{tag}") #{tag}
                   span.sep &nbsp;
+        hr#hr-header
       != yield
 
 block footer_top
