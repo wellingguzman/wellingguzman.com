@@ -3,28 +3,11 @@ const router = require('router-stupid');
 const site = require('./lib/site');
 const route = router();
 
-function redirect(res, url) {
-  res.writeHead(302, { location: url });
-  res.end();
-}
-
-route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
-  redirect(res, '/images/' + req.params.filename);
-});
-
-route.all('/writing/{post_name}?', function (req, res, next) {
-  var url = '';
-
-  if (req.params.post_name) {
-    url = '/notes/' + req.params.post_name;
-  }
-
-  redirect(res, url);
-});
-
 function run(port, options) {
   const url = 'http://localhost:' + port;
   const env = (options || {}).env === 'development' ? 'development' : 'production';
+
+  site.redirects(route);
 
   if (env === 'development') {
     site.development(route, __dirname);
