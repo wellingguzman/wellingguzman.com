@@ -4,12 +4,12 @@ if tags.length === 0
 
 each tag in tags
   - tagNotes = partial('../_shared/notes', { filter: function (note) {
-  -   return note.tags && note.tags.indexOf(tag) >= 0;
+  -   return note.tags && note.tags.indexOf(tag.name) >= 0;
   - }});
 
   if tagNotes.length > 0
     h2
-      a(href="/tags/#{tag}") #{tag}
+      a(href="#{tag.path}") #{tag.name}
     ul
       - note = tagNotes.shift();
       while note

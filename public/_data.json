@@ -6,5 +6,17 @@
   },
   "feed.xml": {
     "layout": false
+  },
+  "sitemap.xml": {
+    "layout": false
+  },
+  "sitemap-notes.xml": {
+    "layout": false
+  },
+  "sitemap-pages.xml": {
+    "layout": false
+  },
+  "sitemap-tags.xml": {
+    "layout": false
   }
 }
