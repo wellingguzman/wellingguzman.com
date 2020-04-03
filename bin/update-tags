@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const fs = require('fs');
+const helper = require('../lib/helper');
+const notesPath = path.resolve(__dirname + '/../public/notes');
+
+var data = JSON.parse(fs.readFileSync(notesPath + '/_data.json'));
+
+Object.keys(data).filter(function (key) {
+  const note = data[key];
+
+  return note.published === true
+    && note.tags
+    && note.tags.length > 0
+    ? true
+    : false;
+}).forEach(function (key) {
+  const note = data[key];
+
+  note.tags.forEach(function (tag) {
+    helper.createTag(tag)
+  });
+});

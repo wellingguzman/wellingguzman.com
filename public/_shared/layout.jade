@@ -10,8 +10,6 @@ html(class="style-plain" id="#{documentId}", lang="#{site_lang}")
     link(rel="alternate", type="application/rss+xml", title="#{site_title}'s RSS", href="/feed.xml")
     link(rel="shortcut icon" href="/favicon.ico")
     link(rel="stylesheet" type="text/css" href="/css/main.css?v=#{version}")
-    script.
-      var SITE_VERSION = '#{version}';
   body(class="#{documentId}")
     div#wrap
       include inc/sitebar

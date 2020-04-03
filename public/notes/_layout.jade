@@ -12,8 +12,8 @@ block content
           .page-meta
             time.timestamp(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
             span.sep &nbsp;
-            if (updated_at)
-              time.timestamp(datetime="#{moment(updated_at).format(formats.tagDateTime)}") Updated on #{moment(updated_at).format(formats.displayDate)}
+            if (updated)
+              time.timestamp(datetime="#{moment(updated).format(formats.tagDateTime)}") Updated on #{moment(updated_at).format(formats.displayDate)}
               span.sep &nbsp;
             if (tags && tags.length)
               span.tags
@@ -32,11 +32,11 @@ block footer_top
           if note.slug == current.source
             - var prev = notes[i-1];
             - var next = notes[i+1];
-            .note-nav-item.note-nav-prev
-              if (prev)
-                a(rel="prev", href="#{prev.path}", title="#{prev.title}") « Previous
-            .note-nav-item.note-nav-index
-              a(href="/notes") Index
-            .note-nav-item.note-nav-next
-              if (next)
-                a(rel="next", href="#{next.path}", title="#{next.title}") Next »
+            if (next)
+              .note-nav-item.note-nav-next » Next: 
+                a(rel="next", href="#{next.path}", title="#{next.title}") #{next.title}
+            if (prev)
+              .note-nav-item.note-nav-prev « Previous: 
+                a(rel="prev", href="#{prev.path}", title="#{prev.title}") #{prev.title}
+            .note-nav-item.note-nav-index ← 
+              a(href="/notes") Back to index

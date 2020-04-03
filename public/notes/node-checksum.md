@@ -1,4 +1,12 @@
-Below there's a snippet on how to generate a md5 checksum consuming low memory.
+Creating a checksum from a huge file can impact the memory consumption if it's not done correctly. One solution is to use `Hash.update` method to hash the data by pieces.
+
+To create a checksum of a file we need to read its whole content and hash it. Reading the whole content of a big file could result in an undesired error due to not enough memory, because the content loaded into memory.
+
+To overcome this we can use `Hash.update` method from the `crypto` module. It allows us to incrementally hash a string by appending new data, which makes it the perfect option to hash big files with low memory consumption.
+
+We can read the file by chunk and incrementally update the hash by adding chunk to the hash object.
+
+Below there's a snippet on how to generate a md5 checksum using `Hash.update`.
 
 ```js
 const crypto = require('crypto');
@@ -6,6 +14,8 @@ const fs = require('fs');
 
 function getChecksum(path) {
   return new Promise(function (resolve, reject) {
+    // crypto.createHash('sha1');
+    // crypto.createHash('sha256');
     const hash = crypto.createHash('md5');
     const input = fs.createReadStream(path);
 
@@ -28,6 +38,11 @@ getChecksum(process.argv[2])
   .catch(console.error);
 ```
 
-If you are wondering why this doesn't consume much memory even on reading huge files, it's because we are not reading the whole file into memory, but reading the file by small pieces at a time. By default [`fs.createReadStream`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options) limit each chunk of data to 64kb.
+> The algorithm is dependent on the available algorithms supported by the version of OpenSSL on the platform.
 
-Because `crypto` Cipher.update method allows us to incrementally hash a string by appending new data makes the perfect option to hash huge files without use much memory.
+Example of some algorithms you can use are: md5, sha1, sha256, and sha512.
+
+## References
+
+- [crypto.createHash(algorithm[, options])](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options)
+- [`fs.createReadStream`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options)
