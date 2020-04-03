@@ -1,0 +1,7 @@
+extends ../_shared/layout
+
+block content
+  .content
+    article
+      h1 #{title || current.source}
+      != yield

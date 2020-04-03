@@ -8,9 +8,17 @@ footer
       #footer-nav.items
         span.item.copyright © #{moment().format('YYYY')}
         if (footer_nav)
-          each url, label in footer_nav
+          each anchor, label in footer_nav
+            - if (typeof anchor === 'string') {
+            -   anchor = { href: anchor };
+            - }
             span.item
-              a(href="#{url}", class="link-#{label.toLowerCase()}")
+              a(
+                href="#{anchor.href}",
+                class="link-#{label.toLowerCase()}",
+                rel=ifDef(anchor.rel)
+                target=ifDef(anchor.target)
+              )
                 span #{label}
             span &nbsp
 

@@ -4,7 +4,7 @@ block content
   .content
     article.page(
         class=summary === true ? 'has-summary' : undefined,
-        lang=typeof lang === 'undefined' ? undefined : lang
+        lang=ifDef(lang)
       )
       if current.path[0] == 'notes' && current.source != 'index'
         header

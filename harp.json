@@ -18,9 +18,21 @@
     },
     "footer_nav": {
       "About": "/about",
-      "Twitter": "https://twitter.com/wellingguzman",
-      "GitHub": "https://github.com/wellingguzman",
-      "CodePen": "https://codepen.io/wellingguzman"
+      "Twitter": {
+        "href": "https://twitter.com/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      },
+      "GitHub": {
+        "href": "https://github.com/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      },
+      "CodePen": {
+        "href": "https://codepen.io/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      }
     }
   }
 }
