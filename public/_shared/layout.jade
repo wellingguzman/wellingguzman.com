@@ -1,6 +1,6 @@
-- var documentId = current.path[0];
+- var documentId = 'doc-' + current.path[0];
 doctype
-html(class="style-plain" id="#{documentId}", lang="#{site_lang}")
+html(id="#{documentId}", lang="#{site_lang}")
   head
     meta(charset="utf8")
     title= title ? title + ' — ' + site_title : site_title
@@ -9,8 +9,8 @@ html(class="style-plain" id="#{documentId}", lang="#{site_lang}")
     meta(name="author" content="#{site_author}")
     link(rel="alternate", type="application/rss+xml", title="#{site_title}'s RSS", href="/feed.xml")
     link(rel="shortcut icon" href="/favicon.ico")
-    link(rel="stylesheet" type="text/css" href='/css/main.css?bust=17146c632d2')
-  body(class="#{documentId}")
+    link(rel="stylesheet" type="text/css" href='/css/main.css?bust=171430d7099')
+  body(class="style-plain #{documentId}")
     div#wrap
       include inc/sitebar
       block header
