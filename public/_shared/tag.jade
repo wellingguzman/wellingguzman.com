@@ -10,10 +10,7 @@ if notes.length > 0
   ul
     - note = notes.shift();
     while note
-      li
-        span: time.timestamp #{moment(note.date).format(formats.date)}
-        span.sep &nbsp;
-        span: a(href="#{note.path}") #{note.title}
+      include item
       - note = notes.shift();
 
 a(href="/tags") All tags

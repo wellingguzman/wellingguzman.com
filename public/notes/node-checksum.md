@@ -42,7 +42,7 @@ getChecksum(process.argv[2])
 
 Example of some algorithms you can use are: md5, sha1, sha256, and sha512.
 
-## References
+### References
 
-- [crypto.createHash(algorithm[, options])](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options)
+- [`crypto.createHash(algorithm[, options])`](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options)
 - [`fs.createReadStream`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options)

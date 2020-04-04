@@ -1,12 +1,23 @@
 unless notes.length
   p No notes were found
 
+- var displayYearTitle = !!ifDef(displayYear, true);
 if notes.length > 0
-  ul
-    - note = notes.shift();
+  if displayYearTitle === false
+    - var note = notes.shift();
+    ul
+      while note
+        include item
+        - note = notes.shift();
+  else
+    - var lastYear, year;
+    - var note = notes.shift();
     while note
-      li
-        span: time.timestamp #{moment(note.original_date || note.date).format(formats.date)}
-        span.sep &nbsp;
-        span: a(href="#{note.path}") #{note.title}
-      - note = notes.shift();
+      - year = moment(note.original_date || note.date).format('YYYY');
+      - lastYear = year
+        h2 #{ year }
+        ul
+          while year === lastYear
+            include item
+            - note = notes.shift();
+            - year = note && moment(note.original_date || note.date).format('YYYY');

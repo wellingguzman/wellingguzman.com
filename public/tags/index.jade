@@ -9,12 +9,9 @@ each tag in tags
 
   if tagNotes.length > 0
     h2
-      a(href="#{tag.path}") #{tag.name}
+      a(href="#{tag.path}") #{tag.title}
     ul
       - note = tagNotes.shift();
       while note
-        li
-          span: time.Timestamp #{moment(note.date).format(formats.date)}
-          span.sep &nbsp;
-          span: a(href="#{note.path}") #{note.title}
+        include ../_shared/item
         - note = tagNotes.shift();

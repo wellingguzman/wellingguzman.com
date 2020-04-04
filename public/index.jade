@@ -1,17 +1,15 @@
-- notes = partial('_shared/notes', { limit: 8 })
-
 block header
   header
     .container
       .content
         .hero
-          h1 Welling Guzman
-          p Welcome! I'm a world wide web programmer, and this is my personal website.
+          h1 Welcome!
+          p I'm Welling Guzman. I'm a world wide web programmer, and this is my personal website.
 
   hr#hr-header
 
 .box
   h2 Latest notes
-  include ./_shared/list
+  != partial('./_shared/list', { displayYear: false, notes: partial('_shared/notes', { limit: 8 }) })
   p
     a(href="/notes") All notes
