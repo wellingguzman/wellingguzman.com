@@ -9,7 +9,7 @@ html(class="style-plain" id="#{documentId}", lang="#{site_lang}")
     meta(name="author" content="#{site_author}")
     link(rel="alternate", type="application/rss+xml", title="#{site_title}'s RSS", href="/feed.xml")
     link(rel="shortcut icon" href="/favicon.ico")
-    link(rel="stylesheet" type="text/css" href="/css/main.css?v=#{version}")
+    link(rel="stylesheet" type="text/css" href='/css/main.css?bust=171430d7099')
   body(class="#{documentId}")
     div#wrap
       include inc/sitebar
