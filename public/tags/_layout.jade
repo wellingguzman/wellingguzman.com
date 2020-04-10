@@ -3,6 +3,6 @@ extends ../_shared/layout
 block content
   .content
     article
-      h1 #{title || current.source}
+      h1 Notes tagged "#{title || current.source}"
       hr
       != yield
