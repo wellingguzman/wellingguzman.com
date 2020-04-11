@@ -9,7 +9,7 @@ if (tags.length > 0)
     -   return note.tags && note.tags.indexOf(tag.name) >= 0;
     - }}).length;
     - if (tagNotesCount > maxTags) maxTags = tagNotesCount
-  ul.tagcloud
+  ul.tag-cloud
     each tag in tags
       - tagNotes = partial('../_shared/notes', { filter: function (note) {
       -   return note.tags && note.tags.indexOf(tag.name) >= 0;
