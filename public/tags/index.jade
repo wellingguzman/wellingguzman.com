@@ -1,17 +1,22 @@
 - tags = partial('../_shared/tags');
-if tags.length === 0
+unless tags.length
   p Not found
 
-each tag in tags
-  - tagNotes = partial('../_shared/notes', { filter: function (note) {
-  -   return note.tags && note.tags.indexOf(tag.name) >= 0;
-  - }});
+if (tags.length > 0)
+  - var maxTags = 1;
+  each tag in tags
+    - tagNotesCount = partial('../_shared/notes', { filter: function (note) {
+    -   return note.tags && note.tags.indexOf(tag.name) >= 0;
+    - }}).length;
+    - if (tagNotesCount > maxTags) maxTags = tagNotesCount
+  ul.tagcloud
+    each tag in tags
+      - tagNotes = partial('../_shared/notes', { filter: function (note) {
+      -   return note.tags && note.tags.indexOf(tag.name) >= 0;
+      - }});
 
-  if tagNotes.length > 0
-    h2
-      a(href="#{tag.path}") #{tag.title}
-    ul
-      - note = tagNotes.shift();
-      while note
-        include ../_shared/item
-        - note = tagNotes.shift();
+      if tagNotes.length > 0
+        li
+          - var fontSize = 100 + (tagNotes.length / maxTags) * 70;
+          a(href="#{tag.path}",style="font-size: #{fontSize}%") #{tag.name}
+          | 

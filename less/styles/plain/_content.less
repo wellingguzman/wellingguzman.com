@@ -6,12 +6,16 @@ hr#hr-header {
   margin: 0.5em 0 2em;
 }
 
+hr#hr-footer {
+  margin: 2rem 0 1rem;
+}
+
 .external-link {
   &::before {
-    content: "↗";
-    margin: 0 0.25em 0 0;
+    content    : "↗";
+    margin     : 0 0.25em 0 0;
     font-weight: bold;
-    color: @lightGray;
+    color      : @lightGray;
   }
 }
 
@@ -85,5 +89,17 @@ ul {
     .timestamp {
       display: block;
     }
+  }
+}
+
+ul.tagcloud {
+  margin    : 2rem 0;
+  padding   : 0;
+  list-style: none;
+  text-align: justify;
+
+  li {
+    display: inline;
+    padding: 0 0.5rem 0.5rem 0;
   }
 }
