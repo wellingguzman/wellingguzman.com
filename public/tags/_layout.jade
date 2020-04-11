@@ -3,6 +3,9 @@ extends ../_shared/layout
 block content
   .content
     article
-      h1 Notes tagged "#{title || current.source}"
+      if (current.source === 'index')
+        h1 #{title || current.source}
+      else
+        h1 Notes tagged "#{title || current.source}"
       hr
       != yield
