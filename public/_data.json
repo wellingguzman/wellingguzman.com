@@ -1,12 +1,23 @@
 {
   "index": {
-    "title": "Welling Guzmán"
+    "site_title": "Welling Guzman's Homepage"
   },
   "about": {
-    "title": "About - Welling Guzmán",
-    "header_title": "About"
+    "title": "About"
   },
   "feed.xml": {
+    "layout": false
+  },
+  "sitemap.xml": {
+    "layout": false
+  },
+  "sitemap-notes.xml": {
+    "layout": false
+  },
+  "sitemap-pages.xml": {
+    "layout": false
+  },
+  "sitemap-tags.xml": {
     "layout": false
   }
 }

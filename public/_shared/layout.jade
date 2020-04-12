@@ -1,29 +1,21 @@
-- var documentId = '';
-- if (current.path[0]=='index') {
--   documentId = 'home';
-- } else if (current.path[0] == '404') {
--   documentId = 'missingPage';
-- } else {
--   documentId = current.path[0];
-- }
+- var documentId = 'doc-' + current.path[0];
 doctype
-html(id="#{documentId}",lang="#{site_lang}")
+html(id="#{documentId}", lang="#{site_lang}")
   head
     meta(charset="utf8")
-    title= title || site_title
-    if (site_description)
-      meta(name="description",content="#{site_description}")
-    if (site_keywords)
-      meta(name="keywords",content="#{site_keywords}")
+    title= title ? title + ' — ' + site_title : site_title
+    meta(name="description", content="#{site_description}")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    if (site_author)
-      meta(name="author" content="#{site_author}")
+    meta(name="author" content="#{site_author}")
+    link(rel="alternate", type="application/rss+xml", title="#{site_title}'s RSS", href="/feed.xml")
     link(rel="shortcut icon" href="/favicon.ico")
-    link(rel="stylesheet" type="text/css" href="/css/main.css?v=#{version}")
-    script.
-      var SITE_VERSION = '#{version}';
-  body(class="comfy-outfit #{documentId}")
-    include inc/sitebar
-    include inc/header
-    include inc/main
-    include inc/footer
+    link(rel="stylesheet" type="text/css" href='/css/main.css?bust=171704bda81')
+  body(class="style-plain #{documentId}")
+    div#wrap
+      include inc/sitebar
+      block header
+      main
+        .container
+          block content
+      include inc/footer
+      <!-- This page was generated on #{moment().format(formats.dateTime)} -->

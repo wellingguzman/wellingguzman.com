@@ -1,26 +1,98 @@
 {
-  "personal": {
-    "hidden": false
+  "babel": {
+    "title": "Babel"
+  },
+  "canary": {
+    "title": "Canary"
+  },
+  "canvas": {
+    "title": "Canvas"
+  },
+  "cocoa": {
+    "title": "Cocoa"
+  },
+  "css": {
+    "title": "CSS"
   },
   "database": {
-    "hidden": false
+    "title": "Database"
+  },
+  "german": {
+    "title": "German"
+  },
+  "git": {
+    "title": "Git"
+  },
+  "github": {
+    "title": "GitHub"
+  },
+  "html": {
+    "title": "HTML"
+  },
+  "index": {
+    "title": "Tags"
+  },
+  "javascript": {
+    "title": "JavaScript"
+  },
+  "language": {
+    "title": "Language"
+  },
+  "linux": {
+    "title": "Linux"
+  },
+  "mamp": {
+    "title": "MAMP"
+  },
+  "mysql": {
+    "title": "MySQL"
   },
   "nginx": {
-    "hidden": false
+    "title": "Nginx"
+  },
+  "nodejs": {
+    "title": "Node.js"
+  },
+  "objective-c": {
+    "title": "Objective-C"
+  },
+  "os": {
+    "title": "OS"
+  },
+  "personal": {
+    "title": "Personal"
   },
   "php": {
-    "hidden": false
+    "title": "PHP"
+  },
+  "preact": {
+    "title": "Preact"
   },
   "server": {
-    "hidden": false
+    "title": "Server"
   },
-  "wordpress":{
-    "hidden": false
+  "til": {
+    "title": "TIL"
+  },
+  "tips": {
+    "title": "Tips"
+  },
+  "ubuntu": {
+    "title": "Ubuntu"
+  },
+  "unicode": {
+    "title": "Unicode"
+  },
+  "webpack": {
+    "title": "Webpack"
+  },
+  "wordpress": {
+    "title": "WordPress"
   },
   "zend": {
-    "hidden": false
+    "title": "Zend Framework"
   },
   "zend-db": {
-    "hidden": false
+    "title": "Zend-DB"
   }
 }

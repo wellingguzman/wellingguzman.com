@@ -1,0 +1,105 @@
+.timestamp {
+  color: @lightGray;
+}
+
+hr#hr-header {
+  margin: 0.5em 0 2em;
+}
+
+hr#hr-footer {
+  margin: 2rem 0 1rem;
+}
+
+.external-link {
+  &::before {
+    content    : "↗";
+    margin     : 0 0.25em 0 0;
+    font-weight: bold;
+    color      : @lightGray;
+  }
+}
+
+.page-meta {
+  &> :not(.sep):not(:first-child):before {
+    color  : fade(@gray, 50%);
+    content: " / ";
+    margin : 0 0.25rem;
+  }
+
+  .sep {
+    display: none;
+  }
+}
+
+article {
+  .doc-404& {
+    margin: 3rem 0;
+  }
+
+  header {
+    margin: 2rem 0;
+
+    h1 {
+      margin: 1rem 0 0;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin   : 1rem 0;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin   : 2.5rem 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin   : 2rem 0 1rem;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  &.has-summary {
+    &>p:first-of-type {
+      font-size: 1.3rem;
+      margin   : 2rem 0;
+    }
+  }
+}
+
+a.tag {
+  text-decoration: none;
+  margin-right   : 0.50rem;
+}
+
+.copyright {
+  color: @gray;
+}
+
+ul {
+  li {
+    a {
+      font-weight: 600;
+    }
+
+    .timestamp {
+      display: block;
+    }
+  }
+}
+
+ul.tag-cloud {
+  margin    : 2rem 0;
+  padding   : 0;
+  list-style: none;
+  text-align: justify;
+
+  li {
+    display: inline;
+    padding: 0 0.5rem 0.5rem 0;
+  }
+}

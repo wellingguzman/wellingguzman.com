@@ -1,110 +1,26 @@
-var http = require('http');
-var router = require('router-stupid');
-var harp = require('./harp');
-var moment = require('moment');
-var serveHandler = require('serve-handler');
-var getPort = require('get-port');
-var route = router();
-var outputPath = __dirname + '/www';
-var defaultPort = 9000;
-var requestPort = process.env.PORT;
-var pkg = require('./package');
+const http = require('http');
+const router = require('router-stupid');
+const site = require('./lib/site');
+const route = router();
 
-global.moment = moment;
-global.version = pkg.version.split('.').slice(0, 2).join('.');
+function run(port, options) {
+  const url = 'http://localhost:' + port;
+  const env = (options || {}).env === 'development' ? 'development' : 'production';
 
-function redirect(res, url) {
-  res.writeHead(302, { location: url });
-  res.end();
-}
+  site.redirects(route);
 
-route.all('/wp-content/uploads/{year}/{month}/{filename}', function (req, res, next) {
-  redirect(res, '/images/' + req.params.filename);
-});
-
-route.all('/writing/{post_name}?', function (req, res, next) {
-  var url = '';
-
-  if (req.params.post_name) {
-    url = '/notes/' + req.params.post_name;
-  }
-
-  redirect(res, url);
-});
-
-function printSuccess(port) {
-  var mode = process.env.NODE_ENV || 'development';
-  var url = 'http://localhost:' + port;
-
-  console.log('Running harp-static (' + mode + ') on ' + url);
-}
-
-function run(port) {
-  if (process.env.NODE_ENV === 'production') {
-    route.get('*', function (req, res, next) {
-      serveHandler(req, res, {
-        cleanUrls: true,
-        directoryListing: false,
-        public: outputPath,
-        headers: [
-          {
-            'source' : '**/*.*',
-            'headers' : [{
-              'key' : 'Cache-Control',
-              'value' : 'public, max-age=7200'
-            }]
-          }
-        ],
-      });
-    });
-
-    http.createServer(route).listen(port);
-    printSuccess(port);
+  if (env === 'development') {
+    site.development(route, __dirname);
   } else {
-    var normalizeDirectories = function (req, res, next) {
-      req.url += '/';
-      next();
-    };
-
-    var directoriesPattern = [
-      'images',
-      'notes',
-      'logs',
-      'logs(\/(.*)+[^\/]$)',
-      'lab',
-      'projects',
-      'tags(\/(.*))'
-    ].join('|');
-
-    route.get(
-      new RegExp('^\/(' + directoriesPattern + '?)$'),
-      normalizeDirectories
-    );
-
-    route.all('*', harp.mount(__dirname));
-    route.all('*', function (req, res, next) {
-      req.url = '/404';
-      harp.mount(__dirname)(req, res);
-    });
-
-    http.createServer(route).listen(port);
-    printSuccess(port);
+    site.production(route, __dirname);
   }
+
+  http.createServer(route).listen(port);
+  console.log('Running harp-static (' + env + ') on ' + url);
 }
 
-if (process.argv[2] === 'compile') {
-  harp.compile(__dirname, outputPath, function(errors){
-    if (errors) {
-      console.log(JSON.stringify(errors, null, 2));
-      process.exit(1);
-    }
-
-    process.exit(0);
-  });
-} else {
-  if (requestPort) {
-    run(requestPort);
-  } else {
-    getPort({port: defaultPort}).then(run);
-  }
-}
+run(process.env.PORT || 9000, {
+  env: process.argv[2] === 'dev' || process.env.NODE_ENV === 'development'
+    ? 'development'
+    : 'production'
+});

@@ -1,18 +1,12 @@
-# About me
-
-I am a software engineer and consultant focusing on web technologies and web-related solutions for applications and devices.
-
-I have a degree in Computer Engineering and I am Passionate about the web, architecturing and building software, open source, mentoring, teaching and _reinventing the wheel_*.
+I am a software engineer focusing on web technologies and web-related solutions. I am passionate about the web, system design, open source, computers, mentoring, teaching and _reinventing the wheel_*.
 
 ![](//wellingguzman.com/images/me.jpg)
 
-I am interested in micro-services, infrastructure, servers, communications between systems and solving complex problems.
+APIs, infrastructure, accessibility, game development, MacOS, and iOS development are some of the stuff I enjoy working with.
 
-Currently working on [Directus](https://getdirectus.com), an open-source headless CMS & API for managing content.
+- Read even shorter (_mostly non-sense_) notes on Twitter: [@wellingguzman](https://twitter.com/wellingguzman)
+- Check my code on Github: [wellingguzman](https://github.com/wellingguzman)
 
-- Reach me or read even shorter (_mostly non-sense_) notes via Twitter: [@WellingGuzman](https://twitter.com/WellingGuzman)
-- Check my open-source contributions on Github: [WellingGuzman](https://github.com/WellingGuzman)
+Please feel free to contact me via [email](mailto:&#104;&#111;&#108;&#097;&#064;&#119;&#101;&#108;&#108;&#105;&#110;&#103;&#103;&#117;&#122;&#109;&#097;&#110;&#046;&#099;&#111;&#109;).
 
-Please feel free to contact me.
-
-_*I am passionate about how things works and were made. I love recreating things for the sake of learning. We can learn why something was created and what problem it solved._
+_*I am passionate about how things works and were made. I love recreating things for the sake of learning. We could learn why something was created and what problem it solved._

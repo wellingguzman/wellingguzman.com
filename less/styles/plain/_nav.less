@@ -1,0 +1,30 @@
+// Nav
+#main-nav,
+#footer-nav {
+  .item {
+    margin-right: 0.5rem;
+  }
+}
+
+.note-nav {
+  padding: 0.5rem 0 1rem;
+
+  .note-nav-item {
+    margin: 0 0 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  #footer-nav {
+    text-align: center;
+
+    span {
+      height: 0;
+
+      &.item {
+        display: block;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,8 +1,6 @@
 {
   "index": {
-    "title": "Notes - Welling Guzmán",
-    "header_title": "Notes",
-    "header_image": "images/header/just-me.jpeg"
+    "title": "All Notes"
   },
   "getting-real": {
     "title": "Getting Real in the real world",
@@ -142,73 +140,107 @@
     "title": "Get PHP config values",
     "date": "2019-02-10 20:08:04",
     "published": true,
-    "tags": ["php"]
+    "tags": [
+      "php"
+    ]
   },
   "node-checksum": {
-    "title": "Node checksum",
-    "date": "2019-02-09 23:25:21",
+    "title": "Generating checksum hashes in node.js",
+    "date": "2019-02-09T23:25:21+02:00",
+    "updated": "2020-04-02T21:14:43+02:00",
     "published": true,
-    "tags": ["node"]
+    "summary": true,
+    "tags": [
+      "nodejs"
+    ]
   },
   "node-pipe-input": {
     "title": "Node pipe input",
     "date": "2019-02-08 23:38:12",
     "published": true,
-    "tags": ["node"]
+    "tags": [
+      "nodejs"
+    ]
   },
   "zend-db-nested-conditions": {
     "title": "Zend DB Nested Conditions",
     "date": "2019-02-07 21:09:25",
     "published": true,
-    "tags": ["php", "zend", "zend-db", "database"]
+    "tags": [
+      "php",
+      "zend",
+      "zend-db",
+      "database"
+    ]
   },
   "php-datetime-createfromformat-c": {
     "title": "PHP DateTime createFromFormat c fails",
     "date": "2019-02-06 20:17:02",
     "published": true,
-    "tags": ["php"]
+    "tags": [
+      "php"
+    ]
   },
   "webpack-without-babelrc": {
     "title": "Webpack without .babelrc",
     "date": "2019-02-05 23:30:21",
     "published": true,
-    "tags": ["webpack"]
+    "tags": [
+      "webpack"
+    ]
   },
   "hello-preact-modules": {
     "title": "Hello Preact Modules",
     "date": "2019-02-04 22:58:35",
     "published": true,
-    "tags": ["preact", "javascript", "webpack"]
+    "tags": [
+      "preact",
+      "javascript",
+      "webpack"
+    ]
   },
   "hello-preact": {
-    "title":"Hello Preact",
+    "title": "Hello Preact",
     "date": "2019-02-03 18:13:35",
     "published": true,
-    "tags": ["preact", "javascript", "babel"]
+    "tags": [
+      "preact",
+      "javascript",
+      "babel"
+    ]
   },
   "change-timezone-ubuntu": {
     "title": "Change timezone in Ubuntu",
     "date": "2019-02-02 21:40:19",
     "published": true,
-    "tags": ["ubuntu", "linux"]
+    "tags": [
+      "ubuntu",
+      "linux"
+    ]
   },
   "php-zero-equals-any-string": {
     "title": "PHP: Zero equals to any string",
     "date": "2019-02-01 21:22:23",
     "published": true,
-    "tags": ["php"]
+    "tags": [
+      "php"
+    ]
   },
   "pagination-with-mysql": {
     "title": "Pagination with MySQL",
     "date": "2018-09-07 08:20:01",
     "published": true,
-    "tags": ["mysql"]
+    "tags": [
+      "mysql"
+    ]
   },
   "upgrading-nodejs-npm-on-ubuntu-14-04": {
     "title": "Upgrading nodejs/npm on Ubuntu 14.04",
     "date": "2018-08-23 10:53:13",
     "published": true,
-    "tags": ["server"]
+    "tags": [
+      "server"
+    ]
   },
   "manipulating-pixels-using-canvas": {
     "title": "Manipulating Pixels Using Canvas",
@@ -216,79 +248,119 @@
     "original_date": "2018-06-07 00:00:00",
     "url": "https://css-tricks.com/manipulating-pixels-using-canvas",
     "published": true,
-    "tags": ["canvas"]
+    "tags": [
+      "canvas"
+    ]
   },
   "hashtag-100-days-of-english": {
     "title": "#100DaysOfEnglish",
     "date": "2018-05-10 10:55:03",
     "published": true,
-    "tags": ["personal"]
+    "tags": [
+      "personal"
+    ]
   },
   "hashtag-100-days-of-code": {
     "title": "#100DaysOfCode",
     "date": "2018-05-10 10:33:22",
     "published": true,
-    "tags": ["personal"]
+    "tags": [
+      "personal"
+    ]
   },
   "guzzle-http-upgrade-mocking-from-version-5-to-6": {
     "title": "Guzzle HTTP: Upgrade mocking from version 5 to 6",
     "date": "2018-03-31 19:08:19",
     "published": true,
-    "tags": ["php"]
+    "tags": [
+      "php"
+    ]
   },
   "cocoa-set-the-nib-name-on-a-view-controller": {
     "title": "Cocoa: Set the nib name on a view controller",
     "date": "2018-03-31 01:06:32",
     "published": true,
-    "tags": ["cocoa", "objective-c"]
+    "tags": [
+      "cocoa",
+      "objective-c"
+    ]
   },
   "github-reauthentication-on-mac-osx": {
     "title": "Github: Re-authentication on Mac OSX",
     "date": "2018-03-10 16:25:06",
     "published": true,
-    "tags": ["git", "github"]
+    "tags": [
+      "git",
+      "github"
+    ]
   },
   "mysql-fetch-table-name-with-original-case": {
     "title": "MySQL fetch table name with original case",
     "date": "2018-02-14 20:22:34",
     "published": true,
-    "tags": ["mysql"]
+    "tags": [
+      "mysql"
+    ]
   },
   "mysql-key-limit": {
     "title": "MySQL string columns key length",
     "date": "2017-05-28 20:06:14",
     "published": true,
-    "tags": ["mysql", "unicode"]
+    "tags": [
+      "mysql",
+      "unicode"
+    ]
   },
   "ubuntu-missing-package-sources": {
     "title": "Ubuntu missing package sources",
     "date": "2016-09-20 04:22:34",
     "published": true,
-    "tags": ["server", "os", "linux", "ubuntu"]
+    "tags": [
+      "server",
+      "os",
+      "linux",
+      "ubuntu"
+    ]
   },
   "zend-db-select-from-different-database": {
-      "title": "Zend DB select from a different database",
-      "date": "2016-05-09 00:56:13",
-      "published": true,
-      "tags": ["php", "zend", "zend-db", "database"]
+    "title": "Zend DB select from a different database",
+    "date": "2016-05-09 00:56:13",
+    "published": true,
+    "tags": [
+      "php",
+      "zend",
+      "zend-db",
+      "database"
+    ]
   },
   "run-node-app-in-background-linux": {
-      "title": "Run node app in background (Linux)",
-      "date": "2016-04-28 07:01:59",
-      "published": true,
-      "tags": ["node", "os", "linux"]
+    "title": "Run node app in background (Linux)",
+    "date": "2016-04-28 07:01:59",
+    "updated": "2020-04-03T00:16:23+02:00",
+    "published": true,
+    "summary": true,
+    "tags": [
+      "nodejs",
+      "os",
+      "linux"
+    ]
   },
   "php-call-user-func-reference": {
-      "title": "PHP - call_user_func reference",
-      "date": "2016-04-01 10:49:12",
-      "published": true,
-      "tags": ["php"]
+    "title": "PHP - call_user_func reference",
+    "date": "2016-04-01 10:49:12",
+    "published": true,
+    "tags": [
+      "php"
+    ]
   },
   "disable-nginx-basic-auth-for-one-location": {
     "title": "Disable nginx basic_auth for one location",
     "date": "2016-02-18 02:19:21",
     "published": true,
-    "tags": ["server", "nginx"]
+    "tags": [
+      "server",
+      "nginx"
+    ]
   },
   "sudo-and-redirect-output": {
     "title": "sudo and redirect output",
@@ -305,25 +377,34 @@
     "title": "Writing on the moment",
     "date": "2015-11-29 00:51:55",
     "published": true,
-    "tags": ["personal"]
+    "tags": [
+      "personal"
+    ]
   },
   "twenty-years-of-php": {
     "title": "Twenty years of PHP",
     "date": "2015-06-17 10:39:55",
     "published": true,
-    "tags": ["php", "personal"]
+    "tags": [
+      "php",
+      "personal"
+    ]
   },
   "prevent-line-break-with-hyphenated-words": {
     "title": "Prevent line-break with hyphenated words",
     "date": "2015-02-25 04:06:18",
     "published": true,
-    "tags": ["html", "css", "tips"]
+    "tags": [
+      "html",
+      "css",
+      "tips"
+    ]
   },
   "github-long-diff-problem": {
-   "title": "GitHub: long diff problem",
-   "date": "2015-02-07 01:47:22",
-   "published": true,
-   "tags": []
+    "title": "GitHub: long diff problem",
+    "date": "2015-02-07 01:47:22",
+    "published": true,
+    "tags": []
   },
   "learn-proper-names": {
     "title": "Learn the proper names",
@@ -360,7 +441,7 @@
       "javascript",
       "mamp",
       "mysql",
-      "node-js"
+      "nodejs"
     ]
   },
   "wordpress-functionality-another-php-project": {
@@ -406,12 +487,14 @@
   },
   "php-apache-500-internal-server-error": {
     "title": "PHP – Apache 500 Internal Server Error",
+    "lang": "es",
     "date": "2013-01-25 18:15:47",
     "published": true,
     "tags": []
   },
   "sesiones-codeigniter-terminan-inmediatamente": {
     "title": "Sesiones CodeIgniter terminan inmediatamente",
+    "lang": "es",
     "date": "2013-01-19 16:25:13",
     "published": true,
     "tags": []

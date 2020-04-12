@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://wellingguzman.com/sitemap.xml

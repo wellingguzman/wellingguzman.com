@@ -1,19 +1,16 @@
-- tag = filter === undefined ? current.path.slice(-2, -1)[0] : filter;
-- posts = partial('posts', { filter: function (post) {
--   if (post.tags && post.tags.indexOf(tag) !== -1) return true;
--   return false;
+- tag = filter !== undefined ? filter : current.path.splice(1, 1)[0];
+- notes = partial('notes', { filter: function (post) {
+-   return post.tags && post.tags.indexOf(tag) !== -1;
 - }});
 
+unless notes.length
+  p No notes were found
 
-h2 Notes tagged with "#{tag}"
+if notes.length > 0
+  ul
+    - note = notes.shift();
+    while note
+      include item
+      - note = notes.shift();
 
-ul.List.Post-List
-  - post = posts.shift();
-  while post
-    li.List-item
-      .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
-      .List-text.Post-title: a(href="#{post.url_relative}") #{post.title}
-    - post = posts.shift();
-
-.Content-bottom
-  a.Button(href="/tags") All tags
+a(href="/tags") All tags

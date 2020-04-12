@@ -1,11 +1,23 @@
-unless posts.length
-    h3
-      | No entries found
+unless notes.length
+  p No notes were found
 
-ul.List.Post-List
-  - post = posts.shift();
-  while post
-    li.List-item(class=post.original_date ? "external" : "")
-      .List-meta: time.Timestamp #{moment(post.original_date || post.date).format('MMMM DD, YYYY')}
-      .List-text: a(href="#{post.url_relative}") #{post.title}
-    - post = posts.shift();
+- var displayYearTitle = !!ifDef(displayYear, true);
+if notes.length > 0
+  if displayYearTitle === false
+    - var note = notes.shift();
+    ul
+      while note
+        include item
+        - note = notes.shift();
+  else
+    - var lastYear, year;
+    - var note = notes.shift();
+    while note
+      - year = moment(note.original_date || note.date).format('YYYY');
+      - lastYear = year
+        h2 #{ year }
+        ul
+          while year === lastYear
+            include item
+            - note = notes.shift();
+            - year = note && moment(note.original_date || note.date).format('YYYY');

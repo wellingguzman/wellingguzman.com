@@ -1,8 +1,15 @@
-- posts = partial('_shared/posts', { postlimit: 8 })
+block header
+  header
+    .container
+      .content
+        .hero
+          h1 Welcome!
+          p I'm Welling Guzman. I'm a world wide web programmer, and this is my personal website.
 
-h3.title Latest notes
+  hr#hr-header
 
-include ./_shared/list
-
-.Content-bottom
-  a.Button(href="/notes") All notes
+.box
+  h2 Latest notes
+  != partial('./_shared/list', { displayYear: false, notes: partial('_shared/notes', { limit: 8 }) })
+  p
+    a(href="/notes") All notes

@@ -2,20 +2,37 @@
   "globals": {
     "site_title": "Welling Guzmán",
     "site_description": "Notes about code and among other things.",
-    "site_keywords": "",
-    "site_url": "http://wellingguzman.com",
+    "site_url": "https://wellingguzman.com",
     "site_lang": "en",
     "analytics": "UA-37732822-1",
     "main_nav": {
       "Home": "/",
       "Notes": "/notes",
-      "Hire Me": "/hire-me",
       "About": "/about"
+    },
+    "formats": {
+      "date": "DD.MM.YYYY",
+      "displayDate": "D. MMMM YYYY",
+      "dateTime": "DD.MM.YYYY HH:mm:ss",
+      "tagDateTime": "YYYY-MM-DD HH:mm:ss"
     },
     "footer_nav": {
       "About": "/about",
-      "Twitter": "https://twitter.com/WellingGuzman",
-      "GitHub": "https://github.com/WellingGuzman"
+      "Twitter": {
+        "href": "https://twitter.com/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      },
+      "GitHub": {
+        "href": "https://github.com/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      },
+      "CodePen": {
+        "href": "https://codepen.io/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      }
     }
   }
 }

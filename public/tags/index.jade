@@ -1,21 +1,22 @@
 - tags = partial('../_shared/tags');
-if tags.length === 0
-  h2 Notes not found
+unless tags.length
+  p Not found
 
-h1 All notes tags
-each tag in tags
-  -   tagPosts = partial('../_shared/posts', { filter: function (post) {
-  -     if (post.tags && post.tags.indexOf(tag) !== -1) return true;
-  -     return false;
-  -   }});
+if (tags.length > 0)
+  - var maxTags = 1;
+  each tag in tags
+    - tagNotesCount = partial('../_shared/notes', { filter: function (note) {
+    -   return note.tags && note.tags.indexOf(tag.name) >= 0;
+    - }}).length;
+    - if (tagNotesCount > maxTags) maxTags = tagNotesCount
+  ul.tag-cloud
+    each tag in tags
+      - tagNotes = partial('../_shared/notes', { filter: function (note) {
+      -   return note.tags && note.tags.indexOf(tag.name) >= 0;
+      - }});
 
-  if tagPosts.length > 0
-    h2.Tag-title
-        a(href="/tags/#{tag}") #{tag}
-    ul.List.Post-List
-      - post = tagPosts.shift();
-      while post
-        li.List-item
-          .List-meta: time.Timestamp #{moment(post.date).format('MMMM DD, YYYY')}
-          .List-text: a(href="#{post.url}") #{post.title}
-        - post = tagPosts.shift();
+      if tagNotes.length > 0
+        li
+          - var fontSize = 100 + (tagNotes.length / maxTags) * 70;
+          a(href="#{tag.path}",style="font-size: #{fontSize}%") #{tag.name}
+          | 
