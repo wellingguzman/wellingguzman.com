@@ -1,2 +1,0 @@
-- how convinient is to use AirBnB
-- how this will not fully work on DR
