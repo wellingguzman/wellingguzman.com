@@ -10,6 +10,12 @@ body {
 // B A S E
 ///////////
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 ::selection {
   background-color: #ffb1e4;
 }
@@ -77,7 +83,6 @@ blockquote {
 .container {
   max-width: 540px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 ///////////////////////
