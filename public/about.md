@@ -1,4 +1,4 @@
-I am a software engineer focusing on web technologies and web-related solutions. I am passionate about the web, system design, open source, computers, mentoring, teaching and _reinventing the wheel_*.
+I am a software engineer focusing on web and web-related technologies. I am passionate about the web, system design, open source, computers, mentoring, teaching and _reinventing the wheel_*.
 
 ![](//wellingguzman.com/images/me.jpg)
 
