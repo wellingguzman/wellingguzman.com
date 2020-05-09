@@ -1,17 +1,17 @@
-- tags = partial('../_shared/tags');
+- tags = partial('../_shared/data/tags');
 unless tags.length
   p Not found
 
 if (tags.length > 0)
   - var maxTags = 1;
   each tag in tags
-    - tagNotesCount = partial('../_shared/notes', { filter: function (note) {
+    - tagNotesCount = partial('../_shared/data/notes', { filter: function (note) {
     -   return note.tags && note.tags.indexOf(tag.name) >= 0;
     - }}).length;
     - if (tagNotesCount > maxTags) maxTags = tagNotesCount
   ul.tag-cloud
     each tag in tags
-      - tagNotes = partial('../_shared/notes', { filter: function (note) {
+      - tagNotes = partial('../_shared/data/notes', { filter: function (note) {
       -   return note.tags && note.tags.indexOf(tag.name) >= 0;
       - }});
 

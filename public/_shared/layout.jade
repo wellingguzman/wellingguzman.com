@@ -1,21 +1,18 @@
-- var documentId = 'doc-' + current.path[0];
 doctype
-html(id="#{documentId}", lang="#{site_lang}")
+html(lang="#{site_lang}")
   head
     meta(charset="utf-8")
     title= title ? title + ' — ' + site_title : site_title
     meta(name="description", content="#{site_description}")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="author" content="#{site_author}")
-    link(rel="alternate", type="application/rss+xml", title="#{site_title}'s RSS", href="/feed.xml")
+    link(rel="alternate", type="application/rss+xml", title="Welling Guzman's RSS", href="/feed.xml")
     link(rel="shortcut icon" href="/favicon.ico")
-    link(rel="stylesheet" type="text/css" href='/css/main.css?bust=1718e9e0d65')
-  body(class="style-plain #{documentId}")
-    div#wrap
+    link(rel="stylesheet" type="text/css" href='/css/main.css?bust=171f8d467b5')
+  body
+    .container
       include inc/sitebar
       block header
-      main
-        .container
-          block content
+      block content
       include inc/footer
-      <!-- This page was generated on #{moment().format(formats.dateTime)} -->
+    <!-- This page was generated on #{moment().format(formats.dateTime)} -->

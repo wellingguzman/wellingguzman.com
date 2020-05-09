@@ -1,5 +1,5 @@
 - tag = filter !== undefined ? filter : current.path.splice(1, 1)[0];
-- notes = partial('notes', { filter: function (post) {
+- notes = partial('data/notes', { filter: function (post) {
 -   return post.tags && post.tags.indexOf(tag) !== -1;
 - }});
 
@@ -7,7 +7,7 @@ unless notes.length
   p No notes were found
 
 if notes.length > 0
-  ul
+  ul.list
     - note = notes.shift();
     while note
       include item

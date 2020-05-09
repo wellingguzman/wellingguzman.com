@@ -1,6 +1,4 @@
 - var date = moment(note.original_date || note.date)
 li
-  span(class=note.original_date ? 'external-link' : undefined)
-    a(href="#{note.path}") #{note.title}
-  span.sep &nbsp;
-  span: time.timestamp #{date.format(formats.displayDate)}
+  time #{date.format(formats.listDate)}&nbsp;
+  a(href="#{note.path}", class=note.original_date ? 'external-link' : undefined) #{note.title}

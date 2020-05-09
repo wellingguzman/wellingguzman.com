@@ -1,42 +1,46 @@
 extends ../_shared/layout
 
 block content
-  .content
-    article.page(
-        class=summary === true ? 'has-summary' : undefined,
-        lang=ifDef(lang)
-      )
-      if current.path[0] == 'notes' && current.source != 'index'
-        header
-          h1 #{title}
-          .page-meta
-            time.timestamp(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
-            span.sep &nbsp;
-            if (updated)
-              time.timestamp(datetime="#{moment(updated).format(formats.tagDateTime)}") Updated on #{moment(updated_at).format(formats.displayDate)}
-              span.sep &nbsp;
-            if (tags && tags.length)
-              span.tags
-                each tag in tags
-                  a.tag(href="/tags/#{tag}") #{tag}
-                  span.sep &nbsp;
-        hr#hr-header
-      != yield
+  article(
+      class=summary === true ? 'has-summary' : undefined,
+      lang=ifDef(lang)
+    )
+    h1 #{title}
+    if (date || updated)
+      .meta
+        if (date)
+          time(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
+        | &nbsp;
+        if (updated)
+          time(datetime="#{moment(updated).format(formats.tagDateTime)}") Updated on #{moment(updated_at).format(formats.displayDate)}
+          | &nbsp;
+    != yield
+  if (tags && tags.length)
+    .footnote
+      .tags
+        a(href="/tags") Tags:
+        | &nbsp;
+        each tag in tags
+          span
+            a(href="/tags/#{tag}") #{tag}
+          | &nbsp;
 
 block footer_top
-  - notes = partial('../_shared/notes')
+  - notes = partial('../_shared/data/notes')
   if (current.source !== 'index')
-    .container
-      .note-nav
-        each note, i in notes
-          if note.slug == current.source
-            - var prev = notes[i-1];
-            - var next = notes[i+1];
-            if (next)
-              .note-nav-item.note-nav-next » Next: 
-                a(rel="next", href="#{next.path}", title="#{next.title}") #{next.title}
-            if (prev)
-              .note-nav-item.note-nav-prev « Previous: 
-                a(rel="prev", href="#{prev.path}", title="#{prev.title}") #{prev.title}
-            .note-nav-item.note-nav-index ← 
-              a(href="/notes") Back to index
+    p
+      each note, i in notes
+        if note.slug == current.source
+          - var prev = notes[i-1];
+          - var next = notes[i+1];
+          if (next)
+            » Next: 
+            a(rel="next", href="#{next.path}", title="#{next.title}") #{next.title}
+            br
+          if (prev)
+            « Previous: 
+            a(rel="prev", href="#{prev.path}", title="#{prev.title}") #{prev.title}
+            br
+          | ←
+          a(href="/notes") Back to index
+          br

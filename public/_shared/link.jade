@@ -1,0 +1,9 @@
+- if (typeof anchor === 'string') {
+-   anchor = { href: anchor };
+- }
+span #{name} &nbsp;
+a(
+  href="#{anchor.href}",
+  rel=ifDef(anchor.rel)
+  target=ifDef(anchor.target)
+) #{anchor.label || anchor.href}

@@ -8,28 +8,44 @@
     "main_nav": {
       "Home": "/",
       "Notes": "/notes",
-      "About": "/about"
+      "About": "/about",
+      "Contact": "/contact"
     },
     "formats": {
       "date": "DD.MM.YYYY",
       "displayDate": "D. MMMM YYYY",
+      "listDate": "DD.MM.YYYY",
       "dateTime": "DD.MM.YYYY HH:mm:ss",
       "tagDateTime": "YYYY-MM-DD HH:mm:ss"
     },
-    "footer_nav": {
-      "About": "/about",
+    "contact_links": {
+      "Email": {
+        "label": "hola@wellingguzman.com",
+        "href": "mailto:hola@wellingguzman.com"
+      },
       "Twitter": {
+        "label": "@wellingguzman",
         "href": "https://twitter.com/wellingguzman",
         "rel": "noopener",
         "target": "_blank"
       },
       "GitHub": {
+        "label": "wellingguzman",
         "href": "https://github.com/wellingguzman",
         "rel": "noopener",
         "target": "_blank"
-      },
+      }
+    },
+    "elsewhere_links": {
       "CodePen": {
+        "label": "wellingguzman",
         "href": "https://codepen.io/wellingguzman",
+        "rel": "noopener",
+        "target": "_blank"
+      },
+      "LinkedIn": {
+        "label": "wellingguzman",
+        "href": "https://linkedin.com/in/wellingguzman",
         "rel": "noopener",
         "target": "_blank"
       }

@@ -1,0 +1,15 @@
+if (contact_links)
+  p Please feel free to contact me via:
+
+  ul.list.compact
+    each anchor, name in contact_links
+      li
+        include _shared/link
+
+if (elsewhere_links)
+  p Or find me elsewhere:
+
+  ul.list.compact
+    each anchor, name in elsewhere_links
+      li
+        include _shared/link

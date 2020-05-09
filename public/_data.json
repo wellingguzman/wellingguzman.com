@@ -5,6 +5,9 @@
   "about": {
     "title": "About"
   },
+  "contact": {
+    "title": "Contact Information"
+  },
   "feed.xml": {
     "layout": false
   },

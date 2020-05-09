@@ -2,10 +2,12 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var cssmin = require('gulp-cssmin');
 var replace = require('gulp-replace');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('less', function () {
   return gulp.src('./less/**/[^_]*.less')
     .pipe(less())
+    .pipe(autoprefixer())
     .pipe(cssmin())
     .pipe(gulp.dest('./public/css'));
 });

@@ -1,15 +1,7 @@
-#sitebar
-  .container
-    .content
-      nav#main-nav.items
-        if (main_nav)
-          each url, label in main_nav
-            - selected = '';
-            - path = current.path[0].replace(/\-/g, ' ');
-            - if (path.toLowerCase() == label.toLowerCase() || (path.toLowerCase() == 'index' && label.toLowerCase() == 'home')) {
-            -   selected = 'selected';
-            - }
-            span.item(class="#{selected}")
-              a(href="#{url}")
-                span #{label}
-              span &nbsp;
+span Welling Guzman's homepage
+nav
+  if (main_nav)
+    each url, label in main_nav
+      a(href="#{url}") #{label}
+      | &nbsp;
+hr
