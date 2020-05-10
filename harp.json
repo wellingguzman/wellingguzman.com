@@ -13,13 +13,14 @@
     },
     "formats": {
       "date": "DD.MM.YYYY",
+      "isoDate": "YYYY-MM-DD",
       "displayDate": "D. MMMM YYYY",
       "listDate": "DD.MM.YYYY",
       "dateTime": "DD.MM.YYYY HH:mm:ss",
       "tagDateTime": "YYYY-MM-DD HH:mm:ss"
     },
     "contact_links": {
-      "Email": {
+      "E-mail": {
         "label": "hola@wellingguzman.com",
         "href": "mailto:hola@wellingguzman.com"
       },

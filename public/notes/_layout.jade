@@ -6,41 +6,49 @@ block content
       lang=ifDef(lang)
     )
     h1 #{title}
-    if (date || updated)
-      .meta
-        if (date)
-          time(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
-        | &nbsp;
-        if (updated)
-          time(datetime="#{moment(updated).format(formats.tagDateTime)}") Updated on #{moment(updated_at).format(formats.displayDate)}
-          | &nbsp;
+    if (updated)
+      time(datetime="#{moment(updated).format(formats.tagDateTime)}") Updated on #{moment(updated).format(formats.displayDate)}
+    else if date
+      time(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
+
     != yield
-  if (tags && tags.length)
-    .footnote
-      .tags
-        a(href="/tags") Tags:
-        | &nbsp;
-        each tag in tags
-          span
-            a(href="/tags/#{tag}") #{tag}
-          | &nbsp;
 
 block footer_top
-  - notes = partial('../_shared/data/notes')
-  if (current.source !== 'index')
-    p
-      each note, i in notes
-        if note.slug == current.source
-          - var prev = notes[i-1];
-          - var next = notes[i+1];
-          if (next)
-            » Next: 
-            a(rel="next", href="#{next.path}", title="#{next.title}") #{next.title}
+  if current.source != 'index'
+    .meta
+      div
+        span
+          a(href="/tags") Tags:
+        span
+          if (tags && tags.length)
+            .tags
+              each tag in tags
+                span: a(href="/tags/#{tag}") #{tag}
+      div
+        span Creation Date:
+        time(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.isoDate)}
+      if updated
+        div
+          span Last update:
+          time(datetime="#{moment(updated).format(formats.tagDateTime)}") #{moment(updated).format(formats.isoDate)}
+
+block footer_bottom
+  if current.source != 'index'
+    - notes = partial('../_shared/data/notes')
+    if (current.source !== 'index')
+      p
+        each note, i in notes
+          if note.slug == current.source
+            - var prev = notes[i-1];
+            - var next = notes[i+1];
+            if (next)
+              | » Next: 
+              a(rel="next", href="#{next.path}", title="#{next.title}") #{next.title}
+              br
+            if (prev)
+              | « Previous: 
+              a(rel="prev", href="#{prev.path}", title="#{prev.title}") #{prev.title}
+              br
+            | ←
+            a(href="/notes") Back to index
             br
-          if (prev)
-            « Previous: 
-            a(rel="prev", href="#{prev.path}", title="#{prev.title}") #{prev.title}
-            br
-          | ←
-          a(href="/notes") Back to index
-          br
