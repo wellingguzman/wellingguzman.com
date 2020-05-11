@@ -3,6 +3,7 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.4;
+  color: @gray-9;
 }
 
 ///////////
@@ -40,10 +41,6 @@ a {
 ul,
 ol {
   padding: 0 0 0 2rem;
-
-  li {
-    margin-bottom: 0.25rem;
-  }
 }
 
 h1,
@@ -74,19 +71,19 @@ figure {
 }
 
 blockquote {
-  margin     : 0 1rem 0 0.25rem;
-  padding    : 0 1rem 0 0.7rem;
-  border-left: 1px solid;
-  color      : @gray-7;
+  margin    : 0 1rem 0 0.25rem;
+  padding   : 0 1rem 0 0.7rem;
+  color     : @gray-7;
+  font-style: italic;
 }
 
 ///////////////
 // L A Y O U T
 ///////////////
 .container {
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width: 640px;
+  margin   : 0 auto;
+  padding  : 0 1rem;
 }
 
 ///////////////////////
@@ -94,7 +91,7 @@ blockquote {
 ///////////////////////
 nav {
   a {
-    font-weight: 500;
+    font-weight    : 500;
     text-decoration: none;
   }
 }
@@ -111,49 +108,53 @@ time {
 }
 
 article {
+  line-height: 1.6;
+
   h1 {
     font-size: 1.8rem;
-    margin: 1rem 0 0;
-  }
-
-  h2 {
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid #FFB3FF;
+    margin   : 1rem 0 0;
   }
 
   h3 {
     font-weight: 600;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     background-color: #DBFFFF;
+    background-image:
+      radial-gradient(rgba(magenta, 0.2) 10%, transparent 0),
+      radial-gradient(rgba(magenta, 0.2) 10%, transparent 0);
+
+    background-size    : 6px 6px;
+    background-position: 0 0, 6px 6px;
   }
 }
 
 .meta {
   background-color: @gray-1;
-  padding: 0.25rem 0.5rem;
+  padding         : 0.25rem 0.5rem;
 
   a {
     text-decoration: none;
   }
 
-  > div {
+  >div {
     display: table-row;
 
     > :first-child {
-      font-weight: 500;
-      text-align: right;
+      font-weight  : 500;
+      text-align   : right;
       padding-right: 0.8rem;
     }
 
-    > * {
+    >* {
       display: table-cell;
     }
   }
 
   .tags {
-    & > :not(:first-child):before {
+    &> :not(:first-child):before {
       color  : fade(@gray-7, 50%);
       content: " | ";
     }
@@ -174,7 +175,7 @@ ul.tag-cloud {
 
 .has-summary p:first-of-type {
   font-size: 1.1rem;
-  margin: 1.5rem 0;
+  margin   : 1.5rem 0;
 }
 
 @import '_code';
@@ -184,11 +185,11 @@ ul.tag-cloud {
 /////////////////////
 
 ul.list {
-  display: table;
+  display       : table;
   border-spacing: 0 0.5em;
-  margin: 1rem 0;
-  padding: 0;
-  list-style: none;
+  margin        : 1rem 0;
+  padding       : 0;
+  list-style    : none;
 
   &.compact {
     border-spacing: 0;
@@ -201,7 +202,7 @@ ul.list {
       font-weight: 500;
     }
 
-    > span {
+    >span {
       display: table-cell;
     }
   }
@@ -216,7 +217,6 @@ ul.list {
 
   p {
     font-size: 1.1rem;
-    color    : @gray-7;
     margin   : 1rem 0;
   }
 }
