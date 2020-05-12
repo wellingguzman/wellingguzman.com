@@ -35,8 +35,8 @@ block footer_bottom
       p
         each note, i in notes
           if note.slug == current.source
-            - var prev = notes[i-1];
-            - var next = notes[i+1];
+            - var next = notes[i-1];
+            - var prev = notes[i+1];
             if (next)
               | » Next: 
               a(rel="next", href="#{next.path}", title="#{next.title}") #{next.title}
