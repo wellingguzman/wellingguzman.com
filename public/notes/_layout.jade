@@ -6,10 +6,6 @@ block content
       lang=ifDef(lang)
     )
     h1 #{title}
-    if (updated)
-      time(datetime="#{moment(updated).format(formats.tagDateTime)}") Updated on #{moment(updated).format(formats.displayDate)}
-    else if date
-      time(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.displayDate)}
 
     != yield
 
