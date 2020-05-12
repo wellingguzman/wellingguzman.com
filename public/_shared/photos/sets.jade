@@ -1,0 +1,8 @@
+.photosets
+  a(href="/photos/#{sets.slug}")
+    .photosets-content
+      .caption
+        h2 #{sets.title}
+        span #{sets.count} photos
+      .cover
+        img(src="#{sets.cover.src}")

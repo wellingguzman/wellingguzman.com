@@ -1,0 +1,12 @@
+{
+  "index": {
+    "title": "Photos collection"
+  },
+  "2020": {
+    "title": "2020",
+    "cover": {
+      "src": "/p/2020/pigeon.jpg"
+    },
+    "count": 6
+  }
+}

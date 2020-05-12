@@ -1,0 +1,14 @@
+- var keys = Object.keys(items);
+- var indexPageIndex = keys.indexOf('index');
+
+- // Avoid the index to be part of the note lists
+- if (indexPageIndex > -1) {
+-   keys.splice(indexPageIndex, 1);
+- }
+
+- return keys.map(function (key) {
+-   var item = items[key];
+-   item.slug = key;
+-
+-   return item;
+- });

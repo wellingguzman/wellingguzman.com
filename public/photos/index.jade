@@ -1,0 +1,11 @@
+- var photos = public.photos;
+- var list = partial('../_shared/data/_items', { items: photos._data });
+
+.photos
+  - var sets = list.shift();
+  while sets
+    if (sets.collection == true)
+      include ../_shared/photos/sets
+    else
+      include ../_shared/photos/sets
+    - sets = list.shift();

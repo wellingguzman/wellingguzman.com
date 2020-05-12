@@ -1,0 +1,15 @@
+- var photos = public.photos['2020']._data;
+- photos = partial('../../_shared/data/_items', { items: photos });
+
+unless photos.length
+  p No photos found
+
+.photos
+  - var photo = photos.shift();
+  while photo
+    figure
+      a(href="/photos/2020/#{photo.slug}")
+        img(src=photo.src title=photo.title)
+      figcaption
+        span #{photo.caption || photo.title}
+    - photo = photos.shift();

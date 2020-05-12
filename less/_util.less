@@ -12,7 +12,11 @@
 @gray-9           : #111317;
 
 .responsive(@maxWidth; @content) {
-  @media only screen and (max-width: @maxWidth) {
+  @media only screen and (min-width: @maxWidth) {
     @content();
   }
+}
+
+.responsiveSmall(@content) {
+  .responsive(576px, @content);
 }

@@ -1,0 +1,22 @@
+.collection-sets
+  header
+    .photosets
+      a(href="#{sets.path}")
+        .photosets-content
+          .caption
+            h2 #{sets.title}
+            span #{sets.photos.length} photos
+          .cover
+            img(src="#{sets.cover.src}")
+  .collection-sets-content.list
+    - var set = sets.items.shift()
+    while set
+      .photosets
+        a(href="#{set.path}")
+          .photosets-content
+            .caption
+              h2 #{set.title}
+              span #{set.count} photos
+            .cover
+              img(src="#{set.cover.src}")
+        - sets.items.shift()

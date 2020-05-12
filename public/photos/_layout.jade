@@ -1,0 +1,10 @@
+extends ../_shared/layout
+
+block content
+  article(
+    class=current.source !== 'index' ? 'photo' : undefined,
+  )
+    if (current.source == 'index')
+      if (title)
+        h1 #{title}
+    != yield

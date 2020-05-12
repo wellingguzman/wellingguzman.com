@@ -8,6 +8,7 @@
     "main_nav": {
       "Home": "/",
       "Notes": "/notes",
+      "Photos": "/photos",
       "About": "/about",
       "Contact": "/contact"
     },

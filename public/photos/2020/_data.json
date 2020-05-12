@@ -1,0 +1,35 @@
+{
+  "index": {
+    "title": "2020"
+  },
+  "pigeons": {
+    "title": "Pigeons",
+    "year": 2020,
+    "src": "/p/2020/pigeons.jpg"
+  },
+  "spiderweb": {
+    "title": "Spiderweb",
+    "year": 2020,
+    "src": "/p/2020/spiderweb.jpg"
+  },
+  "pigeon": {
+    "title": "Pigeon",
+    "year": 2020,
+    "src": "/p/2020/pigeon.jpg"
+  },
+  "hamburg": {
+    "title": "Hamburg",
+    "year": 2020,
+    "src": "/p/2020/hamburg.jpg"
+  },
+  "leer-sbahn": {
+    "title": "Leer S-Bahn",
+    "year": 2020,
+    "src": "/p/2020/leer-sbahn.jpg"
+  },
+  "distance": {
+    "title": "Social distance",
+    "year": 2020,
+    "src": "/p/2020/distance.jpg"
+  }
+}
