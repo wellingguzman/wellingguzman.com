@@ -50,6 +50,18 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
+
+  a {
+    visibility: hidden;
+    color: @gray-5;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 0.25em;
+  }
+
+  &:hover a {
+    visibility: visible;
+  }
 }
 
 img {
