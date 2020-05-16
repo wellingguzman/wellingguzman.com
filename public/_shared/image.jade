@@ -1,9 +1,21 @@
 figure
-  img(src="#{src}" title="#{title}")
+  img(
+    src="#{src}"
+    title="#{title}"
+    alt=ifDef(alt)
+  )
   figcaption
     span.title #{title}
     br
     if caption
       span #{caption}
       br
-    span Copyright © #{year} Welling Guzman
+    if date
+      span #{moment(date).format(formats.isoDate)}
+      br
+    if note
+      span #{note}
+      br
+    if src_large
+      a(href="#{src_large}" target="_blank") Large Photo
+    span © Welling Guzman
