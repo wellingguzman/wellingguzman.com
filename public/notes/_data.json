@@ -5,6 +5,7 @@
   "get-php-config-values": {
     "title": "Get PHP config values",
     "date": "2019-02-10 20:08:04",
+    "updated": "2020-05-15T22:26:17+00:00",
     "published": true,
     "tags": [
       "php"
@@ -171,7 +172,7 @@
   "mysql-key-limit": {
     "title": "MySQL string columns key length",
     "date": "2017-05-28 20:06:14",
-    "updated": "2020-05-16T12:32:20+0000",
+    "updated": "2020-05-16T12:32:20+00:00",
     "published": true,
     "tags": [
       "mysql",
