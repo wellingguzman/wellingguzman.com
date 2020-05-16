@@ -96,6 +96,7 @@
   "pagination-with-mysql": {
     "title": "Pagination with MySQL",
     "date": "2018-09-07 08:20:01",
+    "updated": "2020-05-16T13:39:28+0000",
     "published": true,
     "tags": [
       "mysql"
