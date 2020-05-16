@@ -87,6 +87,16 @@ blockquote {
   padding   : 0 1rem 0 0.7rem;
   color     : @gray-7;
   font-style: italic;
+
+  cite {
+    display: block;
+    margin: 1rem 0;
+
+    &:before {
+      content: "—";
+      padding: 0 0.5rem;
+    }
+  }
 }
 
 ///////////////

@@ -3,12 +3,12 @@ There's a built-in function in PHP called [`ini_get`](http://php.net/manual/en/f
 To get the configuration value defined in `php.ini`, there's another function called [`get_cfg_var`](http://php.net/manual/en/function.get-cfg-var.php), that actually do this. This function will ignore any values set by a webserver or during runtime.
 
 > This function will not return configuration information set when the PHP was compiled, or read from an Apache configuration file.
-> — [PHP get_cfg_var Manual](http://php.net/manual/en/function.get-cfg-var.php)
+> <cite>[PHP get_cfg_var Manual](http://php.net/manual/en/function.get-cfg-var.php)</cite>
 
 It can be possible that PHP is not loading values from the configuration file (`php.ini`), well in that case no value will be returned from `get_cfg_var`.
 
 > To check whether the system is using a [configuration file](http://php.net/manual/en/configuration.file.php), try retrieving the value of the cfg_file_path configuration setting. If this is available, a configuration file is being used.
-> — [PHP get_cfg_var Manual](http://php.net/manual/en/function.get-cfg-var.php)
+> <cite>[PHP get_cfg_var Manual](http://php.net/manual/en/function.get-cfg-var.php)</cite>
 
 One thing to keep in mind is that defining a configuration using `php -d`, even when php didn't load the values from `php.ini` this value will be available through `get_cfg_var`.
 
