@@ -4,8 +4,10 @@ const site = require('./lib/site');
 const route = router();
 
 function run(port, options) {
-  const url = 'http://localhost:' + port;
-  const env = (options || {}).env === 'development' ? 'development' : 'production';
+  options = (options || {});
+  const host = options.host || '127.0.0.1';
+  const url = 'http://' + host + ':' + port;
+  const env = options.env === 'development' ? 'development' : 'production';
 
   site.redirects(route);
 
@@ -15,12 +17,13 @@ function run(port, options) {
     site.production(route, __dirname);
   }
 
-  http.createServer(route).listen(port);
+  http.createServer(route).listen(port, host);
   console.log('Running harp-static (' + env + ') on ' + url);
 }
 
 run(process.env.PORT || 9000, {
   env: process.argv[2] === 'dev' || process.env.NODE_ENV === 'development'
     ? 'development'
-    : 'production'
+    : 'production',
+    host: process.argv[3] || process.env.HOST,
 });
