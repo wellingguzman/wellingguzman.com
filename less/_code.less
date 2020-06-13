@@ -1,3 +1,8 @@
+pre, code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size  : 0.9em;
+}
+
 pre {
   line-height: 1.4;
   background : #eeeeee;
@@ -6,20 +11,15 @@ pre {
 }
 
 code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size  : 0.9em;
-}
-
-p code {
   background: #eeeeee;
   padding   : .1em .25em;
 }
 
-p a:hover code {
+a:hover code {
   background: @linkColor;
 }
 
-pre code {
+pre {
   .comment {
     color     : #505047;
     font-style: italic;
