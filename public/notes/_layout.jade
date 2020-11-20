@@ -12,14 +12,14 @@ block content
 block footer_top
   if current.source != 'index'
     .meta
-      div
-        span
-          a(href="/tags") Tags:
-        span
-          if (tags && tags.length)
-            .tags
-              each tag in tags
-                span: a(href="/tags/#{tag}") #{tag}
+      //- div
+      //-   span
+      //-     a(href="/tags") Tags:
+      //-   span
+      //-     if (tags && tags.length)
+      //-       .tags
+      //-         each tag in tags
+      //-           span: a(href="/tags/#{tag}") #{tag}
       div
         span Creation Date:
         time(datetime="#{moment(date).format(formats.tagDateTime)}") #{moment(date).format(formats.isoDate)}
