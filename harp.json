@@ -21,10 +21,6 @@
       "tagDateTime": "YYYY-MM-DD HH:mm:ss"
     },
     "contact_links": {
-      "E-mail": {
-        "label": "hola@wellingguzman.com",
-        "href": "mailto:hola@wellingguzman.com"
-      },
       "Twitter": {
         "label": "@wellingguzman",
         "href": "https://twitter.com/wellingguzman",
@@ -36,9 +32,7 @@
         "href": "https://github.com/wellingguzman",
         "rel": "noopener",
         "target": "_blank"
-      }
-    },
-    "elsewhere_links": {
+      },
       "CodePen": {
         "label": "wellingguzman",
         "href": "https://codepen.io/wellingguzman",

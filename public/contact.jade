@@ -1,15 +1,7 @@
 if (contact_links)
-  p Please feel free to contact me via:
-
+  p Please feel free to contact me via email at hola <i>at</i> this domain
+  p Or find me around the web
   ul.list.compact
     each anchor, name in contact_links
-      li
-        include _shared/link
-
-if (elsewhere_links)
-  p Or find me elsewhere:
-
-  ul.list.compact
-    each anchor, name in elsewhere_links
       li
         include _shared/link
